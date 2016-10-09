@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nodeid: MyString
+  systemid: 1
+  nodetype: 1
+  parentnodeid: MyString
+  label: MyString
+  info: MyString
+  description: MyText
+
+two:
+  nodeid: MyString
+  systemid: 1
+  nodetype: 1
+  parentnodeid: MyString
+  label: MyString
+  info: MyString
+  description: MyText

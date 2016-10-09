@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+    window._points = [+new Date()];
+    function wx_main(mod) {
+      window._points && (window._points[3] = +new Date());
+    }
+  </script>
+  <title>微信认证后台管理系统</title>
+  <meta charset="UTF-8"/>
+  <!-- 让ie浏览器使用最新的渲染引擎 -->
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'layout_head', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'base', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'lib', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'page/media/appmsg_new', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'wx_resources', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'wx_account_choice', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery-ui.min', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+  <% admin=session[:admin] %>
+</head>
+<body class="zh_CN">
+<%= render template: "layouts/account_select" %>
+<div class="headbox">
+  <div class="head">
+    <a href="javascript:void(0)" class="headlogo"><%= image_tag('logo.png') %></a>
+    <div class="headToolbar">
+      <a href="javascript:void(0)" class="icon-quit">退出</a>
+      <a href="javascript:void(0)" class="icon-msg">&nbsp;</a>
+      <a href="javascript:void(0)" class="icon-user"><span>管理员</span> </a>
+    </div>
+  </div>
+</div>
+<div id="body" class="body page_simple page_appmsg_new">
+  <div class="container_box">
+    <div class="js_main_title main_hd">
+      <% if admin.fetch('logintype') == 0
+           @this_wechat_name = session[:current_official_account_wechat_name]
+           if @this_wechat_name != nil %>
+              <div class="id_wechat">
+                <span id="choiced_account_id"><%= @this_wechat_name %></span>
+                <a href="javascript:void(0)" class="replace">切换公众号</a>
+              </div>
+          <% end
+             end %>
+      <div class="page_nav" style="border-top:0;">
+        <a href="javascript:void(0)" class="icon_goback">返回上一层</a>
+        <a href="javascript:void(0)">素材管理</a>&nbsp;/&nbsp;新建图文消息
+      </div>
+    </div>
+    <div class=" main_bd">
+      <div class="appmsg_edit_box">
+        <div class="appmsg_edit_mod default appmsg_preview_area">
+          <div class="appmsg_edit_container appmsg_preview_container js_aside">
+            <div class="js_scrollbar scrollbar-macosx">
+              <div class="appmsg_container_hd">
+                <h4 class="appmsg_container_title">图文列表</h4>
+              </div>
+              <div class="appmsg_container_bd">
+                <div class="appmsg multi editing">
+                  <div id="js_appmsg_preview" class="appmsg_content">
+                  </div>
+                </div>
+                <a onclick="return false;" title="添加一篇图文" class="create_access_primary appmsg_add" id="js_add_appmsg" href="javascript:void(0);">
+                  <i class="icon35_common add_gray">增加一条</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="appmsg_edit_mod default appmsg_tpl_area">
+          <div class="appmsg_edit_container appmsg_tpl_container js_aside">
+            <div class="js_scrollbar scrollbar-macosx">
+              <div class="appmsg_container_hd">
+                <h4 class="appmsg_container_title">多媒体</h4>
+              </div>
+              <div class="appmsg_container_bd">
+                <ul class="tpl_list">
+                  <li class="tpl_item img" id="js_editor_insertimage" style="display:none;">
+                    <i class="icon_media_choose"></i>图片
+                  </li>
+                  <li class="tpl_item video" id="js_editor_insertvideo" style="display:none;">
+                    <i class="icon_media_choose"></i>视频
+                  </li>
+                  <li id="music_plugin_btn" class="tpl_item music" style="display:none;">
+                    <i class="icon_media_choose"></i>音乐
+                  </li>
+                  <li id="audio_plugin_btn" class="tpl_item audio" style="display:none;">
+                    <i class="icon_media_choose"></i>音频
+                  </li>
+                  <li class="tpl_item vote" id="js_editor_insertvote" style="display:none;">
+                    <i class="icon_media_choose"></i>投票
+                  </li>
+                  <li class="tpl_item cardticket" id="js_editor_insertcard" style="display:none;">
+                    <i class="icon_media_choose"></i>卡券
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="appmsg_edit_mod primary appmsg_input_area">
+          <div id="js_appmsg_editor" class="appmsg_editor_wrp">
+
+          </div>
+          <div class="tool_area_wrp">
+            <div id="js_save_success" class="page_tips success" style="display:none;">
+              <div class="inner">保存成功</div>
+            </div>
+            <div class="js_bot_bar tool_area">
+              <div class="tool_bar">
+                <span id="js_fold" class="mini_tips icon_before l fold_tips"><i class="icon_appmsg_edit_folder"></i><span>收起正文</span></span>
+
+                <span id="js_send" class="btn btn_input btn_default r"><button type="button">保存并群发</button></span>
+                <span id="js_preview" class="btn btn_input btn_default r no_extra"><button type="button">预览</button></span>
+                <span id="js_submit" class="btn btn_input btn_primary r"><button type="button">保存</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edui_img_edit_bar" style="display:none">
+      <span class="edui_img_edit_item edui_img_edit_adaptwidth">自适应宽度</span>
+      <span class="edui_img_edit_item edui_img_edit_del">删除</span>
+    </div>
+  </div>
+</div>
+<%= render template:"layouts/wx_info_application" %>
+<script type="text/javascript">
+  define('widget/wx_phone_preview/wx_phone_preview.css', [], function () {
+    return null;
+  });
+  define('widget/media/richvideo.css', [], function () {
+    return null;
+  });
+  define('page/cardticket/dialog_choose_card.css', [], function () {
+    return null;
+  });
+  define('widget/datepicker.css', [], function () {
+    return null;
+  });
+  define('widget/colorpicker/colorpicker.css', [], function () {
+    return null;
+  });
+  define('widget/media/media_dialog.css', [], function () {
+    return null;
+  });
+  define('page/smallvideo/dialog_select_video.css', [], function () {
+    return null;
+  });
+  define('widget/media.css', [], function () {
+    return null;
+  });
+  define('widget/pagination.css', [], function () {
+    return null;
+  });
+  define('widget/tooltip.css', [], function () {
+    return null;
+  });
+  define('widget/ueditor_new/themes/default/css/ueditor.css', [], function () {
+    return null;
+  });
+  define('widget/ueditor_new/themes/default/ueditor.css', [], function () {
+    return null;
+  });
+  define('widget/date_select.css', [], function () {
+    return null;
+  });
+  define('page/vote/dialog_vote_table.css', [], function () {
+    return null;
+  });
+  define('biz_web/widget/date_range.css', [], function () {
+    return null;
+  });
+  define('widget/img_preview.css', [], function () {
+    return null;
+  });
+  define('page/media/dialog_img_pick.css', [], function () {
+    return null;
+  });
+  define('biz_web/widget/dropdown.css', [], function () {
+    return null;
+  });
+  define('widget/processor_bar.css', [], function () {
+    return null;
+  });
+  define('widget/upload.css', [], function () {
+    return null;
+  });
+  define('biz_web/widget/jquery.scrollbar.css', [], function () {
+    return null;
+  });
+</script>
+
+<script type="text/html" id="tpl_original">
+  <div class="processor_bar_wrp js_step"></div>
+  <div class="step_panel step_agreement js_step_panel">
+    <div class="simple_dialog_content">
+      <div class="page_msg small default">
+        <div class="inner">
+          <span class="msg_icon_wrp"><i class="icon_msg info"></i></span>
+          <div class="msg_content">
+            <h4>文章原创声明须知</h4>
+            <p>
+              原创特指自己写的、独立完成创作的作品。歪曲、篡改他人创作或者抄袭、剽窃他人创作而产生的作品，改编、翻译、注释、整理他人已有创作而产生的作品均不能说是原创。 </p>
+            <p>
+              公众平台鼓励用户发表原创文章，平台会对原创声明的文章在群发后进行审核，审核通过后文章会被标识为原创文章。 </p>
+            <p>
+              如下情形不得对文章进行原创声明，一经发现将永久收回原创声明功能使用权限，导致严重影响的还将对违规公众帐号予以一定期限内封号处理。<br>
+              1. 抄袭的文章；<br>
+              2. 文章主要篇幅为诸如“法律、法规，国家机关的决议、决定、命令和其他具有立法、行政、司法性质的文件、时事新闻、历法、通用数表、通用表格和公式”等的公共内容；<br>
+              3. 大篇幅引用他人内容或文章主要内容为他人作品，如书摘、文摘、报摘等；<br>
+              4. 营销性质的内容；<br>
+              5. 整合的内容；<br>
+              6. 对非独家代理的文章声明原创等；<br>
+              7. 色情低俗内容、暴力内容、不实信息等内容；<br>
+              8. 违反法律法规、政策及公序良俗、社会公德，违反《微信公众平台服务协议》、《微信公众平台运营规范》，或干扰微信公众平台正常运营和侵犯其他用户或第三方合法权益内容的信息。 </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="step_panel js_step_panel original_edit_box" style="display:none;">
+    <div class="simple_dialog_content">
+      <div class="frm_control_group">
+        <label class="frm_label" for="">公众平台首发</label>
+        <div class="frm_controls frm_vertical_pt">
+          <label class="frm_radio_label js_forIEbug_selectedTure">
+            <i class="icon_radio"></i>
+            <span class="lbl_content">是</span>
+            <input type="radio" name="" class="js_original_publish frm_radio js_forIEbug_original" value="1" {if first== 1}checked="checked" {/if}>
+          </label>
+          <label class="frm_radio_label js_forIEbug_selectedFalse">
+            <i class="icon_radio"></i>
+            <span class="lbl_content">否</span>
+            <input type="radio" name="" class="js_original_publish frm_radio" value="0" {if first== 0}checked="checked" {/if}>
+          </label>
+        </div>
+      </div>
+      <div class="original_edit_inner_box">
+        <div class="frm_control_group">
+          <label class="frm_label" for="">原文链接</label>
+          <div class="frm_controls">
+            <span class="frm_input_box"><input class="frm_input js_url" type="text" value="{url}" placeholder="选填"></span>
+            <div class="frm_msg fail js_url_error" style="display:none;">链接不合法</div>
+          </div>
+        </div>
+        <div class="frm_control_group">
+          <label class="frm_label" for="">平台名称</label>
+          <div class="frm_controls">
+                        <span class="frm_input_box with_counter counter_in append" style="display:none;">
+                            <input placeholder="该网站的名称" type="text" class="frm_input js_counter js_platform" value="{platform}">
+                            <em class="frm_input_append frm_counter">0/10</em>
+                        </span>
+            <div class="frm_msg fail js_platform_error" style="display:none;">平台名称不能为空且长度不能超过10字</div>
+                        <span class="frm_input_box disabled">
+                            <input value="微信公众平台" type="text" class="frm_input js_platform" disabled="disabled">
+                        </span>
+          </div>
+        </div>
+        <div class="frm_control_group">
+          <label class="frm_label" for="">作者</label>
+          <div class="frm_controls">
+                        <span class="frm_input_box with_counter counter_in append">
+                            <input type="text" class="frm_input js_counter js_author" value="{author}">
+                            <em class="frm_input_append frm_counter">0/8</em>
+                        </span>
+            <div class="frm_msg fail js_author_error" style="display:none;">作者不能为空且不超过8个字</div>
+          </div>
+        </div>
+      </div>
+      <div class="frm_control_group">
+        <label class="frm_label" for="">文章类别</label>
+        <div class="grid_item target">
+          <div class="filter_content">
+            <div id="js_original_article_type"></div>
+            <div class="frm_msg fail js_article_type_error" style="display:none;">请选择文章类别</div>
+          </div>
+        </div>
+      </div>
+      <div class="frm_control_group">
+        <label class="frm_label mini_tips icon_after">转载类型<i class="icon_msg_mini ask" id="js_frmtips"></i></label>
+
+        <div class="frm_controls frm_vertical_pt">
+          <label class="frm_radio_label selected">
+            <i class="icon_radio"></i>
+            <span class="lbl_content">允许转载</span>
+            <input type="radio" name="" class="js_reprint_frm frm_radio js_forIEbug_frm" value="1" {if frm== 1}checked="checked" {/if}>
+          </label>
+          <label class="frm_radio_label">
+            <i class="icon_radio"></i>
+            <span class="lbl_content">禁止转载</span>
+            <input type="radio" name="" class="js_reprint_frm frm_radio" value="3" {if frm== 3}checked="checked" {/if}>
+          </label>
+          <div class="frm_msg fail js_frm_error" style="display:none;">授权转载方式不合法</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+<script type="text/html" id="tpl_reward_statement">
+  <div class="">
+    <div class="page_msg small default">
+      <div class="inner">
+        <span class="msg_icon_wrp"><i class="icon_msg info"></i></span>
+        <div class="msg_content">
+          <h4>文章赞赏须知</h4>
+          <p> 赞赏是读者认可原创文章而自愿赠予，用以鼓励作者的无偿行为。 </p>
+          <p>
+            以下情形不得对文章使用赞赏功能，包括但不限于：<br>
+            1. 募捐，或类似的资金筹集的文章，包括但不限于公益筹款、众筹、乞讨，或者带有宗教色彩的募集、募捐等；<br>
+            2. 用赞赏进行赌博或抽奖；<br>
+            3. 售卖商品（任何实物或虚拟商品）等，包括但不限于声明或暗示给予赞赏金额最多的用户提供粉丝见面会的门票、进入某个粉丝群的权限等；<br>
+            4. 以提供增值服务利诱用户，包括但不限于声明或暗示赞赏达到一定金额可以获赠某种礼物或可以收到分组群发的文章、邮件等。 </p>
+          <p>一经发现将采取阶梯式的处罚：取消单篇文章赞赏权限、将赞赏金额退回用户、永久收回赞赏功能使用权限等，导致严重影响的还将对违规公众帐号予以一定期限的封号处理。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+<script type="text/html" id="tpl_pay">
+  <div class="processor_bar_wrp js_step"></div>
+  <div class="pay_reading_panel_wrp">
+    <div class="pay_reading_panel form_panel js_step_panel">
+      <div class="simple_dialog_content">
+        <div class="frm_control_group">
+          <label class="frm_label" for="">免费阅读内容</label>
+          <div class="frm_controls">
+            <div class="counter_wrp align_counter">
+                    <span class="frm_textarea_box with_counter counter_out">
+                        <textarea class="frm_textarea js_editor"></textarea>
+                        <em class="frm_input_append frm_counter">0/200</em>
+                    </span>
+              <div class="frm_tips">至少输入20个文字</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="frm_control_group">
+          <label class="frm_label" for="">付费阅读金额</label>
+          <div class="frm_controls">
+            <label class="frm_input_box with_counter counter_in append frm_input_pay">
+              <input type="text" class="frm_input js_fee" value="">
+              <em class="frm_input_append frm_counter">元</em>
+            </label>
+            <div class="frm_tips">请设置为0~200之间的任意数字</div>
+            <div class="frm_msg fail" style="display:none;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pay_reading_panel preview_panel js_step_panel" style="display:none;">
+      <div class="reading_preview">
+        <div class="preview_hd"><span class="org_name js_nickname"></span></div>
+        <div class="preview_bd">
+          <div class="preview_content_wrp">
+            <div class="preview_con js_preview">
+              <h2 class="rich_media_title js_title"></h2>
+              <div class="rich_media_meta_list">
+                <span class="rich_media_meta meta_original_tag">原创</span>
+                <em class="rich_media_meta rich_media_meta_text js_date"></em>
+                <em class="rich_media_meta rich_media_meta_text js_author"></em>
+                <span class="rich_media_meta rich_media_meta_text rich_media_meta_nickname js_nickname"></span>
+              </div>
+              <div class="rich_media_content js_content">
+
+              </div>
+            </div>
+            <div class="preview_exp">
+              <div class="line_tips tips_global">
+                <span class="line_tips_inner">该文章需要付费阅读</span>
+              </div>
+              <p class="line_sub_tips tips_global">(全文<span class="js_content_count">0</span>字)</p>
+              <a href="javascript:;" class="btn_pay">￥<span class="js_fee_preview"></span></a>
+              <p class="pay_tips" style="display:none;">已有0人付费</p>
+            </div>
+
+            <div class="rich_media_tool" style="display:none">
+              <div class="media_tool_meta tips_global meta_primary">阅读 <span id="readNum">0</span></div>
+                    <span class="media_tool_meta meta_primary tips_global meta_praise">
+                        <i class="icon_praise_gray"></i><span class="praise_num">0</span>
+                    </span>
+              <a class="media_tool_meta tips_global meta_extra" href="javascript:;">投诉</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+<script type="text/html" id="previewTpl">
+  <div class="simple_dialog_content send_preview">
+    <form class="form" onSubmit="return false;">
+      <div class="frm_control_group">
+        <label class="frm_label">关注公众号后，才能接收图文消息预览</label>
+                <span class="frm_input_box">
+                    <input type="text" class="frm_input jsAccountInput" placeholder="请输入微信号/QQ号/手机号"/>
+                </span>
+        <p class="frm_msg fail jsAccountFail" style="display:none"></p>
+      </div>
+      {if accounts.length>0}
+      <div class="user_list jsAccountList">
+        {each accounts as o i}
+        <div class="user jsAccount" data-value="{o}">
+          {o}
+          <a href="javascript:;" class="opt jsAccountDel" data-index="{i}">x</a>
+        </div>
+        {/each}
+      </div>
+      {/if}
+    </form>
+  </div>
+</script>
+<script type="text/javascript">
+  document.domain = "<%= request.host%>";
+  wx.cgiData = <%= raw @cgiData.to_json %>;
+  wx.EditorRes = {
+    "themes/iframe": "<%=asset_path 'widget/ueditor_new/themes/iframe.css' %>",
+    "themes/default/ueditor": "",
+    "themes/default/css/ueditor": ""
+  };
+  seajs.use('media/appmsg_edit_v2.js', wx_main);
+</script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<%= content_for :css do %>
+    <%= stylesheet_link_tag 'widget/jquery.datetimepicker.css', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'wx_shake_managements', 'data-turbolinks-track' => true %>
+<% end %>
+<%= content_for :content do %>
+    <div class="col_main setup">
+      <div class="main_hd">
+        <h2>摇一摇管理</h2>
+        <div class="page_nav">
+          <%= link_to '返回上一层', wx_shake_managements_path, :class => 'icon_goback' %>
+          <%= link_to '摇一摇管理', wx_shake_managements_path %>&nbsp;/&nbsp;新建摇一摇
+        </div>
+      </div>
+      <div class="main_bd">
+        <form>
+            <div class="shake_meta">
+              <div class="frm_control_group">
+                <label for class="frm_label">活动名称</label>
+                <div class="frm_controls">
+                <span class="frm_input_box counter_in append ">
+                  <input type="text" class="frm_input frm_msg_content" id="name" maxlength="35"/>
+                </span>
+                  <p class="frm_msg fail" style="display: none;">请输入活动名称</p>
+                  <p class="frm_tips">活动名称只用于管理，不显示在下发的活动内容中</p>
+                </div>
+              </div>
+            </div>
+            <div class="shake_meta time_setting">
+              <div class="frm_control_group">
+                <label for class="frm_label">开始时间</label>
+                <div class="frm_controls">
+                  <div class="date_select timepicker">
+                    <div class="datepicker_area">
+                    <span class="btn datepicker_switch">
+                      <input type="text" class="frm_input" id="datetimepicker_begin"/>
+                      <i class="icon_datepicker"></i>
+                    </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="shake_meta time_setting">
+              <div class="frm_control_group">
+                <label for class="frm_label">结束时间</label>
+                <div class="frm_controls">
+                  <div class="date_select timepicker">
+                    <div class="datepicker_area">
+                    <span class="btn datepicker_switch">
+                      <input type="text" class="frm_input" id="datetimepicker_end"/>
+                      <i class="icon_datepicker"></i>
+                    </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="shake_meta">
+              <div class="frm_control_group">
+                <label for class="frm_label">活动峰值</label>
+                <div class="frm_controls">
+                <span class="frm_input_box frm_small">
+                  <input type="text" class="frm_input frm_msg_content" id="maxcount"/>
+                </span>
+                  <p class="frm_tips">活动时摇动手机的终点次数</p>
+                </div>
+              </div>
+            </div>
+            <div class="shake_meta">
+              <div class="frm_control_group">
+                <label for class="frm_label">二维码</label>
+                <div class="frm_controls">
+                  <div class="qr_code">
+                    <img src="/assets/img_code.jpg" alt=""/><div class="txt">扫码关注<br/>进入活动页面</div>
+                  </div>
+                  <p class="code_tips">
+                    <a style="display:inline-block;" id="qrcodePicker">更改二维码</a>（上传图片的最佳尺寸：50CM*50CM，其他尺寸会影响页面效果)</p>
+                </div>
+              </div>
+            </div>
+            <div class="shake_meta">
+              <div class="frm_control_group">
+                <label for class="frm_label">活动说明</label>
+                <div class="frm_controls">
+                  <div class="emotion_editor">
+                    <textarea style="height:150px; width:740px;" maxlength="300"></textarea>
+                    <div class="editor_toolbar"><div class="editor_tip">最多可以输入300字,按下Shift+Enter键换行</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+            <div class="shake_meta">
+          <span>奖项设置<span class="frm_tips">（上传图片的最佳尺寸：300像素*300像素，其他尺寸会影响页面效果，格式png，jpeg，jpg，gif。大小不超过1M）</span></span>
+          <div class="shake_meta_container">
+            <!--一等奖-->
+            <div class="shake_meta option_setting">
+              <form class="">
+                <div class="shake_meta_title group">
+                  <span class="shake_num">一等奖</span>
+                </div>
+                <div class="shake_meta shake_meta_content">
+                  <div class="award">
+                    <div class="shake_meta_detail">
+                      <div class="frm_control_group">
+                        <label for class="frm_label">奖品名称</label>
+                        <div class="frm_controls">
+                          <span class="frm_input_box counter_in append ">
+                            <input type="text" class="frm_input frm_msg_content" maxlength="35"/>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="shake_meta_detail">
+                      <div class="frm_control_group">
+                        <label for class="frm_label" >数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</label>
+                        <div class="frm_controls">
+                          <span class="frm_input_box frm_small">
+                            <input type="text" class="frm_input frm_msg_content" />
+                          </span>
+                          <span class="number_of">个</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prize_bar"><div id="filePicker">上传图片</div>
+                      <div class="prize_img hide"><img src="" alt=""/><a href="javascript:;">删除</a></div></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- 一等奖结束-->
+            <!-- 二等奖-->
+            <div class="shake_meta option_setting">
+              <form class="shake_form">
+                <div class="shake_meta_title group">
+                  <span class="shake_num">二等奖</span>
+                </div>
+                <div class="shake_meta shake_meta_content">
+                  <div class="award">
+                    <div class="shake_meta_detail">
+                      <div class="frm_control_group">
+                        <label for class="frm_label">奖品名称</label>
+                        <div class="frm_controls">
+                          <span class="frm_input_box counter_in append ">
+                            <input type="text" class="frm_input frm_msg_content" maxlength="35" />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="shake_meta_detail">
+                      <div class="frm_control_group">
+                        <label for class="frm_label" >数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</label>
+                        <div class="frm_controls">
+                          <span class="frm_input_box frm_small">
+                            <input type="text" class="frm_input frm_msg_content" />
+                          </span>
+                          <span class="number_of">个</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prize_bar"><div id="filePicker">上传图片</div>
+                      <div class="prize_img hide"><img src="" alt=""/><a href="javascript:;">删除</a></div></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- 二等奖结束-->
+            <!-- 三等奖-->
+            <div class="shake_meta option_setting">
+              <form class="shake_form">
+                <div class="shake_meta_title group">
+                  <span class="shake_num">三等奖</span>
+                </div>
+                <div class="shake_meta shake_meta_content">
+                  <div class="award">
+                    <div class="shake_meta_detail">
+                      <div class="frm_control_group">
+                        <label for class="frm_label">奖品名称</label>
+                        <div class="frm_controls">
+                          <span class="frm_input_box counter_in append ">
+                            <input type="text" class="frm_input frm_msg_content" maxlength="35" />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="shake_meta_detail">
+                      <div class="frm_control_group">
+                        <label for class="frm_label" >数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</label>
+                        <div class="frm_controls">
+                          <span class="frm_input_box frm_small">
+                            <input type="text" class="frm_input frm_msg_content" />
+                          </span>
+                          <span class="number_of">个</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prize_bar"><div id="filePicker">上传图片</div>
+                      <div class="prize_img hide"><img src="" alt=""/><a href="javascript:;">删除</a></div></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- 三等奖结束-->
+            <div class="shake_container_dec shake_add">
+              <a class="btn btn_default btn_add btn_shake_add" href="javascript:;"><i class="icon14_common add_gray"></i>添加奖项</a>
+            </div>
+            <div class="shake_container_dec shake_del">
+              <a class="btn btn_default btn_add btn_shake_del" href="javascript:;"><i class="icon14_common del_gray"></i>删除奖项</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tool_bar tc" style="margin-top:60px;"><button class="btn btn_primary">完成</button></div>
+    </div>
+    <div class="results hide" style="position: fixed;left: 35%;top: 0;">删除成功</div>
+<% end %>
+<%= content_for :js do %>
+    <%= javascript_include_tag 'activity/jquery.datetimepicker.full', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'webuploader/webuploader.js', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'wx_shake_managements', 'data-turbolinks-track' => true %>
+
+    <script type="text/javascript">
+      $(function() {
+        bindEvents(); // 上传图片事件初始化
+
+        $('.tc .btn_primary').click(function () {
+          if(valueCheck()) {
+            $.ajax({
+              type: 'POST',
+              url: '/wxoss/wx_shake_managements',
+              dataType: 'json',
+              data: getShakeInfo(),
+              success: function (data) {
+                if (data.result == 'success') {
+                  msgShow("保存成功");
+                  document.location.href = '/wxoss/wx_shake_managements';
+                } else {
+                  msgShow("保存失败");
+                }
+              }
+            });
+          }
+        });
+      });
+    </script>
+<% end %>
+
+
+
+
+

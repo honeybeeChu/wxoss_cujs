@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/* 公共样式 */
+/* line 7, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+html, body, table, th, tr, td, div, span, input, select, textarea, ul, li, dl, ol, dt, dd, form, p, hr, img, h1, h2, h3, h4, h5, h6, h7 {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 11, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+strong {
+  font-weight: normal;
+}
+
+/* line 13, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+ul, li {
+  list-style: none;
+}
+
+/* line 14, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+/* line 16, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+img {
+  border: 0;
+  vertical-align: bottom;
+}
+
+/* line 20, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+input textarea {
+  resize: none;
+  outline: none;
+}
+
+/* line 21, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 22, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+body {
+  font-size: 14px;
+  background: #e7e8eb;
+  color: #222222;
+  width: 1000px;
+  margin: 0 auto;
+  font-family: Microsoft Yahei, Arial, Helvetica, sans-serif;
+}
+
+/* line 30, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+i {
+  font-style: italic;
+}
+
+/* line 31, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+/* line 32, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+button, input {
+  outline: none;
+}
+
+/* line 33, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+
+/* for firefox Button Bug*/
+/* line 34, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 35, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+.clearfix {
+  display: inline-table;
+}
+
+/* line 36, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+* html .clearfix {
+  height: 1%;
+}
+
+/* line 37, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+.clearfix {
+  display: block;
+}
+
+/* line 38, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+form {
+  display: block;
+  margin-top: 0em;
+}
+
+/* line 42, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+.hide {
+  display: none;
+}
+
+/* line 45, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+input, select {
+  color: #222;
+}
+
+/* line 48, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_activities.scss */
+.fl {
+  float: left;
+}

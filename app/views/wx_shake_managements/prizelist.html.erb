@@ -1,0 +1,69 @@
+<%= content_for :content do %>
+    <div class="col_main setup">
+      <div class="main_hd">
+        <h2>摇一摇管理</h2>
+        <div class="page_nav">
+          <%= link_to '返回上一层', wx_shake_managements_path, :class => 'icon_goback' %>
+          <%= link_to '摇一摇管理', wx_shake_managements_path %>&nbsp;/&nbsp;中奖名单
+        </div>
+      </div>
+      <div class="main_bd">
+        <div class="prize_list">
+          <% @wx_activity_awards.each do |wx_activity_award| %>
+                <% case wx_activity_award.level %>
+                <% when 1 %>
+                  <div class="prize_item winners first">
+                    <div class="prize_item_hd"><h4 class="prize_title">一等奖</h4></div>
+                <% when 2 %>
+                  <div class="prize_item winners second">
+                    <div class="prize_item_hd"><h4 class="prize_title">二等奖</h4></div>
+                <% when 3 %>
+                  <div class="prize_item winners third">
+                    <div class="prize_item_hd"><h4 class="prize_title">三等奖</h4></div>
+                <% when 4 %>
+                  <div class="prize_item winners fourth">
+                    <div class="prize_item_hd"><h4 class="prize_title">四等奖</h4></div>
+                <% when 5 %>
+                  <div class="prize_item winners fifth">
+                    <div class="prize_item_hd"><h4 class="prize_title">五等奖</h4></div>
+                <% end %>
+                <div class="prize_item_bd">
+                  <div class="prize_main">
+                    <div class="prize_name"><%= wx_activity_award.name %></div>
+                    <ul class="prize_name_list">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+<% end %>
+<%= content_for :js do %>
+    <script type="text/javascript">
+      $(function(){
+        var prize_list = <%= raw @prize_list.to_json%>;
+        for (var i = 0;i < prize_list.length;i++){
+          switch(prize_list[i].award_level)
+          {
+            case 1:
+              $('<li/>').text(prize_list[i].nickname).appendTo($('.first .prize_name_list'));
+              break;
+            case 2:
+              $('<li/>').text(prize_list[i].nickname).appendTo($('.second .prize_name_list'));
+              break;
+            case 3:
+              $('<li/>').text(prize_list[i].nickname).appendTo($('.third .prize_name_list'));
+              break;
+            case 4:
+              $('<li/>').text(prize_list[i].nickname).appendTo($('.fourth .prize_name_list'));
+              break;
+            case 5:
+              $('<li/>').text(prize_list[i].nickname).appendTo($('.fifth .prize_name_list'));
+              break;
+          }
+        }
+      });
+    </script>
+<% end %>

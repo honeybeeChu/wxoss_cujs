@@ -1,0 +1,539 @@
+/* line 1, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.headbox {
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid #d9dadc;
+  border-top: 4px solid #44b549;
+  background: #fff;
+  margin: 0;
+}
+
+/* line 10, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.head {
+  width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+/* line 16, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.headlogo {
+  float: left;
+  width: 345px;
+  padding: 10px;
+}
+
+/* line 22, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.headlogo img {
+  display: block;
+  max-width: 100%;
+}
+
+/* line 27, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.headToolbar {
+  float: right;
+  width: auto;
+  padding-top: 20px;
+}
+
+/* line 33, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.headToolbar [class*="icon-"] {
+  position: relative;
+  float: right;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+/* line 40, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.headToolbar .icon-msg {
+  width: 22px;
+  height: 15px;
+  background-image: url(/assets/mes-ea5bc644a65e10b01c6304a5512951b7c6645062382d4f8b155d32178d25a827.png);
+  display: inline;
+  margin: 0 10px 0 20px;
+  margin-top: 8px;
+}
+
+/* line 49, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.headToolbar .icon-user {
+  height: 28px;
+  padding-top: 5px;
+  background-image: url(/assets/user-ea6672a7397866062f7aa5bb7e32c95f0ae34f7119dd568c42b3304eeae684d0.png);
+  padding-left: 38px;
+  color: #222;
+}
+
+/* line 57, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.headToolbar .icon-quit {
+  height: 20px;
+  padding: 0 10px;
+  border-left: 1px solid #d0d0d0;
+  color: #222;
+  margin-top: 4px;
+}
+
+/* line 65, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.icon_subscribe_label {
+  background: url(/assets/htmledition/layout_head_z26f6ea-5e108e1e58f689b6ebbadcca9f56d516fedce8e86761ab89cb7bc0a102ef358f.png) 0 0 no-repeat;
+  width: 38px;
+  height: 14px;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 100px;
+  overflow: hidden;
+}
+
+/* line 75, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.icon_service_label {
+  background: url(/assets/htmledition/layout_head_z26f6ea-5e108e1e58f689b6ebbadcca9f56d516fedce8e86761ab89cb7bc0a102ef358f.png) 0 -24px no-repeat;
+  width: 38px;
+  height: 14px;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 100px;
+  overflow: hidden;
+}
+
+/* line 85, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.icon_verify_label {
+  width: 37px;
+  height: 14px;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 100px;
+  overflow: hidden;
+}
+
+/* line 94, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.icon_verify_label.fail {
+  background: url(/assets/htmledition/layout_head_z26f6ea-5e108e1e58f689b6ebbadcca9f56d516fedce8e86761ab89cb7bc0a102ef358f.png) 0 -48px no-repeat;
+}
+
+/* line 98, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.icon_verify_label.success {
+  background: url(/assets/htmledition/layout_head_z26f6ea-5e108e1e58f689b6ebbadcca9f56d516fedce8e86761ab89cb7bc0a102ef358f.png) 0 -72px no-repeat;
+}
+
+/* line 102, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.icon_inbox {
+  background: url(/assets/htmledition/layout_head_z26f6ea-5e108e1e58f689b6ebbadcca9f56d516fedce8e86761ab89cb7bc0a102ef358f.png) 0 -96px no-repeat;
+  width: 20px;
+  height: 15px;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 100px;
+  overflow: hidden;
+}
+
+/* line 112, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account {
+  float: right;
+  padding-top: 10px;
+}
+
+/* line 117, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_meta {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: bottom;
+}
+
+/* line 124, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_faq {
+  padding-top: 18px;
+}
+
+/* line 128, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_line {
+  font-weight: 400;
+  font-style: normal;
+  color: #8d8d8d;
+  margin: 0 5px;
+  position: relative;
+  top: -1px;
+  font-size: 12px;
+}
+
+/* line 138, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account {
+  font-size: 0;
+}
+
+/* line 142, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_meta {
+  font-size: 14px;
+}
+
+/* line 146, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_meta_primary a {
+  color: #222;
+}
+
+/* line 150, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_meta_primary a:hover {
+  color: #459ae9;
+}
+
+/* line 154, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_info {
+  position: relative;
+  min-width: 80px;
+}
+
+/* line 159, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_info .avatar {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 38px;
+  height: 38px;
+  background-color: #f0f0f0;
+}
+
+/* line 168, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_info .type_wrp {
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+/* line 174, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_info .type_wrp .type {
+  vertical-align: top;
+}
+
+/* line 178, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_info .nickname {
+  display: inline-block;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 18px;
+}
+
+/* line 185, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.icon_dot_notices {
+  position: relative;
+  margin: 0 9px;
+  display: inline-block;
+  height: 16px;
+  background-color: #ff5027;
+  line-height: 16px;
+  color: #fff;
+  font-size: 12px;
+}
+
+/* line 196, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.icon_dot_notices_left {
+  position: absolute;
+  left: -9px;
+  top: 0;
+  background: transparent url(/assets/htmledition/icon_notice_dot_left2880f5-1251ff2645de4c898488fdf480510a862c62913cddf5a459a66f03772b6b26e1.png) no-repeat 0 0;
+  width: 9px;
+  height: 16px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* line 207, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.icon_dot_notices_right {
+  position: absolute;
+  right: -9px;
+  top: 0;
+  background: transparent url(/assets/htmledition/icon_notice_dot_right2880f5-3d8f5df02461f739639ac8db58dcae5c2ae7ac3ee4014605d3ced56ee36cf4fe.png) no-repeat 0 0;
+  width: 9px;
+  height: 16px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* line 218, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_inbox {
+  position: relative;
+  z-index: 1;
+  top: 3px;
+  margin-left: 5px;
+}
+
+/* line 225, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_inbox .icon_inbox {
+  margin-left: 3px;
+}
+
+/* line 229, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_inbox.on .account_inbox_switch {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 234, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_inbox .account_inbox_switch {
+  *padding-left: 18px;
+}
+
+/* line 238, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_inbox .icon_dot_notices {
+  *margin-right: 0;
+  *margin-top: 7px;
+}
+
+/* line 243, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_inbox_switch {
+  display: block;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-bottom-width: 0;
+}
+
+/* line 252, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_inbox_switch:hover {
+  text-decoration: none;
+}
+
+/* line 256, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_inbox_switch:hover .icon_dot_notices {
+  color: #fff;
+}
+
+/* line 260, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_inbox_switch i.icon_common {
+  cursor: pointer;
+  vertical-align: top;
+  margin-top: 16px;
+}
+
+/* line 266, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_inbox_switch i.inbox {
+  *margin-top: 6px;
+}
+
+/* line 270, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_inbox_switch i.notices {
+  *margin-top: 6px;
+  margin-left: -12px;
+}
+
+/* line 275, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_box {
+  position: absolute;
+  top: 37px;
+  right: -32px;
+  margin-top: -1px;
+  padding: 18px 0 16px;
+  font-size: 12px;
+  border: 1px solid #b3b3b4;
+  background-color: #fffeec;
+  box-shadow: 0 2px #d5d5d5;
+  -moz-box-shadow: 0 2px #d5d5d5;
+  -webkit-box-shadow: 0 2px #d5d5d5;
+}
+
+/* line 289, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_box ul {
+  width: 320px;
+}
+
+/* line 293, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_box li.highlight .account_message_link {
+  color: #222;
+}
+
+/* line 297, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_box li.highlight .account_message_link:hover {
+  color: #222;
+}
+
+/* line 301, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_box li.highlight .account_message_link strong {
+  max-width: 84%;
+}
+
+/* line 305, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_box .btn_closed {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 999px;
+  overflow: hidden;
+  cursor: pointer;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASBAMAAACk4JNkAAAAElBMVEUAAACen6Gen6Gen6Gen6Gen6HHskWrAAAABXRSTlMAowNbXKRhl0MAAAA2SURBVAjXYyAeGCowMAmDWaJCDIqBIAaQUgJyQIBJVDBQgQEiGAoUgrMQsggdCFPgJosQ7xAAAoEFuCOFwmEAAAAASUVORK5CYII=");
+}
+
+/* line 318, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_box .btn_closed:hover {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASBAMAAACk4JNkAAAAElBMVEUAAACHhoaHhoaHhoaHhoaHhoYqfBoTAAAABXRSTlMAowNbXKRhl0MAAAA2SURBVAjXYyAeGCowMAmDWaJCDIqBIAaQUgJyQIBJVDBQgQEiGAoUgrMQsggdCFPgJosQ7xAAAoEFuCOFwmEAAAAASUVORK5CYII=");
+}
+
+/* line 322, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_box .message_arrow {
+  position: absolute;
+  right: 40px;
+  margin-left: -6px;
+  margin-top: -6px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-width: 6px;
+  border-style: dashed;
+  border-color: transparent;
+  border-top-width: 0;
+  border-bottom-color: #b3b3b4;
+  border-bottom-style: solid;
+}
+
+/* line 338, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_box .message_arrow_out {
+  top: 0;
+}
+
+/* line 342, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_box .message_arrow_in {
+  border-bottom-color: #fffeec;
+  top: 1px;
+}
+
+/* line 347, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_link {
+  position: relative;
+  display: block;
+  line-height: 28px;
+  padding-left: 16px;
+  padding-right: 32px;
+}
+
+/* line 355, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_link strong {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+/* line 369, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_link strong:before {
+  content: " ";
+  color: #8d8d8d;
+}
+
+/* line 374, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_link .read_more {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: .5em;
+  color: #459ae9;
+  cursor: pointer;
+  *margin-top: 1px;
+}
+
+/* line 383, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account .account_message_link {
+  color: #8d8d8d;
+}
+
+/* line 387, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account .account_message_link:hover {
+  color: #8d8d8d;
+}
+
+/* line 391, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account .account_message_link:hover strong, .account .account_message_link:hover .read_more {
+  text-decoration: underline;
+}
+
+/* line 395, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_message_link .icon_dot {
+  font-size: 12px;
+  color: #ff3b30;
+  margin-right: 7px;
+  margin-top: -3px;
+}
+
+/* line 402, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.btn.btn_inbox_closed {
+  display: block;
+  margin: 10px 18px 0;
+  background-color: #fff;
+  background-image: -moz-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#fff));
+  background-image: -webkit-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: -o-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: linear-gradient(to bottom, #fff 0, #fff 100%);
+  border-color: #e7e7eb;
+  color: #222;
+  height: 30px;
+  line-height: 30px;
+  *line-height: 28px;
+  width: auto;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 11px;
+}
+
+/* line 422, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.btn.btn_inbox_closed button {
+  color: #222;
+}
+
+/* line 426, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.btn.btn_inbox_closed:hover {
+  background-color: #e7e7eb;
+  background-image: -moz-linear-gradient(top, #e7e7eb 0, #e7e7eb 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e7e7eb), to(#e7e7eb));
+  background-image: -webkit-linear-gradient(top, #e7e7eb 0, #e7e7eb 100%);
+  background-image: -o-linear-gradient(top, #e7e7eb 0, #e7e7eb 100%);
+  background-image: linear-gradient(to bottom, #e7e7eb 0, #e7e7eb 100%);
+  border-color: #dadbe0;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  color: #000;
+}
+
+/* line 440, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.btn.btn_inbox_closed:hover button {
+  color: #222;
+}
+
+/* line 444, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.btn.btn_inbox_closed:hover {
+  color: #222;
+}
+
+/* line 448, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_logout a {
+  display: inline-block;
+  margin-left: 5px;
+  line-height: 16px;
+  margin-top: 18px;
+  padding-left: 14px;
+  border-left: 1px solid #e7e7eb;
+}
+
+/* line 457, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.account_faq a {
+  display: inline-block;
+}
+
+/* line 461, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.headlogo {
+  float: left;
+  width: 345px;
+  padding: 10px;
+}
+
+/* line 467, /home/chuliang/work/wxoss/app/assets/stylesheets/layout_head.css.scss */
+.headlogo img {
+  display: block;
+  max-width: 100%;
+}

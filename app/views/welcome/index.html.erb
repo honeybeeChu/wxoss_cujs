@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%= yield :title %>微信认证后台管理系统</title>
+  <meta charset="UTF-8"/>
+  <!-- 让ie浏览器使用最新的渲染引擎 -->
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+  <%= stylesheet_link_tag 'master.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'css.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'ipmana', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'welcome', 'data-turbolinks-track' => true %>
+  <%= yield :js %>
+
+  <%= yield :css %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="headbox">
+  <div class="head">
+     <a href="javascript:void(0)" class="headlogo"><%= image_tag("logo.png") %></a>
+     </div>
+   </div>
+<div class="login">
+<div class="login_main">
+<!--主体-->
+  <div class="login_box">
+    <h2>登录</h2>
+    <form method="post">
+    <div class="prompt hide">
+          <p>密码错误，请重新核实后登录！</p>
+        </div>
+    <div class="login_ul">          
+        <ul>        
+        <li><input name="userName" id="userName" class="logininput" style="color:#999" placeholder="手机号"/>
+        </li>
+        <li><input name="passWord" type="password" id="passWord" class="logininput password" value="" placeholder="密码" >
+        </li>           
+      </ul>
+      <input type="submit" class="btn btn_primary login_btn" value="登&nbsp;&nbsp;录"></input>
+      </div>
+      </form>
+  </div> 
+  </div>
+</div>
+<!--主体结束-->
+<div class="footer">版权信息</div>
+</body>
+</html>

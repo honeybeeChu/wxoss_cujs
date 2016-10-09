@@ -1,0 +1,307 @@
+<%= content_for :css do %>
+    <%= stylesheet_link_tag 'page/media/media_list', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'page/media/media_list_img', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'processor_bar', 'data-turbolinks-track' => true %>
+<% end %>
+<%= content_for :tab do %>
+    <h2>素材管理</h2>
+<% end %>
+<%= content_for :resource do %>
+    <div class="main_bd">
+      <div class="img_pick_panel">
+        <div class="inner_container_box side_r cell_layout">
+          <div class="inner_main">
+            <div class="bd">
+              <div class="media_list">
+                <div class="global_mod float_layout">
+                  <p class="global_info">
+                    <span class="group_name global_info_ele" data-id="<%= params[:group_id] %>" id="js_currentgroup">未分组</span>
+                    <% unless params[:group_id].nil? || params[:group_id].eql?('1') %>
+                        <a href="javascript:;" class="global_info_ele js_popover" id="js_rename">重命名</a>
+                        <a href="javascript:;" class="global_info_ele js_popover" id="js_delgroup">删除分组</a>
+                    <% end %>
+                  </p>
+                  <div class="global_extra">
+                    <div class="upload_box align_right r">
+                      <span class="upload_area">
+                        <a id="js_upload" class="btn btn_primary" data-gid="<%= params[:group_id] %>">本地上传</a>
+                      </span>
+                    </div>
+                    <div class="mini_tips weak_text icon_after img_water_tips r">
+                      大小不超过5M<span id="js_water"></span>
+                      <i id="js_water_tips" class="icon_msg_mini ask"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="oper_group group">
+                  <div class="frm_controls oper_ele l">
+                    <input id="js_all" type="checkbox" class="frm_checkbox" data-label=" 全选">
+                  </div>
+                  <a id="js_batchmove" class="btn btn_default btn_disabled oper_ele l js_popover" href="javascript:;">移动分组</a>
+                  <a id="js_batchdel" class="btn btn_default btn_disabled oper_ele l js_popover" href="javascript:;">删除</a>
+                </div>
+                <div class="group img_pick" id="js_imglist"></div>
+                <div class="pagination_wrp pageNavigator" id="js_pagebar"></div>
+              </div>
+            </div>
+          </div>
+          <div class="inner_side">
+            <div class="bd">
+              <div class="group_list">
+                <div class="inner_menu_box" id="js_group"></div>
+                <div class="inner_menu_item">
+                  <a href="javascript:;" class="inner_menu_link js_popover" id="js_creategroup"><i
+                  class="icon14_common add_gray">新建分组</i>新建分组</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/html" id="tpl_list">
+      {if list.length <= 0}
+      <div class="empty_tips">该分组暂时没有图片素材</div>
+      {else}
+      <ul class="group">
+        {each list as item}
+        <li class="img_item js_imgitem" data-id="{item.file_id}">
+          <div class="img_item_bd">
+            <img class="pic wxmImg Zoomin" src="{item.img_src}" data-previewsrc="{item.imgsrc}" data-id="{item.file_id}"/>
+				<span class="check_content">
+					<input type="checkbox" {if item.selected}checked{/if}  class="frm_checkbox" data-label="{item.name}" data-id="{item.file_id}" data-oristatus="{item.copyright_status}">
+				</span>
+          </div>
+          <div class="msg_card_ft">
+            <ul class="grid_line msg_card_opr_list">
+              <li class="grid_item size1of3 msg_card_opr_item">
+
+                <a class="js_edit js_tooltip js_popover" data-id="{item.file_id}" data-name="{item.name}" href="javascript:;" data-tooltip="编辑名称">
+                    							<span class="msg_card_opr_item_inner">
+								<i class="icon18_common edit_gray">编辑</i>
+							</span>
+                  <span class="vm_box"></span>
+                </a>
+              </li>
+
+              <li class="grid_item size1of3 msg_card_opr_item">
+                <a class="js_move js_tooltip js_popover" href="javascript:;" data-id="{item.file_id}" data-tooltip="移动分组">
+                  <span class="msg_card_opr_item_inner">
+                    <i class="icon18_common move_gray">移动分组</i>
+                  </span>
+                  <span class="vm_box"></span>
+                </a>
+              </li>
+              <li class="grid_item size1of3 no_extra msg_card_opr_item">
+                <a class="js_del js_tooltip js_popover" data-id="{item.file_id}" data-oristatus="{item.copyright_status}" href="javascript:;"
+                   data-tooltip="删除">
+                  <span class="msg_card_opr_item_inner">
+                    <i class="icon18_common del_gray">删除</i>
+                  </span>
+                  <span class="vm_box"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        {/each}
+      </ul>
+      {/if}
+    </script>
+    <script type="text/html" id="tpl_group">
+      <dl class="inner_menu">
+
+        {each list as item}
+        <dd class="inner_menu_item{if item.selected} selected{/if} js_groupitem" data-id="{item.id}">
+          <a href="/wxoss/wx_articles/resources?type=2&begin=0&count=12&group_id={item.id}&t=media/img_list&token=1819544827&lang=_('zh_CN')" class="inner_menu_link" title="{item.name}">
+            <strong>{item.name}</strong><em class="num">({item.count})</em>
+          </a>
+        </dd>
+        {/each}
+      </dl>
+    </script>
+    <script type="text/html" id="tpl_edit">
+      <div class="popover_edit">
+        <label for="" class="frm_label">编辑名称</label>
+
+        <div class="frm_controls">
+        <span class="frm_input_box">
+            <input type="text" class="frm_input js_name" value="{name}" data-id="{id}">
+        </span>
+
+          <p class="frm_tips"></p>
+
+          <p class="frm_msg fail">
+            <span class="frm_msg_content">填错了！！！！</span>
+          </p>
+        </div>
+      </div>
+    </script>
+    <script type="text/html" id="tpl_create">
+      <div class="popover_edit">
+        <label for="" class="frm_label">创建分组</label>
+
+        <div class="frm_controls">
+        <span class="frm_input_box">
+            <input type="text" class="frm_input js_name" value="">
+        </span>
+
+          <p class="frm_tips"></p>
+
+          <p class="frm_msg fail">
+            <span class="frm_msg_content">填错了！！！！</span>
+          </p>
+        </div>
+      </div>
+    </script>
+    <script type="text/html" id="tpl_ori_apply">
+
+      <div class="processor_bar_wrp" id="Js_imgOriStep"></div>
+
+      <div class="step_wrp">
+        <div class="step1 js_step1" style="display: none;">
+          <div class="simple_dialog_content agreement">
+            <div class="page_msg small default">
+              <div class="inner">
+                <span class="msg_icon_wrp"><i class="icon_msg info"></i></span>
+                <div class="msg_content">
+                  <h4>图片原创声明须知</h4>
+                  <p>原创特指原创声明人自己独立完成创作作品的行为。原创图片是指由原创声明人自己独立完成创作的图片。以任何形式歪曲、篡改他人创作的作品，抄袭、剽窃他人创作而产生的作品，或者裁剪、涂改、整合他人已有创作而产生的作品均不属于原创图片。</p>
+                  <br/>
+                  <p>微信公众平台鼓励用户发表原创图片，平台会对原创声明的图片在提交声明后进行识别判断，并对成功通过识别、判断为原创的图片标识为原创图片。<br><br/>
+                    含有如下情形之一的，不得对图片进行原创声明，一经发现将永久收回原创图片声明功能的使用权限，产生严重影响的，还将对违规微信公众帐号予以包括但不限于一定期限内封号、永久封号等方式的处理。<br>
+                    1. 抄袭、整合他人创作的图片，或非独家授权申请原创声明的图片。<br>
+                    2. 涉及色情低俗、暴力、不实信息等内容违反法律法规或腾讯平台规则、用户协议的图片。<br>
+                    3. 图片主要内容为法律、法规，国家机关的决议、决定、命令和其他具有立法、行政、司法性质的文件、时事新闻、历法、通用数表、通用表格和公式等公共或为公众所周知的内容。<br>
+                    4. 图片主要内容为诸如：二维码、基础几何图形、基础色块图、纯文字图、系统常用图、网页或应用截图等的通用内容。<br>
+                    5. 任何以对实物图像作品进行包括但不限于摄影、扫描等而产生的电子版本图片作品。<br>
+                    6. 违反法律法规、政策及公序良俗、社会公德，违反《微信公众平台服务协议》、《微信公众平台运营规范》，或干扰微信公众平台正常运营和侵犯其他用户或第三方合法权益内容的信息。<br><br>
+                  <p>你理解并同意，鉴于原创作品的多样性、复杂性，维护用户的合法权益，以及保障微信或其服务平台的健康发展和有序运营，如腾讯基于合理理由认为你申请声明的作品存在或可能存在对原创声明产生曲解、滥用或误用的，尽管该种情形未在本须知或其他平台规则中列明，腾讯仍有权拒绝你的原创声明申请。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="step2 js_step2">
+          <form id="imgOri_form" class="form">
+            <input type="hidden" value="" name="img_list">
+            <div class="frm_control_group">
+              <label for="" class="frm_label">标题</label>
+              <div class="js_title_controls1 frm_controls">
+                <span>多图声明时图片名称即标题，请确保图片名称正确</span>
+              </div>
+              <div class="js_title_controls2 frm_controls">
+                        <span class="js_title_len_warn frm_input_box with_counter counter_in append">
+                            <input type="text" name="title_list2" class="frm_input">
+                            <input type="hidden" name="title_list" class="frm_input">
+                            <em class="frm_input_append frm_counter"><span class="js_title_len">0</span>/21</em>
+                        </span>
+              </div>
+            </div>
+            <div class="frm_control_group">
+              <label for="" class="frm_label">作者</label>
+
+              <div class="frm_controls">
+                        <span class="js_author_len_warn frm_input_box with_counter counter_in append">
+                            <input type="text" name="author" class="frm_input">
+                            <em class="frm_input_append frm_counter"><span class="js_author_len">0</span>/8</em>
+                        </span>
+              </div>
+            </div>
+            <div class="frm_control_group">
+              <label for="" class="frm_label">类型</label>
+
+              <div class="frm_controls">
+                <div class="dropdown_wrp">
+                  <div id="js_imgori_type" class="dropdown_menu">
+
+                  </div>
+                  <input type="hidden" value="" name="type">
+                </div>
+              </div>
+            </div>
+            <div class="frm_control_group tag_control">
+              <label for="" class="frm_label">
+                标签 <br/>
+                (选填) </label>
+              <div class="frm_controls">
+                        <span class="frm_input_box">
+                            <span id="js_tag_box">
+                            </span>
+                            <input class="frm_input" type="text" name="tag2">
+                            <input class="frm_input" type="hidden" name="tag">
+                            <input class="frm_input" type="hidden" name="tag3">
+                            <input class="frm_input" type="hidden" name="tag4">
+                        </span>
+                <p class="frm_tips">
+                  使用回车添加标签 </p>
+                <p id="js_history_tag_box" class="frm_tips" style="display:none;">
+                  最近填写的标签： <span class="js_history_ori_tag"></span>
+                </p>
+                <p class="frm_tips">
+                  原创图片可在<a href='/cgi-bin/imgcopyright?action=original&begin=1&count=10&lang=zh_CN&token=1819544827' target='_blank'>原创图片管理页</a>查看该图片被引用情况
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </script>
+    <script type="text/html" id="tpl_img_ori_tag">
+    <span class="tag" title="{tag}">
+        {tag}
+        <i class="js_tag_del icon_tag_del"></i>
+    </span>
+    </script>
+    <script type="text/html" id="tpl_history_tag">
+      {each data as d}
+      {if !!d}
+    <span class="history_tag js_add_tag">
+        {d}
+    </span>
+      {/if}
+      {/each}
+    </script>
+    <script type="text/html" id="tpl_del">
+      <p class="tl">确定删除此素材吗？</p>
+    </script>
+    <script type="text/html" id="tpl_imgori_del">
+      <p class="tl">点击确定按钮，删除此素材。若需取消原创，可到<a href='/cgi-bin/imgcopyright?action=original&begin=1&count=10&lang=zh_CN&token=1819544827' target='_blank'>原创图片管理页</a>操作。
+      </p>
+    </script>
+    <script type="text/html" id="tpl_move">
+      <div class="no_group" style="display:none;">你还没有任何分组。</div>
+      <div class="frm_control group_select">
+        {each list as item}
+        {if item.id != current}
+        <input type="radio" class="frm_radio" data-id="{item.id}" data-label="{item.name}">
+        {/if}
+        {/each}
+      </div>
+    </script>
+<% end %>
+<%= content_for :js do %>
+    <script type="text/javascript">
+      define('biz_web/widget/dropdown.css', [], function () {
+        return null;
+      });
+      define('widget/upload.css', [], function () {
+        return null;
+      });
+      define('widget/img_preview.css', [], function () {
+        return null;
+      });
+      define('widget/pagination.css', [], function () {
+        return null;
+      });
+      define('widget/tooltip.css', [], function () {
+        return null;
+      });
+      define('widget/processor_bar.css', [], function () {
+        return null;
+      });</script>
+    <script type="text/javascript">
+      wx.cgiData = <%= raw @wx_resources.to_json%>;
+      seajs.use('media/img_list', wx_main);
+    </script>
+<% end %>

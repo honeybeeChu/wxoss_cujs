@@ -1,0 +1,2 @@
+module WxOfficialAccountsHelper
+end

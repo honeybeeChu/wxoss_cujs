@@ -1,0 +1,577 @@
+<%= content_for :js do %>
+    <%= javascript_include_tag 'jquery-ui.min', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'wx_batch_messages', 'data-turbolinks-track' => true %>
+<% end %>
+<div class="main_hd">
+  <h2>群发功能</h2>
+  <!--<div class="id_wechat">亚信WIFI<a href="javascript:void(0)" class="replace">切换公众号</a></div>-->
+  <div class="title_tab">
+    <ul class="tab_navsB">
+      <li class="tab_navB first selected hot">
+        <%=link_to "新建群发消息", wx_batch_messages_path %>
+        <!--<a href="javascript:void(0);">新建群发消息</a>-->
+      </li>
+      <li class="tab_navB">
+        <%=link_to "已发送", batch_messages_history_wx_batch_messages_path
+           %>
+        <!--<a href="javascript:void(0);">已发送</a>-->
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="main_bd">
+  <div class="highlight_box no_extra">
+    <div class="opr">
+    </div>
+    <div class="txt">
+      <p>为保障用户体验，微信公众平台严禁恶意营销以及诱导分享朋友圈，严禁发布色情低俗、暴力血腥、政治谣言等各类违反法律法规及相关政策规定的信息。一旦发现，我们将严厉打击和处理。</p>
+    </div>
+  </div>
+  <div class="grid_line send_filter">
+    <div class="grid_item">
+      <label class="label" for="">群发对象</label>
+      <div class="filter_content">
+        <div id="is_groups_select" class="J_dropmenu add-select">
+          <span class="selTxt" data-value="all">全部用户</span>
+          <ul class="dropmenu">
+            <li class="hot" data-value="all">全部用户</li>
+            <li data-value="1">按组别选择</li>
+          </ul>
+        </div>
+
+        <div id="user_group_select" class="J_dropmenu add-select" style="display: none;">
+          <span class="selTxt" data-value="all">组别</span>
+          <ul class="dropmenu">
+            <% unless @all_user_groups.nil? %>
+                <% @all_user_groups.each do |group| %>
+                    <li data-value=<%= group.groupid %>><%= group.name %></li>
+                <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid_item">
+      <label class="label" for="">性别</label>
+      <div class="filter_content">
+        <div id="gender_select" class="J_dropmenu add-select"><span class="selTxt" data-value="all">全部</span>
+          <ul class="dropmenu">
+            <li class="hot" data-value="all">全部</li>
+            <li data-value=1>男</li>
+            <li data-value=2>女</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="grid_item">
+      <label class="label" for="">群发地区</label>
+      <div class="filter_content">
+        <div id="country_select" class="J_dropmenu add-select">
+          <span class="selTxt" data-value="all">国家</span>
+          <ul class="dropmenu">
+            <li class="hot" data-value="all">全部</li>
+            <% @all_countries.each do |country|%>
+                <li data-value=<%= country.id %>><%= country.country_name %></li>
+            <% end %>
+          </ul>
+        </div>
+        <div id="province_select" class="J_dropmenu add-select">
+          <span class="selTxt" data-value="all">省份</span>
+          <ul class="dropmenu">
+          </ul>
+        </div>
+        <div id="city_select" class="J_dropmenu add-select"><span class="selTxt">城市</span>
+          <ul class="dropmenu">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content_wrap">
+    <div class="reply_tab_wrp">
+
+    </div>
+    <div id="tabBoxA" class="tabBox">
+      <ul class="tabList" id="tabListA">
+        <li class="hot" msg-type=0><i class="icon_txt icon_appmsg"></i>图文消息</li>
+        <li msg-type=1><i class="icon_txt"></i>文字</li>
+        <li msg-type=2><i class="icon_txt icon_img"></i>图片</li>
+        <li msg-type=3><i class="icon_txt icon_voice"></i>语音</li>
+        <li msg-type=4><i class="icon_txt icon_video"></i>视频</li>
+      </ul>
+      <div id="tabOutBoxA">
+        <!--图文消息-->
+        <div class="tabOutList">
+          <div class="inner">
+            <div class="img_item_bd" id="news_item" media_id="" hidden>
+              <br>
+              <a href="#" id="news_item_del">删除</a>
+            </div>
+            <div class="create_access auto_news_choice">
+              <a href="#" id="appmsg_modal"><i class="icon36 icon36_add"></i>
+                <strong>从素材库中选择</strong></a>
+            </div>
+            <div class="create_access auto_news_choice">
+              <a href="/wxoss/wx_articles/edit?t=media/appmsg_edit_v2&action=edit&isNew=1&type=10&lang=zh_CN&token=1708268647"><i class="icon36 icon36_add"></i>
+                <strong>新建图文消息</strong></a>
+            </div>
+          </div>
+        </div>
+        <!--文字-->
+        <div class="tabOutList" style="display: none;">
+          <div class="edit_area">
+            <textarea id="text_content" maxlength=600></textarea>
+          </div>
+          <div class="editor_toolbar"><div class="editor_tip">最多可以输入600个字</div></div>
+        </div>
+        <!--图片-->
+        <div class="tabOutList" style="display: none;">
+          <div class="inner">
+            <div class="img_item_bd" id="img_item" media_id="" hidden>
+              <img class="pic" src="" style="height:70px;width:70px;">
+              <a href="#" id="img_item_del">删除</a>
+            </div>
+            <div class="create_access auto_img_choice">
+              <a href="#" id="img_modal"><i class="icon36 icon36_add"></i>
+                <strong>从素材库中选择</strong></a>
+            </div>
+            <div class="create_access auto_img_choice">
+              <a href="#"><i class="icon36 icon36_add"></i>
+                <strong>上传图片</strong></a>
+            </div>
+          </div>
+        </div>
+        <!--语音-->
+        <div class="tabOutList" style="display: none;">
+          <div class="inner">
+            <div class="create_access">
+              <a href="#" id="audio_modal"><i class="icon36 icon36_add"></i>
+                <strong>从素材库中选择</strong></a>
+            </div>
+            <div class="create_access">
+              <a href="#"><i class="icon36 icon36_add"></i>
+                <strong>新建语音</strong></a>
+            </div>
+          </div>
+        </div>
+        <!--视频-->
+        <div class="tabOutList" style="display: none;">
+          <div class="inner">
+            <div class="create_access">
+              <a href="#" id="video_modal"><i class="icon36 icon36_add"></i>
+                <strong>从素材库中选择</strong></a>
+            </div>
+            <div class="create_access">
+              <a href="#"><i class="icon36 icon36_add"></i>
+                <strong>新建视频</strong></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tool_bar">
+    <% if @has_send_account != nil and @has_send_account < 4 %>
+        <button id="prompt_modal" class="btn btn_primary">群发</button>
+    <% else %>
+        <button id="prompt_modal" class="disabled_button btn_primary" disabled>群发</button>
+    <% end %>
+
+
+    <div class="bubble_tips bubble_left warn" style="margin-left:20px; display: inline-block;">
+      <div class="bubble_tips_inner">
+        <p class="mass_send_tips">你本月还能群发 <em class="send_num">
+          <% unless @has_send_account.nil? %>
+              <%= 4-@has_send_account %>
+          <% end %>
+        </em>条消息</p>
+      </div>
+      <i class="bubble_tips_arrow out"></i>
+      <i class="bubble_tips_arrow in"></i>
+    </div>
+  </div>
+</div>
+
+<!--遮罩层ｍａｓｋ的样式-->
+<div id="mask" style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;
+    filter: alpha(opacity = 75);-moz-opacity: .75;-khtml-opacity: .75;opacity: .75;
+    background-color: #000;z-index: 9998;display:none;"></div>
+
+<!--　图片的选择弹出层　-->
+<div id="img_choice_popup" style="border-width: 0;
+    overflow: hidden;width: 846px;margin-top: 1%;
+    z-index: 9999;position: fixed;top: 1%;display:none;">
+  <div class="dialog_hd" style="line-height: 52px;
+      padding: 0 20px;background-color: #f4f5f9;border-bottom: 1px solid #e7e7eb;">
+    <h3>选择图片</h3>
+    <a class="close" title="Close">×</a>
+  </div>
+  <div class="dialog_bd">
+    <div class="inner_container_box">
+      <div class="inner_side" style="width: 18%;border-right: 1px solid #e7e7eb;">
+        <div class="group_list" style="padding-left: 10px;">
+          <div class="inner_menu_box">
+            <dl class="inner_menu js_group">
+              <% unless @group_name_map.nil? %>
+                  <% @group_name_map.each do |group|%>
+                      <% size = @group_map[group[0]].length%>
+                      <dd class="inner_menu_item js_groupitem" data-groupid=<%=group[0]%>>
+                        <a href="javascript:;" class="inner_menu_link" title=<%=group[1]%> />
+                        <strong><%=group[1]%></strong><em class="num">(<span><%=size%></span>)</em>
+                        </a>
+                      </dd>
+                  <% end %>
+              <% end %>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="inner_main" style=" width: 2000px;display: table-cell;
+          vertical-align: top;
+          word-wrap: break-word;
+          word-break: break-all;">
+        <div class="img_pick_area">
+          <div class="img_pick" style="text-align: left;">
+            <ul class="group js_list img_list">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog_ft" style="padding: 16px 0;
+      background-color: #f4f5f9;text-align: center;">
+    <button id="img_choice_confirm" class="btn btn_default btn_disabled"
+            style="width: 120px;border-radius: 5px;" disabled>确定</button>
+    <button id="img_choice_cancer" class="btn btn_default"
+            style="width: 120px;border-radius: 5px;">取消</button>
+  </div>
+
+</div>
+
+
+
+<!--　图文的选择弹出层　-->
+<div id="news_choice_popup" style="border-width: 0;
+    overflow: hidden;width: 906px;margin-top: 1%;
+    z-index: 9999;position: fixed;top: 1%;display:none;">
+  <div class="dialog_hd" style="line-height: 52px;
+      padding: 0 20px;background-color: #f4f5f9;border-bottom: 1px solid #e7e7eb;">
+    <h3>选择素材</h3>
+    <a class="close" title="Close">×</a>
+  </div>
+  <div class="dialog_bd">
+    <div class="inner_container_box">
+      <div class="inner_main" style=" width: 2000px;display: table-cell;
+          vertical-align: top;
+          word-wrap: break-word;
+          word-break: break-all;">
+        <div class="img_pick_area">
+          <div class="img_pick" style="text-align: left;">
+            <% unless @wx_articles.nil? %>
+                <% @wx_articles.each do |article|%>
+                    <% imgSrc = @current_wx_official_account.wx_resources.find(article.cover_file_id).file_url%>
+                    <div class="appmsg_col">
+                      <div class="inner">
+                        <div>
+                          <div class="appmsg" media_id=<%= article.id %> data-id="400505465" data-fileid="400505457" data-completed="1">
+                            <div class="appmsg_content">
+                              <h4 class="appmsg_title js_title">
+                                <a href=<%= article.content_url == nil ? '#':article.content_url %> target="_blank"><%= article.title %></a>
+                              </h4>
+                              <div class="appmsg_info">
+                                <em class="appmsg_date">
+                                  <%= article.updated_at.to_s[0,4] %>年<%= article.updated_at.to_s[5,2] %>月<%= article.updated_at.to_s[8,2] %>日
+                                </em>
+                              </div>
+                              <div class="appmsg_thumb_wrp" style="background-image:url('<%= imgSrc%>')">
+                              </div>
+                              <p class="appmsg_desc"><%= article.digest==""?"【无】":article.digest %></p>
+                            </div>
+                            <div class="appmsg_mask"></div>
+                            <i class="icon_card_selected">已选择</i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                <%end%>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog_ft" style="padding: 16px 0;
+      background-color: #f4f5f9;text-align: center;">
+    <button id="news_choice_confirm" class="btn btn_default btn_disabled"
+            style="width: 120px;border-radius: 5px;" disabled>确定</button>
+    <button id="news_choice_cancer" class="btn btn_default"
+            style="width: 120px;border-radius: 5px;">取消</button>
+  </div>
+
+</div>
+
+
+<style>
+  .disabled_button{
+    overflow: visible;
+    padding: 0px 22px;
+    height: 32px;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 0px;
+    display: inline-block;
+    border-radius: 3px;
+  }
+
+</style>
+
+
+<script>
+  var groupMap = <%= raw @group_map.to_json%>;
+  var groupName = <%= raw @group_name_map.to_json%>;
+
+  $(function (){
+
+    pageInitial();
+
+    pageEventsBind();
+
+    // 页面初始化
+    function pageInitial(){
+
+      var current_account_id = '<%= session[:current_official_account_id] %>';
+      //如果session中没有current_official_account_id ，弹出选择框
+      if (current_account_id == '') {
+//        $("#account_choice").show();
+        $("#mask_select_account,#pop_account_select").show();
+        return;
+      }
+
+      //默认隐藏省份和城市的选择菜单
+      $("#province_select,#city_select").hide();
+
+      //图片选择层的可拖拽的实现
+      $("#img_choice_popup").draggable();
+      $("#news_choice_popup").draggable();
+
+    }
+
+
+    //页面事件绑定
+    function pageEventsBind(){
+      //切换国家时动态改变身份的值
+      $("#country_select ul li").click(function(){
+        var selected_name = $(this).html();
+        var selected_country_id = $(this).attr("data-value");
+
+        $(this).parent().prev().attr("data-value",selected_country_id);
+
+        //选择是的全部国家
+        if(selected_country_id == "all"){
+          $("#province_select,#city_select").hide();
+        }else{
+          $("#city_select").hide();
+          var actionUrl = '<%=get_provinces_by_country_id_wx_batch_messages_path %>';
+          $.ajax({
+            type: 'get',
+            url: actionUrl,
+            dataType: 'json',
+            data:{country_id:selected_country_id},
+            success: function (data) {
+              var provinces = data.result;
+              if(provinces.length >0){
+                $("#province_select ul").empty();
+
+                $("#province_select .selTxt").attr("data-value","all").html("省份");
+
+                for(var i =0;i<provinces.length;i++){
+                  var province = provinces[i];
+                  $("<li>").attr("data-value", province.id)
+                      .html(province.province_name)
+                      .appendTo($("#province_select>ul")).click(function (e) {
+
+                    e.stopPropagation();
+                    var selTxt = $(this).text();
+                    $(this).parent().prev().html(selTxt);
+                    $(this).parent().slideUp();
+
+                    var selected_name = $(this).html();
+                    var selected_province_id = $(this).attr("data-value");
+
+                    $(this).parent().prev().attr("data-value",selected_province_id);
+                    //选择是的全部国家
+                    if(selected_province_id == "all"){
+                      $("#province_select,#city_select").hide();
+                    }else{
+                      var actionUrl = '<%=get_cities_by_province_id_wx_batch_messages_path %>';
+                      $.ajax({
+                        type: 'get',
+                        url: actionUrl,
+                        dataType: 'json',
+                        data:{province_id:selected_province_id},
+                        success: function (data) {
+                        var cities = data.result;
+                        if(cities.length >0){
+                          $("#city_select ul").empty();
+                          $("#city_select").show();
+
+                          $("#city_select .selTxt").attr("data-value","all").html("城市");
+                          for(var i =0;i<cities.length;i++){
+                            var city = cities[i];
+                            $("<li>").attr("data-value",city.id)
+                                .html(city.city_name)
+                                .appendTo($("#city_select>ul")).click(function(e){
+                              e.stopPropagation();
+                              var selTxt = $(this).text();
+                              $(this).parent().prev().html(selTxt);
+                              $(this).parent().prev().attr("data-value",$(this).attr("data-value"));
+                              $(this).parent().parent().removeClass("open");
+                              $(this).parent().slideUp();
+                            });
+                          }
+                        }
+                        //没有身份的国家，不显示省份和城市选择
+                        else{
+                          $("#city_select,#city_select").hide();
+                        }
+                        }
+                      });
+                    }
+                  });
+                }
+                $("#province_select").show();
+              }
+              //没有身份的国家，不显示省份和城市选择
+              else{
+                $("#province_select,#city_select").hide();
+              }
+            }
+          });
+        }
+      });
+
+
+      //性别选择下拉框的ｃｈａｎｇｅ事件的绑定
+      $("#gender_select ul li").click(function(){
+        var sex_value = $(this).attr("data-value");
+        $(this).parent().prev().attr("data-value",sex_value);
+      });
+
+      //是否按组别选择过滤用户
+      $("#is_groups_select ul li").click(function(){
+        var group_value = $(this).attr("data-value");
+        $(this).parent().prev().attr("data-value",group_value);
+        //选择的是全部用户
+        if(group_value == "all"){
+          //隐藏组别选择下拉框
+          $("#user_group_select").hide();
+        }
+        //选择的是按组别过滤
+        else{
+          $("#user_group_select").show();
+        }
+      });
+
+
+      //组别选择用户
+      $("#user_group_select ul li").click(function(){
+        var group_value = $(this).attr("data-value");
+        $(this).parent().prev().attr("data-value",group_value);
+      });
+
+      //群发按钮的点击事件的绑定，弹出确认框
+      $("#prompt_modal").click(function(){
+
+        var groupid= $("#is_groups_select .selTxt").attr("data-value");
+        if(groupid != "all"){
+          groupid = $("#user_group_select .selTxt").attr("data-value");
+        }
+        // 性别
+        var genderId = $("#gender_select .selTxt").attr("data-value");
+        //国家，省份和城市
+        var country_id = $("#country_select .selTxt").attr("data-value");
+        var province_id = country_id=="all"? "all" : $("#province_select .selTxt").attr("data-value");
+        var city_id = province_id == "all"? "all": $("#city_select .selTxt").attr("data-value");
+
+        var msg_type = parseInt($("#tabListA li.hot").attr("msg-type"));
+        var msg_content;
+        var check_result=true;
+        switch(msg_type)
+        {
+          case 0:   //图文
+            msg_content = $("#news_item").attr("media_id");
+            if(msg_content == undefined){
+              $('<div class="results"  style="position:fixed;z-index:999;top:0px ">文字必须为1到600个字</div>')
+                  .appendTo("body").fadeOut(6000);
+            }
+            break;
+          case 1:  //文字
+            msg_content = $("#text_content").val();
+            break;
+          case 2:  //图片
+            msg_content =$("#img_item").attr("media_id")
+            break;
+          case 3:  //语音
+            msg_content = "";
+            break;
+          case 4:  //视屏
+            msg_content = "";
+            break;
+          default:
+            msg_content =　"";
+        }
+
+        if(msg_type == 1 && ($.trim(msg_content).length > 600 || $.trim(msg_content).length == 0)){
+          $('<div class="results"  style="position:fixed;z-index:999;top:0px ">文字必须为1到600个字</div>')
+              .appendTo("body").fadeOut(6000);
+          return;
+        }
+        else if($.trim(msg_content) == "" || msg_content == undefined){
+          $('<div class="results"  style="position:fixed;z-index:999;top:0px ">请添加素材</div>')
+              .appendTo("body").fadeOut(6000);
+          return;
+        }
+
+        $(this).after('<div class="mod-popover" style="left:0px;"><div class="mod-popover_arrow"></div>' +
+            '<div class="mod-popover_inner" style="width: 234px;"><div class="popover_content">确定要群发该消息吗？</div>' +
+            '<div class="popover_bar"><button class="btn btn_primary remove">确认</button><button ' +
+            'class=" btn btn_primary cancel">取消</button></div></div></div>');
+
+        $("button.remove").on('click', function () {
+          $.ajax({
+            type: "post",
+            data:{group:groupid,gender:genderId,country:country_id,province:province_id
+              ,city:city_id,msg_type:msg_type,msg_content:msg_content},
+            url: '<%=batchSendMessage_wx_batch_messages_path %>',
+            success: function (data) {
+              if(data.result == "ok"){
+                window.location.href= "wx_batch_messages/batch_messages_history";
+              }else{
+                $('<div class="results"  style="position:fixed;z-index:999;top:0px;">'+data.errorMsg+'</div>')
+                    .appendTo("body").fadeOut(3000);
+              }
+            },
+            error: function (msg) {
+              $('<div class="results"  style="position:fixed;z-index:999;top:0px ">发送失败</div>')
+                  .appendTo("body").fadeOut(3000);
+            }
+          });
+          $(".mod-popover").remove();
+        });
+        $("button.cancel").on('click', function () {
+          $(".mod-popover").remove();
+        });
+      });
+    }
+  });
+
+</script>

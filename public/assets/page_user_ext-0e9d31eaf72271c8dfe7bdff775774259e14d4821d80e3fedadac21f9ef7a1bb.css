@@ -1,0 +1,4497 @@
+/* line 1, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji {
+  background: transparent url(/assets/htmledition/emoji-c8bd04a2f1f7872f363bdb2a3a415519a39b594364b2c644482522de0f2d1039.png) no-repeat 0 0;
+  width: 20px;
+  height: 20px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -0.2em;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 13, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2600 {
+  background-position: 0 -260px;
+}
+
+/* line 17, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2601 {
+  background-position: 0 -20px;
+}
+
+/* line 21, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2614 {
+  background-position: 0 -40px;
+}
+
+/* line 25, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26c4 {
+  background-position: 0 -60px;
+}
+
+/* line 29, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26a1 {
+  background-position: 0 -80px;
+}
+
+/* line 33, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f300 {
+  background-position: 0 -100px;
+}
+
+/* line 37, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f301 {
+  background-position: 0 -9200px;
+}
+
+/* line 41, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f302 {
+  background-position: 0 -120px;
+}
+
+/* line 45, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f303 {
+  background-position: 0 -920px;
+}
+
+/* line 49, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f304 {
+  background-position: 0 -160px;
+}
+
+/* line 53, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f305 {
+  background-position: 0 -180px;
+}
+
+/* line 57, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f306 {
+  background-position: 0 -200px;
+}
+
+/* line 61, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f307 {
+  background-position: 0 -220px;
+}
+
+/* line 65, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f308 {
+  background-position: 0 -240px;
+}
+
+/* line 69, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2744 {
+  background-position: 0 -9200px;
+}
+
+/* line 73, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26c5 {
+  background-position: 0 -260px;
+}
+
+/* line 77, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f309 {
+  background-position: 0 -920px;
+}
+
+/* line 81, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f30a {
+  background-position: 0 -900px;
+}
+
+/* line 85, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f30b {
+  background-position: 0 -9200px;
+}
+
+/* line 89, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f30c {
+  background-position: 0 -920px;
+}
+
+/* line 93, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f30f {
+  background-position: 0 -9200px;
+}
+
+/* line 97, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f311 {
+  background-position: 0 -9200px;
+}
+
+/* line 101, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f314 {
+  background-position: 0 -360px;
+}
+
+/* line 105, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f313 {
+  background-position: 0 -360px;
+}
+
+/* line 109, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f319 {
+  background-position: 0 -360px;
+}
+
+/* line 113, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f315 {
+  background-position: 0 -9200px;
+}
+
+/* line 117, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f31b {
+  background-position: 0 -360px;
+}
+
+/* line 121, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f31f {
+  background-position: 0 -10740px;
+}
+
+/* line 125, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f320 {
+  background-position: 0 -9200px;
+}
+
+/* line 129, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f550 {
+  background-position: 0 -380px;
+}
+
+/* line 133, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f551 {
+  background-position: 0 -400px;
+}
+
+/* line 137, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f552 {
+  background-position: 0 -420px;
+}
+
+/* line 141, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f553 {
+  background-position: 0 -440px;
+}
+
+/* line 145, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f554 {
+  background-position: 0 -460px;
+}
+
+/* line 149, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f555 {
+  background-position: 0 -480px;
+}
+
+/* line 153, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f556 {
+  background-position: 0 -500px;
+}
+
+/* line 157, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f557 {
+  background-position: 0 -520px;
+}
+
+/* line 161, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f558 {
+  background-position: 0 -540px;
+}
+
+/* line 165, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f559 {
+  background-position: 0 -620px;
+}
+
+/* line 169, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f55a {
+  background-position: 0 -580px;
+}
+
+/* line 173, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f55b {
+  background-position: 0 -600px;
+}
+
+/* line 177, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji231a {
+  background-position: 0 -9200px;
+}
+
+/* line 181, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji231b {
+  background-position: 0 -9200px;
+}
+
+/* line 185, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji23f0 {
+  background-position: 0 -620px;
+}
+
+/* line 189, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji23f3 {
+  background-position: 0 -9200px;
+}
+
+/* line 193, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2648 {
+  background-position: 0 -640px;
+}
+
+/* line 197, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2649 {
+  background-position: 0 -660px;
+}
+
+/* line 201, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji264a {
+  background-position: 0 -680px;
+}
+
+/* line 205, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji264b {
+  background-position: 0 -700px;
+}
+
+/* line 209, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji264c {
+  background-position: 0 -720px;
+}
+
+/* line 213, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji264d {
+  background-position: 0 -740px;
+}
+
+/* line 217, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji264e {
+  background-position: 0 -760px;
+}
+
+/* line 221, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji264f {
+  background-position: 0 -780px;
+}
+
+/* line 225, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2650 {
+  background-position: 0 -800px;
+}
+
+/* line 229, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2651 {
+  background-position: 0 -820px;
+}
+
+/* line 233, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2652 {
+  background-position: 0 -840px;
+}
+
+/* line 237, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2653 {
+  background-position: 0 -860px;
+}
+
+/* line 241, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26ce {
+  background-position: 0 -880px;
+}
+
+/* line 245, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f340 {
+  background-position: 0 -1220px;
+}
+
+/* line 249, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f337 {
+  background-position: 0 -960px;
+}
+
+/* line 253, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f331 {
+  background-position: 0 -1220px;
+}
+
+/* line 257, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f341 {
+  background-position: 0 -1000px;
+}
+
+/* line 261, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f338 {
+  background-position: 0 -1020px;
+}
+
+/* line 265, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f339 {
+  background-position: 0 -1040px;
+}
+
+/* line 269, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f342 {
+  background-position: 0 -1060px;
+}
+
+/* line 273, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f343 {
+  background-position: 0 -1080px;
+}
+
+/* line 277, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f33a {
+  background-position: 0 -1100px;
+}
+
+/* line 281, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f33b {
+  background-position: 0 -1200px;
+}
+
+/* line 285, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f334 {
+  background-position: 0 -1140px;
+}
+
+/* line 289, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f335 {
+  background-position: 0 -1160px;
+}
+
+/* line 293, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f33e {
+  background-position: 0 -1180px;
+}
+
+/* line 297, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f33d {
+  background-position: 0 -9200px;
+}
+
+/* line 301, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f344 {
+  background-position: 0 -9200px;
+}
+
+/* line 305, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f330 {
+  background-position: 0 -9200px;
+}
+
+/* line 309, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f33c {
+  background-position: 0 -1200px;
+}
+
+/* line 313, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f33f {
+  background-position: 0 -1220px;
+}
+
+/* line 317, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f352 {
+  background-position: 0 -9200px;
+}
+
+/* line 321, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f34c {
+  background-position: 0 -9200px;
+}
+
+/* line 325, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f34e {
+  background-position: 0 -1360px;
+}
+
+/* line 329, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f34a {
+  background-position: 0 -1260px;
+}
+
+/* line 333, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f353 {
+  background-position: 0 -1280px;
+}
+
+/* line 337, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f349 {
+  background-position: 0 -1300px;
+}
+
+/* line 341, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f345 {
+  background-position: 0 -1320px;
+}
+
+/* line 345, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f346 {
+  background-position: 0 -1340px;
+}
+
+/* line 349, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f348 {
+  background-position: 0 -9200px;
+}
+
+/* line 353, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f34d {
+  background-position: 0 -9200px;
+}
+
+/* line 357, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f347 {
+  background-position: 0 -9200px;
+}
+
+/* line 361, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f351 {
+  background-position: 0 -9200px;
+}
+
+/* line 365, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f34f {
+  background-position: 0 -1360px;
+}
+
+/* line 369, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f440 {
+  background-position: 0 -1380px;
+}
+
+/* line 373, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f442 {
+  background-position: 0 -1400px;
+}
+
+/* line 377, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f443 {
+  background-position: 0 -1420px;
+}
+
+/* line 381, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f444 {
+  background-position: 0 -1440px;
+}
+
+/* line 385, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f445 {
+  background-position: 0 -3000px;
+}
+
+/* line 389, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f484 {
+  background-position: 0 -1480px;
+}
+
+/* line 393, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f485 {
+  background-position: 0 -1500px;
+}
+
+/* line 397, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f486 {
+  background-position: 0 -1520px;
+}
+
+/* line 401, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f487 {
+  background-position: 0 -1540px;
+}
+
+/* line 405, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f488 {
+  background-position: 0 -1560px;
+}
+
+/* line 409, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f464 {
+  background-position: 0 -9200px;
+}
+
+/* line 413, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f466 {
+  background-position: 0 -1580px;
+}
+
+/* line 417, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f467 {
+  background-position: 0 -1600px;
+}
+
+/* line 421, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f468 {
+  background-position: 0 -1620px;
+}
+
+/* line 425, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f469 {
+  background-position: 0 -1640px;
+}
+
+/* line 429, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f46a {
+  background-position: 0 -9200px;
+}
+
+/* line 433, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f46b {
+  background-position: 0 -1660px;
+}
+
+/* line 437, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f46e {
+  background-position: 0 -1680px;
+}
+
+/* line 441, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f46f {
+  background-position: 0 -1700px;
+}
+
+/* line 445, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f470 {
+  background-position: 0 -9200px;
+}
+
+/* line 449, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f471 {
+  background-position: 0 -1720px;
+}
+
+/* line 453, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f472 {
+  background-position: 0 -1740px;
+}
+
+/* line 457, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f473 {
+  background-position: 0 -1760px;
+}
+
+/* line 461, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f474 {
+  background-position: 0 -1780px;
+}
+
+/* line 465, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f475 {
+  background-position: 0 -1800px;
+}
+
+/* line 469, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f476 {
+  background-position: 0 -1820px;
+}
+
+/* line 473, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f477 {
+  background-position: 0 -1840px;
+}
+
+/* line 477, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f478 {
+  background-position: 0 -1860px;
+}
+
+/* line 481, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f479 {
+  background-position: 0 -9200px;
+}
+
+/* line 485, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f47a {
+  background-position: 0 -9200px;
+}
+
+/* line 489, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f47b {
+  background-position: 0 -1880px;
+}
+
+/* line 493, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f47c {
+  background-position: 0 -1900px;
+}
+
+/* line 497, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f47d {
+  background-position: 0 -1920px;
+}
+
+/* line 501, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f47e {
+  background-position: 0 -1940px;
+}
+
+/* line 505, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f47f {
+  background-position: 0 -1960px;
+}
+
+/* line 509, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f480 {
+  background-position: 0 -1980px;
+}
+
+/* line 513, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f481 {
+  background-position: 0 -2000px;
+}
+
+/* line 517, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f482 {
+  background-position: 0 -2020px;
+}
+
+/* line 521, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f483 {
+  background-position: 0 -2040px;
+}
+
+/* line 525, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f40c {
+  background-position: 0 -9200px;
+}
+
+/* line 529, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f40d {
+  background-position: 0 -2620px;
+}
+
+/* line 533, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f40e {
+  background-position: 0 -6680px;
+}
+
+/* line 537, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f414 {
+  background-position: 0 -2640px;
+}
+
+/* line 541, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f417 {
+  background-position: 0 -2660px;
+}
+
+/* line 545, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f42b {
+  background-position: 0 -2680px;
+}
+
+/* line 549, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f418 {
+  background-position: 0 -2480px;
+}
+
+/* line 553, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f428 {
+  background-position: 0 -2500px;
+}
+
+/* line 557, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f412 {
+  background-position: 0 -2520px;
+}
+
+/* line 561, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f411 {
+  background-position: 0 -2540px;
+}
+
+/* line 565, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f419 {
+  background-position: 0 -2340px;
+}
+
+/* line 569, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f41a {
+  background-position: 0 -2360px;
+}
+
+/* line 573, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f41b {
+  background-position: 0 -2460px;
+}
+
+/* line 577, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f41c {
+  background-position: 0 -9200px;
+}
+
+/* line 581, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f41d {
+  background-position: 0 -9200px;
+}
+
+/* line 585, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f41e {
+  background-position: 0 -9200px;
+}
+
+/* line 589, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f420 {
+  background-position: 0 -2420px;
+}
+
+/* line 593, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f421 {
+  background-position: 0 -7360px;
+}
+
+/* line 597, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f422 {
+  background-position: 0 -9200px;
+}
+
+/* line 601, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f424 {
+  background-position: 0 -2140px;
+}
+
+/* line 605, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f425 {
+  background-position: 0 -2140px;
+}
+
+/* line 609, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f426 {
+  background-position: 0 -2400px;
+}
+
+/* line 613, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f423 {
+  background-position: 0 -2140px;
+}
+
+/* line 617, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f427 {
+  background-position: 0 -2160px;
+}
+
+/* line 621, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f429 {
+  background-position: 0 -2720px;
+}
+
+/* line 625, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f41f {
+  background-position: 0 -7360px;
+}
+
+/* line 629, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f42c {
+  background-position: 0 -2380px;
+}
+
+/* line 633, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f42d {
+  background-position: 0 -2280px;
+}
+
+/* line 637, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f42f {
+  background-position: 0 -2240px;
+}
+
+/* line 641, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f431 {
+  background-position: 0 -2080px;
+}
+
+/* line 645, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f433 {
+  background-position: 0 -2300px;
+}
+
+/* line 649, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f434 {
+  background-position: 0 -2200px;
+}
+
+/* line 653, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f435 {
+  background-position: 0 -2320px;
+}
+
+/* line 657, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f436 {
+  background-position: 0 -2720px;
+}
+
+/* line 661, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f437 {
+  background-position: 0 -2780px;
+}
+
+/* line 665, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f43b {
+  background-position: 0 -2260px;
+}
+
+/* line 669, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f439 {
+  background-position: 0 -2440px;
+}
+
+/* line 673, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f43a {
+  background-position: 0 -2560px;
+}
+
+/* line 677, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f42e {
+  background-position: 0 -2580px;
+}
+
+/* line 681, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f430 {
+  background-position: 0 -2600px;
+}
+
+/* line 685, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f438 {
+  background-position: 0 -2700px;
+}
+
+/* line 689, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f43e {
+  background-position: 0 -6460px;
+}
+
+/* line 693, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f432 {
+  background-position: 0 -9200px;
+}
+
+/* line 697, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f43c {
+  background-position: 0 -9200px;
+}
+
+/* line 701, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f43d {
+  background-position: 0 -2780px;
+}
+
+/* line 705, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f620 {
+  background-position: 0 -2800px;
+}
+
+/* line 709, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f629 {
+  background-position: 0 -3860px;
+}
+
+/* line 713, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f632 {
+  background-position: 0 -2840px;
+}
+
+/* line 717, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f61e {
+  background-position: 0 -2860px;
+}
+
+/* line 721, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f635 {
+  background-position: 0 -3540px;
+}
+
+/* line 725, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f630 {
+  background-position: 0 -2900px;
+}
+
+/* line 729, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f612 {
+  background-position: 0 -2920px;
+}
+
+/* line 733, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f60d {
+  background-position: 0 -3660px;
+}
+
+/* line 737, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f624 {
+  background-position: 0 -3720px;
+}
+
+/* line 741, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f61c {
+  background-position: 0 -2980px;
+}
+
+/* line 745, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f61d {
+  background-position: 0 -3000px;
+}
+
+/* line 749, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f60b {
+  background-position: 0 -3220px;
+}
+
+/* line 753, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f618 {
+  background-position: 0 -3640px;
+}
+
+/* line 757, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f61a {
+  background-position: 0 -3060px;
+}
+
+/* line 761, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f637 {
+  background-position: 0 -3080px;
+}
+
+/* line 765, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f633 {
+  background-position: 0 -3100px;
+}
+
+/* line 769, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f603 {
+  background-position: 0 -3580px;
+}
+
+/* line 773, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f605 {
+  background-position: 0 -3260px;
+}
+
+/* line 777, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f606 {
+  background-position: 0 -3380px;
+}
+
+/* line 781, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f601 {
+  background-position: 0 -3720px;
+}
+
+/* line 785, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f602 {
+  background-position: 0 -3620px;
+}
+
+/* line 789, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f60a {
+  background-position: 0 -3220px;
+}
+
+/* line 793, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji263a {
+  background-position: 0 -3240px;
+}
+
+/* line 797, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f604 {
+  background-position: 0 -3260px;
+}
+
+/* line 801, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f622 {
+  background-position: 0 -3680px;
+}
+
+/* line 805, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f62d {
+  background-position: 0 -3300px;
+}
+
+/* line 809, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f628 {
+  background-position: 0 -3320px;
+}
+
+/* line 813, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f623 {
+  background-position: 0 -3540px;
+}
+
+/* line 817, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f621 {
+  background-position: 0 -3880px;
+}
+
+/* line 821, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f60c {
+  background-position: 0 -3380px;
+}
+
+/* line 825, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f616 {
+  background-position: 0 -10520px;
+}
+
+/* line 829, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f614 {
+  background-position: 0 -3860px;
+}
+
+/* line 833, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f631 {
+  background-position: 0 -3440px;
+}
+
+/* line 837, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f62a {
+  background-position: 0 -3460px;
+}
+
+/* line 841, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f60f {
+  background-position: 0 -3480px;
+}
+
+/* line 845, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f613 {
+  background-position: 0 -3500px;
+}
+
+/* line 849, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f625 {
+  background-position: 0 -3520px;
+}
+
+/* line 853, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f62b {
+  background-position: 0 -3540px;
+}
+
+/* line 857, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f609 {
+  background-position: 0 -3560px;
+}
+
+/* line 861, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f63a {
+  background-position: 0 -3580px;
+}
+
+/* line 865, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f638 {
+  background-position: 0 -3720px;
+}
+
+/* line 869, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f639 {
+  background-position: 0 -3620px;
+}
+
+/* line 873, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f63d {
+  background-position: 0 -3640px;
+}
+
+/* line 877, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f63b {
+  background-position: 0 -3660px;
+}
+
+/* line 881, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f63f {
+  background-position: 0 -3680px;
+}
+
+/* line 885, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f63e {
+  background-position: 0 -3880px;
+}
+
+/* line 889, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f63c {
+  background-position: 0 -3720px;
+}
+
+/* line 893, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f640 {
+  background-position: 0 -3860px;
+}
+
+/* line 897, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f645 {
+  background-position: 0 -3760px;
+}
+
+/* line 901, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f646 {
+  background-position: 0 -3780px;
+}
+
+/* line 905, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f647 {
+  background-position: 0 -3800px;
+}
+
+/* line 909, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f648 {
+  background-position: 0 -9200px;
+}
+
+/* line 913, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f64a {
+  background-position: 0 -9200px;
+}
+
+/* line 917, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f649 {
+  background-position: 0 -9200px;
+}
+
+/* line 921, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f64b {
+  background-position: 0 -11240px;
+}
+
+/* line 925, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f64c {
+  background-position: 0 -3840px;
+}
+
+/* line 929, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f64d {
+  background-position: 0 -3860px;
+}
+
+/* line 933, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f64e {
+  background-position: 0 -3880px;
+}
+
+/* line 937, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f64f {
+  background-position: 0 -3900px;
+}
+
+/* line 941, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3e0 {
+  background-position: 0 -3940px;
+}
+
+/* line 945, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3e1 {
+  background-position: 0 -3940px;
+}
+
+/* line 949, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3e2 {
+  background-position: 0 -3960px;
+}
+
+/* line 953, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3e3 {
+  background-position: 0 -3980px;
+}
+
+/* line 957, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3e5 {
+  background-position: 0 -4000px;
+}
+
+/* line 961, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3e6 {
+  background-position: 0 -4020px;
+}
+
+/* line 965, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3e7 {
+  background-position: 0 -4040px;
+}
+
+/* line 969, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3e8 {
+  background-position: 0 -4060px;
+}
+
+/* line 973, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3e9 {
+  background-position: 0 -4080px;
+}
+
+/* line 977, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3ea {
+  background-position: 0 -4100px;
+}
+
+/* line 981, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3eb {
+  background-position: 0 -4120px;
+}
+
+/* line 985, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26ea {
+  background-position: 0 -4140px;
+}
+
+/* line 989, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26f2 {
+  background-position: 0 -4160px;
+}
+
+/* line 993, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3ec {
+  background-position: 0 -4180px;
+}
+
+/* line 997, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3ef {
+  background-position: 0 -4200px;
+}
+
+/* line 1001, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3f0 {
+  background-position: 0 -4220px;
+}
+
+/* line 1005, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3ed {
+  background-position: 0 -4240px;
+}
+
+/* line 1009, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2693 {
+  background-position: 0 -6920px;
+}
+
+/* line 1013, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3ee {
+  background-position: 0 -8800px;
+}
+
+/* line 1017, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f5fb {
+  background-position: 0 -4300px;
+}
+
+/* line 1021, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f5fc {
+  background-position: 0 -4320px;
+}
+
+/* line 1025, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f5fd {
+  background-position: 0 -4340px;
+}
+
+/* line 1029, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f5fe {
+  background-position: 0 -9200px;
+}
+
+/* line 1033, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f5ff {
+  background-position: 0 -9200px;
+}
+
+/* line 1037, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f45e {
+  background-position: 0 -4400px;
+}
+
+/* line 1041, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f45f {
+  background-position: 0 -4400px;
+}
+
+/* line 1045, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f460 {
+  background-position: 0 -4420px;
+}
+
+/* line 1049, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f461 {
+  background-position: 0 -4440px;
+}
+
+/* line 1053, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f462 {
+  background-position: 0 -4460px;
+}
+
+/* line 1057, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f463 {
+  background-position: 0 -6460px;
+}
+
+/* line 1061, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f453 {
+  background-position: 0 -9200px;
+}
+
+/* line 1065, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f455 {
+  background-position: 0 -4620px;
+}
+
+/* line 1069, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f456 {
+  background-position: 0 -9200px;
+}
+
+/* line 1073, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f451 {
+  background-position: 0 -4500px;
+}
+
+/* line 1077, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f454 {
+  background-position: 0 -4520px;
+}
+
+/* line 1081, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f452 {
+  background-position: 0 -4540px;
+}
+
+/* line 1085, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f457 {
+  background-position: 0 -4560px;
+}
+
+/* line 1089, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f458 {
+  background-position: 0 -4580px;
+}
+
+/* line 1093, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f459 {
+  background-position: 0 -4600px;
+}
+
+/* line 1097, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f45a {
+  background-position: 0 -4620px;
+}
+
+/* line 1101, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f45b {
+  background-position: 0 -9200px;
+}
+
+/* line 1105, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f45c {
+  background-position: 0 -4960px;
+}
+
+/* line 1109, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f45d {
+  background-position: 0 -9200px;
+}
+
+/* line 1113, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4b0 {
+  background-position: 0 -4720px;
+}
+
+/* line 1117, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4b1 {
+  background-position: 0 -4660px;
+}
+
+/* line 1121, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4b9 {
+  background-position: 0 -6380px;
+}
+
+/* line 1125, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4b2 {
+  background-position: 0 -4720px;
+}
+
+/* line 1129, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4b3 {
+  background-position: 0 -9200px;
+}
+
+/* line 1133, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4b4 {
+  background-position: 0 -9200px;
+}
+
+/* line 1137, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4b5 {
+  background-position: 0 -4720px;
+}
+
+/* line 1141, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4b8 {
+  background-position: 0 -9200px;
+}
+
+/* line 1145, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f1e81f1f3 {
+  background-position: 0 -4740px;
+}
+
+/* line 1149, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f1e91f1ea {
+  background-position: 0 -4760px;
+}
+
+/* line 1153, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f1ea1f1f8 {
+  background-position: 0 -4780px;
+}
+
+/* line 1157, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f1eb1f1f7 {
+  background-position: 0 -4800px;
+}
+
+/* line 1161, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f1ec1f1e7 {
+  background-position: 0 -4820px;
+}
+
+/* line 1165, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f1ee1f1f9 {
+  background-position: 0 -4840px;
+}
+
+/* line 1169, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f1ef1f1f5 {
+  background-position: 0 -4860px;
+}
+
+/* line 1173, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f1f01f1f7 {
+  background-position: 0 -4880px;
+}
+
+/* line 1177, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f1f71f1fa {
+  background-position: 0 -4900px;
+}
+
+/* line 1181, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f1fa1f1f8 {
+  background-position: 0 -4920px;
+}
+
+/* line 1185, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f525 {
+  background-position: 0 -5040px;
+}
+
+/* line 1189, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f526 {
+  background-position: 0 -9200px;
+}
+
+/* line 1193, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f527 {
+  background-position: 0 -9200px;
+}
+
+/* line 1197, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f528 {
+  background-position: 0 -4360px;
+}
+
+/* line 1201, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f529 {
+  background-position: 0 -9200px;
+}
+
+/* line 1205, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f52a {
+  background-position: 0 -9200px;
+}
+
+/* line 1209, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f52b {
+  background-position: 0 -5020px;
+}
+
+/* line 1213, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f52e {
+  background-position: 0 -5080px;
+}
+
+/* line 1217, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f52f {
+  background-position: 0 -5080px;
+}
+
+/* line 1221, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f530 {
+  background-position: 0 -9660px;
+}
+
+/* line 1225, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f531 {
+  background-position: 0 -9680px;
+}
+
+/* line 1229, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f489 {
+  background-position: 0 -5300px;
+}
+
+/* line 1233, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f48a {
+  background-position: 0 -5320px;
+}
+
+/* line 1237, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f170 {
+  background-position: 0 -5340px;
+}
+
+/* line 1241, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f171 {
+  background-position: 0 -5360px;
+}
+
+/* line 1245, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f18e {
+  background-position: 0 -5380px;
+}
+
+/* line 1249, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f17e {
+  background-position: 0 -5400px;
+}
+
+/* line 1253, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f380 {
+  background-position: 0 -5420px;
+}
+
+/* line 1257, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f381 {
+  background-position: 0 -6080px;
+}
+
+/* line 1261, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f382 {
+  background-position: 0 -5460px;
+}
+
+/* line 1265, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f384 {
+  background-position: 0 -5480px;
+}
+
+/* line 1269, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f385 {
+  background-position: 0 -5500px;
+}
+
+/* line 1273, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f38c {
+  background-position: 0 -5520px;
+}
+
+/* line 1277, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f386 {
+  background-position: 0 -5540px;
+}
+
+/* line 1281, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f388 {
+  background-position: 0 -5560px;
+}
+
+/* line 1285, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f389 {
+  background-position: 0 -5580px;
+}
+
+/* line 1289, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f38d {
+  background-position: 0 -5600px;
+}
+
+/* line 1293, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f38e {
+  background-position: 0 -5620px;
+}
+
+/* line 1297, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f393 {
+  background-position: 0 -5640px;
+}
+
+/* line 1301, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f392 {
+  background-position: 0 -5660px;
+}
+
+/* line 1305, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f38f {
+  background-position: 0 -5680px;
+}
+
+/* line 1309, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f387 {
+  background-position: 0 -5700px;
+}
+
+/* line 1313, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f390 {
+  background-position: 0 -5720px;
+}
+
+/* line 1317, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f383 {
+  background-position: 0 -5740px;
+}
+
+/* line 1321, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f38a {
+  background-position: 0 -9200px;
+}
+
+/* line 1325, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f38b {
+  background-position: 0 -9200px;
+}
+
+/* line 1329, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f391 {
+  background-position: 0 -5760px;
+}
+
+/* line 1333, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4df {
+  background-position: 0 -9200px;
+}
+
+/* line 1337, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji260e {
+  background-position: 0 -5800px;
+}
+
+/* line 1341, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4de {
+  background-position: 0 -5800px;
+}
+
+/* line 1345, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4f1 {
+  background-position: 0 -5820px;
+}
+
+/* line 1349, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4f2 {
+  background-position: 0 -5840px;
+}
+
+/* line 1353, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4dd {
+  background-position: 0 -6440px;
+}
+
+/* line 1357, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4e0 {
+  background-position: 0 -5880px;
+}
+
+/* line 1361, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2709 {
+  background-position: 0 -11200px;
+}
+
+/* line 1365, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4e8 {
+  background-position: 0 -11200px;
+}
+
+/* line 1369, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4e9 {
+  background-position: 0 -11200px;
+}
+
+/* line 1373, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4ea {
+  background-position: 0 -5980px;
+}
+
+/* line 1377, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4eb {
+  background-position: 0 -5980px;
+}
+
+/* line 1381, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4ee {
+  background-position: 0 -6000px;
+}
+
+/* line 1385, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4f0 {
+  background-position: 0 -9200px;
+}
+
+/* line 1389, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4e2 {
+  background-position: 0 -6020px;
+}
+
+/* line 1393, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4e3 {
+  background-position: 0 -6040px;
+}
+
+/* line 1397, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4e1 {
+  background-position: 0 -6060px;
+}
+
+/* line 1401, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4e4 {
+  background-position: 0 -9200px;
+}
+
+/* line 1405, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4e5 {
+  background-position: 0 -9200px;
+}
+
+/* line 1409, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4e6 {
+  background-position: 0 -6080px;
+}
+
+/* line 1413, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4e7 {
+  background-position: 0 -11200px;
+}
+
+/* line 1417, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f520 {
+  background-position: 0 -9200px;
+}
+
+/* line 1421, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f521 {
+  background-position: 0 -9200px;
+}
+
+/* line 1425, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f522 {
+  background-position: 0 -9200px;
+}
+
+/* line 1429, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f523 {
+  background-position: 0 -9200px;
+}
+
+/* line 1433, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f524 {
+  background-position: 0 -9200px;
+}
+
+/* line 1437, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2712 {
+  background-position: 0 -9200px;
+}
+
+/* line 1441, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4ba {
+  background-position: 0 -6100px;
+}
+
+/* line 1445, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4bb {
+  background-position: 0 -6120px;
+}
+
+/* line 1449, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji270f {
+  background-position: 0 -6440px;
+}
+
+/* line 1453, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4ce {
+  background-position: 0 -9200px;
+}
+
+/* line 1457, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4bc {
+  background-position: 0 -6160px;
+}
+
+/* line 1461, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4bd {
+  background-position: 0 -6200px;
+}
+
+/* line 1465, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4be {
+  background-position: 0 -6200px;
+}
+
+/* line 1469, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4bf {
+  background-position: 0 -7800px;
+}
+
+/* line 1473, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4c0 {
+  background-position: 0 -7820px;
+}
+
+/* line 1477, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2702 {
+  background-position: 0 -6220px;
+}
+
+/* line 1481, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4cd {
+  background-position: 0 -9200px;
+}
+
+/* line 1485, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4c3 {
+  background-position: 0 -6440px;
+}
+
+/* line 1489, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4c4 {
+  background-position: 0 -6440px;
+}
+
+/* line 1493, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4c5 {
+  background-position: 0 -9200px;
+}
+
+/* line 1497, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4c1 {
+  background-position: 0 -9200px;
+}
+
+/* line 1501, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4c2 {
+  background-position: 0 -9200px;
+}
+
+/* line 1505, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4d3 {
+  background-position: 0 -6420px;
+}
+
+/* line 1509, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4d6 {
+  background-position: 0 -6420px;
+}
+
+/* line 1513, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4d4 {
+  background-position: 0 -6420px;
+}
+
+/* line 1517, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4d5 {
+  background-position: 0 -6420px;
+}
+
+/* line 1521, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4d7 {
+  background-position: 0 -6420px;
+}
+
+/* line 1525, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4d8 {
+  background-position: 0 -6420px;
+}
+
+/* line 1529, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4d9 {
+  background-position: 0 -6420px;
+}
+
+/* line 1533, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4da {
+  background-position: 0 -6420px;
+}
+
+/* line 1537, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4db {
+  background-position: 0 -9200px;
+}
+
+/* line 1541, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4dc {
+  background-position: 0 -9200px;
+}
+
+/* line 1545, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4cb {
+  background-position: 0 -6440px;
+}
+
+/* line 1549, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4c6 {
+  background-position: 0 -9200px;
+}
+
+/* line 1553, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4ca {
+  background-position: 0 -6380px;
+}
+
+/* line 1557, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4c8 {
+  background-position: 0 -6380px;
+}
+
+/* line 1561, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4c9 {
+  background-position: 0 -9200px;
+}
+
+/* line 1565, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4c7 {
+  background-position: 0 -6420px;
+}
+
+/* line 1569, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4cc {
+  background-position: 0 -9200px;
+}
+
+/* line 1573, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4d2 {
+  background-position: 0 -6420px;
+}
+
+/* line 1577, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4cf {
+  background-position: 0 -9200px;
+}
+
+/* line 1581, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4d0 {
+  background-position: 0 -9200px;
+}
+
+/* line 1585, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4d1 {
+  background-position: 0 -6440px;
+}
+
+/* line 1589, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3bd {
+  background-position: 0 -9200px;
+}
+
+/* line 1593, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26be {
+  background-position: 0 -6480px;
+}
+
+/* line 1597, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26f3 {
+  background-position: 0 -6500px;
+}
+
+/* line 1601, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3be {
+  background-position: 0 -6520px;
+}
+
+/* line 1605, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26bd {
+  background-position: 0 -6540px;
+}
+
+/* line 1609, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3bf {
+  background-position: 0 -6560px;
+}
+
+/* line 1613, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3c0 {
+  background-position: 0 -6580px;
+}
+
+/* line 1617, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3c1 {
+  background-position: 0 -6600px;
+}
+
+/* line 1621, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3c2 {
+  background-position: 0 -9200px;
+}
+
+/* line 1625, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3c3 {
+  background-position: 0 -6620px;
+}
+
+/* line 1629, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3c4 {
+  background-position: 0 -6640px;
+}
+
+/* line 1633, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3c6 {
+  background-position: 0 -6660px;
+}
+
+/* line 1637, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3c8 {
+  background-position: 0 -6700px;
+}
+
+/* line 1641, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3ca {
+  background-position: 0 -6720px;
+}
+
+/* line 1645, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f683 {
+  background-position: 0 -6740px;
+}
+
+/* line 1649, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f687 {
+  background-position: 0 -6780px;
+}
+
+/* line 1653, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji24c2 {
+  background-position: 0 -6780px;
+}
+
+/* line 1657, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f684 {
+  background-position: 0 -6800px;
+}
+
+/* line 1661, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f685 {
+  background-position: 0 -6820px;
+}
+
+/* line 1665, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f697 {
+  background-position: 0 -6840px;
+}
+
+/* line 1669, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f699 {
+  background-position: 0 -6860px;
+}
+
+/* line 1673, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f68c {
+  background-position: 0 -6880px;
+}
+
+/* line 1677, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f68f {
+  background-position: 0 -6900px;
+}
+
+/* line 1681, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6a2 {
+  background-position: 0 -6920px;
+}
+
+/* line 1685, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2708 {
+  background-position: 0 -6940px;
+}
+
+/* line 1689, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26f5 {
+  background-position: 0 -6960px;
+}
+
+/* line 1693, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f689 {
+  background-position: 0 -7000px;
+}
+
+/* line 1697, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f680 {
+  background-position: 0 -7020px;
+}
+
+/* line 1701, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6a4 {
+  background-position: 0 -7040px;
+}
+
+/* line 1705, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f695 {
+  background-position: 0 -7060px;
+}
+
+/* line 1709, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f69a {
+  background-position: 0 -7100px;
+}
+
+/* line 1713, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f692 {
+  background-position: 0 -7120px;
+}
+
+/* line 1717, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f691 {
+  background-position: 0 -7140px;
+}
+
+/* line 1721, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f693 {
+  background-position: 0 -7260px;
+}
+
+/* line 1725, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26fd {
+  background-position: 0 -7180px;
+}
+
+/* line 1729, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f17f {
+  background-position: 0 -7200px;
+}
+
+/* line 1733, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6a5 {
+  background-position: 0 -7220px;
+}
+
+/* line 1737, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6a7 {
+  background-position: 0 -9720px;
+}
+
+/* line 1741, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6a8 {
+  background-position: 0 -7260px;
+}
+
+/* line 1745, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2668 {
+  background-position: 0 -7280px;
+}
+
+/* line 1749, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26fa {
+  background-position: 0 -7300px;
+}
+
+/* line 1753, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3a0 {
+  background-position: 0 -9200px;
+}
+
+/* line 1757, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3a1 {
+  background-position: 0 -7320px;
+}
+
+/* line 1761, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3a2 {
+  background-position: 0 -7340px;
+}
+
+/* line 1765, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3a3 {
+  background-position: 0 -7360px;
+}
+
+/* line 1769, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3a4 {
+  background-position: 0 -7380px;
+}
+
+/* line 1773, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3a5 {
+  background-position: 0 -7400px;
+}
+
+/* line 1777, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3a6 {
+  background-position: 0 -7420px;
+}
+
+/* line 1781, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3a7 {
+  background-position: 0 -7440px;
+}
+
+/* line 1785, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3a8 {
+  background-position: 0 -7460px;
+}
+
+/* line 1789, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3a9 {
+  background-position: 0 -7540px;
+}
+
+/* line 1793, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3aa {
+  background-position: 0 -9200px;
+}
+
+/* line 1797, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3ab {
+  background-position: 0 -7500px;
+}
+
+/* line 1801, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3ac {
+  background-position: 0 -7520px;
+}
+
+/* line 1805, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3ad {
+  background-position: 0 -7540px;
+}
+
+/* line 1809, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3ae {
+  background-position: 0 -9200px;
+}
+
+/* line 1813, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f004 {
+  background-position: 0 -7560px;
+}
+
+/* line 1817, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3af {
+  background-position: 0 -7580px;
+}
+
+/* line 1821, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3b0 {
+  background-position: 0 -7600px;
+}
+
+/* line 1825, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3b1 {
+  background-position: 0 -7620px;
+}
+
+/* line 1829, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3b2 {
+  background-position: 0 -9200px;
+}
+
+/* line 1833, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3b3 {
+  background-position: 0 -9200px;
+}
+
+/* line 1837, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3b4 {
+  background-position: 0 -9200px;
+}
+
+/* line 1841, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f0cf {
+  background-position: 0 -9200px;
+}
+
+/* line 1845, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3b5 {
+  background-position: 0 -7640px;
+}
+
+/* line 1849, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3b6 {
+  background-position: 0 -7740px;
+}
+
+/* line 1853, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3b7 {
+  background-position: 0 -7680px;
+}
+
+/* line 1857, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3b8 {
+  background-position: 0 -7700px;
+}
+
+/* line 1861, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3b9 {
+  background-position: 0 -9200px;
+}
+
+/* line 1865, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3ba {
+  background-position: 0 -7720px;
+}
+
+/* line 1869, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3bb {
+  background-position: 0 -9200px;
+}
+
+/* line 1873, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f3bc {
+  background-position: 0 -7740px;
+}
+
+/* line 1877, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji303d {
+  background-position: 0 -7760px;
+}
+
+/* line 1881, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4f7 {
+  background-position: 0 -4940px;
+}
+
+/* line 1885, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4f9 {
+  background-position: 0 -7400px;
+}
+
+/* line 1889, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4fa {
+  background-position: 0 -7780px;
+}
+
+/* line 1893, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4fb {
+  background-position: 0 -7840px;
+}
+
+/* line 1897, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4fc {
+  background-position: 0 -7860px;
+}
+
+/* line 1901, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f48b {
+  background-position: 0 -7900px;
+}
+
+/* line 1905, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f48c {
+  background-position: 0 -11200px;
+}
+
+/* line 1909, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f48d {
+  background-position: 0 -7940px;
+}
+
+/* line 1913, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f48e {
+  background-position: 0 -7960px;
+}
+
+/* line 1917, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f48f {
+  background-position: 0 -7980px;
+}
+
+/* line 1921, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f490 {
+  background-position: 0 -8000px;
+}
+
+/* line 1925, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f491 {
+  background-position: 0 -8020px;
+}
+
+/* line 1929, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f492 {
+  background-position: 0 -8040px;
+}
+
+/* line 1933, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f51e {
+  background-position: 0 -9860px;
+}
+
+/* line 1937, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emojia9 {
+  background-position: 0 -9900px;
+}
+
+/* line 1941, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emojiae {
+  background-position: 0 -9920px;
+}
+
+/* line 1945, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2122 {
+  background-position: 0 -9940px;
+}
+
+/* line 1949, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2139 {
+  background-position: 0 -9200px;
+}
+
+/* line 1953, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2320e3 {
+  background-position: 0 -8060px;
+}
+
+/* line 1957, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji3120e3 {
+  background-position: 0 -8080px;
+}
+
+/* line 1961, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji3220e3 {
+  background-position: 0 -8100px;
+}
+
+/* line 1965, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji3320e3 {
+  background-position: 0 -8120px;
+}
+
+/* line 1969, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji3420e3 {
+  background-position: 0 -8140px;
+}
+
+/* line 1973, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji3520e3 {
+  background-position: 0 -8160px;
+}
+
+/* line 1977, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji3620e3 {
+  background-position: 0 -8180px;
+}
+
+/* line 1981, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji3720e3 {
+  background-position: 0 -8200px;
+}
+
+/* line 1985, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji3820e3 {
+  background-position: 0 -8220px;
+}
+
+/* line 1989, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji3920e3 {
+  background-position: 0 -8240px;
+}
+
+/* line 1993, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji3020e3 {
+  background-position: 0 -8260px;
+}
+
+/* line 1997, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f51f {
+  background-position: 0 -9200px;
+}
+
+/* line 2001, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4f6 {
+  background-position: 0 -8280px;
+}
+
+/* line 2005, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4f3 {
+  background-position: 0 -8300px;
+}
+
+/* line 2009, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4f4 {
+  background-position: 0 -8320px;
+}
+
+/* line 2013, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f354 {
+  background-position: 0 -8340px;
+}
+
+/* line 2017, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f359 {
+  background-position: 0 -8360px;
+}
+
+/* line 2021, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f370 {
+  background-position: 0 -8380px;
+}
+
+/* line 2025, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f35c {
+  background-position: 0 -8400px;
+}
+
+/* line 2029, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f35e {
+  background-position: 0 -8420px;
+}
+
+/* line 2033, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f373 {
+  background-position: 0 -8440px;
+}
+
+/* line 2037, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f366 {
+  background-position: 0 -8460px;
+}
+
+/* line 2041, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f35f {
+  background-position: 0 -8480px;
+}
+
+/* line 2045, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f361 {
+  background-position: 0 -8500px;
+}
+
+/* line 2049, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f358 {
+  background-position: 0 -8520px;
+}
+
+/* line 2053, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f35a {
+  background-position: 0 -8540px;
+}
+
+/* line 2057, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f35d {
+  background-position: 0 -8560px;
+}
+
+/* line 2061, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f35b {
+  background-position: 0 -8580px;
+}
+
+/* line 2065, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f362 {
+  background-position: 0 -8600px;
+}
+
+/* line 2069, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f363 {
+  background-position: 0 -8620px;
+}
+
+/* line 2073, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f371 {
+  background-position: 0 -8640px;
+}
+
+/* line 2077, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f372 {
+  background-position: 0 -8660px;
+}
+
+/* line 2081, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f367 {
+  background-position: 0 -8680px;
+}
+
+/* line 2085, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f356 {
+  background-position: 0 -9200px;
+}
+
+/* line 2089, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f365 {
+  background-position: 0 -9200px;
+}
+
+/* line 2093, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f360 {
+  background-position: 0 -9200px;
+}
+
+/* line 2097, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f355 {
+  background-position: 0 -9200px;
+}
+
+/* line 2101, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f357 {
+  background-position: 0 -9200px;
+}
+
+/* line 2105, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f368 {
+  background-position: 0 -9200px;
+}
+
+/* line 2109, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f369 {
+  background-position: 0 -9200px;
+}
+
+/* line 2113, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f36a {
+  background-position: 0 -9200px;
+}
+
+/* line 2117, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f36b {
+  background-position: 0 -9200px;
+}
+
+/* line 2121, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f36c {
+  background-position: 0 -9200px;
+}
+
+/* line 2125, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f36d {
+  background-position: 0 -9200px;
+}
+
+/* line 2129, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f36e {
+  background-position: 0 -9200px;
+}
+
+/* line 2133, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f36f {
+  background-position: 0 -9200px;
+}
+
+/* line 2137, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f364 {
+  background-position: 0 -9200px;
+}
+
+/* line 2141, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f374 {
+  background-position: 0 -8700px;
+}
+
+/* line 2145, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2615 {
+  background-position: 0 -8720px;
+}
+
+/* line 2149, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f378 {
+  background-position: 0 -8860px;
+}
+
+/* line 2153, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f37a {
+  background-position: 0 -8760px;
+}
+
+/* line 2157, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f375 {
+  background-position: 0 -8780px;
+}
+
+/* line 2161, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f376 {
+  background-position: 0 -8800px;
+}
+
+/* line 2165, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f377 {
+  background-position: 0 -8860px;
+}
+
+/* line 2169, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f37b {
+  background-position: 0 -8840px;
+}
+
+/* line 2173, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f379 {
+  background-position: 0 -8860px;
+}
+
+/* line 2177, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2197 {
+  background-position: 0 -8960px;
+}
+
+/* line 2181, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2198 {
+  background-position: 0 -8980px;
+}
+
+/* line 2185, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2196 {
+  background-position: 0 -8920px;
+}
+
+/* line 2189, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2199 {
+  background-position: 0 -8940px;
+}
+
+/* line 2193, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2934 {
+  background-position: 0 -8960px;
+}
+
+/* line 2197, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2935 {
+  background-position: 0 -8980px;
+}
+
+/* line 2201, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2194 {
+  background-position: 0 -9200px;
+}
+
+/* line 2205, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2195 {
+  background-position: 0 -9200px;
+}
+
+/* line 2209, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2b06 {
+  background-position: 0 -9000px;
+}
+
+/* line 2213, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2b07 {
+  background-position: 0 -9020px;
+}
+
+/* line 2217, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji27a1 {
+  background-position: 0 -9040px;
+}
+
+/* line 2221, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2b05 {
+  background-position: 0 -11180px;
+}
+
+/* line 2225, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji25b6 {
+  background-position: 0 -9080px;
+}
+
+/* line 2229, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji25c0 {
+  background-position: 0 -9100px;
+}
+
+/* line 2233, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji23e9 {
+  background-position: 0 -9120px;
+}
+
+/* line 2237, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji23ea {
+  background-position: 0 -9140px;
+}
+
+/* line 2241, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji23eb {
+  background-position: 0 -9200px;
+}
+
+/* line 2245, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji23ec {
+  background-position: 0 -9200px;
+}
+
+/* line 2249, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f53a {
+  background-position: 0 -9200px;
+}
+
+/* line 2253, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f53b {
+  background-position: 0 -9200px;
+}
+
+/* line 2257, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f53c {
+  background-position: 0 -9200px;
+}
+
+/* line 2261, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f53d {
+  background-position: 0 -9200px;
+}
+
+/* line 2265, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2b55 {
+  background-position: 0 -9800px;
+}
+
+/* line 2269, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji274c {
+  background-position: 0 -10340px;
+}
+
+/* line 2273, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji274e {
+  background-position: 0 -10340px;
+}
+
+/* line 2277, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2757 {
+  background-position: 0 -9160px;
+}
+
+/* line 2281, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2049 {
+  background-position: 0 -9200px;
+}
+
+/* line 2285, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji203c {
+  background-position: 0 -9200px;
+}
+
+/* line 2289, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2753 {
+  background-position: 0 -9180px;
+}
+
+/* line 2293, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2754 {
+  background-position: 0 -9200px;
+}
+
+/* line 2297, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2755 {
+  background-position: 0 -9220px;
+}
+
+/* line 2301, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji3030 {
+  background-position: 0 -9200px;
+}
+
+/* line 2305, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji27b0 {
+  background-position: 0 -9200px;
+}
+
+/* line 2309, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji27bf {
+  background-position: 0 -9200px;
+}
+
+/* line 2313, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2764 {
+  background-position: 0 -9240px;
+}
+
+/* line 2317, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f493 {
+  background-position: 0 -9480px;
+}
+
+/* line 2321, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f494 {
+  background-position: 0 -9280px;
+}
+
+/* line 2325, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f495 {
+  background-position: 0 -9480px;
+}
+
+/* line 2329, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f496 {
+  background-position: 0 -9480px;
+}
+
+/* line 2333, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f497 {
+  background-position: 0 -9340px;
+}
+
+/* line 2337, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f498 {
+  background-position: 0 -9360px;
+}
+
+/* line 2341, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f499 {
+  background-position: 0 -9380px;
+}
+
+/* line 2345, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f49a {
+  background-position: 0 -9400px;
+}
+
+/* line 2349, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f49b {
+  background-position: 0 -9420px;
+}
+
+/* line 2353, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f49c {
+  background-position: 0 -9440px;
+}
+
+/* line 2357, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f49d {
+  background-position: 0 -9460px;
+}
+
+/* line 2361, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f49e {
+  background-position: 0 -9480px;
+}
+
+/* line 2365, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f49f {
+  background-position: 0 -9500px;
+}
+
+/* line 2369, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2665 {
+  background-position: 0 -9520px;
+}
+
+/* line 2373, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2660 {
+  background-position: 0 -9540px;
+}
+
+/* line 2377, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2666 {
+  background-position: 0 -9560px;
+}
+
+/* line 2381, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2663 {
+  background-position: 0 -9580px;
+}
+
+/* line 2385, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6ac {
+  background-position: 0 -9600px;
+}
+
+/* line 2389, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6ad {
+  background-position: 0 -9620px;
+}
+
+/* line 2393, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji267f {
+  background-position: 0 -9640px;
+}
+
+/* line 2397, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6a9 {
+  background-position: 0 -9200px;
+}
+
+/* line 2401, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26a0 {
+  background-position: 0 -9700px;
+}
+
+/* line 2405, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26d4 {
+  background-position: 0 -9720px;
+}
+
+/* line 2409, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji267b {
+  background-position: 0 -9200px;
+}
+
+/* line 2413, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6b2 {
+  background-position: 0 -6980px;
+}
+
+/* line 2417, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6b6 {
+  background-position: 0 -7080px;
+}
+
+/* line 2421, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6b9 {
+  background-position: 0 -9740px;
+}
+
+/* line 2425, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6ba {
+  background-position: 0 -9760px;
+}
+
+/* line 2429, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6c0 {
+  background-position: 0 -5220px;
+}
+
+/* line 2433, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6bb {
+  background-position: 0 -5240px;
+}
+
+/* line 2437, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6bd {
+  background-position: 0 -5260px;
+}
+
+/* line 2441, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6be {
+  background-position: 0 -5280px;
+}
+
+/* line 2445, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6bc {
+  background-position: 0 -9780px;
+}
+
+/* line 2449, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6aa {
+  background-position: 0 -9200px;
+}
+
+/* line 2453, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f6ab {
+  background-position: 0 -9200px;
+}
+
+/* line 2457, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2714 {
+  background-position: 0 -9200px;
+}
+
+/* line 2461, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f191 {
+  background-position: 0 -9200px;
+}
+
+/* line 2465, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f192 {
+  background-position: 0 -10020px;
+}
+
+/* line 2469, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f193 {
+  background-position: 0 -9200px;
+}
+
+/* line 2473, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f194 {
+  background-position: 0 -11020px;
+}
+
+/* line 2477, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f195 {
+  background-position: 0 -9980px;
+}
+
+/* line 2481, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f196 {
+  background-position: 0 -9200px;
+}
+
+/* line 2485, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f197 {
+  background-position: 0 -9880px;
+}
+
+/* line 2489, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f198 {
+  background-position: 0 -9200px;
+}
+
+/* line 2493, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f199 {
+  background-position: 0 -10000px;
+}
+
+/* line 2497, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f19a {
+  background-position: 0 -9960px;
+}
+
+/* line 2501, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f201 {
+  background-position: 0 -10060px;
+}
+
+/* line 2505, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f202 {
+  background-position: 0 -10080px;
+}
+
+/* line 2509, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f232 {
+  background-position: 0 -9200px;
+}
+
+/* line 2513, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f233 {
+  background-position: 0 -10100px;
+}
+
+/* line 2517, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f234 {
+  background-position: 0 -9200px;
+}
+
+/* line 2521, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f235 {
+  background-position: 0 -10120px;
+}
+
+/* line 2525, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f236 {
+  background-position: 0 -10140px;
+}
+
+/* line 2529, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f21a {
+  background-position: 0 -10160px;
+}
+
+/* line 2533, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f237 {
+  background-position: 0 -10180px;
+}
+
+/* line 2537, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f238 {
+  background-position: 0 -10200px;
+}
+
+/* line 2541, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f239 {
+  background-position: 0 -10220px;
+}
+
+/* line 2545, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f22f {
+  background-position: 0 -10240px;
+}
+
+/* line 2549, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f23a {
+  background-position: 0 -10260px;
+}
+
+/* line 2553, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji3299 {
+  background-position: 0 -10280px;
+}
+
+/* line 2557, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji3297 {
+  background-position: 0 -10300px;
+}
+
+/* line 2561, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f250 {
+  background-position: 0 -10320px;
+}
+
+/* line 2565, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f251 {
+  background-position: 0 -9200px;
+}
+
+/* line 2569, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2795 {
+  background-position: 0 -9200px;
+}
+
+/* line 2573, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2796 {
+  background-position: 0 -9200px;
+}
+
+/* line 2577, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2716 {
+  background-position: 0 -10340px;
+}
+
+/* line 2581, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2797 {
+  background-position: 0 -9200px;
+}
+
+/* line 2585, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4a0 {
+  background-position: 0 -9200px;
+}
+
+/* line 2589, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4a1 {
+  background-position: 0 -10360px;
+}
+
+/* line 2593, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4a2 {
+  background-position: 0 -10380px;
+}
+
+/* line 2597, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4a3 {
+  background-position: 0 -10400px;
+}
+
+/* line 2601, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4a4 {
+  background-position: 0 -10420px;
+}
+
+/* line 2605, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4a5 {
+  background-position: 0 -9200px;
+}
+
+/* line 2609, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4a6 {
+  background-position: 0 -10460px;
+}
+
+/* line 2613, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4a7 {
+  background-position: 0 -10460px;
+}
+
+/* line 2617, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4a8 {
+  background-position: 0 -10480px;
+}
+
+/* line 2621, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4a9 {
+  background-position: 0 -5000px;
+}
+
+/* line 2625, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4aa {
+  background-position: 0 -10500px;
+}
+
+/* line 2629, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4ab {
+  background-position: 0 -10520px;
+}
+
+/* line 2633, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4ac {
+  background-position: 0 -9200px;
+}
+
+/* line 2637, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2728 {
+  background-position: 0 -11000px;
+}
+
+/* line 2641, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2734 {
+  background-position: 0 -10560px;
+}
+
+/* line 2645, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2733 {
+  background-position: 0 -10580px;
+}
+
+/* line 2649, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26aa {
+  background-position: 0 -10640px;
+}
+
+/* line 2653, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji26ab {
+  background-position: 0 -10640px;
+}
+
+/* line 2657, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f534 {
+  background-position: 0 -10640px;
+}
+
+/* line 2661, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f535 {
+  background-position: 0 -10900px;
+}
+
+/* line 2665, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f532 {
+  background-position: 0 -10900px;
+}
+
+/* line 2669, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f533 {
+  background-position: 0 -10980px;
+}
+
+/* line 2673, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2b50 {
+  background-position: 0 -10720px;
+}
+
+/* line 2677, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2b1c {
+  background-position: 0 -10980px;
+}
+
+/* line 2681, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2b1b {
+  background-position: 0 -10900px;
+}
+
+/* line 2685, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji25ab {
+  background-position: 0 -10980px;
+}
+
+/* line 2689, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji25aa {
+  background-position: 0 -10900px;
+}
+
+/* line 2693, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji25fd {
+  background-position: 0 -10980px;
+}
+
+/* line 2697, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji25fe {
+  background-position: 0 -10900px;
+}
+
+/* line 2701, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji25fb {
+  background-position: 0 -10980px;
+}
+
+/* line 2705, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji25fc {
+  background-position: 0 -10900px;
+}
+
+/* line 2709, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f536 {
+  background-position: 0 -10980px;
+}
+
+/* line 2713, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f537 {
+  background-position: 0 -10980px;
+}
+
+/* line 2717, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f538 {
+  background-position: 0 -10980px;
+}
+
+/* line 2721, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f539 {
+  background-position: 0 -10980px;
+}
+
+/* line 2725, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2747 {
+  background-position: 0 -11000px;
+}
+
+/* line 2729, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4ae {
+  background-position: 0 -9200px;
+}
+
+/* line 2733, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f4af {
+  background-position: 0 -9200px;
+}
+
+/* line 2737, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji21a9 {
+  background-position: 0 -9200px;
+}
+
+/* line 2741, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji21aa {
+  background-position: 0 -9200px;
+}
+
+/* line 2745, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f503 {
+  background-position: 0 -9200px;
+}
+
+/* line 2749, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f50a {
+  background-position: 0 -7880px;
+}
+
+/* line 2753, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f50b {
+  background-position: 0 -9200px;
+}
+
+/* line 2757, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f50c {
+  background-position: 0 -9200px;
+}
+
+/* line 2761, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f50d {
+  background-position: 0 -11060px;
+}
+
+/* line 2765, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f50e {
+  background-position: 0 -11060px;
+}
+
+/* line 2769, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f512 {
+  background-position: 0 -11140px;
+}
+
+/* line 2773, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f513 {
+  background-position: 0 -11100px;
+}
+
+/* line 2777, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f50f {
+  background-position: 0 -11140px;
+}
+
+/* line 2781, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f510 {
+  background-position: 0 -11140px;
+}
+
+/* line 2785, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f511 {
+  background-position: 0 -11160px;
+}
+
+/* line 2789, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f514 {
+  background-position: 0 -4980px;
+}
+
+/* line 2793, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2611 {
+  background-position: 0 -9200px;
+}
+
+/* line 2797, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f518 {
+  background-position: 0 -9200px;
+}
+
+/* line 2801, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f516 {
+  background-position: 0 -9200px;
+}
+
+/* line 2805, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f517 {
+  background-position: 0 -9200px;
+}
+
+/* line 2809, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f519 {
+  background-position: 0 -11180px;
+}
+
+/* line 2813, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f51a {
+  background-position: 0 -9200px;
+}
+
+/* line 2817, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f51b {
+  background-position: 0 -9200px;
+}
+
+/* line 2821, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f51c {
+  background-position: 0 -9200px;
+}
+
+/* line 2825, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f51d {
+  background-position: 0 -10040px;
+}
+
+/* line 2829, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2003 {
+  background-position: 0 -9200px;
+}
+
+/* line 2833, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2002 {
+  background-position: 0 -9200px;
+}
+
+/* line 2837, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2005 {
+  background-position: 0 -9200px;
+}
+
+/* line 2841, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji2705 {
+  background-position: 0 -9200px;
+}
+
+/* line 2845, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji270a {
+  background-position: 0 -11220px;
+}
+
+/* line 2849, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji270b {
+  background-position: 0 -11240px;
+}
+
+/* line 2853, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji270c {
+  background-position: 0 -11260px;
+}
+
+/* line 2857, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f44a {
+  background-position: 0 -11280px;
+}
+
+/* line 2861, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f44d {
+  background-position: 0 -11300px;
+}
+
+/* line 2865, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji261d {
+  background-position: 0 -11320px;
+}
+
+/* line 2869, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f446 {
+  background-position: 0 -11340px;
+}
+
+/* line 2873, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f447 {
+  background-position: 0 -11360px;
+}
+
+/* line 2877, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f448 {
+  background-position: 0 -11380px;
+}
+
+/* line 2881, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f449 {
+  background-position: 0 -11400px;
+}
+
+/* line 2885, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f44b {
+  background-position: 0 -11420px;
+}
+
+/* line 2889, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f44f {
+  background-position: 0 -11440px;
+}
+
+/* line 2893, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f44c {
+  background-position: 0 -11460px;
+}
+
+/* line 2897, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f44e {
+  background-position: 0 -11480px;
+}
+
+/* line 2901, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.emoji1f450 {
+  background-position: 0 -11500px;
+}
+
+/* line 2905, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_area.with_form {
+  height: 32px;
+  line-height: 32px;
+}
+
+/* line 2910, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_area.with_form .dropdown_value {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 2915, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_area.with_form .dropdown_wrp {
+  line-height: 1.6;
+}
+
+/* line 2919, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_area.with_form .dropdown_menu {
+  vertical-align: top;
+}
+
+/* line 2923, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_area.with_form .dropdown_menu, .dropdown_area.with_form .dropdown_value {
+  margin-right: 10px;
+  margin-top: -0.2em;
+}
+
+/* line 2928, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_area.spacing {
+  margin-bottom: 10px;
+}
+
+/* line 2932, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_wrp {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+}
+
+/* line 2939, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  position: relative;
+  width: 95px;
+  line-height: normal;
+  text-align: left;
+  font-size: 0;
+}
+
+/* line 2950, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.open {
+  z-index: 2;
+}
+
+/* line 2954, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.open .dropdown_data_container {
+  display: block;
+}
+
+/* line 2958, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.disabled .dropdown_switch {
+  background-color: #e6e7ec;
+  background-image: -moz-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e6e7ec), to(#e6e7ec));
+  background-image: -webkit-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: -o-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: linear-gradient(to bottom, #e6e7ec 0, #e6e7ec 100%);
+  border-color: #dadbe0;
+  color: #a5a6aa;
+  cursor: default;
+}
+
+/* line 2970, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.disabled .dropdown_switch button {
+  color: #a5a6aa;
+  cursor: default;
+}
+
+/* line 2975, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.disabled .dropdown_switch:hover {
+  background-color: #e6e7ec;
+  background-image: -moz-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e6e7ec), to(#e6e7ec));
+  background-image: -webkit-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: -o-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: linear-gradient(to bottom, #e6e7ec 0, #e6e7ec 100%);
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  border-color: #dadbe0;
+  color: #a5a6aa;
+}
+
+/* line 2989, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.disabled .dropdown_switch:hover button {
+  color: #a5a6aa;
+  cursor: default;
+}
+
+/* line 2994, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.disabled .dropdown_switch label {
+  cursor: default;
+}
+
+/* line 2998, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.disabled .dropdown_switch .arrow {
+  border-top-color: #a0a0a0;
+}
+
+/* line 3002, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.search .dropdown_switch label {
+  outline: 0;
+}
+
+/* line 3006, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.search .dropdown_switch label.error {
+  color: #b11516;
+}
+
+/* line 3010, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.search .dropdown_data_list .empty {
+  line-height: 30px;
+  padding: 0 10px;
+  color: #7b7b7b;
+  white-space: nowrap;
+}
+
+/* line 3017, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.dropdown_checkbox .dropdown_data_list {
+  width: 150px;
+  padding: 10px;
+  height: auto;
+  overflow: visible;
+  min-height: inherit;
+  max-height: none;
+}
+
+/* line 3026, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.dropdown_checkbox .dropdown_data_list_item {
+  width: 150px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  *zoom: 1;
+}
+
+/* line 3035, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.dropdown_checkbox .dropdown_data_item {
+  padding: 0 10px;
+  *zoom: 1;
+}
+
+/* line 3040, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.dropdown_checkbox .dropdown_tool_bar {
+  padding: 20px 0 10px;
+  margin: 10px 0 0;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+  box-shadow: inset 0 1px 0 #fbfbfb;
+  -moz-box-shadow: inset 0 1px 0 #fbfbfb;
+  -webkit-box-shadow: inset 0 1px 0 #fbfbfb;
+}
+
+/* line 3050, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.dropdown_checkbox .dropdown_tool_bar .btn {
+  margin: 0 3px;
+}
+
+/* line 3054, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.dropdown_checkbox .frm_checkbox_label {
+  margin-right: 0;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  display: block;
+  word-wrap: normal;
+}
+
+/* line 3065, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.dropdown_switch {
+  background-color: #fff;
+  background-image: -moz-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#fff));
+  background-image: -webkit-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: -o-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: linear-gradient(to bottom, #fff 0, #fff 100%);
+  border-color: #e6e7ec;
+  color: #222;
+  height: 30px;
+  line-height: 30px;
+  *line-height: 28px;
+  width: auto;
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
+  text-align: left;
+}
+
+/* line 3084, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.dropdown_switch button {
+  color: #222;
+}
+
+/* line 3088, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.dropdown_switch:hover {
+  background-color: #e6e7ec;
+  background-image: -moz-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e6e7ec), to(#e6e7ec));
+  background-image: -webkit-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: -o-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: linear-gradient(to bottom, #e6e7ec 0, #e6e7ec 100%);
+  border-color: #dadbe0;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  color: #000;
+}
+
+/* line 3102, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.dropdown_switch:hover button {
+  color: #222;
+}
+
+/* line 3106, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_switch {
+  position: relative;
+}
+
+/* line 3110, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_switch label {
+  display: block;
+  cursor: pointer;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-wrap: normal;
+  word-break: normal;
+  margin-left: 10px;
+  margin-right: 25px;
+}
+
+/* line 3124, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_switch .arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -2.5px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: dashed;
+  border-color: transparent;
+  border-bottom-width: 0;
+  border-top-color: #c6c6c6;
+  border-top-style: solid;
+}
+
+/* line 3140, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_data_container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin-top: -1px;
+  left: 0;
+  z-index: 1;
+  min-width: 100%;
+  *width: 100%;
+}
+
+/* line 3151, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_data_list {
+  max-height: 150px;
+  min-height: 2em;
+  overflow-x: hidden;
+  *overflow-x: auto;
+  overflow-y: auto;
+  border: 1px solid #d9dadc;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  background-color: #fff;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  font-size: 14px;
+}
+
+/* line 3168, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_data_item {
+  line-height: 30px;
+}
+
+/* line 3172, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_data_item a {
+  display: block;
+  text-decoration: none;
+  color: #222;
+  white-space: nowrap;
+  padding: 0 28px 0 10px;
+  *padding-right: 10px;
+}
+
+/* line 3181, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_data_item:hover {
+  background-color: #f4f5f9;
+}
+
+/* line 3185, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.dropdown_switch {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+/* line 3191, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.dropdown_switch:hover .arrow {
+  border-top-color: #a0a0a0;
+}
+
+/* line 3195, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_data_list {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  padding: 5px 0 10px;
+}
+
+/* line 3202, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu {
+  vertical-align: middle;
+  width: 116px;
+}
+
+/* line 3207, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.dropdown_checkbox .dropdown_tool_bar {
+  padding: 16px 0 7px;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  border-top-color: #e7e7eb;
+}
+
+/* line 3215, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.no_ellipse {
+  width: auto;
+}
+
+/* line 3219, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.dropdown_menu.no_ellipse .dropdown_data_list {
+  width: 100%;
+}
+
+/* line 3223, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.hd_dropdown_area .dropdown_menu {
+  vertical-align: top;
+  margin-left: -1em;
+}
+
+/* line 3228, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.hd_dropdown_area a.dropdown_switch {
+  border-top-width: 0;
+  border-bottom-width: 0;
+  background: #f4f5f9;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* line 3236, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.cascade_dropdown {
+  font-size: 0;
+}
+
+/* line 3240, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.cascade_dropdown .dropdown_menu {
+  vertical-align: top;
+  margin-left: 14px;
+}
+
+/* line 3245, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.cascade_dropdown .dropdown_menu:first-child {
+  margin-left: 0;
+}
+
+/* line 3249, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.box_align_h {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* line 3256, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_buddy {
+  z-index: 1;
+  width: 625px;
+  padding-top: 0;
+}
+
+/* line 3262, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_buddy .popover_inner {
+  padding: 0;
+}
+
+/* line 3266, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_buddy .frm_control_group {
+  padding-bottom: 0;
+  min-height: 26px;
+}
+
+/* line 3271, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_buddy .frm_label {
+  color: #8d8d8d;
+  width: 2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  margin-top: 0;
+}
+
+/* line 3281, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_buddy .remark .remark_input {
+  margin-top: -6px;
+}
+
+/* line 3285, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_buddy .tag_group {
+  color: #459ae9;
+}
+
+/* line 3289, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_buddy_hd {
+  padding-bottom: 10px;
+}
+
+/* line 3293, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_buddy_bd {
+  *zoom: 1;
+}
+
+/* line 3297, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_buddy_bd:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* line 3304, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_buddy_loading {
+  height: 230px;
+  text-align: center;
+}
+
+/* line 3309, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_user_info {
+  overflow: hidden;
+  *zoom: 1;
+  height: 230px;
+  position: relative;
+}
+
+/* line 3316, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_user_info strong {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* line 3321, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_user_info .global_mod {
+  padding-bottom: 14px;
+}
+
+/* line 3325, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.icon_rich_user_sex {
+  margin-top: -0.2em;
+}
+
+/* line 3329, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_user_info_inner {
+  padding: 18px 18px 0 0;
+}
+
+/* line 3333, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_user_avatar {
+  float: left;
+  width: 230px;
+  height: 230px;
+  margin-right: 20px;
+}
+
+/* line 3340, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_data_bar {
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+  left: 0;
+  padding-top: 14px;
+  border-top: 1px solid #e7e7eb;
+}
+
+/* line 3349, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_data_list {
+  *zoom: 1;
+}
+
+/* line 3353, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_data_list:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* line 3360, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_data_meta {
+  float: left;
+  margin-right: 1em;
+}
+
+/* line 3365, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.rich_data_meta.extra {
+  float: right;
+  margin-right: 0;
+  margin-left: 1em;
+  color: #8d8d8d;
+}
+
+/* line 3372, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.tag_popover {
+  width: 460px;
+}
+
+/* line 3376, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.tag_popover .popover_inner {
+  padding: 0 0 72px;
+}
+
+/* line 3380, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.tag_popover .popover_content {
+  max-height: 260px;
+  overflow-y: auto;
+  padding: 30px;
+}
+
+/* line 3386, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.tag_popover .popover_bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 30px;
+  text-align: center;
+  border-top: 1px solid #e7e7eb;
+}
+
+/* line 3396, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.tag_popover .popover_bar .btn {
+  margin: 0 8px;
+}
+
+/* line 3400, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.tag_popover .frm_checkbox_label {
+  display: inline-block;
+  width: 8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  vertical-align: top;
+  margin-right: 1em;
+  margin-bottom: 10px;
+}
+
+/* line 3412, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.tag_popover .popover_tag_list {
+  position: relative;
+}
+
+/* line 3416, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.tag_popover .popover_tag_add {
+  display: inline-block;
+  line-height: 32px;
+  cursor: pointer;
+  color: #459ae9;
+}
+
+/* line 3423, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.tag_popover .frm_input_box_wrp {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 3428, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.tag_popover .frm_input_box_wrp a {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+/* line 3433, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.tag_popover .frm_input_box {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 3438, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.pagination_wrp {
+  text-align: right;
+}
+
+/* line 3442, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.pagination {
+  *font-size: 0;
+}
+
+/* line 3446, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.page_nav_area, .goto_area {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+/* line 3452, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.page_nav_area {
+  letter-spacing: 4px;
+  *letter-spacing: normal;
+}
+
+/* line 3457, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.page_nav_area .btn {
+  letter-spacing: normal;
+  *margin: 0 3px;
+}
+
+/* line 3462, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.page_nav_area .gap_prev, .page_nav_area .gap_next {
+  letter-spacing: normal;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+/* line 3471, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.page_nav {
+  margin: 0;
+  background-color: #fff;
+  background-image: -moz-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#fff));
+  background-image: -webkit-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: -o-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: linear-gradient(to bottom, #fff 0, #fff 100%);
+  border-color: #e6e7ec;
+  color: #222;
+  height: 30px;
+  line-height: 30px;
+  *line-height: 28px;
+  width: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+/* line 3489, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.page_nav button {
+  color: #222;
+}
+
+/* line 3493, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.page_nav:hover {
+  background-color: #e6e7ec;
+  background-image: -moz-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e6e7ec), to(#e6e7ec));
+  background-image: -webkit-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: -o-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: linear-gradient(to bottom, #e6e7ec 0, #e6e7ec 100%);
+  border-color: #dadbe0;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  color: #000;
+}
+
+/* line 3507, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.page_nav:hover button {
+  color: #222;
+}
+
+/* line 3511, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.page_nav.current {
+  border: 0;
+  background: 0;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  cursor: default;
+}
+
+/* line 3520, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.page_prev, .btn.page_next {
+  position: relative;
+  font-size: 0;
+  letter-spacing: -5px;
+  background-color: #fff;
+  background-image: -moz-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#fff));
+  background-image: -webkit-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: -o-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: linear-gradient(to bottom, #fff 0, #fff 100%);
+  border-color: #e6e7ec;
+  color: #222;
+  height: 30px;
+  line-height: 30px;
+  *line-height: 28px;
+  width: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+/* line 3540, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.page_prev button, .btn.page_next button {
+  color: #222;
+}
+
+/* line 3544, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.page_prev:hover, .btn.page_next:hover {
+  background-color: #e6e7ec;
+  background-image: -moz-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e6e7ec), to(#e6e7ec));
+  background-image: -webkit-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: -o-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: linear-gradient(to bottom, #e6e7ec 0, #e6e7ec 100%);
+  border-color: #dadbe0;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  color: #000;
+}
+
+/* line 3558, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.page_prev:hover button, .btn.page_next:hover button {
+  color: #222;
+}
+
+/* line 3562, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.page_prev .arrow, .btn.page_next .arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -6px;
+  margin-left: -3px;
+}
+
+/* line 3570, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.page_first, .btn.page_last, .btn.page_go {
+  background-color: #fff;
+  background-image: -moz-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#fff));
+  background-image: -webkit-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: -o-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: linear-gradient(to bottom, #fff 0, #fff 100%);
+  border-color: #e6e7ec;
+  color: #222;
+  height: 30px;
+  line-height: 30px;
+  *line-height: 28px;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* line 3587, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.page_first button, .btn.page_last button, .btn.page_go button {
+  color: #222;
+}
+
+/* line 3591, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.page_first:hover, .btn.page_last:hover, .btn.page_go:hover {
+  background-color: #e6e7ec;
+  background-image: -moz-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e6e7ec), to(#e6e7ec));
+  background-image: -webkit-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: -o-linear-gradient(top, #e6e7ec 0, #e6e7ec 100%);
+  background-image: linear-gradient(to bottom, #e6e7ec 0, #e6e7ec 100%);
+  border-color: #dadbe0;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  color: #000;
+}
+
+/* line 3605, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.btn.page_first:hover button, .btn.page_last:hover button, .btn.page_go:hover button {
+  color: #222;
+}
+
+/* line 3609, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.page_next .arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-width: 6px;
+  border-style: dashed;
+  border-color: transparent;
+  border-right-width: 0;
+  border-left-color: #919191;
+  border-left-style: solid;
+}
+
+/* line 3621, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.page_prev .arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-width: 6px;
+  border-style: dashed;
+  border-color: transparent;
+  border-left-width: 0;
+  border-right-color: #919191;
+  border-right-style: solid;
+}
+
+/* line 3633, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.page_num {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  *margin-right: 4px;
+  letter-spacing: normal;
+}
+
+/* line 3641, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.goto_area {
+  margin-left: 8px;
+}
+
+/* line 3645, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.goto_area input[type="text"] {
+  vertical-align: middle;
+  width: 75px;
+  height: 22px;
+  line-height: 22px;
+  padding: 4px 0;
+  border: 1px solid #e7e7eb;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  text-align: center;
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+/* line 3663, /home/chuliang/work/wxoss/app/assets/stylesheets/page_user_ext.scss */
+.pagination .btn {
+  min-width: 0;
+}

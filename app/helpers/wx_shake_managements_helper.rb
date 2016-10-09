@@ -1,0 +1,2 @@
+module WxShakeManagementsHelper
+end

@@ -1,0 +1,138 @@
+<%= content_for :content do %>
+    <div class="col_main setup">
+      <div class="main_hd">
+        <h2>大转盘管理</h2>
+        <div class="page_nav">
+          <%= link_to '返回上一层', wx_wheel_managements_path, :class => 'icon_goback' %>
+          <%= link_to '大转盘管理', wx_wheel_managements_path %>&nbsp;/&nbsp;大转盘详情
+        </div>
+      </div>
+      <div class="main_bd">
+        <div class="msg_pre_view">
+          <ul>
+            <li class="group">
+              <span class="title">活动名称</span>
+              <div class="msg"><%= @wx_activity.name %><br/>
+                <span class="dec">活动名称只用于管理，不显示在下发的活动内容中</span>
+              </div>
+            </li>
+            <li class="group">
+              <span class="title">开始时间</span>
+              <div class="msg"><%= @wx_activity.begintime.strftime("%Y-%m-%d %H:%M") %>
+              </div>
+            </li>
+            <li class="group">
+              <span class="title">结束时间</span>
+              <div class="msg"><%= @wx_activity.endtime.strftime("%Y-%m-%d %H:%M") %>
+              </div>
+            </li>
+            <li class="group">
+              <span class="title">抽奖限制</span>
+              <div class="msg">
+                <span>每人抽奖机会<%= @wx_activity.lottery_num %>次</span><br/>
+                <p><label class="radio-label"><input type="checkbox" name="" id="is_repeat_draw" disabled>支持每天可重复抽奖</label></p>
+              </div>
+            </li>
+            <li class="group">
+              <span class="title">活动说明</span>
+              <div class="msg">
+                <div class="ins">
+                  <%= @wx_activity.description %>
+                </div>
+              </div>
+            </li>
+            <li class="group">
+              <span class="title">领奖方式</span>
+              <div class="msg">
+                <label class="radio-label hide" id="mail">
+                  邮寄/直接发放
+                  <p class="frm_tips m_l20">用户中奖后通过表单来登记领奖信息。</p>
+                  <div id="j_mail_info"><p class="frm_info m_l20"><label class="radio-label"><input type="checkbox" name="realname" id="" disabled>姓名</label><label class="radio-label"><input type="checkbox" name="telephone" id="" disabled>手机</label><label class="radio-label"><input type="checkbox" name="address" id="" disabled>地址</label></p></div>
+                </label>
+                <label class="radio-label hide" id="offline">
+                  线下兑奖
+                  <p class="frm_tips">用户到线下兑奖，由商家进行核销。</p><br/>
+                  <div id="j_offline_info">
+                    <p>是否需要中奖者填写信息<span class="frm_tips">(请勿要求填写与领奖无关的隐私信息）</span><br/><label class="radio-label" id="j_win" ><input type="checkbox" id="j_win_btn" disabled>需要</label></p>
+                    <p class="frm_info hide" id="j_win_info"><label class="radio-label"><input type="checkbox" name="realname" id="" disabled>姓名</label><label class="radio-label"><input type="checkbox" name="telephone" id="" disabled>手机</label></p><br />
+                    <p>线下领奖地址：<br/><%= @wx_activity.offline_address %></p><br/>
+                    <p>线下领奖时间说明：<br/><%= @wx_activity.offline_description %></p>
+                  </div>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="prize_list">
+          <p class="prize_h">奖项设置</p>
+          <% @wx_activity_awards.each do |wx_activity_award| %>
+              <div class="prize_item">
+                <% case wx_activity_award.level %>
+                <% when 1 %>
+                    <div class="prize_item_hd"><h4 class="prize_title">一等奖</h4></div>
+                <% when 2 %>
+                    <div class="prize_item_hd"><h4 class="prize_title">二等奖</h4></div>
+                <% when 3 %>
+                    <div class="prize_item_hd"><h4 class="prize_title">三等奖</h4></div>
+                <% when 4 %>
+                    <div class="prize_item_hd"><h4 class="prize_title">四等奖</h4></div>
+                <% when 5 %>
+                    <div class="prize_item_hd"><h4 class="prize_title">五等奖</h4></div>
+                <% end %>
+                <div class="prize_item_bd">
+                  <ul class="prize_option_list">
+                    <li class="prize_option">
+                      <div class="prize_img"><img src="<%= wx_activity_award.imgurl %>" alt=""/></div>
+                      <span class="prize_name"><%= wx_activity_award.name %></span>
+                      <span class="prize_num"><%= wx_activity_award.amount %>个</span>
+                      <span class="prize_pro">中奖率：<%= wx_activity_award.probability %>%</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div></div>
+<% end %>
+<%= content_for :js do %>
+    <script type="text/javascript">
+      $(function() {
+        var wx_activity = <%= raw @wx_activity.to_json%>;
+        if(wx_activity.is_repeat_draw){
+          $('#is_repeat_draw').prop('checked','true');
+        }
+        if(wx_activity.receive_way == 0){
+          $('#mail').show();
+          if(wx_activity.receive_info.indexOf('realname')!=-1){
+            $("#j_mail_info input[name='realname']").prop('checked','true');
+          }
+          if(wx_activity.receive_info.indexOf('telephone')!=-1){
+            $("#j_mail_info input[name='telephone']").prop('checked','true');
+          }
+          if(wx_activity.receive_info.indexOf('address')!=-1){
+            $("#j_mail_info input[name='address']").prop('checked','true');
+          }
+        }else {
+          $('#offline').show();
+          if(wx_activity.receive_info != null){
+            $('#j_win_info').show();
+            $('#j_win_btn').prop('checked','true');
+            if(wx_activity.receive_info.indexOf('realname')!=-1){
+              $("#j_win_info input[name='realname']").prop('checked','true');
+            }
+            if(wx_activity.receive_info.indexOf('telephone')!=-1){
+              $("#j_win_info input[name='telephone']").prop('checked','true');
+            }
+            if(wx_activity.receive_info.indexOf('address')!=-1){
+              $("#j_win_info input[name='address']").prop('checked','true');
+            }
+          }
+        }
+
+        // 活动说明换行显示
+        var content = $('.ins').text().split("\n").join("<br/>").substring(5);
+        $(".ins").html(content);
+      });
+    </script>
+<% end %>

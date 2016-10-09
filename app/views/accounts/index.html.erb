@@ -1,0 +1,38 @@
+<%= content_for :css do %>
+    <%= stylesheet_link_tag 'master', media: 'all', 'data-turbolinks-track' => true %>
+<% end %>
+
+<div class="main">
+  <div class="main_hd">
+    <h2>公众号管理</h2>
+  </div>
+  <div class="searchBox">
+    <div class="search">
+      <input type="text" style="color:#8d8d8d" onFocus="if(this.value=='请输入公众号名称'){this.value='';this.style.color='#8d8d8d'};" onblur="if(this.value==''){this.value='请输入公众号名称';this.style.color='#8d8d8d'}" value="请输入公众号名称">
+      <button class="search_btn_01">&nbsp;</button>
+    </div>
+    <%= button_to '添加公众号', new_account_path, class: "btn add_btn", method: :get %>
+    <table class="J_table_hover data-table">
+      <thead>
+      <tr>
+        <th>名称</th>
+        <th>备注</th>
+        <th>创建日期</th>
+        <th>操作</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @accounts.each do |account| %>
+          <tr>
+            <td class="name">亚信WiFi</td>
+            <td>集团公众号</td>
+            <td>2015-12-26</td>
+            <td><%= link_to 'Show', account %></td>
+            <td><%= link_to 'Edit', edit_account_path(account) %></td>
+            <td><%= link_to 'Destroy', account, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

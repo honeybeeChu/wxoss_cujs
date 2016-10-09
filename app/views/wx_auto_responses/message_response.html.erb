@@ -1,0 +1,388 @@
+<%= content_for :css do %>
+    <%= javascript_include_tag 'ipmana', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'jquery-ui.min', 'data-turbolinks-track' => true %>
+<% end %>
+<%= content_for :response do %>
+    <div id="tabBoxA" class="tabBox">
+      <ul class="tabList" id="tabListA">
+        <li class="hot" id="res_text" data-value=1><i class="icon_txt"></i>文字</li>
+        <li id="res_pic" data-value=2><i class="icon_txt icon_img"></i>图片</li>
+        <li id="res_audio" data-value=3><i class="icon_txt icon_voice"></i>语音</li>
+        <li id="res_vedio" data-value=4><i class="icon_txt icon_video"></i>视频</li>
+      </ul>
+      <div id="tabOutBoxA">
+        <!--文字-->
+        <div class="tabOutList">
+          <div class="edit_area">
+            <% if @wx_auto_response and @wx_auto_response.res_type == 1 %>
+                <textarea><%= @wx_auto_response.res_content %></textarea>
+            <% else %>
+                <textarea maxlength=600></textarea>
+            <% end %>
+          </div>
+          <div class="editor_toolbar">
+            <div class="editor_tip">最多可以输入600个字</div>
+          </div>
+        </div>
+        <!--图片-->
+        <div class="tabOutList" style="display: none;">
+          <div class="inner">
+
+            <div class="img_item_bd" id="img_item" hidden>
+              <img class="pic" src="" style="height:70px;width:70px;">
+              <a href="#" id="auto_img_del">删除</a>
+            </div>
+
+
+            <div class="create_access auto_img_choice">
+              <a href="#" id="img_modal"><i class="icon36 icon36_add"></i>
+                <strong>从素材库中选择</strong></a>
+            </div>
+
+            <div class="create_access auto_img_choice">
+              <a id="filePicker1">
+                <i class="icon36 icon36_add"></i>
+                <strong>上传图片</strong>
+                <ul class="upload_file_box">
+                </ul>
+              </a>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <!--语音-->
+        <div class="tabOutList" style="display: none;">
+          <div class="inner">
+            <div class="create_access">
+              <a href="#" id="audio_modal"><i class="icon36 icon36_add"></i>
+                <strong>从素材库中选择</strong></a>
+            </div>
+            <div class="create_access">
+              <a href="#"><i class="icon36 icon36_add"></i>
+                <strong>新建语音</strong></a>
+            </div>
+          </div>
+        </div>
+        <!--视频-->
+        <div class="tabOutList" style="display: none;">
+          <div class="inner">
+            <div class="create_access">
+              <a href="#" id="video_modal"><i class="icon36 icon36_add"></i>
+                <strong>从素材库中选择</strong></a>
+            </div>
+            <div class="create_access">
+              <a href="#"><i class="icon36 icon36_add"></i>
+                <strong>新建视频</strong></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div hidden>
+        <input id="currentAccountId" value=<%= session[:current_official_account_id] %>/>
+        <%= text_field :wx_auto_response, :event_type %>
+        <%= text_field :wx_auto_response, :res_type %>
+      </div>
+      <div class="results" style="position: fixed;left: 35%;top: 0;" hidden>删除成功</div>
+
+    </div>
+    <div class="tool_bar">
+
+      <button class="btn btn_primary" type="button" id="saveAutoResponse">保存</button>
+      <button class="btn btn_primary cancel" id="delAutoResponse">删除回复</button>
+
+
+
+
+
+      <div class="mod-popover" hidden>
+        <div class="mod-popover_arrow"></div>
+        <div class="mod-popover_inner">
+          <div class="popover_content">删除后，关注该公众号的用户将不再接收该回复，确定删除？</div>
+          <div class="popover_bar">
+
+            <button class="btn btn_primary remove_response">确认</button>
+            <button class=" btn btn_primary cancel">取消</button>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+<% end %>
+
+
+
+
+<%= content_for :js do %>
+    <%= javascript_include_tag 'webuploader/webuploader.js', 'data-turbolinks-track' => true %>
+
+
+    <script type="text/javascript">
+      var autoObject = {
+        wx_auto_response: {
+          res_content: "",
+          event_type: 2,
+          res_type: 1
+        }
+      };
+
+      var groupMap = <%= raw @group_map.to_json%>;
+      var groupName = <%= raw @group_name_map.to_json%>;
+
+      // page initial event
+      $(function () {
+
+        //初始化页面的时候，把被添加自动回复的内容放在页面上
+        dataInitial();
+
+        //页面的所有事件绑定
+        bindPageEvents();
+
+        $.WebUploader({
+          // 选完文件后，是否自动上传。
+          auto: true,
+          // swf文件路径
+          swf: 'plugins/webuploader/Uploader.swf',
+          // 文件接收服务端。
+          server: '<%= wx_articles_resources_path %>',
+          // 选择文件的按钮。可选。
+          // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+          pick: '#filePicker1',
+          fileVal: 'file',
+          fileQueued: function (file) {
+          },
+          uploadProgress: function (file, percentage) {
+            $(".results").html("上传中.....");
+            $(".results").show();
+
+          },
+          uploadSuccess: function (file, resData) {
+            autoObject.wx_auto_response.res_content = resData.resource_id;
+            var filename = file.name;
+            $(".auto_img_choice").hide();
+            $("#img_item img").attr("src", "/uploads/" + <%= session[:current_official_account_id] %> + "/"+ filename);
+            $("#img_item").show();
+          },
+          uploadError: function (file) {
+            $(".results").html("上传失败");
+            $(".results").show();
+            setTimeout(function () {
+              $(".results").hide();
+            }, 1000);
+          },
+          uploadComplete: function (file) {
+            $(".results").hide();
+          }
+        });
+
+
+      });
+
+
+      //初始化被添加自动回复的界面初始化
+      function dataInitial() {
+        var current_account_id = '<%= session[:current_official_account_id] %>';
+        //如果session中没有current_official_account_id ，弹出选择框
+        if (current_account_id == '') {
+//          $("#account_choice").show();
+          $("#mask_select_account,#pop_account_select").show();
+          return;
+
+        }
+
+        //弹出层的可拖拽设置
+        $("#img_choice_popup").draggable();
+
+        //解决webloader隐藏快无法在hide状态下加载的问题
+        $(".tabOutList").show();
+        setTimeout(function () {
+          $(".tabOutList").hide();
+        }, 100);
+
+        // 解决webloader的错误
+        setTimeout(function () {
+          $(".webuploader-element-invisible").hide();
+
+          switch ($("#wx_auto_response_res_type").val()) {
+            case '1':
+              $("#res_text").trigger("click");
+              break;
+            case '2':
+              $(".auto_img_choice").hide();
+              $("#img_item").show();
+            <%	if @wx_resource != nil  %>
+              var imgname = '<%=	@wx_resource.file_url  %>';
+              $("#img_item img").attr("src", imgname);
+            <% end %>
+              $("#res_pic").trigger("click");
+              break;
+            case '3':
+              $("#res_audio").trigger("click");
+              break;
+            case '4':
+              $("#res_vedio").trigger("click");
+              break;
+            default:
+              $("#res_text").trigger("click");
+          }
+        }, 100);
+
+      }
+
+
+      //页面的事件绑定
+      function bindPageEvents() {
+        // 删除上传的图片
+        $("#auto_img_del").on("click", function () {
+          autoObject.wx_auto_response.res_content = "";
+          $("#img_item").hide();
+          $(".auto_img_choice").show();
+        });
+
+
+        //点击回复类型的事件绑定
+        $("#tabListA li").on("click", function () {
+          $("#wx_auto_response_res_type").val($(this).attr("data-value"));
+          autoObject.wx_auto_response.res_type = parseInt($(this).attr("data-value"));
+        });
+
+
+        //给所有的回复类型增加点击样式
+        $("#tabListA li").each(function () {
+          $(this).click(function () {
+            $(this).addClass("hot").siblings("li").removeClass();
+            $("#tabOutBoxA .tabOutList:eq(" + $(this).index() + ")").show().siblings("div").hide();
+          });
+        });
+
+
+        //保存按钮的点击事件
+        $("#saveAutoResponse").on("click", function (event) {
+
+          //check内容的正确性
+          if (autoObject.wx_auto_response.res_type == 1) {  //文字
+            if ($(".edit_area textarea").val().trim() == "") {
+              showMessage("文字必须为1到600个字");
+              return;
+            }
+            autoObject.wx_auto_response.res_content = $(".edit_area > textarea").val();
+          } else if (autoObject.wx_auto_response.res_type == 2) {    //图片
+            if ($("#img_item").is(":hidden")) {
+              showMessage("请添加素材");
+              return;
+            }
+          }
+
+
+          var actionUrl;
+          <% if @wx_auto_response.nil? %>
+          actionUrl = '<%=create_response_wx_auto_responses_path %>';
+          <% else %>
+          actionUrl = '<%=update_response_wx_auto_responses_path %>';
+
+          <% end %>
+
+          $.ajax({
+            type: 'POST',
+            url: actionUrl,
+            dataType: 'json',
+            data: autoObject,
+            success: function (data) {
+              if (data.result == 'success') {
+                showMessage("保存成功");
+              } else {
+                showMessage("保存失败");
+              }
+            }
+          });
+        });
+
+
+        //删除自动回复消息的按钮点击事件
+        $("#delAutoResponse").click(function(){
+          $(".mod-popover").show();
+        });
+
+
+        // 确认删除此自动回复
+        $(".mod-popover .remove_response").click(function(){
+
+          $.ajax({
+            type: 'get',
+            url: '<%=delete_response_wx_auto_responses_path %>',
+            dataType: 'json',
+            data: {event_type:2},
+            success: function (data) {
+              if (data.result == 'success') {
+                showMessage("删除成功");
+                location.reload();
+              } else {
+                showMessage("已删除");
+                location.reload();
+              }
+            }
+          });
+
+
+        });
+
+        // 取消删除此自动回复
+        $(".mod-popover .cancel").click(function(){
+          $(".mod-popover").hide();
+        });
+
+
+
+        //从素材库添加的点击按钮的事件绑定
+        $("#img_modal").click(function(){
+          $("#mask,#img_choice_popup").show();
+
+          // 默认选择的是为分组的图片展示出来
+          $(".js_group dd[data-groupid=1]").trigger("click");
+
+        });
+
+        // 确定选中的图片
+        $("#img_choice_confirm").click(function(){
+          $("#mask,#img_choice_popup").hide();
+
+          var media_id = $("label.frm_checkbox_label.selected").parent().attr("resource-id");
+
+          autoObject.wx_auto_response.res_content = media_id;
+          $(".auto_img_choice").hide();
+          $("#img_item img").attr("src",  $("label.frm_checkbox_label.selected>img").attr("src"));
+          $("#img_item").show();
+        });
+      }
+
+
+      //提示消息框
+      function showMessage(msg) {
+        $(".results").html(msg);
+        $(".results").show();
+        setTimeout(function () {
+          $(".results").hide();
+        }, 1000);
+      }
+
+
+      // 设置确定按钮是否可以点击
+      function setConfirmBtnVisible(){
+        if($(".img_list li>label.selected").length == 0){
+          $("#img_choice_confirm").attr("disabled","true");
+          $("#img_choice_confirm").addClass("btn_disabled");
+        }else{
+          $("#img_choice_confirm").removeAttr("disabled");
+          $("#img_choice_confirm").removeClass("btn_disabled");
+        }
+      }
+
+    </script>
+<% end %>
+<!--主体结束-->
+
+
+
+

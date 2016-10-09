@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  original_id: MyString
+  wechat_name: MyString
+  wechat_account: MyString
+  wechat_type: 1
+  app_id: MyString
+  app_secret: MyString
+  uncode: MyString
+  token: MyString
+  encoding_aes_key: MyString
+  accesstype: 1
+
+two:
+  original_id: MyString
+  wechat_name: MyString
+  wechat_account: MyString
+  wechat_type: 1
+  app_id: MyString
+  app_secret: MyString
+  uncode: MyString
+  token: MyString
+  encoding_aes_key: MyString
+  accesstype: 1

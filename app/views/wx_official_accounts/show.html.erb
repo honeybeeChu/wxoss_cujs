@@ -1,0 +1,73 @@
+<div class="col_main">
+  <div class="main">
+    <div class="main_hd">
+      <h2>公众号管理</h2>
+    </div>
+    <div class="main_bd" style="border-top: 1px solid #e7e7eb;">
+      <div>
+        <div class="add-data-form">
+          <div class="add-item">
+            <label class="add-label">公众号名称：</label>
+            <%= @wx_official_account.wechat_name %>
+          </div>
+          <div class="add-item">
+            <label class="add-label">公众号原始ID：</label>
+            <%= @wx_official_account.original_id %>
+          </div>
+          <div class="add-item">
+            <label class="add-label">微信号：</label>
+            <%= @wx_official_account.wechat_account %>
+          </div>
+          <div class="add-item">
+            <label class="add-label">AppID(公众号）：</label>
+            <%= @wx_official_account.app_id %>
+          </div>
+          <div class="add-item">
+            <label class="add-label">AppSecret(公众号）：</label>
+            <%= @wx_official_account.app_secret %>
+          </div>
+          <div class="add-item">
+            <label class="add-label">公众号所属集团：</label>
+            <%= WxMEnterpriseclient.find(@wx_official_account.wx_m_enterpriseclient_id).ecname %>
+          </div>
+          <div class="add-item">
+            <label class="add-label">公众号类型：</label>
+            <%	if @wx_official_account.wechat_type == 1%>
+                未认证订阅号
+            <%	elsif @wx_official_account.wechat_type == 2%>
+                已认证订阅号
+            <%	elsif @wx_official_account.wechat_type == 3%>
+                未认证服务号
+            <%	elsif @wx_official_account.wechat_type == 4%>
+                已认证服务号
+            <% end %>
+          </div>
+          <div class="add-item">
+            <label class="add-label">服务器地址：</label>
+            <%= weixin_engine.weixin_server_url(@wx_official_account.weixin_secret_key).sub!(request.base_url, WEIXIN_SERVER) %>
+          </div>
+          <div class="add-item">
+            <label class="add-label">令牌：</label>
+            <%= @wx_official_account.weixin_token %>
+          </div>
+          <div class="add-item">
+            <label class="add-label">消息秘钥：</label>
+            <%= @wx_official_account.encoding_aes_key %>
+          </div>
+        </div>
+        <div class="tool_bar">
+          <%= button_to "修改", edit_wx_official_account_path(@wx_official_account), :class => "btn btn_primary", method: :get %>
+          <%= button_to "返回", wx_official_accounts_path, :class => " btn btn_primary cancel", method: :get %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $(".manager").addClass("selected");
+</script>
+<style>
+  .button_to{
+    display: inline-block;}
+</style>

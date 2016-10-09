@@ -1,0 +1,391 @@
+<%= content_for :css do %>
+    <%= stylesheet_link_tag 'page/stat/stat_overview', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'wx_msg_analysis', 'data-turbolinks-track' => true %>
+<% end %>
+<%= content_for :tab do %>
+    <h2>统计</h2>
+<% end %>
+<%= content_for :resource do %>
+    <script type="text/javascript">
+      window.cgiData = <%= raw @wx_interface_stats.to_json%>
+    </script>
+    <div class="main_bd msg_analysis">
+      <div class="wrp_overview wrp_interface">
+        <div class="wrp_select_box append_help">
+          <div class="select_box" id="js_timetype_drop"> </div>
+
+          <div class="ext_info help">
+            <i id="js_help_icon" class="icon_msg_mini ask"></i>
+            <div class="help_content" id="js_help_content">
+              <i class="dropdown_arrow out"></i>
+              <i class="dropdown_arrow in"></i>
+              <dl class="help-change-list" id="pop_items_info">
+                <dt>调用次数</dt>
+                <dd>接口被调用总次数</dd>
+                <dt>失败率</dt>
+                <dd>调用失败的次数/接口被调用总次数</dd>
+                <dt>平均耗时</dt>
+                <dd>接口调用的总时长/接口被调用成功总次数</dd>
+                <dt>最大耗时</dt>
+                <dd>接口调用耗时的最大值</dd>
+                <dt>日、周、月</dt>
+                <dd>分别计算昨日数据相比1天、7天、30天前的变化情况</dd>
+              </dl>
+              <div class="help-change-footer" id="footer_items_info"><span class="wechat_data_range">数据从2013年7月1日开始统计。</span>由于服务器缓存，以及指标计算方法和统计时间的差异，数据可能出现微小误差，一般在1%以内。</div>
+            </div>
+          </div>
+        </div>
+        <div class="page_msg mini top">
+          <div class="inner group">
+                <span class="msg_icon_wrp">
+                    <i class="icon_msg_mini info"></i>
+                </span>
+            <div class="msg_content">
+              <p>接口分析仅统计了基础消息接口，暂未统计其他高级接口，请知悉。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info_box poi_rel" id="js_keydata_p">
+          <div class="inner">
+
+            <div class="info_hd">
+              <h4>昨日关键指标</h4>
+            </div>
+            <div class="info_bd">
+              <div class="content" id="js_keydata">
+                <table class="ui_trendgrid ui_trendgrid_3">
+                  <tr>
+                    <td class="first">
+                      <div class="ui_trendgrid_item">
+                        <div class="ui_trendgrid_chart"></div>
+                        <dl>
+                          <dt><b>调用次数</b></dt>
+                          <dd class="ui_trendgrid_number"><strong>
+                          </strong><em class="ui_trendgrid_unit"></em></dd>
+                          <dd>日</dd>
+                          <dd>周</dd>
+                          <dd>月</dd>
+                        </dl>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ui_trendgrid_item">
+                        <div class="ui_trendgrid_chart"></div>
+                        <dl>
+                          <dt><b>失败率</b></dt>
+                          <dd class="ui_trendgrid_number"><strong>
+                          </strong><em class="ui_trendgrid_unit"></em></dd>
+                          <dd>日</dd>
+                          <dd>周</dd>
+                          <dd>月</dd>
+                        </dl>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ui_trendgrid_item">
+                        <div class="ui_trendgrid_chart"></div>
+                        <dl>
+                          <dt><b>平均耗时(毫秒)</b></dt>
+                          <dd class="ui_trendgrid_number"><strong>
+                          </strong><em class="ui_trendgrid_unit"></em></dd>
+                          <dd>日</dd>
+                          <dd>周</dd>
+                          <dd>月</dd>
+                        </dl>
+                      </div>
+                    </td>
+                    <td class="last">
+                      <div class="ui_trendgrid_item">
+                        <div class="ui_trendgrid_chart" ></div>
+                        <dl>
+                          <dt><b>最大耗时(毫秒)</b></dt>
+                          <dd class="ui_trendgrid_number"><strong>
+                          </strong><em class="ui_trendgrid_unit"></em></dd>
+                          <dd>日                                        </dd><dd>周</dd>
+                          <dd>月</dd>
+                        </dl>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info_box drop_hd_right">
+          <div class="inner" id="js_actions">
+
+            <div  class="info_bd">
+              <div class="sub_title">趋势图</div>
+              <div class="sub_content" id="js_msg_chart">
+
+              </div>
+              <div class="split"></div>
+              <h4 class="sub_title">详细数据                        <div class="tr_ext_info"><a target="_blank" href="javascript:void(0);" id="js_download_detail">导出Excel</a></div>
+              </h4>
+              <div class="sub_content">
+                <div id="js_detail_table"> </div>
+                <div class="turn_page tr" id="js_pagebar"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrp_loading">
+          <div class="stat_loading">
+            <i class="icon_loading"></i><span>消息加载中...</span>
+          </div>
+          <div class="mask"></div>
+        </div>
+
+      </div>
+    </div>
+    <script type="text/html" id="js_keydata_tpl">
+      <table class="ui_trendgrid ui_trendgrid_3">
+        <tr>
+          <td class="first">
+            <div class="ui_trendgrid_item">
+              <div class="ui_trendgrid_chart"></div>
+              <dl>
+                <dt><b>调用次数</b></dt>
+                <dd class="ui_trendgrid_number">
+                  {if isPatch}
+                  <strong><span class='none_data'>暂无数据</span></strong>
+                  {else}
+                  <strong>{callback_count.count}</strong>
+                  {/if}
+                  <em class="ui_trendgrid_unit"></em>
+                </dd>
+                <dd>日 {keyPercent(callback_count.day)}</dd>
+                <dd>周 {keyPercent(callback_count.week)} </dd>
+                <dd>月 {keyPercent(callback_count.month)} </dd>
+              </dl>
+            </div>
+          </td>
+          <td>
+            <div class="ui_trendgrid_item">
+              <div class="ui_trendgrid_chart"></div>
+              <dl>
+                <dt><b>失败率</b></dt>
+                <dd class="ui_trendgrid_number">
+                  {if isPatch}
+                  <strong><span class='none_data'>暂无数据</span></strong>
+                  {else}
+                  <strong>{fail_rate.count}%</strong>
+                  {/if}
+                  <em class="ui_trendgrid_unit"></em>
+                </dd>
+                <dd>日 {keyPercent(fail_rate.day)}</dd>
+                <dd>周 {keyPercent(fail_rate.week)} </dd>
+                <dd>月 {keyPercent(fail_rate.month)} </dd>
+              </dl>
+            </div>
+          </td>
+          <td>
+            <div class="ui_trendgrid_item">
+              <div class="ui_trendgrid_chart" ></div>
+              <dl>
+                <dt><b>平均耗时(毫秒)</b></dt>
+                <dd class="ui_trendgrid_number">
+                  {if isPatch}
+                  <strong><span class='none_data'>暂无数据</span></strong>
+                  {else}
+                  <strong>{average_time_cost.count}</strong>
+                  {/if}
+                  <em class="ui_trendgrid_unit"></em>
+                </dd>
+                <dd>日 {keyPercent(average_time_cost.day)}</dd>
+                <dd>周 {keyPercent(average_time_cost.week)} </dd>
+                <dd>月 {keyPercent(average_time_cost.month)} </dd>
+              </dl>
+            </div>
+          </td>
+          <td class="last">
+            <div class="ui_trendgrid_item">
+              <div class="ui_trendgrid_chart" ></div>
+              <dl>
+                <dt><b>最大耗时(毫秒)</b></dt>
+                <dd class="ui_trendgrid_number">
+                  {if isPatch}
+                  <strong><span class='none_data'>暂无数据</span></strong>
+                  {else}
+                  <strong>{max_time_cost.count}</strong>
+                  {/if}
+                  <em class="ui_trendgrid_unit"></em>
+                </dd>
+                <dd>日 {keyPercent(max_time_cost.day)}</dd>
+                <dd>周 {keyPercent(max_time_cost.week)} </dd>
+                <dd>月 {keyPercent(max_time_cost.month)} </dd>
+              </dl>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </script>
+    <script type="text/html" id="js_detail_table_tpl">
+      <div class="table_wrp hour_datas">
+        <table class="table" cellspacing="0">
+          <thead class="thead">
+          <tr>
+            <th class="table_cell rank_area tl js_rankFlag js_sort_date" data-sort="date">
+              时间                <span class="icon_rank rank_area">
+                    <i class="arrow arrow_up"></i>
+                    <i class="arrow arrow_down"></i>
+                </span>
+            </th>
+            {if type=="hourly"}
+            <th class="table_cell rank_area tl js_rankFlag js_sort_hour" data-sort="hour">
+              小时                <span class="icon_rank rank_area">
+                    <i class="arrow arrow_up"></i>
+                    <i class="arrow arrow_down"></i>
+                </span>
+            </th>
+            {/if}
+            <th class="table_cell rank_area tr js_rankFlag js_sort_callback_count" data-sort="callback_count">
+              调用次数                <span class="icon_rank">
+                    <i class="arrow arrow_up"></i>
+                    <i class="arrow arrow_down"></i>
+                </span>
+            </th>
+            <th class="table_cell rank_area tr js_rankFlag js_sort_fail_count" data-sort="fail_count">
+              失败次数                <span class="icon_rank">
+                    <i class="arrow arrow_up"></i>
+                    <i class="arrow arrow_down"></i>
+                </span>
+            </th>
+            <th class="table_cell rank_area tr js_rankFlag js_sort_fail_rate" data-sort="fail_rate">
+              失败率                <span class="icon_rank">
+                    <i class="arrow arrow_up"></i>
+                    <i class="arrow arrow_down"></i>
+                </span>
+            </th>
+            <th class="table_cell rank_area tr js_rankFlag js_sort_total_time_cost" data-sort="total_time_cost">
+              总共耗时(毫秒)                <span class="icon_rank">
+                    <i class="arrow arrow_up"></i>
+                    <i class="arrow arrow_down"></i>
+                </span>
+            </th>
+            <th class="table_cell rank_area tr js_rankFlag js_sort_average_time_cost" data-sort="average_time_cost">
+              平均耗时(毫秒)                <span class="icon_rank">
+                    <i class="arrow arrow_up"></i>
+                    <i class="arrow arrow_down"></i>
+                </span>
+            </th>
+            <th class="table_cell tr rank_area last_child no_extra js_sort_max_time_cost js_rankFlag" data-sort="max_time_cost">
+              最大耗时(毫秒)                <span class="icon_rank">
+                    <i class="arrow arrow_up"></i>
+                    <i class="arrow arrow_down"></i>
+                </span>
+            </th>
+
+          </tr>
+          </thead>
+          <tbody class="tbody">
+          {each data as item i}
+          <tr>
+            {if type === "hourly"}
+            {if i === 0}
+            <td rowspan="{data.length}" class="table_cell js_high_light td_high_light">
+              {item.date}
+            </td>
+            {/if}
+            {else}
+
+            <td class="table_cell js_date">{item.date}</td>
+
+            {/if}
+            {if type=="hourly"}
+            <td class="table_cell tl hour">{item.newHour}</td>
+            {/if}
+            <td class="table_cell tr js_callback_count">{item.callback_count}</td>
+            <td class="table_cell tr js_fail_count">{item.fail_count}</td>
+            <td class="table_cell tr js_fail_rate">{processRate item.fail_rate}</td>
+            <td class="table_cell tr js_total_time_cost">{item.total_time_cost}</td>
+            <td class="table_cell tr js_average_time_cost">{item.average_time_cost}</td>
+            <td class="table_cell tr js_max_time_cost">{item.max_time_cost}</td>
+          </tr>
+          {/each}
+
+          {if data.length === 0}
+          <tr class="empty_item"><td colspan="10" class="empty_tips">暂无数据</td></tr>
+          {/if}
+          </tbody>
+        </table>
+      </div>
+    </script>
+    <script type="text/html" id="js_compare_detail_table_tpl">
+      <div class="table_wrp with_border">
+        <table class="table compared_talbe" cellspacing="0">
+          <thead class="thead">
+          <tr>
+            <th class="table_cell rank_area">
+              序号            </th>
+            <th class="table_cell rank_area tl">
+              时间            </th>
+            {if type=="hourly"}
+            <th class="table_cell rank_area tl">
+              小时            </th>
+            {/if}
+            <th class="table_cell rank_area tr">
+              调用次数            </th>
+            <th class="table_cell rank_area tr">
+              失败次数            </th>
+            <th class="table_cell tr rank_area last_child no_extra">
+              失败率            </th>
+            <th class="table_cell tr rank_area last_child no_extra">
+              总共耗时(毫秒)            </th>
+            <th class="table_cell tr rank_area last_child no_extra">
+              平均耗时(毫秒)            </th>
+            <th class="table_cell tr rank_area last_child no_extra">
+              最大耗时(毫秒)            </th>
+          </tr>
+          </thead>
+          <tbody class="tbody">
+          {if data.length > 0}
+          {each data as item i}
+          <tr>
+            {if i % 2 == 0}
+            <td class="table_cell td_high_light js_high_light"
+                style="text-align: center;"
+                rowspan="2">
+              {item.index}
+            </td>
+            {/if}
+            <td class="table_cell tl js_date">{item.date}</td>
+            {if type=="hourly"}
+            <td class="table_cell tl hour js_hour">{item.newHour}</td>
+            {/if}
+            <td class="table_cell js_callback_count">{processCount item.callback_count item}</td>
+            <td class="table_cell js_fail_count">{processCount item.fail_count item}</td>
+            <td class="table_cell js_fail_rate">{processRate item.fail_rate item}</td>
+            <td class="table_cell js_total_time_cost">{processCount item.total_time_cost item}</td>
+            <td class="table_cell js_average_time_cost">{processCount item.average_time_cost item}</td>
+            <td class="table_cell js_max_time_cost">{processCount item.max_time_cost item}</td>
+          </tr>
+          {/each}
+          {else}
+          <tr class="empty_item"><td colspan="10" class="empty_tips">暂无数据</td></tr>
+          {/if}
+          </tbody>
+        </table>
+      </div>
+    </script>
+<% end %>
+<%= content_for :js do %>
+    <script type="text/javascript">
+      define('widget/pagination.css', [], function () {
+        return null;
+      });
+      define('biz_web/widget/date_range.css', [], function () {
+        return null;
+      });
+      define('biz_web/widget/dropdown.css', [], function () {
+        return null;
+      });
+    </script>
+    <script type="text/javascript">
+      seajs.use('statistics/interface/interface.js', wx_main);
+    </script>
+<% end %>

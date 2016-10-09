@@ -1,0 +1,254 @@
+@charset "UTF-8";
+/* line 1, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+}
+
+/* line 6, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* line 10, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+body > div {
+  margin: 0 auto;
+}
+
+/* line 13, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+div {
+  text-align: left;
+}
+
+/* line 16, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+a img {
+  border: 0;
+}
+
+/* line 19, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+body {
+  text-align: center;
+  font-family: Microsoft Yahei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  min-width: 320px;
+  background: #2f3334;
+}
+
+/* line 26, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+ul, ol, li {
+  list-style-type: none;
+  vertical-align: 0;
+}
+
+/* line 30, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+a {
+  outline-style: none;
+  color: #545454;
+  text-decoration: none;
+}
+
+/* line 35, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 38, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.hide {
+  display: none;
+}
+
+/*文字颜色*/
+/* line 40, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.cyellow {
+  color: #fee94e;
+}
+
+/* line 41, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.cred {
+  color: #e94935;
+}
+
+/* line 42, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.corange {
+  color: #fc8322;
+}
+
+/*文字大小*/
+/* line 44, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.f12 {
+  font-size: 1.2em;
+}
+
+/* line 45, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.f14 {
+  font-size: 1.4em;
+}
+
+/* line 46, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.f16 {
+  font-size: 1.6em;
+}
+
+/* line 47, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.f18 {
+  font-size: 1.8em;
+}
+
+/* line 48, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.fontn {
+  font-weight: normal;
+}
+
+/* line 49, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.fontb {
+  font-weight: bold;
+}
+
+/* line 51, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.shake {
+  width: 40%;
+  padding: 0 30%;
+  margin-top: 40%;
+}
+
+/* line 56, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.shake img {
+  width: 100%;
+}
+
+/* line 57, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.txt {
+  width: 100%;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 1.2em;
+  color: #fee94e;
+  line-height: 2em;
+}
+
+/* line 65, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.num {
+  position: relative;
+  top: 0.1em;
+}
+
+/*遮罩层*/
+/* line 70, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.15;
+  opacity: .15;
+  filter: alpha(opacity=15);
+}
+
+/*模态框*/
+/* line 83, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.modal_default {
+  position: fixed;
+  z-index: 1002;
+  left: 10%;
+  top: 20%;
+  width: 80%;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+}
+
+/* line 95, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.modal_default .close {
+  display: inline;
+  z-index: 3200;
+  position: absolute;
+  top: 7px;
+  right: 2px;
+  cursor: pointer;
+  color: #545454;
+  font-size: 2em;
+  font-weight: bold;
+  background: none;
+  border: none;
+}
+
+/* line 108, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.modal {
+  position: fixed;
+  z-index: 1002;
+  left: 0;
+  top: 5%;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 116, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.modal .close {
+  display: inline;
+  z-index: 3200;
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2em;
+  background: #5e5e5e;
+  border: none;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 14px;
+}
+
+/* line 132, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.modal-body, .modal-body img, .modal img {
+  width: 100%;
+}
+
+/* line 133, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.modal-body {
+  text-align: center;
+}
+
+/* line 134, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.modal-body p {
+  padding-bottom: 10px;
+}
+
+/* line 137, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.modal .modal-body p {
+  padding-bottom: 15px;
+}
+
+/* line 140, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.modal .modal-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1003;
+  padding-top: 38%;
+}
+
+/* line 148, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/shake.scss */
+.btn {
+  background: #e74e3e;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.2em;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #e74e3e;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-family: "微软雅黑";
+}

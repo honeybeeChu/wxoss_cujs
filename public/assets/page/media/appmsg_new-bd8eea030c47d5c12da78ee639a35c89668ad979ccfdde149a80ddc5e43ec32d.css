@@ -1,0 +1,2036 @@
+/* line 1, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_container {
+  padding: 30px;
+}
+
+/* line 5, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta:first-child {
+  margin-top: 0;
+}
+
+/* line 9, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta.option_setting {
+  margin-bottom: 20px;
+}
+
+/* line 13, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta.option_setting .vote_meta_title {
+  padding: 10px;
+  background-color: #f4f5f9;
+}
+
+/* line 18, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta .frm_tips {
+  width: auto;
+}
+
+/* line 22, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_form {
+  margin-bottom: 0;
+}
+
+/* line 26, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta_title {
+  font-weight: 400;
+  font-style: normal;
+  border-top: 1px solid #e7e7eb;
+  border-bottom: 1px solid #e7e7eb;
+}
+
+/* line 33, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta_title .vote_meta_title_opr {
+  float: right;
+}
+
+/* line 37, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta_title .vote_meta_title_opr a {
+  margin-left: 1em;
+}
+
+/* line 41, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_num {
+  float: left;
+  margin-right: 1em;
+}
+
+/* line 46, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_question {
+  display: block;
+  float: left;
+  width: 17em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+/* line 56, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_warn {
+  color: #e15f63;
+  float: right;
+}
+
+/* line 61, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta_detail .frm_control_group .link_delete {
+  margin-left: 0.5em;
+}
+
+/* line 65, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta_detail .frm_control_group .frm_num {
+  color: #8d8d8d;
+  margin: 0 .5em 0 0;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 72, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta_detail .frm_control_group .frm_num.warning {
+  color: #e15f63;
+}
+
+/* line 76, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta_detail .upload_box {
+  display: table-cell;
+}
+
+/* line 80, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta_detail .frm_label_top {
+  margin-top: 0;
+}
+
+/* line 84, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta_detail.tips_wrp {
+  border-top: 1px solid #e7e7eb;
+  padding-top: 0.5em;
+}
+
+/* line 89, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta_detail.vote_meta_radio {
+  padding-left: 5em;
+}
+
+/* line 93, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta_detail.vote_meta_radio .frm_label {
+  margin-top: 0;
+}
+
+/* line 97, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_remove_link {
+  margin-left: 0.5em;
+}
+
+/* line 101, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_edit .dialog_bd {
+  padding: 40px 0 15px;
+  height: 450px;
+  overflow-y: scroll;
+}
+
+/* line 107, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_edit .dialog_bd .title_tab {
+  position: absolute;
+  top: 26px;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* line 117, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_edit .frm_label {
+  width: 4em;
+}
+
+/* line 121, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_edit .frm_input_box {
+  width: 248px;
+  margin-right: 0.3em;
+}
+
+/* line 126, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta_content {
+  padding: 2em 2em;
+}
+
+/* line 130, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta_container .option_setting {
+  border: 1px solid #e7e7eb;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+/* line 136, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_meta_container .option_setting.close_vote .vote_meta_title {
+  background: 0;
+  border: 0;
+  border-top: 1px solid #e7e7eb;
+}
+
+/* line 142, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.frm_tips_btm {
+  width: auto;
+}
+
+/* line 146, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.img_container {
+  margin-left: 5em;
+  margin-top: 0.5em;
+}
+
+/* line 151, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.img_container .img_panel {
+  display: table-cell;
+}
+
+/* line 155, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.img_container .link_dele {
+  display: table-cell;
+  padding-left: 0.5em;
+}
+
+/* line 160, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.img_container img {
+  width: 75px;
+  height: 75px;
+  display: block;
+}
+
+/* line 166, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_edit .upload_area .upload_file_box {
+  z-index: 4;
+  right: 0;
+  left: auto;
+}
+
+/* line 172, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_edit .dialog_bd {
+  *position: relative;
+  overflow-x: hidden;
+}
+
+/* line 177, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.vote_edit .dialog_bd .title_tab {
+  *top: 0;
+}
+
+/* line 181, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.btn.btn_vote_add {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* line 187, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.simple_preview_title {
+  border-bottom: 1px solid #e7e7eb;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 193, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.simple_preview_title a {
+  margin-left: 0.5em;
+}
+
+/* line 197, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.simple_preview_label {
+  float: left;
+  width: 5em;
+  margin-right: 0.5em;
+}
+
+/* line 203, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.simple_preview_item, .simple_preview_value {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 208, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .dialog_bd {
+  padding: 30px 50px;
+}
+
+/* line 212, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .btn_link_triger {
+  color: #459ae9;
+  cursor: pointer;
+}
+
+/* line 217, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .btn_link_triger:hover {
+  text-decoration: underline;
+}
+
+/* line 221, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .btn_link_triger .arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: dashed;
+  border-color: transparent;
+  border-bottom-width: 0;
+  border-top-color: #d0d0d0;
+  border-top-style: solid;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* line 235, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .btn_link_triger .arrow.up {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: dashed;
+  border-color: transparent;
+  border-top-width: 0;
+  border-bottom-color: #d0d0d0;
+  border-bottom-style: solid;
+}
+
+/* line 247, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .link_chooser_wrap {
+  margin-left: 70px;
+}
+
+/* line 251, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .frm_input_box.search {
+  width: 278px;
+}
+
+/* line 255, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .frm_label {
+  width: 4em;
+}
+
+/* line 259, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .link_chooser {
+  margin-top: 5px;
+}
+
+/* line 263, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .my_link_list {
+  margin-top: 10px;
+  border: 1px solid #e7e7eb;
+  height: 214px;
+  overflow-y: scroll;
+}
+
+/* line 270, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .my_link_list .empty_tips {
+  padding: 64px 0;
+}
+
+/* line 274, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .my_link_item {
+  position: relative;
+  line-height: 42px;
+  border-bottom: 1px solid #e7e7eb;
+}
+
+/* line 280, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .my_link_item:last-child {
+  border: 0;
+}
+
+/* line 284, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .my_link_item .frm_radio_label {
+  display: block;
+  padding: 0 10px;
+  margin-right: 0;
+}
+
+/* line 290, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .my_link_item .frm_radio_label:hover {
+  background-color: #f4f5f9;
+}
+
+/* line 294, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .my_link_item .lbl_content {
+  display: block;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  padding-right: 7em;
+  padding-left: 1.7em;
+  margin-top: -42px;
+}
+
+/* line 306, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .my_link_item .date {
+  position: absolute;
+  right: 10px;
+  color: #8d8d8d;
+}
+
+/* line 312, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.link_dialog .pagination {
+  margin-top: 10px;
+}
+
+/* line 316, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.img_water.popover {
+  z-index: 9999;
+}
+
+/* line 320, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+body .tooltip {
+  z-index: 801;
+}
+
+/* line 324, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+body.edit_fixed .main_hd, body.edit_fixed .appmsg_edit_container {
+  position: fixed;
+  z-index: 2;
+}
+
+/* line 329, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+body.edit_fixed .main_hd {
+  top: 0;
+  width: 1198px;
+}
+
+/* line 334, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+body.edit_fixed .appmsg_edit_container, body.edit_fixed .edui-editor-toolbarbox {
+  top: 53px;
+}
+
+/* line 338, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+body.edit_fixed .appmsg_preview_container {
+  left: auto;
+}
+
+/* line 342, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+body.edit_fixed .appmsg_tpl_container {
+  right: auto;
+}
+
+/* line 346, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+body.edit_fixed .edui-editor-toolbarbox {
+  box-shadow: 0 1px 3px #f8f8f8;
+  -moz-box-shadow: 0 1px 3px #f8f8f8;
+  -webkit-box-shadow: 0 1px 3px #f8f8f8;
+}
+
+/* line 352, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.page_appmsg_new .main_hd {
+  background-color: #fff;
+}
+
+/* line 356, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.page_appmsg_new .main_hd .page_nav {
+  margin: 0;
+  padding: 6px 20px;
+  border-bottom: 1px solid #e7e7eb;
+}
+
+/* line 362, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.page_appmsg_new .main_bd {
+  padding-bottom: 0;
+}
+
+/* line 366, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.page_appmsg_new .tool_area_wrp {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #fff;
+  border-top: 1px solid #d9dadc;
+}
+
+/* line 376, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.page_appmsg_new .tool_area_wrp .page_tips {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+}
+
+/* line 383, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.page_appmsg_new .tool_area_wrp .page_tips .inner {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 389, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.page_appmsg_new .tool_area {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 395, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.page_appmsg_new .tool_bar {
+  padding: 20px 210px 20px 250px;
+}
+
+/* line 399, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.page_appmsg_new .tool_bar .fold_tips {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/* line 404, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.page_appmsg_new .icon_appmsg_edit_folder {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 0 no-repeat;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 300px;
+  overflow: hidden;
+}
+
+/* line 414, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.mpeditor_global_tips {
+  position: absolute;
+  top: 13px;
+  right: 16px;
+}
+
+/* line 420, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_box {
+  position: relative;
+}
+
+/* line 424, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_container {
+  height: 100%;
+}
+
+/* line 428, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_container_hd {
+  padding: 10px 20px 0;
+}
+
+/* line 432, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_container_bd {
+  padding: 20px;
+}
+
+/* line 436, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_container_title {
+  font-weight: 400;
+}
+
+/* line 440, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_area {
+  position: absolute;
+  left: 0;
+  height: 100%;
+}
+
+/* line 446, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container {
+  width: 250px;
+  border-right: 1px solid #e7e7eb;
+  background-color: #f8f8f8;
+}
+
+/* line 452, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container div.appmsg_edit_mask {
+  top: auto;
+  bottom: 0;
+  height: 40px;
+  line-height: 40px;
+  background: rgba(0, 0, 0, 0.5) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#80000000', endcolorstr='#80000000');
+  text-align: right;
+}
+
+/* line 462, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container div.appmsg_edit_mask .sort_up_white, .appmsg_preview_container div.appmsg_edit_mask .sort_down_white {
+  float: left;
+  margin-top: 10px;
+}
+
+/* line 467, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_add {
+  margin: 0;
+  border-top-width: 0;
+  line-height: 90px;
+}
+
+/* line 473, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_add:hover {
+  border-color: #d9dadc;
+}
+
+/* line 477, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg {
+  overflow: visible;
+  margin-bottom: 0;
+}
+
+/* line 482, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_content {
+  min-height: 134px;
+  margin-top: -1px;
+}
+
+/* line 487, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_item, .appmsg_preview_container .first_appmsg_item {
+  padding: 10px;
+}
+
+/* line 491, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_item_wrp {
+  cursor: pointer;
+}
+
+/* line 495, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_item_wrp.current {
+  border: 2px solid #43b548;
+  position: relative;
+  z-index: 1;
+  margin-left: -1px;
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+
+/* line 504, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_item_wrp.current .appmsg_item {
+  border-top-width: 0;
+  padding: 9px 9px;
+}
+
+/* line 509, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_item_wrp.current .first_appmsg_item {
+  border-top-width: 0;
+  padding: 9px 9px;
+}
+
+/* line 514, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_item_wrp.current .appmsg_edit_mask {
+  bottom: -1px;
+}
+
+/* line 518, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_title {
+  max-height: 28px;
+}
+
+/* line 522, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .first_appmsg_item {
+  padding: 0;
+  border-top: 1px solid #e7e7eb;
+}
+
+/* line 527, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_thumb_wrp {
+  height: 120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* line 534, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_thumb.default {
+  line-height: 120px;
+}
+
+/* line 538, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_item .appmsg_title {
+  margin-top: 8px;
+}
+
+/* line 542, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_item .appmsg_thumb {
+  width: 70px;
+  height: 70px;
+  margin-left: 10px;
+}
+
+/* line 548, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_preview_container .appmsg_item .appmsg_thumb.default {
+  line-height: 70px;
+}
+
+/* line 552, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area {
+  position: absolute;
+  right: 1px;
+  width: 210px;
+  height: 100%;
+}
+
+/* line 559, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_list {
+  border: 1px solid #e7e7eb;
+  border-top-width: 0;
+}
+
+/* line 564, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item {
+  border-top: 1px solid #e7e7eb;
+  background-color: #fff;
+  text-align: left;
+  padding-left: 20px;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+/* line 573, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item .icon_media_choose {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+/* line 581, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item.img .icon_media_choose {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -26px no-repeat;
+}
+
+/* line 585, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item.video .icon_media_choose {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -58px no-repeat;
+}
+
+/* line 589, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item.audio .icon_media_choose {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -90px no-repeat;
+}
+
+/* line 593, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item.cardticket .icon_media_choose {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -122px no-repeat;
+}
+
+/* line 597, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item.music .icon_media_choose {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -154px no-repeat;
+}
+
+/* line 601, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item.vote .icon_media_choose {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -186px no-repeat;
+}
+
+/* line 605, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item.shopcard .icon_media_choose {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -218px no-repeat;
+}
+
+/* line 609, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item:hover {
+  border: 1px solid #43b548;
+  margin: 0 -1px -1px;
+  position: relative;
+  z-index: 1;
+  color: #43b548;
+  zoom: 1;
+}
+
+/* line 618, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item:hover.img .icon_media_choose {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -250px no-repeat;
+}
+
+/* line 622, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item:hover.video .icon_media_choose {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -282px no-repeat;
+}
+
+/* line 626, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item:hover.audio .icon_media_choose {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -314px no-repeat;
+}
+
+/* line 630, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item:hover.cardticket .icon_media_choose {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -346px no-repeat;
+}
+
+/* line 634, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item:hover.music .icon_media_choose {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -378px no-repeat;
+}
+
+/* line 638, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item:hover.vote .icon_media_choose {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -410px no-repeat;
+}
+
+/* line 642, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_area .tpl_item:hover.shopcard .icon_media_choose {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -442px no-repeat;
+}
+
+/* line 646, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_tpl_container {
+  width: 210px;
+  border-left: 1px solid #e7e7eb;
+  background-color: #fff;
+}
+
+/* line 652, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_function_area {
+  padding-top: 30px;
+  margin: 0 90px 30px;
+  border-top: 1px solid #e7e7eb;
+}
+
+/* line 658, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_highlight_area {
+  background-color: #fcfcfc;
+}
+
+/* line 662, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.tool_area {
+  padding: 0;
+}
+
+/* line 666, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.tool_bar {
+  margin-top: 0;
+  padding: 20px 90px 40px;
+}
+
+/* line 671, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.tool_bar .btn.r {
+  margin-right: 0;
+  margin-left: 1em;
+}
+
+/* line 676, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area {
+  margin: 0 211px 0 251px;
+  position: relative;
+}
+
+/* line 681, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .page_msg {
+  margin: 20px 90px;
+}
+
+/* line 685, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .upload_preview img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* line 690, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .edui_toolbar_mask {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.5) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#80ffffff', endcolorstr='#80ffffff');
+}
+
+/* line 701, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .edui_editor_wrp {
+  position: relative;
+  z-index: 0;
+  min-height: 320px;
+}
+
+/* line 707, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .edui-default .edui-editor {
+  border-width: 0;
+}
+
+/* line 711, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .edui-default .edui-toolbar {
+  padding: 10px 45px;
+}
+
+/* line 715, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .edui-default .edui-toolbar-primary {
+  padding-bottom: 0;
+  border-bottom-width: 0;
+}
+
+/* line 720, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .editor_area .editor_content_placeholder {
+  position: absolute;
+  left: 90px;
+  right: 90px;
+  color: #a3a3a3;
+  padding-top: 10px;
+}
+
+/* line 728, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .editor_area iframe {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 733, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .editor_area .split_line {
+  border-top: 1px solid #e7e7eb;
+  margin: 0 90px;
+}
+
+/* line 738, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .editor_area .page_msg {
+  margin-bottom: -10px;
+}
+
+/* line 742, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .edui_iframe_switch_tips {
+  padding: 20px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 748, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .edui-editor-iframeholder {
+  padding: 10px 0 0;
+  min-height: 0;
+}
+
+/* line 753, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .appmsg_editor_wrp {
+  min-height: 560px;
+}
+
+/* line 757, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .appmsg_editor_inner {
+  padding: 0;
+}
+
+/* line 761, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .appmsg_editor_arrow_wrp {
+  position: absolute;
+  left: -9px;
+}
+
+/* line 766, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .appmsg_editor_arrow {
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-width: 8px;
+  border-style: dashed;
+  border-color: transparent;
+  border-left-width: 0;
+  border-right-color: #e7e7eb;
+  border-right-style: solid;
+}
+
+/* line 779, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_input_area .appmsg_editor_arrow.arrow_in {
+  left: 1px;
+  border-right-color: #fff;
+}
+
+/* line 784, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_title {
+  line-height: 38px;
+  margin-top: 30px;
+  padding: 25px 90px 15px;
+  border-top: 1px solid #e7e7eb;
+}
+
+/* line 791, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item {
+  padding-bottom: 1em;
+}
+
+/* line 795, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item .frm_label {
+  display: block;
+  width: auto;
+  float: none;
+  *zoom: 1;
+  margin-right: 0;
+  margin-bottom: 4px;
+}
+
+/* line 804, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item .frm_label:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* line 811, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item .lbl_content .tips_global {
+  margin-left: 0.5em;
+}
+
+/* line 815, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item .frm_textarea_box {
+  width: 100%;
+}
+
+/* line 819, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.author, .appmsg_edit_item.title {
+  position: relative;
+}
+
+/* line 823, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.author .frm_counter, .appmsg_edit_item.title .frm_counter {
+  right: 10px;
+}
+
+/* line 827, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.author.frm_input_box, .appmsg_edit_item.title.frm_input_box {
+  width: auto;
+  display: block;
+  border: 0;
+  height: auto;
+  line-height: 1.6;
+}
+
+/* line 835, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.author .placeholder_tips, .appmsg_edit_item.title .placeholder_tips {
+  position: absolute;
+  left: 90px;
+}
+
+/* line 840, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.author .frm_input, .appmsg_edit_item.title .frm_input {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 845, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.title {
+  margin: 20px 0 15px;
+  padding: 0 90px;
+}
+
+/* line 850, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.title .frm_input {
+  font-size: 22px;
+  height: 46px;
+  line-height: 46px;
+}
+
+/* line 856, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.title .frm_counter {
+  top: 20px;
+}
+
+/* line 860, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.title .placeholder_tips {
+  font-size: 22px;
+  top: 10px;
+}
+
+/* line 865, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.author {
+  margin: 15px 0 10px;
+  padding: 0 90px 10px;
+}
+
+/* line 870, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.author .frm_counter {
+  top: 6px;
+}
+
+/* line 874, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.author .placeholder_tips {
+  top: 3px;
+}
+
+/* line 878, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.gap_left {
+  margin-left: 90px;
+  margin-right: 90px;
+}
+
+/* line 883, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item strong.title {
+  font-weight: 400;
+  font-style: normal;
+  float: left;
+}
+
+/* line 889, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item .tips {
+  color: #8d8d8d;
+}
+
+/* line 893, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item .tips em {
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* line 898, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item .tips.gap_left {
+  float: left;
+  margin-left: 0.5em;
+}
+
+/* line 903, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item .frm_input_box.reward_wording {
+  width: 382px;
+}
+
+/* line 907, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item .zoom_edit_access.zoomin {
+  display: none;
+}
+
+/* line 911, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.content_edit {
+  padding-bottom: 0;
+}
+
+/* line 915, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.content_edit .pop_closed {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+/* line 922, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.content_edit .tool_bar {
+  display: none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  border-top-width: 0;
+  margin: 0;
+  padding-bottom: 28px;
+}
+
+/* line 932, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.content_edit .zoom_in_switch {
+  display: none;
+}
+
+/* line 936, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.content_edit.zoom_edit {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  width: 960px;
+  padding: 5px 20px 25px;
+  z-index: 801;
+}
+
+/* line 946, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.content_edit.zoom_edit .frm_label {
+  padding: 5px 0;
+}
+
+/* line 950, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.content_edit.zoom_edit .zoom_edit_tips {
+  margin-right: 8px;
+}
+
+/* line 954, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.content_edit.zoom_edit .pop_closed {
+  display: inline-block;
+}
+
+/* line 958, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.content_edit.zoom_edit .tool_bar {
+  display: block;
+}
+
+/* line 962, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.content_edit.zoom_edit .zoom_out_switch {
+  display: none;
+}
+
+/* line 966, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.content_edit.zoom_edit .zoom_in_switch {
+  display: inline-block;
+}
+
+/* line 970, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.content_edit.zoom_edit .edui-default .edui-editor-iframeholder {
+  height: 500px !important;
+}
+
+/* line 974, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.content_edit.zoom_edit .zoom_edit_access.zoomout {
+  display: none;
+}
+
+/* line 978, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.content_edit.zoom_edit .zoom_edit_access.zoomin {
+  display: inline-block;
+}
+
+/* line 982, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.appmsg_description {
+  *zoom: 1;
+}
+
+/* line 986, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_edit_item.appmsg_description .frm_textarea_box {
+  width: 540px;
+}
+
+/* line 990, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_dialog .dialog_bd {
+  min-height: 490px;
+}
+
+/* line 994, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_dialog .step_panel {
+  padding: 55px;
+}
+
+/* line 998, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_dialog .step_agreement {
+  padding: 30px 30px 0;
+}
+
+/* line 1002, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_dialog .step_agreement .simple_dialog_content {
+  width: 730px;
+}
+
+/* line 1006, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_dialog .step_agreement .page_msg p {
+  margin-bottom: 1em;
+}
+
+/* line 1010, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_dialog .news_box .inner {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* line 1015, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_dialog .original_edit_box {
+  padding-top: 75px;
+}
+
+/* line 1019, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_dialog .original_edit_box .simple_dialog_content {
+  width: 495px;
+  min-height: 245px;
+}
+
+/* line 1024, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_dialog .original_edit_box .frm_label {
+  width: 6em;
+}
+
+/* line 1028, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_dialog .original_msg {
+  padding-top: 30px;
+}
+
+/* line 1032, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_poptips h4 {
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 1em;
+}
+
+/* line 1038, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_poptips h4:first-child {
+  margin-top: 0;
+}
+
+/* line 1042, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_area {
+  *zoom: 1;
+  padding-top: 8px;
+}
+
+/* line 1047, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.icon_original {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* line 1054, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.icon_original.access {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -474px no-repeat;
+}
+
+/* line 1058, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.icon_original.success {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -502px no-repeat;
+}
+
+/* line 1062, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_preview_pop {
+  width: 542px;
+}
+
+/* line 1066, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_preview_pop .popover_inner {
+  padding: 14px 18px;
+}
+
+/* line 1070, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_preview_pop .popover_bar {
+  display: none;
+}
+
+/* line 1074, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.simple_preview_list {
+  padding-left: 2em;
+}
+
+/* line 1078, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.original_title_tips {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 1083, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.unorigin {
+  overflow: hidden;
+}
+
+/* line 1087, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.unorigin .icon_area {
+  margin-right: 10px;
+  *margin-top: 5px;
+}
+
+/* line 1092, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.unorigin .cont {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 1097, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.unorigin .cont .subtitle {
+  font-weight: normal;
+  float: left;
+  margin-right: 2em;
+}
+
+/* line 1103, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.unorigin .opt {
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+/* line 1108, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.unorigin .opt .description {
+  float: left;
+  text-align: left;
+  width: 395px;
+}
+
+/* line 1114, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.unorigin .opt .desc {
+  color: #8d8d8d;
+}
+
+/* line 1118, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.unorigin .opt .btn_default {
+  border-color: #09bb07;
+  color: #09bb07;
+}
+
+/* line 1123, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.unorigin .opt .btn_default:hover {
+  background: #fff;
+}
+
+/* line 1127, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.origined .frm_label {
+  cursor: pointer;
+}
+
+/* line 1131, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.origined .frm_label a {
+  margin: 0 10px;
+}
+
+/* line 1135, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.origined .normal_flow {
+  background-color: #fff;
+  padding: 10px 15px;
+  border: 1px solid #e7e7eb;
+}
+
+/* line 1141, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.origined .normal_flow .preview_hd {
+  margin-bottom: 8px;
+}
+
+/* line 1145, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.origined .normal_flow .icon_arrow {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  vertical-align: middle;
+  border: 6px solid transparent;
+  border-bottom-color: #c1c1c1;
+  margin-top: -9px;
+  margin-left: 10px;
+}
+
+/* line 1156, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.origined .normal_flow.open .icon_arrow {
+  border-bottom-color: transparent;
+  border-top-color: #c1c1c1;
+  margin-top: 6px;
+  margin-left: 10px;
+}
+
+/* line 1163, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.reward {
+  border-top: 1px solid #e7e7eb;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+/* line 1169, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.reward .frm_input_box {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+/* line 1174, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.payread {
+  margin-top: 15px;
+}
+
+/* line 1178, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.origin_url_area {
+  *zoom: 1;
+}
+
+/* line 1182, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.origin_url_area .frm_input_box {
+  margin-left: 1.7em;
+  width: 508px;
+}
+
+/* line 1187, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.send_preview .user_list {
+  overflow: hidden;
+}
+
+/* line 1191, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.send_preview .user {
+  float: left;
+  margin-right: 10px;
+  border: 1px solid #e7e7eb;
+  cursor: pointer;
+  padding: 0 .5em;
+  background-color: #e5e7ec;
+}
+
+/* line 1200, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.send_preview .user .opt {
+  font-size: 0;
+  text-indent: -999em;
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -530px no-repeat;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* line 1210, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.send_preview .user .opt:hover {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -554px no-repeat;
+}
+
+/* line 1214, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.send_preview .frm_control_group {
+  padding-bottom: 14px;
+}
+
+/* line 1218, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.reprinted_tips {
+  width: 480px;
+}
+
+/* line 1222, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.comment_checkbox .mini_tips {
+  margin-left: 1em;
+}
+
+/* line 1226, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_dialog .pay_reading_panel_wrp {
+  height: 435px;
+  overflow-y: auto;
+}
+
+/* line 1231, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel.form_panel {
+  padding-top: 75px;
+}
+
+/* line 1235, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel.form_panel .frm_textarea_box {
+  padding-right: 10px;
+}
+
+/* line 1239, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel.form_panel .frm_textarea {
+  height: 116px;
+}
+
+/* line 1243, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel.preview_panel {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* line 1248, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .line_tips {
+  border-top: 1px solid #e7e7eb;
+  margin: 0 15px;
+}
+
+/* line 1253, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .line_tips_inner {
+  display: inline-block;
+  padding: 0 .5em;
+  background-color: #fff;
+  top: -11px;
+  position: relative;
+}
+
+/* line 1261, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .line_sub_tips {
+  word-wrap: break-word;
+  word-break: break-all;
+  margin: -10px 15px 0;
+}
+
+/* line 1267, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .title {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* line 1273, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .simple_dialog_content {
+  width: 630px;
+}
+
+/* line 1277, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .frm_label {
+  width: 6em;
+}
+
+/* line 1281, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .reading_preview {
+  width: 230px;
+  border: 1px solid #dfdfdf;
+  text-align: left;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 1290, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .preview_hd {
+  height: 46px;
+  background: transparent url(../images/htmledition/pic_mobile_preview_w23028fc9a.png) no-repeat 0 0;
+  text-align: center;
+}
+
+/* line 1296, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .preview_hd .org_name {
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  padding-top: 20px;
+}
+
+/* line 1308, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .preview_bd {
+  position: relative;
+  height: 312px;
+  overflow: hidden;
+}
+
+/* line 1314, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .preview_content_wrp {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 1321, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .preview_con {
+  padding: 0 15px;
+  margin-top: 10px;
+}
+
+/* line 1326, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .preview_exp {
+  padding: 45px 0;
+  text-align: center;
+}
+
+/* line 1331, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .preview_exp .btn_pay {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-top: 15px;
+  min-width: 160px;
+  height: 30px;
+  padding: 0 10px;
+  line-height: 30px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border: 1px solid #44b549;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  color: #44b549;
+  cursor: default;
+}
+
+/* line 1351, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .preview_exp .btn_pay:hover {
+  text-decoration: none;
+}
+
+/* line 1355, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .preview_exp .pay_tips {
+  color: #888;
+  margin-top: 10px;
+}
+
+/* line 1360, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .frm_input_box.frm_input_pay {
+  width: 60px;
+}
+
+/* line 1364, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_reading_panel .frm_input_box.frm_input_pay.error .frm_input, .pay_reading_panel .frm_input_box.frm_input_pay.error .frm_input_append {
+  color: #e15f62;
+}
+
+/* line 1368, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_seting {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 1374, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.pay_seting .frm_fee {
+  margin-right: 5px;
+}
+
+/* line 1378, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.page_reading_index .main_hd h2 {
+  border-bottom: 1px solid #e7e7eb;
+}
+
+/* line 1382, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap h1, .appmsg_wap h2, .appmsg_wap h3, .appmsg_wap h4, .appmsg_wap h5, .appmsg_wap h6 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* line 1387, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap * {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1392, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap a {
+  color: #607fa6;
+  text-decoration: none;
+}
+
+/* line 1397, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_title {
+  margin-bottom: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* line 1404, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_meta_list {
+  margin-bottom: 18px;
+  line-height: 20px;
+  font-size: 0;
+}
+
+/* line 1410, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_meta {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* line 1418, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .meta_original_tag {
+  line-height: 100px;
+  overflow: hidden;
+  width: 49px;
+  height: 20px;
+  display: inline-block;
+  background: transparent url(../images/htmledition/icon_original_tag2b638f.png) no-repeat 0 0;
+}
+
+/* line 1427, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_meta_text {
+  color: #8c8c8c;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* line 1433, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_meta_link {
+  color: #607fa6;
+  cursor: pointer;
+}
+
+/* line 1438, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_meta_nickname {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 9em;
+}
+
+/* line 1445, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_content {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/* line 1450, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_thumb_wrp {
+  margin-bottom: 6px;
+}
+
+/* line 1454, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_thumb_wrp .original_img_wrp {
+  display: block;
+}
+
+/* line 1458, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_thumb {
+  display: block;
+  width: 100%;
+}
+
+/* line 1463, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_content {
+  overflow: hidden;
+  color: #3e3e3e;
+}
+
+/* line 1468, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_content img[data-ratio] {
+  height: auto !important;
+}
+
+/* line 1472, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_content * {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+  word-wrap: break-word !important;
+}
+
+/* line 1479, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_content p {
+  clear: both;
+  min-height: 1em;
+  white-space: pre-wrap;
+}
+
+/* line 1485, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_content em {
+  font-style: italic;
+}
+
+/* line 1489, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_content fieldset {
+  min-width: 0;
+}
+
+/* line 1493, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_content .list-paddingleft-2 {
+  padding-left: 30px;
+}
+
+/* line 1497, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_content blockquote {
+  margin: 0;
+  padding-left: 10px;
+  border-left: 3px solid #dbdbdb;
+}
+
+/* line 1503, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .original_img_wrp {
+  display: inline-block;
+  font-size: 0;
+}
+
+/* line 1508, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .original_img_wrp .tips_global {
+  display: block;
+  margin-top: .5em;
+  font-size: 14px;
+  text-align: right;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+/* line 1520, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_tool {
+  overflow: hidden;
+  padding-top: 15px;
+  line-height: 32px;
+}
+
+/* line 1526, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_tool .meta_primary {
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 1531, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .rich_media_tool .meta_extra {
+  float: right;
+  margin-left: 10px;
+}
+
+/* line 1536, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .res_iframe {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 1543, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .vote_area {
+  display: block;
+}
+
+/* line 1547, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .qqmusic_iframe {
+  width: 100% !important;
+  height: 75px;
+}
+
+/* line 1552, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .audio_iframe {
+  width: 100% !important;
+  height: 82px;
+}
+
+/* line 1557, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .video_iframe {
+  height: 150px;
+  background-color: #000;
+  width: 100% !important;
+  *width: 96% !important;
+  position: static;
+}
+
+/* line 1565, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .video_small_iframe {
+  height: auto !important;
+}
+
+/* line 1569, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .shopcard_iframe {
+  margin: 14px 0;
+  height: 95px;
+}
+
+/* line 1574, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .selectTdClass {
+  background-color: #edf5fa !important;
+}
+
+/* line 1578, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap table.noBorderTable td, .appmsg_wap table.noBorderTable th, .appmsg_wap table.noBorderTable caption {
+  border: 1px dashed #ddd !important;
+}
+
+/* line 1582, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap table {
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  display: table;
+  width: 100% !important;
+}
+
+/* line 1589, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap td, .appmsg_wap th {
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 5px 10px;
+  border: 1px solid #DDD;
+}
+
+/* line 1596, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap caption {
+  border: 1px dashed #DDD;
+  border-bottom: 0;
+  padding: 3px;
+  text-align: center;
+}
+
+/* line 1603, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap th {
+  border-top: 2px solid #BBB;
+  background: #f7f7f7;
+}
+
+/* line 1608, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .ue-table-interlace-color-single {
+  background-color: #fcfcfc;
+}
+
+/* line 1612, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap .ue-table-interlace-color-double {
+  background-color: #f7faff;
+}
+
+/* line 1616, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.appmsg_wap td p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1621, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_bar.edui-default.edui-bubble .edui-popup-content {
+  background-color: #fff;
+  border: 1px solid #e7e7eb;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "\9ED1\4F53", Arial, sans-serif;
+  color: #222;
+  padding: 0 10px;
+}
+
+/* line 1631, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_bar .edui-popup-body {
+  width: 320px !important;
+}
+
+/* line 1635, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_group {
+  *zoom: 1;
+  border-top: 1px solid #e7e7eb;
+}
+
+/* line 1640, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_group:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* line 1647, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_group:first-child {
+  border-top-width: 0;
+}
+
+/* line 1651, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_group.with_line .edui_mask_edit_meta_inner {
+  border-left: 1px solid #e7e7eb;
+}
+
+/* line 1655, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_group.with_line .edui_mask_edit_meta.first_child .edui_mask_edit_meta_inner {
+  border-left-width: 0;
+}
+
+/* line 1659, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_meta {
+  padding: 10px 0;
+  cursor: pointer;
+  float: left;
+}
+
+/* line 1665, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_meta_inner {
+  padding: 0 12px;
+}
+
+/* line 1669, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_meta:hover .icon_edui_mask_img_canceladapt {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -578px no-repeat;
+}
+
+/* line 1673, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_meta:hover .icon_edui_mask_img_adapt {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -604px no-repeat;
+}
+
+/* line 1677, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_meta:hover .icon_edui_mask_img_del {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -630px no-repeat;
+}
+
+/* line 1681, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_meta.primary {
+  float: right;
+}
+
+/* line 1685, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_meta.first_child .edui_mask_edit_meta_inner {
+  padding-left: 0;
+}
+
+/* line 1689, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.edui_mask_edit_meta.no_extra .edui_mask_edit_meta_inner {
+  padding-right: 0;
+}
+
+/* line 1693, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.icon_edui_mask_img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+/* line 1701, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.icon_edui_mask_img_canceladapt {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -656px no-repeat;
+}
+
+/* line 1705, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.icon_edui_mask_img_adapt {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -682px no-repeat;
+}
+
+/* line 1709, /home/chuliang/work/wxoss/app/assets/stylesheets/page/media/appmsg_new.css.scss */
+.icon_edui_mask_img_del {
+  background: url(/assets/htmledition/appmsg_new_z2ac3d8-df4e92d0a2eb7741d90ff836770d2b1e91eccfb03db468e266e672b2fe1c14d2.png) 0 -708px no-repeat;
+}

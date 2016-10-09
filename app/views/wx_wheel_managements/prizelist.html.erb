@@ -1,0 +1,49 @@
+<%= content_for :content do %>
+    <div class="col_main setup">
+      <div class="main_hd">
+        <h2>大转盘管理</h2>
+        <div class="page_nav">
+          <%= link_to '返回上一层', wx_wheel_managements_path, :class => 'icon_goback' %>
+          <%= link_to '大转盘管理', wx_wheel_managements_path %>&nbsp;/&nbsp;中奖名单
+        </div>
+      </div>
+      <div class="main_bd">
+        <div class="prize_list">
+          <div class="table_wrp with_border">
+            <table class="J_table_hover data-table">
+              <thead>
+              <tr>
+                <th>奖品名称</th>
+                <th>微信名称</th>
+                <th>姓名</th>
+                <th>手机</th>
+                <th>地址</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% if @prize_list.nil? || @prize_list.empty? %>
+                  <tr>
+                    <td colspan="5">
+                      <div class="empty_tips">
+                        <p>还没有任何中奖信息</p>
+                      </div>
+                    </td>
+                  </tr>
+              <% else %>
+                  <% @prize_list.each do |prize| %>
+                      <tr>
+                        <td class="col2"><%= prize['award_name'] %></td>
+                        <td class="col2"><%= prize['nickname'] %></td>
+                        <td class="col2"><%= prize['realname'] %></td>
+                        <td class="col2"><%= prize['telephone'] %></td>
+                        <td class="col2"><%= prize['address'] %></td>
+                      </tr>
+                  <% end %>
+              <% end %>
+              </tbody>
+              </table>
+            </div>
+        </div>
+      </div>
+    </div>
+<% end %>

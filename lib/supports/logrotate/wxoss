@@ -1,0 +1,11 @@
+# Wxoss logrotate settings
+# based on: http://stackoverflow.com/a/4883967
+
+/home/lcims/dev/wxoss/shared/log/*.log {
+    daily
+    missingok
+    rotate 90
+    compress
+    notifempty
+    copytruncate
+}

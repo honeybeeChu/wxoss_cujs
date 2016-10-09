@@ -1,0 +1,47 @@
+// Place all the styles related to the wx_shake_activities controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* 公共样式 */
+html,body,table,th,tr,td,div,span,input,select,textarea,ul,li,dl,ol,dt,dd,form,p,hr,img,h1,h2,h3,h4,h5,h6,h7{
+  padding:0;
+  margin:0;
+}
+strong{
+  font-weight:normal;}
+ul,li{ list-style: none; }
+li{    display: list-item;
+  text-align: -webkit-match-parent;}
+img{
+  border:0;
+  vertical-align: bottom;
+}
+input textarea{resize:none;outline:none}
+html{height:100%; padding:0;margin:0;}
+body {
+  font-size:14px;
+  background:#e7e8eb;
+  color:#222222;
+  width:1000px;
+  margin:0 auto;
+  font-family:Microsoft Yahei, Arial, Helvetica, sans-serif;
+}
+i{font-style: italic;}
+a{text-decoration:none; outline: none;}
+button,input{outline: none;}
+input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:0;}/* for firefox Button Bug*/
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.clearfix { display: inline-table; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+form {
+  display: block;
+  margin-top: 0em;
+}
+.hide {
+  display: none;
+}
+input, select{
+  color:#222;
+}
+.fl{float:left;}

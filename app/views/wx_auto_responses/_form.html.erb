@@ -1,0 +1,307 @@
+<%= content_for :css do %>
+    <%= stylesheet_link_tag 'webuploader/webuploader.css', 'data-turbolinks-track' => true %>
+<% end %>
+<%= content_for@wx_auto_response,remote: true ,id:"autoResponseForm" do|f| %>
+    <% if @wx_auto_response.errors.any? %>
+       <div id="error_explanation">
+          <h2><%= pluralize(@wx_auto_response.errors.count, "error") %> prohibited this wx_auto_response from being saved:</h2>
+
+          <ul>
+            <% @wx_auto_response.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <<% end %>
+          </ul>
+        </div>
+    <% end %>
+
+
+      <div class="main_bd">
+        <div class="highlight_box">
+          <div class="opr">
+            <button class="btn btn_primary btn_red">停用</button>
+          </div>
+          <div class="icon_wrap icon_reply_open"></div>
+          <div class="txt txt_2">
+            <h2>已开启自动回复设置</h2>
+            <p>通过编辑内容或关键词规则，快速进行自动回复设置。如具备开发能力，可更灵活地使用该功能。</p>
+          </div>
+        </div>
+        <div class="content_wrap">
+          <div class="reply_tab_wrp">
+            <ul class="tab_navs">
+              <li class="tab_nav selected hot" data-value=1><a href="#">被添加自动回复</a></li>
+              <li class="tab_nav" data-value=2><a href="#">消息自动回复</a></li>
+              <li class="tab_nav" data-value=3><a href="#">关键词自动回复</a></li>
+            </ul>
+          </div>
+          <div id="tabBoxA" class="tabBox">
+            <ul class="tabList" id="tabListA">
+              <li class="hot" data-value=1><i class="icon_txt"></i>文字</li>
+              <li data-value=2><i class="icon_txt icon_img" ></i>图片</li>
+              <li data-value=3><i class="icon_txt icon_voice" ></i>语音</li>
+              <li data-value=4><i class="icon_txt icon_video"></i>视频</li>
+            </ul>
+            <div id="tabOutBoxA"> 
+              <!--文字-->
+              <div class="tabOutList">
+                <div class="edit_area">
+                  <!-- <textarea></textarea> -->
+                  <%= text_area :wx_auto_response, :res_content %>
+                </div>
+                <div class="editor_toolbar"><div class="editor_tip">还可以输入591字</div></div> 
+              </div>
+              <!--图片-->
+              <div class="tabOutList" style="display: none;"> 
+                <div class="inner">
+                  <div class="create_access">
+                    <a href="#" id="img_modal"><i class="icon36 icon36_add"></i>
+                    <strong>从素材库中选择</strong></a>
+                  </div>
+                  <div class="create_access">
+                    
+
+
+                 <!--    <input id='upload_image_input' type="file"  accept="image/gif, image/jpeg" hidden/> -->
+                 <div id="uploader" class="wu-example">
+                    <!--用来存放文件信息-->
+                    <div id="thelist" class="uploader-list"></div>
+                    <div class="btns">
+                        <div id="filePicker">选择文件</div>
+                        <button id="ctlBtn" class="btn btn-default">开始上传</button>
+                    </div>
+                </div>
+
+
+                    <a id="filePicker">
+                    <i class="icon36 icon36_add"></i>
+                    <strong>上传图片</strong>
+                    </a>
+                  </div>
+                </div>
+               </div>
+              <!--语音-->
+              <div class="tabOutList" style="display: none;"> 
+              <div class="inner">
+                  <div class="create_access">
+                    <a href="#" id="audio_modal"><i class="icon36 icon36_add"></i>
+                    <strong>从素材库中选择</strong></a>
+                  </div>
+                  <div class="create_access">
+                    <a href="#"><i class="icon36 icon36_add"></i>
+                    <strong>新建语音</strong></a>
+                  </div>
+                </div>
+               </div>
+              <!--视频-->
+              <div class="tabOutList" style="display: none;">
+              <div class="inner">
+                  <div class="create_access">
+                    <a href="#" id="video_modal"><i class="icon36 icon36_add"></i>
+                    <strong>从素材库中选择</strong></a>
+                  </div>
+                  <div class="create_access">
+                    <a href="#"><i class="icon36 icon36_add"></i>
+                    <strong>新建视频</strong></a>
+                  </div>
+                </div>
+               </div>
+            </div>
+          </div>
+        </div>
+
+        <div hidden>
+          <input id="currentAccountId" value= <%= session[:current_official_account_id] %> />
+          <%= text_field :wx_auto_response, :event_type %>
+          <%= text_field :wx_auto_response, :res_type %>
+        </div>  
+        <div class="tool_bar">
+
+          <!-- <button class="btn btn_primary" id="saveAutoResponse">保存submit</button> -->
+
+
+          <button class="btn btn_primary" type="button" id="saveAutoResponse">保存</button>
+          <button class="btn btn_primary cancel">删除回复</button>
+
+        </div>
+      </div>
+      <div class="results" style="left: 20%;" hidden>删除成功</div>
+  <% end %>
+
+<%= content_for :js do %>
+    <%= javascript_include_tag 'webuploader/webuploader.js', 'data-turbolinks-track' => true %>
+<script type="text/javascript">
+
+  // page initial event
+  $(function(){
+    var autoObject = {
+      wx_auto_response:{
+        event_type:1,
+        res_type:1
+      }
+      
+    };
+
+
+    // 修改头部功能模块的名称
+    $("#model_title").html("自动回复");
+    //展现切换公众号链接
+    $(".id_wechat").show();
+
+
+    $("#wx_auto_response_event_type").val(1);
+    $("#wx_auto_response_res_type").val(1);
+
+
+    // $("#upload_image_a").on("click",function(){
+    //   $("#wx_auto_response_file").click();
+    // });
+
+    
+
+  $(".tab_nav").on("click",function(){
+      $(".tab_nav").removeClass("selected");
+      $(this).addClass("selected");
+      $("#wx_auto_response_event_type").val($(this).attr("data-value"));
+      autoObject.wx_auto_response.event_type=$(this).attr("data-value");
+
+  });
+
+
+  $("#tabListA li").on("click",function(){
+    $("#wx_auto_response_res_type").val($(this).attr("data-value"));
+      autoObject.wx_auto_response.res_type = $(this).attr("data-value");
+  });
+
+
+  $("#tabListA li").each(function () {
+        $(this).click(function () {
+             autoObject.res_type = $(this).attr("data-value");
+            $(this).addClass("hot").siblings("li").removeClass();
+            $("#tabOutBoxA .tabOutList:eq(" + $(this).index() + ")").show().siblings("div").hide();
+        });
+    });
+
+
+
+  // $(".replace").on("click",function(){
+  //     window.location.href="/wxoss/wx_auto_responses?isChange=true"
+  // });
+
+
+
+  
+
+   //保存按钮的点击事件
+  $("#saveAutoResponse").on("click",function(event){
+   
+
+    autoObject.current_official_account_id=$("#currentAccountId").val();
+    autoObject.wx_auto_response.res_content = $(".edit_area > textarea").val();
+      
+   
+      // autoObject.wx_auto_response.res_img = $("#wx_auto_response_res_img").val();
+      $.ajax({
+            type: 'post',
+            url: "/wxoss/updateResponse",
+            dataType: 'json',
+            data: autoObject,
+            complete:function(data){
+              if(data.responseText == "success"){
+                $(".results").html("保存成功")
+                $(".results").show();
+                setTimeout(function(){
+                  $(".results").hide();
+                },1000);
+              }
+            }
+      });
+
+
+
+    // 如果是图片文件的上传，则提交form表单
+    // if(autoObject.wx_auto_response.res_type == 1){
+    //   autoObject.current_official_account_id=$("#currentAccountId").val();
+    //   autoObject.wx_auto_response.res_content = $(".edit_area > textarea").val();
+      
+   
+
+    //   $.ajax({
+    //         type: 'post',
+    //         url: "/wxoss/updateResponse",
+    //         dataType: 'json',
+    //         data: autoObject,
+    //         complete:function(data){
+    //           if(data.responseText == "success"){
+    //             $(".results").html("保存成功")
+    //             $(".results").show();
+    //             setTimeout(function(){
+    //               $(".results").hide();
+    //             },1000);
+    //           }
+    //         }
+    //   });
+
+    // }
+    // else if(autoObject.wx_auto_response.res_type == 2){
+    //     $(".edit_wx_auto_response").submit();
+    // }else{
+
+    // }
+
+
+    $.WebUploader({
+          // 选完文件后，是否自动上传。
+          auto: true,
+          // swf文件路径
+          swf: 'plugins/webuploader/Uploader.swf',
+          // 文件接收服务端。
+          server: '<%= wx_articles/resources_path%>',
+          // 选择文件的按钮。可选。
+          // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+          pick: '#filePicker',
+          fileVal: 'file',
+          fileQueued: function (file) {
+            var $li = $('<li id="' + file.id + '" class="img_item"> <label class="frm_checkbox_label img_item_bd">' +
+                    '<img>' + '<span class="lbl_content">' + file.name + '</span>' +
+                    '</label></li>'),
+                $img = $li.find('img');
+            // $list为容器jQuery实例
+            var $list = $('#fileList');
+            $list.append($li);
+          },
+          uploadProgress: function (file, percentage) {
+            var $li = $('.upload_file_box'),
+                $percent = $li.find('.progress span');
+            $li.show();
+            // 避免重复创建
+            if (!$percent.length) {
+              $percent = $('<p class="progress progress-striped active"><span class="progress-bar" role="progressbar" style="width: 0%"></span></p>').appendTo($li).find('span');
+            }
+            $percent.css('width', percentage * 100 + '%');
+          },
+          uploadSuccess: function (file) {
+            $('<div class="results"  style="position:fixed;z-index:999;top:0px ">上传成功</div>').appendTo("body");
+            location.reload();
+          },
+          uploadError: function (file) {
+            var $li = $('#' + file.id),
+                $error = $li.find('div.error');
+            // 避免重复创建
+            if (!$error.length) {
+              $error = $('<div class="error"></div>').appendTo($li);
+            }
+            $error.text('上传失败');
+          },
+          uploadComplete: function (file) {
+            $('.upload_file_box').find('.progress').remove();
+            $('.upload_file_box').hide();
+          }
+        });
+
+  });
+
+
+  });
+
+</script>
+<% end %>

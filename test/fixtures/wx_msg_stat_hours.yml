@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wx_official_account_id: 1
+  cycle: 1
+  date: MyString
+  hour: MyString
+  source: 1
+  msg_type: 1
+  user: 1
+  count: 1
+
+two:
+  wx_official_account_id: 1
+  cycle: 1
+  date: MyString
+  hour: MyString
+  source: 1
+  msg_type: 1
+  user: 1
+  count: 1

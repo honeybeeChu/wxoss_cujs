@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wx_official_account_id: 1
+  openid: MyString
+  nickname: MyString
+  sex: 1
+  language: MyString
+  city: MyString
+  province: MyString
+  country: MyString
+  headimgurl: MyString
+  subscribe_time: MyString
+  unionid: MyString
+  remark: MyString
+  groupid: 1
+  subscribe: 1
+  phone: MyString
+
+two:
+  wx_official_account_id: 1
+  openid: MyString
+  nickname: MyString
+  sex: 1
+  language: MyString
+  city: MyString
+  province: MyString
+  country: MyString
+  headimgurl: MyString
+  subscribe_time: MyString
+  unionid: MyString
+  remark: MyString
+  groupid: 1
+  subscribe: 1
+  phone: MyString

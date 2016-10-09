@@ -1,0 +1,445 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title></title>
+  <%= stylesheet_link_tag 'wx_wheel_activities', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery-2.2.0.min', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'activity/jQueryRotate.2.2', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'activity/jquery.easing.min', 'data-turbolinks-track' => true %>
+
+  <script type="text/javascript">
+    var turnplate={
+      restaraunts:[],				//大转盘奖品名称
+      colors:[],					//大转盘奖品区块对应背景颜色
+      outsideRadius:192,			//大转盘外圆的半径
+      textRadius:155,				//大转盘奖品位置距离圆心的距离
+      insideRadius:68,			//大转盘内圆的半径
+      startAngle:0,				//开始角度
+      bRotate:false				//false:停止;ture:旋转
+    };
+
+    $(document).ready(function(){
+      //动态添加大转盘的奖品与奖品区域背景颜色
+      var award_level = '';
+      var wx_activity = <%= raw @wx_activity.to_json %>;
+      var wx_activity_awards = <%= raw @remain_award_list.to_json %>;
+      $(wx_activity_awards).each(function(index) {
+        turnplate.restaraunts.push(wx_activity_awards[index].name, "谢谢参与");
+        turnplate.colors.push("#f8c240", "#ffeb8c");
+      });
+
+      var rotateTimeOut = function (){
+        $('#wheelcanvas').rotate({
+          angle:0,
+          animateTo:2160,
+          duration:8000,
+          callback:function (){
+            alert('网络超时，请检查您的网络设置！');
+          }
+        });
+      };
+
+      //旋转转盘 item:奖品位置; txt：提示语;
+      var rotateFn = function (item, txt){
+        if(item%2==0){
+          var angles = item * (360 / turnplate.restaraunts.length) - (360 / (turnplate.restaraunts.length*2));
+        }else{
+          var angles = item * ((360 / turnplate.restaraunts.length) - (360 / (turnplate.restaraunts.length*2)));
+        }
+        if(angles<270){
+          angles = 270 - angles;
+        }else{
+          angles = 360 - angles + 270;
+        }
+        $('#wheelcanvas').stopRotate();
+        $('#wheelcanvas').rotate({
+          angle:0,
+          animateTo:angles+1800,
+          duration:8000,
+          callback:function (){
+            if(txt=="谢谢参与"){
+              $('.mask').show();
+              $('#j_none').show();
+            }else{
+              $('.mask').show();
+              $('.jq').text(txt);
+              $('#j_win').show();
+            }
+            turnplate.bRotate = !turnplate.bRotate;
+          }
+        });
+      };
+
+      $('.pointer').click(function (){
+        // 活动状态
+        if(wx_activity.status == -1){
+          $('#j_tip p').text("活动还没有开始！");
+          $('.mask').show();
+          $('#j_tip').show();
+          return;
+        }else if(wx_activity.status == 99){
+          $('#j_tip p').text("活动已经结束了！");
+          $('.mask').show();
+          $('#j_tip').show();
+          return;
+        }
+        if(turnplate.bRotate)return;
+        if($('.number span').text()<=0)return;
+        turnplate.bRotate = !turnplate.bRotate;
+        $.ajax({
+          type: "get",
+          url: "/wxoss/wx_wheel_activities/wheel",
+          dataType: "json",
+          data: {wx_activity_id: wx_activity.id, openid: '<%= @openid %>'},
+          success: function (data) {
+            var result = data.result;
+            award_level = result['id'];
+            if (result['prize'] == "谢谢参与"){
+              var item = rnd(1,turnplate.restaraunts.length/2);
+              rotateFn(item*2, turnplate.restaraunts[item*2-1]);
+            }else{
+              for(var i in turnplate.restaraunts){
+                if(turnplate.restaraunts[i] == result['prize']){
+                  rotateFn(i+1, turnplate.restaraunts[i]);
+                }
+              }
+            }
+          },
+          error: function(data){
+            rotateTimeOut();
+          }
+        });
+      });
+
+      // 抽奖限制
+      var lottery_num = <%= @lottery_num %>;
+      $('.number span').text(lottery_num);
+      // 奖项设置
+      $(wx_activity_awards).each(function(index){
+        var level = wx_activity_awards[index].level;
+        var name = wx_activity_awards[index].name;
+        var amount = wx_activity_awards[index].amount;
+        var imgurl = wx_activity_awards[index].imgurl;
+        var award_name = convert(level);
+        $('<li><div class="award_img"><img src="'+imgurl+'"></div><span class="award_name">'+award_name+'<br/>'+name+'</span><span class="award_num">剩余：'+amount+'个</span></li>').appendTo($('.award_list'));
+      });
+      // 活动时间
+      var begintime = new Date(wx_activity.begintime);
+      var endtime = new Date(wx_activity.endtime);
+      var str = '';
+      str += begintime.getFullYear()+'年'+(begintime.getMonth()+1)+'月'+begintime.getDate()+'日';
+      str += '——';
+      str += endtime.getFullYear()+'年'+(endtime.getMonth()+1)+'月'+endtime.getDate()+'日';
+      $('.time').text(str);
+      // 活动规则
+      $('.txt').text(wx_activity.description);
+      var content = $('.txt').text().split("\n").join("<br/>");
+      $(".txt").html(content);
+      // 奖品发放
+      if(wx_activity.receive_way == "0"){
+        $('.info').text('请中奖人员填写详细的收货地址和联系电话,我们工作人员会尽快与您联系,核实信息后将尽快将奖品寄出。');
+        $('<div class="cgray">奖品邮寄发放，请填写详细的个人信息。</div>').insertBefore($('#j_win_info .btn'));
+      }else{
+        $('.info').text('请中奖人员到线下兑奖，由商家进行核销。线下领奖地址：'+wx_activity.offline_address+'。线下领奖时间说明：'+wx_activity.offline_description+'。');
+        $('<div class="cgray">线下兑奖，由商家进行核销。</div>').insertBefore($('#j_win_info .btn'));
+      }
+      if(wx_activity.receive_info != null){
+        if(wx_activity.receive_info.indexOf('realname')!=-1){
+          $('<div><p class="cgray">姓名</p><input type="text" name="realname"></div>').insertBefore($('#j_win_info .btn'));
+        }
+        if(wx_activity.receive_info.indexOf('telephone')!=-1){
+          $('<div><p class="cgray">电话</p><input type="text" name="telephone"></div>').insertBefore($('#j_win_info .btn'));
+        }
+        if(wx_activity.receive_info.indexOf('address')!=-1){
+          $('<div><p class="cgray">地址</p><input type="text" name="address"></div>').insertBefore($('#j_win_info .btn'));
+        }
+      }
+      $('#j_win_info .btn').click(function(){
+        var win_info = {
+          wx_activity_id:"",
+          openid:"",
+          award_level:"",
+          realname:"",
+          telephone:"",
+          address:"",
+        };
+        win_info.wx_activity_id = wx_activity.id;
+        win_info.openid = '<%= @openid %>';
+        win_info.award_level = award_level;
+        win_info.realname = $("input[name='realname']").val();
+        win_info.telephone = $("input[name='telephone']").val();
+        win_info.address = $("input[name='address']").val();
+        var r = validatePost();
+        if(r) {
+          $.ajax({
+            type: 'POST',
+            url: '/wxoss/wx_wheel_activities/update_info',
+            dataType: 'json',
+            data: win_info,
+            success: function (data) {
+              if (data.result == 'success') {
+                $('.mask').hide();
+                $('#j_win_info').hide();
+                document.location.href = '/wxoss/wx_wheel_activities?wx_activity_id='+wx_activity.id;
+              } else {
+                alert("保存失败");
+              }
+            }
+          });
+        }
+      });
+      //  中奖纪录
+      $('#j_record').click(function() {
+        $.ajax({
+          type: 'get',
+          url: '/wxoss/wx_wheel_activities/query_record',
+          dataType: 'json',
+          data: {wx_activity_id: wx_activity.id, openid: '<%= @openid %>'},
+          success: function (data) {
+            var result = data.award_info;
+            if (result['is_award'] == true){
+              var award_list = result['award_list'];
+              console.log(award_list);
+              $('#j_record_main tbody').empty();
+              $(award_list).each(function(index) {
+                var award_level = convert(award_list[index]['level']);
+                var award_time = award_list[index]['time'];
+                if (typeof(award_time) == "undefined"){
+                  award_time = "";
+                }
+                $('<tr><td>'+award_level+'</td><td>'+award_list[index]['name']+'</td><td>'+award_time+'</td></tr>').appendTo($('#j_record_main tbody'));
+              });
+            }else{
+              $('.record p').show();
+            }
+            $('.mask').show();
+            $('#j_record_main').show();
+          }
+        });
+      });
+
+      /*×按钮*/
+      $('.close').click(function() {
+        $('.mask').hide();
+        $(this).parent().hide();
+      });
+
+      /*再试一次*/
+      $('#j_more').click(function() {
+        $('.mask').hide();
+        $('#j_none').hide();
+        document.location.href = '/wxoss/wx_wheel_activities?wx_activity_id='+wx_activity.id;
+      });
+
+      $('#j_tip .btn').click(function() {
+        $('.mask').hide();
+        $('#j_tip').hide();
+      });
+
+      $('#j_win .btn').click(function() {
+        $('#j_win').hide();
+        $('#j_win_info').show();
+      });
+    });
+
+    function rnd(n, m){
+      var random = Math.floor(Math.random()*(m-n+1)+n);
+      return random;
+    }
+
+    function convert(level){
+      var name = '';
+      switch(level)
+      {
+        case 1:
+          name = "一等奖";
+          break;
+        case 2:
+          name = "二等奖";
+          break;
+        case 3:
+          name = "三等奖";
+          break;
+        case 4:
+          name = "四等奖";
+          break;
+        case 5:
+          name = "五等奖";
+          break;
+      }
+      return name;
+    }
+
+    function validatePost(){
+      if($("input[name='realname']").is(":visible")) {
+        if($("input[name='realname']").val().trim() === "") {
+          alert("请输入真实姓名");
+          return false;
+        }
+      }
+      if($("input[name='telephone']").is(":visible")) {
+        var mobile = $("input[name='telephone']").val();
+        var regx = /^1[3|4|5|8][0-9]\d{8}$/;
+        if(!regx.test(mobile)) {
+          alert("请输入正确的手机号码");
+          return false;
+        }
+      }
+      if($("input[name='address']").is(":visible")) {
+        if($("input[name='address']").val().trim() === "") {
+          alert("请输入详细地址");
+          return false;
+        }
+      }
+      return true;
+    }
+
+    //页面所有元素加载完毕后执行drawRouletteWheel()方法对转盘进行渲染
+    window.onload=function(){
+      drawRouletteWheel();
+    };
+
+    function drawRouletteWheel() {
+      var canvas = document.getElementById("wheelcanvas");
+      if (canvas.getContext) {
+        //根据奖品个数计算圆周角度
+        var arc = Math.PI / (turnplate.restaraunts.length/2);
+        var ctx = canvas.getContext("2d");
+        //在给定矩形内清空一个矩形
+        ctx.clearRect(0,0,422,422);
+        //strokeStyle 属性设置或返回用于笔触的颜色、渐变或模式
+        ctx.strokeStyle = "#ae6112";
+        //font 属性设置或返回画布上文本内容的当前字体属性
+        ctx.font = '20px Microsoft YaHei';
+        for(var i = 0; i < turnplate.restaraunts.length; i++) {
+          var angle = turnplate.startAngle + i * arc;
+          ctx.fillStyle = turnplate.colors[i];
+          ctx.beginPath();
+          //arc(x,y,r,起始角,结束角,绘制方向) 方法创建弧/曲线（用于创建圆或部分圆）
+          ctx.arc(211, 211, turnplate.outsideRadius, angle, angle + arc, false);
+          ctx.arc(211, 211, turnplate.insideRadius, angle + arc, angle, true);
+          ctx.stroke();
+          ctx.fill();
+          //锁画布(为了保存之前的画布状态)
+          ctx.save();
+
+          //----绘制奖品开始----
+          ctx.fillStyle = "#ae6112";
+          var text = turnplate.restaraunts[i];
+          var line_height = 30;
+          //translate方法重新映射画布上的 (0,0) 位置
+          ctx.translate(211 + Math.cos(angle + arc / 2) * turnplate.textRadius, 211 + Math.sin(angle + arc / 2) * turnplate.textRadius);
+
+          //rotate方法旋转当前的绘图
+          ctx.rotate(angle + arc / 2 + Math.PI / 2);
+
+          /** 下面代码根据奖品类型、奖品名称长度渲染不同效果，如字体、颜色、图片效果。(具体根据实际情况改变) **/
+          if(text.indexOf("M")>0){//流量包
+            var texts = text.split("M");
+            for(var j = 0; j<texts.length; j++){
+              ctx.font = j == 0?'bold 20px Microsoft YaHei':'18px Microsoft YaHei';
+              if(j == 0){
+                ctx.fillText(texts[j]+"M", -ctx.measureText(texts[j]+"M").width / 2, j * line_height);
+              }else{
+                ctx.fillText(texts[j], -ctx.measureText(texts[j]).width / 2, j * line_height);
+              }
+            }
+          }else if(text.indexOf("M") == -1 && text.length>4){//奖品名称长度超过一定范围
+            text = text.substring(0,4)+"||"+text.substring(4);
+            var texts = text.split("||");
+            for(var j = 0; j<texts.length; j++){
+              ctx.fillText(texts[j], -ctx.measureText(texts[j]).width / 2, j * line_height);
+            }
+          }else{
+            //在画布上绘制填色的文本。文本的默认颜色是黑色
+            //measureText()方法返回包含一个对象，该对象包含以像素计的指定字体宽度
+            ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
+          }
+
+          //把当前画布返回（调整）到上一个save()状态之前
+          ctx.restore();
+          //----绘制奖品结束----
+        }
+      }
+    }
+
+  </script>
+</head>
+<body style="background:#9d240f;overflow-x:hidden;">
+<div class="banner">
+  <div class="turnplate" style="background-image:url(/assets/turnplate-bg.jpg);background-size:100% 100%;">
+    <canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
+    <img class="pointer" src="/assets/turnplate-pointer.png"/>
+  </div>
+</div>
+<div class="number">您今天还有<span class="f16 cwhite">0</span>次抽奖机会</div>
+<a href="#" class="btn_record" id="j_record"><img src="/assets/btn_02.png" alt=""/></a>
+<div class="award_show">
+  <div class="award_top"><img src="/assets/top_jp.png" alt=""/></div>
+  <ul class="award_list">
+  </ul>
+</div>
+<div class="rules">
+  <h2><span>活动规则</span></h2>
+  <h3>活动时间：</h3><p class="time">2014年6月20日—2014年12月31日</p>
+  <h3>活动规则：</h3>
+  <p class="txt">1、会员必须登录成功后才可进行转盘抽奖活动；<br/>
+    2、每抽奖一次即消耗用户50积分；<br/>
+    3、活动中奖结果均以系统自动下发的中奖通知为准；<br/>
+    4、中奖以后，在新页面中填写收货地址及联系方式即可，我们工
+    作人员会尽快与您联系； 下方提供获取积分方式</p>
+  <h3>奖品发放：</h3>
+  <p class="info">奖品会在与客户联系确认后发放，本次活动奖品数量有限，奖品送完为止，不再另行通知。请中奖人员填写详细的收货地址和联系电话。</p>
+</div>
+<div class="foot"><img src="/assets/foot.png" alt=""/></div>
+<!--遮罩-->
+<div class="mask hide"></div>
+<!--提示弹窗-->
+<div id="j_tip" class="modal hide">
+  <div class="modal-body">
+    <p class="f16"></p>
+    <button class="btn">好的</button>
+  </div>
+</div>
+<!--未中奖弹窗-->
+<div id="j_none" class="modal hide">
+  <div class="images"><img src="/assets/top_x.png" alt=""/></div>
+  <div class="modal-body">
+    <p class="f16">很遗憾，未中奖！</p>
+    <button id="j_more" class="btn">再试一次</button>
+  </div>
+</div>
+<!--中奖弹窗-->
+<div id="j_win" class="modal hide">
+  <div class="images"><img src="/assets/top_j.png" alt=""/></div>
+  <div class="modal-body">
+    <p class="jq"></p>
+    <p class="cgray">注：请登记您的地址信息以便寄发奖品。</p>
+    <button class="btn">点击领取</button>
+  </div>
+</div>
+<div id="j_win_info" class="modal hide">
+  <div class="images"><img src="/assets/top_j.png" alt=""/></div>
+  <div class="modal-body">
+    <button class="btn">确认</button>
+  </div>
+</div>
+<!--中奖记录-->
+<div id="j_record_main" class="modal red hide">
+  <button class="close">&times;</button>
+  <div class="images" style="top:-56px;"><img src="/assets/j.png" alt=""/></div>
+  <div class="modal-body" style="padding-bottom:0;">
+    <div class="record">
+      <h2>中奖纪录</h2>
+      <p class="hide">暂无中奖纪录。</p>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="record_list">
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>

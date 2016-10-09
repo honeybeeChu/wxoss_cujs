@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="col_main">
+<div class="main"> 
+<div class="main_hd">
+  <h2>自动回复show</h2>
+  <div class="id_wechat">亚信WIFI<a href="javascript:void(0)" class="replace">切换公众号</a></div>
+</div>
+	<%= render 'form' %>
+</div>
+</div>
+
+
+
+<%= link_to 'Edit', edit_wx_auto_response_path(@wx_auto_response) %> |
+<%= link_to 'Back', wx_auto_responses_path %>

@@ -1,0 +1,479 @@
+@charset "UTF-8";
+/* line 6, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 7, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+body {
+  color: #222;
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+}
+
+/* line 8, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+ul, ol {
+  list-style-type: none;
+}
+
+/* line 9, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+select, input, img, select {
+  vertical-align: middle;
+}
+
+/* line 10, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+input {
+  font-size: 12px;
+}
+
+/* line 11, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* line 12, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+a:hover {
+  color: #c00;
+  text-decoration: none;
+}
+
+/* line 13, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+:active {
+  border: 0;
+}
+
+/* line 14, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.clear {
+  clear: both;
+}
+
+/* line 15, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.hide {
+  display: none;
+}
+
+/*文字颜色*/
+/* line 17, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.cyellow {
+  color: #e6da08;
+}
+
+/* line 18, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.cred {
+  color: #e94935;
+}
+
+/* line 19, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.corange {
+  color: #fc8322;
+}
+
+/* line 20, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.cwhite {
+  color: #fff;
+}
+
+/* line 21, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.cgray {
+  color: #666;
+}
+
+/*文字大小*/
+/* line 23, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.f12 {
+  font-size: 1.2em;
+}
+
+/* line 24, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.f14 {
+  font-size: 1.4em;
+}
+
+/* line 25, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.f16 {
+  font-size: 1.6em;
+}
+
+/* line 26, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.f18 {
+  font-size: 1.8em;
+}
+
+/* line 27, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.fontn {
+  font-weight: normal;
+}
+
+/* line 28, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.fontb {
+  font-weight: bold;
+}
+
+/* 大转盘样式 */
+/* line 30, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.banner {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+}
+
+/* line 31, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.banner .turnplate {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 0 5%;
+  padding-top: 14%;
+  padding-bottom: 8%;
+  box-sizing: border-box;
+}
+
+/* line 32, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.banner .turnplate canvas.item {
+  width: 100%;
+}
+
+/* line 33, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.banner .turnplate img.pointer {
+  position: absolute;
+  width: 30%;
+  height: 33%;
+  left: 35%;
+  top: 33%;
+}
+
+/* line 34, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+#wheelcanvas {
+  background: url(/assets/zp.png) no-repeat;
+  background-size: 100%;
+  padding: 3.2%;
+  padding-right: 2.8%;
+  box-sizing: border-box;
+}
+
+/* line 35, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.number {
+  width: 100%;
+  text-align: center;
+  color: #ffeb8c;
+  font-size: 1.4em;
+  padding-bottom: 20px;
+}
+
+/* line 36, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.number span {
+  padding: 0 5px;
+}
+
+/* line 37, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+a.btn_record {
+  width: 50%;
+  padding-left: 25%;
+}
+
+/* line 38, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+a.btn_record img {
+  width: 50%;
+}
+
+/* line 39, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.award_show {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+/* line 40, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.award_top, .award_top img {
+  width: 100%;
+}
+
+/* line 41, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.award_show ul {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #fff;
+}
+
+/* line 42, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.award_list {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #222;
+}
+
+/* line 43, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.award_list li {
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 5px 0;
+}
+
+/* line 44, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.award_list li:last-child {
+  border-bottom: 0;
+}
+
+/* line 45, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.award_img {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #e7e7eb;
+  background: #f4f5f9 url(/assets/img.png) center no-repeat;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+/* line 53, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.award_img img {
+  width: 100%;
+  height: 100%;
+  margin-right: 0;
+  border: 0;
+}
+
+/* line 54, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.award_name {
+  width: 35%;
+  padding-right: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+/* line 55, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.award_num {
+  width: 25%;
+  float: right;
+  text-align: right;
+  display: inline-block;
+  padding-top: 30px;
+  padding-right: 10px;
+}
+
+/* line 56, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.rules {
+  width: 90%;
+  padding-left: 5%;
+  margin-top: 30px;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #eabfb8;
+}
+
+/* line 57, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.rules h2 {
+  text-align: center;
+  color: #e6da08;
+  text-shadow: #7a1909 0 1px 0;
+  font-weight: normal;
+  border-bottom: 1px solid #6d1709;
+  box-shadow: #b62811 0 1px 0;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* line 58, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.rules h2 span {
+  background: #9d230f;
+  padding: 0 10px;
+  position: relative;
+  top: 12px;
+}
+
+/* line 59, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.rules h3 {
+  color: #e6da08;
+  font-weight: normal;
+  padding-top: 5px;
+}
+
+/* line 60, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.rules p {
+  text-indent: 2em;
+}
+
+/* line 61, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.rules p.txt {
+  padding-left: 2em;
+  text-indent: 0;
+}
+
+/* line 62, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.foot, .foot img {
+  width: 100%;
+}
+
+/* line 63, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.foot {
+  margin-top: 20px;
+}
+
+/*遮罩层*/
+/* line 65, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.50;
+  opacity: .50;
+  filter: alpha(opacity=50);
+}
+
+/*模态框*/
+/* line 78, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.modal {
+  position: fixed;
+  z-index: 1002;
+  left: 0;
+  top: 30%;
+  width: 90%;
+  margin-left: 5%;
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+}
+
+/* line 89, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.modal .close {
+  display: inline;
+  z-index: 3200;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2em;
+  background: #000;
+  -moz-opacity: 0.80;
+  opacity: .80;
+  filter: alpha(opacity=80);
+  border: none;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+/* line 109, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.modal .images {
+  position: absolute;
+  top: -60px;
+}
+
+/* line 110, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.modal-body, .modal-body img, .modal img {
+  width: 100%;
+}
+
+/* line 111, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.modal-body {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+/* line 112, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.modal-body p {
+  padding-bottom: 10px;
+}
+
+/* line 115, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.btn {
+  background: url(/assets/btn.png) no-repeat center;
+  background-size: 100%;
+  color: #a94e0b;
+  width: 50%;
+  height: 36px;
+  border: 0;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* line 127, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.btn:active {
+  border: 0;
+}
+
+/* line 128, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.jq {
+  background: url(/assets/j_bg.png) no-repeat center;
+  background-size: 100%;
+  font-size: 1.8em;
+  text-align: center;
+  color: #994309;
+  width: 40%;
+  height: 40px;
+  margin-left: 30%;
+  line-height: 50px;
+  margin-bottom: 5px;
+}
+
+/* line 140, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+#j_win_info .modal-body div {
+  height: 30px;
+  margin-top: 5px;
+}
+
+/* line 141, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+#j_win_info p {
+  float: left;
+  text-align: right;
+  width: 90px;
+  margin-right: 10px;
+}
+
+/* line 142, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+#j_win_info input {
+  float: left;
+}
+
+/* line 143, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.red {
+  background: #9d230f;
+}
+
+/* line 144, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.record {
+  padding: 0 10px;
+  position: relative;
+  top: -20px;
+}
+
+/* line 145, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.record h2 {
+  text-align: left;
+  color: #fff;
+  font-weight: normal;
+}
+
+/* line 146, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.record p {
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+/* line 147, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.record_list {
+  margin: 10px 0;
+}
+
+/* line 148, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/wx_wheel_activities.scss */
+.record_list td {
+  color: #e6da08;
+  padding-right: 5px;
+  line-height: 40px;
+  border-bottom: 1px dashed #d24932;
+}

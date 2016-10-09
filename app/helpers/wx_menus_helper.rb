@@ -1,0 +1,2 @@
+module WxMenusHelper
+end

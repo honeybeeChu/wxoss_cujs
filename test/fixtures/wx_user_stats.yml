@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wx_official_account_id: 1
+  date: 2016-03-14
+  user_source: 1
+  new_user: 1
+  cancel_user: 1
+  cumulate_user: 1
+
+two:
+  wx_official_account_id: 1
+  date: 2016-03-14
+  user_source: 1
+  new_user: 1
+  cancel_user: 1
+  cumulate_user: 1

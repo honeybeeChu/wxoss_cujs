@@ -1,0 +1,780 @@
+/* line 1, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view li {
+  margin-bottom: 20px;
+}
+
+/* line 5, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view .title {
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  display: inline-block;
+  text-align: right;
+  width: 50%;
+  *width: 48%;
+}
+
+/* line 16, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view .msg {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  display: inline-block;
+  width: 50%;
+  padding-left: 1em;
+  word-break: break-all;
+  word-wrap: break-word;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 30, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view .msg .color_panel {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #FFF;
+  border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  box-shadow: 0 0 3px #8d8d8d;
+  -moz-box-shadow: 0 0 3px #8d8d8d;
+  -webkit-box-shadow: 0 0 3px #8d8d8d;
+  margin-right: 4px;
+}
+
+/* line 44, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view .msg .pre {
+  margin: 0;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+/* line 50, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view .msg img {
+  width: 200px;
+}
+
+/* line 54, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view .msg .tips {
+  font-size: 14px;
+  color: #a3a3a3;
+}
+
+/* line 59, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view .page_top .link {
+  position: relative;
+  right: 0;
+}
+
+/* line 64, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+input::-ms-clear {
+  display: none;
+}
+
+/* line 68, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view .title {
+  width: 30%;
+}
+
+/* line 72, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view .msg {
+  width: 70%;
+}
+
+/* line 76, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view .msg .sub_msg {
+  color: #a3a3a3;
+}
+
+/* line 80, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group .frm_controls .input_submsg .frm_input_box {
+  width: 60px;
+  margin-right: 5px;
+}
+
+/* line 85, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group.radio_row {
+  text-align: left;
+}
+
+/* line 89, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group.radio_row .frm_label {
+  float: none;
+  height: 43px;
+  line-height: 43px;
+}
+
+/* line 95, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group.radio_row .frm_controls {
+  padding: 20px 20px;
+}
+
+/* line 99, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group.radio_row .frm_controls.frm_vertical_lh {
+  line-height: normal;
+}
+
+/* line 103, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group.radio_row .frm_controls .frm_radio_label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* line 108, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group.radio_row .frm_controls .frm_radio_label .frm_tips {
+  padding-top: 0;
+  padding-left: 23px;
+  line-height: normal;
+}
+
+/* line 114, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group.radio_row .frm_controls .frm_radio_label:last-child {
+  margin-bottom: 0;
+}
+
+/* line 118, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group.radio_row .frm_controls .frm_radio_label.frm_radio_input {
+  height: 32px;
+  line-height: 32px;
+}
+
+/* line 123, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group.radio_row .frm_controls .radio_control_group {
+  display: block;
+}
+
+/* line 127, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group.radio_row .frm_controls .radio_control_group:after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 136, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group.radio_row .frm_controls .radio_control_group .frm_radio_label {
+  float: left;
+}
+
+/* line 140, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group.radio_row .frm_controls .radio_control_group .dropdown_menu {
+  margin-right: 5px;
+}
+
+/* line 144, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group.radio_row .frm_controls .radio_control_group .frm_tips {
+  padding-left: 24px;
+}
+
+/* line 148, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .table_wrp {
+  margin-bottom: 20px;
+}
+
+/* line 152, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .table_wrp .dropdown_menu .dropdown_data_list {
+  *width: 100%;
+}
+
+/* line 156, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead {
+  border-top: 1px solid #e7e7eb;
+  border-right: 1px solid #e7e7eb;
+  border-left: 1px solid #e7e7eb;
+  background-color: #f4f5f9;
+}
+
+/* line 163, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead .title h4 {
+  font-weight: normal;
+  padding: 0 1em;
+  height: 38px;
+  line-height: 38px;
+}
+
+/* line 170, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead .title a {
+  margin-left: 1em;
+}
+
+/* line 174, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead .title .tab_nav a {
+  margin-left: 0;
+}
+
+/* line 178, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead .dropdown_menu_td {
+  border-left: 1px solid #e7e7eb;
+}
+
+/* line 182, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead .dropdown_menu_td .dropdown_switch {
+  border: 0;
+  background: 0;
+  background-color: #f4f5f9;
+  height: 38px;
+  line-height: 38px;
+}
+
+/* line 190, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead .tab_top_oper {
+  height: 38px;
+  line-height: 38px;
+  padding: 0 1em;
+  border-left: 1px solid #e7e7eb;
+}
+
+/* line 197, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead .data {
+  border-left: 1px solid #e7e7eb;
+  line-height: 38px;
+}
+
+/* line 202, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead .data .ta_date {
+  border: 0;
+  background: 0;
+  line-height: 38px;
+}
+
+/* line 208, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead .data:hover {
+  background-color: #e7e7eb;
+}
+
+/* line 212, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead .ta_date .opt_sel {
+  height: 38px;
+  line-height: 38px;
+}
+
+/* line 217, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead .time_periods {
+  border-left: 1px solid #e7e7eb;
+  line-height: 38px;
+}
+
+/* line 222, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead .time_periods .btn {
+  border: 0;
+  background: 0;
+}
+
+/* line 227, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead .time_periods:hover {
+  background-color: #e7e7eb;
+}
+
+/* line 231, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tab_wrp_thead.with_oper .td_panel {
+  padding: 0;
+}
+
+/* line 235, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .table {
+  border-left: 1px solid #e7e7eb;
+  border-right: 1px solid #e7e7eb;
+  margin-bottom: 20px;
+}
+
+/* line 241, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .table .btn {
+  border: 0;
+  background: 0;
+}
+
+/* line 246, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .table .btn.dropdown_switch {
+  background: 0;
+}
+
+/* line 250, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .table .frm_radio_label {
+  margin-right: 0;
+}
+
+/* line 254, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .table .table_cell {
+  padding: 0;
+  text-align: left;
+  line-height: normal;
+}
+
+/* line 260, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .table .table_cell.with_num {
+  text-align: right;
+}
+
+/* line 264, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .table_head {
+  padding: 6px 1em;
+  border: 1px solid #e7e7eb;
+  border-bottom: 0;
+  background-color: #f4f5f9;
+}
+
+/* line 271, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .td_panel {
+  padding: 10px 1em;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+/* line 277, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .thead .table_cell {
+  line-height: normal;
+}
+
+/* line 281, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .thead .td_panel {
+  padding: 10px 1em;
+}
+
+/* line 285, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .thead .dropdown_switch label {
+  margin-left: 1em;
+}
+
+/* line 289, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tbody {
+  color: #8d8d8d;
+}
+
+/* line 293, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.send_card .tbody .table_cell.with_oper .td_panel {
+  padding-right: 2em;
+}
+
+/* line 297, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group .hint {
+  height: 30px;
+  margin-left: .5em;
+  line-height: 30px;
+  color: #8d8d8d;
+}
+
+/* line 304, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group .frm_controls_hint .frm_input_box {
+  float: left;
+}
+
+/* line 308, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.frm_control_group .frm_controls_hint .frm_hint {
+  margin-left: 0.5em;
+}
+
+/* line 312, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.pop_task {
+  padding: 0 33px;
+}
+
+/* line 316, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.pop_task .pop_top_tip {
+  margin-bottom: 20px;
+}
+
+/* line 320, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.pop_task .frm_control_group {
+  padding-bottom: 5px;
+}
+
+/* line 324, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.pop_task .frm_checkbox_group label {
+  margin-left: 6em;
+}
+
+/* line 328, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.pop_task .frm_checkbox_group .frm_tips {
+  margin-left: 6em;
+}
+
+/* line 332, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.pop_task .frm_input_box {
+  width: 343px;
+}
+
+/* line 336, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.pop_task .frm_tips {
+  width: 375px;
+}
+
+/* line 340, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.icon18 {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* line 347, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.icon18.ic_intercomm {
+  background: url(/assets/htmledition/dialog_choose_card_z2b3b7f-1e81c06fc4178b60cc687e3633185e3a7329cbe665fa09a1b05993d812268359.png) 0 0 no-repeat;
+}
+
+/* line 351, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.release_method {
+  padding: 55px 35px 55px 35px;
+}
+
+/* line 355, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.release_method .qr_title {
+  font-size: 28px;
+}
+
+/* line 359, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.release_method .qr_desc {
+  text-align: left;
+  padding: 20px 50px;
+}
+
+/* line 364, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.release_method .radio_row .frm_label {
+  padding-left: 22px;
+}
+
+/* line 368, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.release_method .msg_pre_view .title {
+  width: 40%;
+  color: #8d8d8d;
+  *width: 35%;
+}
+
+/* line 374, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.release_method .msg_pre_view .msg {
+  width: 60%;
+  padding-left: 2em;
+}
+
+/* line 379, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.release_method .page_msg.page_msg_release {
+  margin: 0 82px 20px;
+}
+
+/* line 383, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.first_step .frm_control_group.radio_row {
+  padding: 0 0 0 155px;
+}
+
+/* line 387, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.second_step .frm_control_group.radio_row .frm_controls {
+  padding: 0;
+}
+
+/* line 391, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.ic_social {
+  background-color: #87c2e8;
+  color: #fff;
+  font-size: 12px;
+  padding: 1px 3px;
+  font-style: normal;
+  -webkit-font-smoothing: subpixel-antialiased;
+  word-wrap: normal;
+  word-break: normal;
+  display: inline-block;
+}
+
+/* line 403, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.release_method {
+  padding: 55px 35px;
+}
+
+/* line 407, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.release_method .icon_loading_small {
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+/* line 412, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.release_method .search {
+  margin-bottom: 10px;
+}
+
+/* line 416, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.release_method .sub_title_bar {
+  padding: 0;
+  line-height: normal;
+}
+
+/* line 421, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.release_method .mini_tips a {
+  color: #459ae9;
+}
+
+/* line 425, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.dialog_desc {
+  text-align: left;
+  padding-left: 112px;
+  color: #8d8d8d;
+}
+
+/* line 431, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp.release_method_select_table_wrp .td_panel {
+  padding: 10px 0 10px 1em;
+}
+
+/* line 435, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .table_cell.release_method_select_box {
+  width: 1%;
+}
+
+/* line 439, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .table_cell.release_method_select_box .frm_radio_label {
+  margin-right: 0;
+}
+
+/* line 443, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .table_cell.release_method_kind {
+  width: 12%;
+  color: #000;
+}
+
+/* line 448, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .table_cell.release_method_name {
+  width: 17%;
+}
+
+/* line 452, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .table_cell.release_method_name .dropdown_menu label {
+  margin-left: 0;
+}
+
+/* line 456, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .table_cell.release_method_time {
+  width: 25%;
+}
+
+/* line 460, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .table_cell.release_method_stock {
+  width: 15%;
+  text-align: right;
+}
+
+/* line 465, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .table_cell.release_method_stock .td_panel {
+  padding: 10px 1em 10px 0;
+}
+
+/* line 469, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .table_cell.release_method_stock .icon14_common {
+  margin-left: 0.5em;
+}
+
+/* line 473, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .table_cell.release_method_price {
+  width: 16%;
+  text-align: right;
+}
+
+/* line 478, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .table_cell.release_method_preview {
+  width: 7%;
+}
+
+/* line 482, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .table_cell.release_method_state {
+  text-align: right;
+  width: 14%;
+}
+
+/* line 487, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .table_cell.release_method_state .td_panel {
+  padding: 10px 1em 10px 0;
+}
+
+/* line 491, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .thead .release_method_state .td_panel {
+  border-right: 0;
+}
+
+/* line 495, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .thead .release_method_stock .td_panel {
+  padding-right: 2.8em;
+}
+
+/* line 499, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .pagination {
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* line 504, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .disabled_item {
+  background-color: #f5f5f5;
+  color: #c1c1c1;
+}
+
+/* line 509, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .disabled_item .table_cell.release_method_kind {
+  color: #c1c1c1;
+}
+
+/* line 513, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.table_wrp .disabled_item:hover {
+  background-color: #f5f5f5;
+  color: #c1c1c1;
+  cursor: not-allowed;
+}
+
+/* line 519, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.user_list .table_cell .td_panel {
+  padding: 10px 6px;
+}
+
+/* line 523, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view .title {
+  text-align: right;
+  width: 40%;
+  color: #8d8d8d;
+}
+
+/* line 529, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view .msg {
+  width: 53%;
+  text-align: left;
+  padding-left: 2em;
+}
+
+/* line 535, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view .frm_control_group {
+  position: relative;
+  top: -6px;
+}
+
+/* line 540, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.msg_pre_view .frm_control_group .frm_input_box {
+  width: 60px;
+  margin-right: 5px;
+}
+
+/* line 545, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.pop_card_preview {
+  position: relative;
+}
+
+/* line 549, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.pop_card_preview .hook {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+}
+
+/* line 555, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.pop_card_preview .hook .hook_top {
+  position: absolute;
+  bottom: 0;
+  left: 1px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent #e7e7eb;
+}
+
+/* line 564, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.pop_card_preview .hook .hook_btm {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent #fff;
+}
+
+/* line 573, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.pop_card_preview .hook.hook_right_top {
+  right: -20px;
+  top: 20px;
+}
+
+/* line 578, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.pop_card_preview .hook.hook_right_center {
+  right: -20px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+/* line 584, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.pop_card_preview .hook.hook_right_bottom {
+  right: -20px;
+  bottom: 20px;
+}
+
+/* line 589, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.dialog_footer_dec {
+  color: #8d8d8d;
+  padding-left: 23px;
+}
+
+/* line 594, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.dialog_footer_tips {
+  color: #8d8d8d;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+/* line 600, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.select_card_thumb {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 605, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.card_thumb_wrp {
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+}
+
+/* line 612, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.card_thumb_wrp .card_thumb, .card_thumb_wrp .card_thumb_add {
+  display: inline-block;
+  vertical-align: middle;
+  width: 150px;
+  height: 90px;
+  margin: 0;
+}
+
+/* line 620, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.card_thumb_wrp .card_thumb img:first-child {
+  width: 150px;
+  height: 90px;
+  max-width: 150px;
+  max-height: 90px;
+}
+
+/* line 627, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.card_thumb_wrp .card_thumb_add {
+  border: 2px dashed #888;
+  font-size: 64px;
+  line-height: 86px;
+  color: #888;
+  text-align: center;
+}
+
+/* line 635, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.card_thumb_wrp .card_thumb_add:hover {
+  text-decoration: none;
+}
+
+/* line 639, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.card_thumb_wrp .card_name {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 160px;
+  width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  margin-left: 1em;
+}
+
+/* line 651, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/cardticket/dialog_choose_card.css.scss */
+.loading {
+  padding: 1em 0;
+  text-align: center;
+}

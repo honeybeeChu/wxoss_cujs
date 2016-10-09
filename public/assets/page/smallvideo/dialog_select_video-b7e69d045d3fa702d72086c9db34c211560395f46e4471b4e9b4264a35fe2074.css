@@ -1,0 +1,36 @@
+/* line 1, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/smallvideo/dialog_select_video.css.scss */
+.dialog_select_video .video {
+  padding: 30px 205px;
+}
+
+/* line 5, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/smallvideo/dialog_select_video.css.scss */
+.dialog_select_video .frm_input_box {
+  width: 440px;
+}
+
+/* line 9, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/smallvideo/dialog_select_video.css.scss */
+.video_preview {
+  width: 548px;
+  height: 280px;
+  background-color: #f4f5f9;
+  margin: 0 auto 20px;
+}
+
+/* line 16, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/smallvideo/dialog_select_video.css.scss */
+.dialog_select_video .dialog_bd {
+  padding: 0;
+}
+
+/* line 20, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/smallvideo/dialog_select_video.css.scss */
+.dialog_select_video .richvideo_create {
+  margin-top: -51px;
+  padding: 0 20px;
+  text-align: right;
+  *padding-top: 13px;
+}
+
+/* line 27, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/page/smallvideo/dialog_select_video.css.scss */
+.dialog_select_video .sub_title_bar.in_dialog {
+  padding: 0;
+  border-bottom: 0;
+}

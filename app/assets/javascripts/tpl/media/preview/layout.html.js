@@ -1,0 +1,3 @@
+define("tpl/media/preview/layout.html.js", [], function () {
+    return '<div class="wx_phone_preview_wrp jsPhoneView">\n    <div class="wx_phone_preview">\n        <span class="btn btn_default btn_phone_preview_closed jsPhoneViewClose">关闭</span>\n        <div class="wx_phone jsPhoneViewMain">\n            {=content} \n        </div>\n        <!--jsPhoneViewMain-->\n        {if plugin}<div class="wx_view_container jsPhoneViewPlugin">{=plugin}</div>\n        {else}<div class="wx_view_container jsPhoneViewPlugin dn">{=plugin}</div>\n        {/if}\n    </div>\n    <div class="mask"></div>\n</div>\n';
+});

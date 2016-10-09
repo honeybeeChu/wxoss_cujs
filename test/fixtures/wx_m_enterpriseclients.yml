@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  eccode: MyString
+  : MyString
+  ssid: MyString
+  ecname: MyString
+  linkman: MyString
+  : MyString
+
+two:
+  eccode: MyString
+  : MyString
+  ssid: MyString
+  ecname: MyString
+  linkman: MyString
+  : MyString

@@ -1,0 +1,2 @@
+module WxResourcesHelper
+end

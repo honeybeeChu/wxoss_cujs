@@ -1,0 +1,396 @@
+<%= content_for :css do %>
+    <%= stylesheet_link_tag 'page/stat/stat_overview', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'wx_msg_analysis', 'data-turbolinks-track' => true %>
+<% end %>
+<%= content_for :tab do %>
+    <h2>统计</h2>
+<% end %>
+<%= content_for :resource do %>
+
+    <script type="text/javascript">
+      window.cgiData = <%= raw @wx_user_stats.to_json%>
+    </script>
+
+    <div class="main_bd user_analysis">
+      <div class="wrp_overview">
+        <div class="page_msg mini top page_user_stat">
+          <div class="inner group">
+	            <span class="msg_icon_wrp">
+	                <i class="icon_msg_mini info"></i>
+	            </span>
+            <div class="msg_content">
+              <p>数据从2015年12月7日起进行统计优化，计算更准确，并增加更多粉丝来源。</p>
+              <p>本页根据昨日数据来计算，而用户管理页根据当前数据计算，两者不一致。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info_box" id="">
+          <div class="inner">
+            <div class="info_hd append_ask">
+              <h4>昨日关键指标</h4>
+              <div class="ext_info help">
+                <i id="js_ask_keys" class="icon_msg_mini ask"></i>
+                <div class="help_content" id="js_ask_keys_content" style="top:0px;">
+                  <i class="dropdown_arrow out"></i>
+                  <i class="dropdown_arrow in"></i>
+                  <dl class="help-change-list" id="pop_items_info">
+                    <dt>新关注人数</dt>
+                    <dd>新关注的去重用户数</dd>
+                    <dt>取消关注人数</dt>
+                    <dd>取消关注的去重用户数</dd>
+                    <dt>净增关注人数</dt>
+                    <dd>净增长的去重关注用户数</dd>
+                    <dt>累积关注人数</dt>
+                    <dd>当前关注的用户总数</dd>
+                    <dt>日、周、月</dt>
+                    <dd>分别计算昨日数据相比1天、7天、30天前的变化情况</dd>
+                    <dt>请注意</dt>
+                    <dd>用户总数根据昨日数据计算，而用户管理模块根据当前实时数据计算，两者可能不一致</dd>
+                  </dl>
+                  <div class="help-change-footer" id="footer_items_info"><span class="wechat_data_range">数据从2013年7月1日开始统计。</span>由于服务器缓存，以及指标计算方法和统计时间的差异，数据可能出现微小误差，一般在1%以内。</div>
+
+                </div>
+              </div>
+            </div>
+            <div class="info_bd">
+              <div class="content" id="js_keydata">
+                <div class="table_wrp">
+                  <table class="ui_trendgrid ui_trendgrid_3">
+                    <tr>
+                      <td class="first">
+                        <div class="ui_trendgrid_item">
+                          <div class="ui_trendgrid_chart"></div>
+                          <dl>
+                            <dt><b>新关注人数</b></dt>
+                            <dd class="ui_trendgrid_number"><strong></strong><em class="ui_trendgrid_unit"></em></dd>
+                            <dd>日</dd>
+                            <dd>周</dd>
+                            <dd>月</dd>
+                          </dl>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="ui_trendgrid_item">
+                          <div class="ui_trendgrid_chart"></div>
+                          <dl>
+                            <dt><b>取消关注人数</b></dt>
+                            <dd class="ui_trendgrid_number"><strong> </strong><em class="ui_trendgrid_unit"></em></dd>
+                            <dd>日 </dd>
+                            <dd>周 </dd>
+                            <dd>月 </dd>
+                          </dl>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="ui_trendgrid_item">
+                          <div class="ui_trendgrid_chart" ></div>
+                          <dl>
+                            <dt><b>净增关注人数</b></dt>
+                            <dd class="ui_trendgrid_number"><strong></strong><em class="ui_trendgrid_unit"></em></dd>
+                            <dd>日</dd>
+                            <dd>周</dd>
+                            <dd>月</dd>
+                          </dl>
+                        </div>
+                      </td>
+                      <td class="last">
+                        <div class="ui_trendgrid_item">
+                          <div class="ui_trendgrid_chart" ></div>
+                          <dl>
+                            <dt><b>累积关注人数</b></dt>
+                            <dd class="ui_trendgrid_number"><strong></strong><em class="ui_trendgrid_unit"></em></dd>
+                            <dd>日</dd>
+                            <dd>周</dd>
+                            <dd>月</dd>
+                          </dl>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="js_tab_bar_wrp"></div>
+
+        <div class="info_box drop_hd_right">
+          <div class="inner" id="js_actions">
+
+            <div class="sub_menu menu_sub_menu" style="position: relative">
+              <div class="button_group">
+                <div id="js_single" style="display: block; float: left;">
+                  <div class="js_date_filter_drop menu_dropdown dropdown_menu" style="float: left; z-index: 100;"></div>
+                  <div class="js_date_range_drop menu_dropdown" style="float: left; width:230px; border-right:1px solid #e7e7eb"></div>
+                  <div id="js_sources" style="float: left; z-index: 100;width: 160px" class="menu_dropdown dropdown_menu"></div>
+                </div>
+
+                <div id="js_compare" style="display: none; float: left;">
+                  <div style="float: left;margin-left: 20px" class="user_menu_com_text"> 时间 </div>
+                  <div class="js_date_range_drop1 user_menu_drop" style="float: left; width:216px;"></div>
+                  <div style="float: left;" class="user_menu_com_text"> 对比 </div>
+                  <div class="js_date_range_drop2 user_menu_drop" style="float: left; width:216px;"></div>
+                </div>
+
+                <div class="js_versions_and_menus setup" style="position: absolute; right: 15px;top: 3px;">
+                  <button id="js_compare_btn" class="btn btn_primary" style="-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;">
+                    按时间对比
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <div  class="info_bd">
+              <div class="page_msg mini" style="display: none;">
+                <div class="inner group">
+                  <span class="msg_icon_wrp">
+                    <i class="icon_msg_mini info"></i>
+                  </span>
+                  <div class="msg_content">
+                    <p>用户增长来源增加了新的来源，新来源将缺少历史统计数据，请知悉。</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sub_title">趋势图<i class="icon_msg_mini ask" style="margin-left: 5px" id="js_ask_trend"></i></div>
+              <div class="popover pos_left" style="left: 40px; top:15px; display: none;" id="js_ask_trend_content">
+                <div class="popover_inner">
+                  <div class="popover_content">
+                    用户总数和用户增长数分别根据不同方法和时间点来统计，可能出现不匹配。
+                  </div>
+                </div>
+                <i class="popover_arrow popover_arrow_out">
+                </i>
+                <i class="popover_arrow popover_arrow_in">
+                </i>
+              </div>
+              <div class="sub_content">
+                <div class="sub_content" id="js_msg_chart">  </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="sub_content table_wrap user_menu_sub" style="margin-top:20px;">
+            <div class="table_wrp">
+              <div class="popover pos_right" style="right: -6px; top:30px;display: none;" id="js_table_ask_content">
+                <div class="popover_inner">
+                  <div class="popover_content">
+                    用户总数和用户增长数分别根据不同方法和时间点来统计，可能出现不匹配。
+                  </div>
+                </div>
+                <i class="popover_arrow popover_arrow_out">
+                </i>
+                <i class="popover_arrow popover_arrow_in">
+                </i>
+              </div>
+              <div class="table_top">
+                <div id="js_table_date" style="float: left;"></div>
+                <div class="right_box">
+                  <a target="_blank" id="js_download_detail">下载表格</a>
+                  <a class="right_box_link">
+                    <i class="icon_msg_mini ask" id="js_table_ask"></i>
+                  </a>
+                </div>
+
+              </div>
+              <table class="table" cellspacing="0" id="js_single_table">
+                <thead class="thead" style="background: transparent">
+                <tr>
+                  <th class="table_cell rank_area tl" data-type="date">
+                    时间
+                    <span class="icon_rank rank_area">
+                      <i class="arrow arrow_up"></i><i class="arrow arrow_down"></i>
+                    </span>
+                  </th>
+                  <th class="table_cell rank_area tr" data-type="new_user">
+                    新关注人数
+                    <span class="icon_rank">
+                      <i class="arrow arrow_up"></i><i class="arrow arrow_down"></i>
+                    </span>
+                  </th>
+                  <th class="table_cell rank_area tr" data-type="cancel_user">
+                    取消关注人数
+                    <span class="icon_rank">
+                      <i class="arrow arrow_up"></i><i class="arrow arrow_down"></i>
+                    </span>
+                  </th>
+                  <th class="table_cell rank_area tr" data-type="netgain_user">
+                    净增关注人数
+                    <span class="icon_rank">
+                      <i class="arrow arrow_up"></i><i class="arrow arrow_down"></i>
+                    </span>
+                  </th>
+                  <th class="table_cell tr rank_area last_child no_extra" data-type="cumulate_user">
+                    累积关注人数
+                    <span class="icon_rank">
+                      <i class="arrow arrow_up"></i><i class="arrow arrow_down"></i>
+                    </span>
+                  </th>
+
+                </tr>
+                </thead>
+                <tbody class="tbody" id="js_detail">
+                <tr class="empty_item"><td colspan="10" class="empty_tips">暂无数据</td></tr>
+                </tbody>
+              </table>
+              <table class="table" cellspacing="0" id="js_compare_table" style="display: none">
+                <thead class="thead" style="background: transparent">
+                <tr>
+                  <th class="table_cell rank_area tl">序号</th>
+                  <th class="table_cell rank_area tl">时间</th>
+                  <th class="table_cell rank_area tr">新关注人数</th>
+                  <th class="table_cell rank_area tr">取消关注人数</th>
+                  <th class="table_cell rank_area tr">净增关注人数</th>
+                  <th class="table_cell tr rank_area last_child no_extra">累积关注人数</th>
+                </tr>
+                </thead>
+                <tbody class="tbody"></tbody>
+              </table>
+            </div>
+
+            <div class="turn_page tr" id="js_pagebar"></div>
+          </div>
+        </div>
+
+        <div class="wrp_loading">
+          <div class="stat_loading">
+            <i class="icon_loading"></i><span>数据加载中...</span>
+          </div>
+          <div class="mask"></div>
+        </div>
+      </div>
+      </div>
+
+    <script type="text/template" id="js_detail_item">
+      {each data as item}
+      <tr>
+        <td class="table_cell">{item.date}</td>
+        <td class="table_cell tr js_new_user">{item.new_user}</td>
+        <td class="table_cell tr js_cancel_user">{item.cancel_user}</td>
+        <td class="table_cell tr js_netgain_user">{item.netgain_user}</td>
+        <td class="table_cell tr js_cumulate_user">{item.cumulate_user}</td>
+      </tr>
+      {/each}
+
+      {if data.length === 0}
+      <tr class="empty_item"><td colspan="10" class="empty_tips">暂无数据</td></tr>
+      {/if}
+    </script>
+
+    <script type="text/template" id="js_detail_compare_item">
+      {each data as item i}
+      <tr>
+        <td class="table_cell td_rank" rowspan="2">{item["i"]}</td>
+
+        {if item["first"]}
+        <td class="table_cell tl">{item["first"].date}</td>
+        <td class="table_cell tr js_new_user">{item["first"].new_user}</td>
+        <td class="table_cell tr js_cancel_user">{item["first"].cancel_user}</td>
+        <td class="table_cell tr js_netgain_user">{item["first"].netgain_user}</td>
+        <td class="table_cell tr js_cumulate_user">{item["first"].cumulate_user}</td>
+        {else}
+        <td class="table_cell"> </td>
+        <td class="table_cell tr js_new_user">-</td>
+        <td class="table_cell tr js_cancel_user">-</td>
+        <td class="table_cell tr js_netgain_user">-</td>
+        <td class="table_cell tr js_cumulate_user">-</td>
+        {/if}
+      </tr>
+
+
+      <tr>
+        {if item["second"]}
+        <td class="table_cell tl">{item["second"].date}</td>
+        <td class="table_cell tr js_new_user">{item["second"].new_user}</td>
+        <td class="table_cell tr js_cancel_user">{item["second"].cancel_user}</td>
+        <td class="table_cell tr js_netgain_user">{item["second"].netgain_user}</td>
+        <td class="table_cell tr js_cumulate_user">{item["second"].cumulate_user}</td>
+        {else}
+        <td class="table_cell"> </td>
+        <td class="table_cell tr js_new_user">-</td>
+        <td class="table_cell tr js_cancel_user">-</td>
+        <td class="table_cell tr js_netgain_user">-</td>
+        <td class="table_cell tr js_cumulate_user">-</td>
+        {/if}
+      </tr>
+
+      {/each}
+
+      {if data.length === 0}
+      <tr class="empty_item"><td colspan="10" class="empty_tips">暂无数据</td></tr>
+      {/if}
+    </script>
+
+    <script type="text/template" id="js_key_data_tpl">
+      <table class="ui_trendgrid ui_trendgrid_3">
+        <tr>
+          <td class="first">
+            <div class="ui_trendgrid_item">
+              <div class="ui_trendgrid_chart"></div>
+              <dl>
+                <dt><b>新关注人数</b></dt>
+                <dd class="ui_trendgrid_number"><strong>{new_user.count}</strong><em class="ui_trendgrid_unit"></em></dd>
+                <dd>日 {keyPercent(new_user.day)}</dd>
+                <dd>周 {keyPercent(new_user.week)} </dd>
+                <dd>月 {keyPercent(new_user.month)} </dd>
+              </dl>
+            </div>
+          </td>
+          <td>
+            <div class="ui_trendgrid_item">
+              <div class="ui_trendgrid_chart"></div>
+              <dl>
+                <dt><b>取消关注人数</b></dt>
+                <dd class="ui_trendgrid_number"><strong>{cancel_user.count}</strong><em class="ui_trendgrid_unit"></em></dd>
+                <dd>日 {keyPercent(cancel_user.day)}</dd>
+                <dd>周 {keyPercent(cancel_user.week)} </dd>
+                <dd>月 {keyPercent(cancel_user.month)} </dd>
+              </dl>
+            </div>
+          </td>
+          <td>
+            <div class="ui_trendgrid_item">
+              <div class="ui_trendgrid_chart" ></div>
+              <dl>
+                <dt><b>净增关注人数</b></dt>
+                <dd class="ui_trendgrid_number"><strong>{netgain_user.count}</strong><em class="ui_trendgrid_unit"></em></dd>
+                <dd>日 {keyPercent(netgain_user.day)}</dd>
+                <dd>周 {keyPercent(netgain_user.week)} </dd>
+                <dd>月 {keyPercent(netgain_user.month)} </dd>
+              </dl>
+            </div>
+          </td>
+          <td class="last">
+            <div class="ui_trendgrid_item">
+              <div class="ui_trendgrid_chart" ></div>
+              <dl>
+                <dt><b>累积关注人数</b></dt>
+                <dd class="ui_trendgrid_number"><strong>{cumulate_user.count}</strong><em class="ui_trendgrid_unit"></em></dd>
+                <dd>日 {keyPercent(cumulate_user.day)}</dd>
+                <dd>周 {keyPercent(cumulate_user.week)} </dd>
+                <dd>月 {keyPercent(cumulate_user.month)} </dd>
+              </dl>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </script>
+<% end %>
+<%= content_for :js do %>
+    <script type="text/javascript">
+      define('widget/pagination.css', [], function () {
+        return null;
+      });
+      define('biz_web/widget/date_range.css', [], function () {
+        return null;
+      });
+      define('biz_web/widget/dropdown.css', [], function () {
+        return null;
+      });
+    </script>
+    <script type="text/javascript">
+      seajs.use('statistics/user_stat/summary/summary.js', wx_main);
+    </script>
+<% end %>

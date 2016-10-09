@@ -1,0 +1,32 @@
+/* line 1, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_managements.scss */
+.webuploader-container {
+  position: relative;
+}
+
+/* line 4, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_managements.scss */
+.webuploader-element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0;
+}
+
+/* line 10, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_managements.scss */
+#filePicker .webuploader-pick {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #e7e7eb;
+  color: #222;
+  padding: 8px 22px;
+  text-align: center;
+  border-radius: 3px;
+  overflow: visible;
+}
+
+/* line 22, /home/chuliang/work/wxoss/app/assets/stylesheets/wx_shake_managements.scss */
+#filePicker .webuploader-pick-hover {
+  background: #e7e7eb;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <%= stylesheet_link_tag 'wx_shake_activities', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'screen', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery-2.2.0.min', 'data-turbolinks-track' => true %>
+
+  <script type="text/javascript">
+    $(function(){
+      var wx_activity = <%= raw @wx_activity.to_json%>;
+      var maxcount = wx_activity.maxcount;
+
+      var gameon = window.setInterval(start,1000);
+      function start(){
+        $.ajax({
+          type:'get',
+          url: '/wxoss/wx_shake_activities/get_userdata',
+          dataType: 'json',
+          data:{ wx_activity_id: wx_activity.id},
+          success: function (data) {
+            var result = data.data_list;
+            var index = 0;
+            for(var i = 0;i < result.length;i++){
+              index++;
+              var percent = parseFloat(result[i]['count']/(maxcount/100)).toFixed(0)+"%";
+              if (result[i]['nickname'].length > 4){
+                $(".p"+index+" .name").text(result[i]['nickname'].substring(0,4)+"..");
+              }else{
+                $(".p"+index+" .name").text(result[i]['nickname']);
+              }
+              $(".p"+index+" .num").text(result[i]['count']);
+              $(".p"+index+" i img.image").attr('src',result[i]['headimgurl']);
+              $(".p"+index+" .graph span:first").stop().animate({width:percent}, 0);
+              $(".p"+index+" .user span").text(percent);
+            }
+          }
+        });
+      }
+
+      var gameover =window.setInterval(stop,1000);
+      function stop(){
+        if($('.p1 .num').text() == maxcount){
+          clearInterval(gameon);
+          clearInterval(gameover);
+          $.ajax({
+            type:'get',
+            url: '/wxoss/wx_shake_activities/update_status',
+            dataType: 'json',
+            data:{wx_activity_id: wx_activity.id, status: "gameover"},
+            success: function (data) {
+              alert('游戏结束，前往查看中奖名单吧！');
+              document.location.href = '/wxoss/wx_shake_activities/awardlist?wx_activity_id='+wx_activity.id;
+            }
+          });
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+<div class="pk">
+  <ul>
+    <li class="p1">
+      <i><img src="/assets/one.png" alt=""/></i>
+      <span class="name">微信名称</span>
+      <div id="graphbox">
+        <div class="graph"><span class="orange" style="width:0%;">
+       <div class="user"><i class="portrait"><img class="image" src="/assets/img.jpg"  alt=""/></i><span>0%</span></div></span></div>
+        <span class="num">0</span>
+      </div>
+    </li>
+    <li class="p2">
+      <i><img src="/assets/two.png" alt=""/></i>
+      <span class="name">微信名称</span>
+      <div id="graphbox">
+        <div class="graph"><span class="purple" style="width:0%;">
+       <div class="user"><i class="portrait"><img class="image" src="/assets/img.jpg"  alt=""/></i><span>0%</span></div></span></div>
+        <span class="num">0</span>
+      </div>
+    </li>
+    <li class="p3">
+      <i><img src="/assets/three.png" alt=""/></i>
+      <span class="name">微信名称</span>
+      <div id="graphbox">
+        <div class="graph"><span class="green" style="width:0%;">
+       <div class="user"><i class="portrait"><img class="image" src="/assets/img.jpg"  alt=""/></i><span>0%</span></div></span></div>
+        <span class="num">0</span>
+      </div>
+    </li>
+    <li class="p4">
+      <i><span class="mark">4</span></i>
+      <span class="name">微信名称</span>
+      <div id="graphbox">
+        <div class="graph"><span class="blue" style="width:0%;">
+       <div class="user"><i class="portrait"><img class="image" src="/assets/img.jpg"  alt=""/></i><span>0%</span></div></span></div>
+        <span class="num">0</span>
+      </div>
+    </li>
+    <li class="p5">
+      <i><span class="mark">5</span></i>
+      <span class="name">微信名称</span>
+      <div id="graphbox">
+        <div class="graph"><span class="blue" style="width:0%;">
+       <div class="user"><i class="portrait"><img class="image" src="/assets/img.jpg"  alt=""/></i><span>0%</span></div></span></div>
+        <span class="num">0</span>
+      </div>
+    </li>
+    <li class="p6">
+      <i><span class="mark">6</span></i>
+      <span class="name">微信名称</span>
+      <div id="graphbox">
+        <div class="graph"><span class="blue" style="width:0%;">
+       <div class="user"><i class="portrait"><img class="image" src="/assets/img.jpg"  alt=""/></i><span>0%</span></div></span></div>
+        <span class="num">0</span>
+      </div>
+    </li>
+    <li class="p7">
+      <i><span class="mark">7</span></i>
+      <span class="name">微信名称</span>
+      <div id="graphbox">
+        <div class="graph"><span class="blue" style="width:0%;">
+       <div class="user"><i class="portrait"><img class="image" src="/assets/img.jpg"  alt=""/></i><span>0%</span></div></span></div>
+        <span class="num">0</span>
+      </div>
+    </li>
+    <li class="p8">
+      <i><span class="mark">8</span></i>
+      <span class="name">微信名称</span>
+      <div id="graphbox">
+        <div class="graph"><span class="blue" style="width:0%;">
+       <div class="user"><i class="portrait"><img class="image" src="/assets/img.jpg"  alt=""/></i><span>0%</span></div></span></div>
+        <span class="num">0</span>
+      </div>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

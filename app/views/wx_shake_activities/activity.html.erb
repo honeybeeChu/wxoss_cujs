@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <title>摇一摇</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <%= stylesheet_link_tag 'wx_shake_activities', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'screen', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery-2.2.0.min', 'data-turbolinks-track' => true %>
+
+  <script type="text/javascript">
+    $(function (){
+      var content = $('.txt').text().split("\n").join("<br/>").substring(5);
+      $(".txt").html(content);
+
+      var wx_activity = <%= raw @wx_activity.to_json%>;
+
+      $('.start.btn').click(function(){
+        if(wx_activity.status == -1){
+          alert('还未到活动开始时间，请等候！');
+        } else if(wx_activity.status == 0) {
+          $.ajax({
+            type: 'get',
+            url: '/wxoss/wx_shake_activities/update_status',
+            dataType: 'json',
+            data: {wx_activity_id: wx_activity.id, status: "start"},
+            success: function (data) {
+              document.location.href = '/wxoss/wx_shake_activities/runway?wx_activity_id=' + wx_activity.id;
+            }
+          });
+        } else if(wx_activity.status == 1){
+          alert('已经有活动在进行中！');
+          document.location.href = '/wxoss/wx_shake_activities/runway?wx_activity_id=' + wx_activity.id;
+        } else if(wx_activity.status == 99){
+          alert('活动已经结束，下次再来吧！');
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="hd">
+  <div class="top"><button class="start btn">点击开始</button></div>
+  <div class="main">
+    <div class="txt">
+      <%= @wx_activity.description %>
+    </div>
+    <div class="code"><img src="<%= @wx_activity.qrcode_url %>" alt=""/></div>
+  </div>
+</div>
+</body>
+</html>

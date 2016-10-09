@@ -1,0 +1,1041 @@
+<%= content_for :css do %>
+    <%= javascript_include_tag 'ipmana', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'jquery-ui.min', 'data-turbolinks-track' => true %>
+<% end %>
+<%= content_for :response do %>
+
+
+    <div class="btn_wrp">
+      <a href="javascript:void(0);" class="btn btn_add">
+        <i class="icon14_common add_white"></i>添加规则
+      </a>
+    </div>
+
+
+    <ul class="keywords_rule_list new_rule_ul" rule_id="new">
+      <li class="keywords_rule_item open">
+        <!-- /*头部 */-->
+        <div class="keywords_rule_hd no_extra dropdown_opened">
+          <div class="info">新规则</div>
+          <div class="opr">
+            &nbsp;
+            <a href="javascript:void(0);" class="icon_dropdown_switch" id="keywords_dropdown">
+              <i class="arrow arrow_up"></i>
+              <i class="arrow arrow_down"></i>
+            </a>
+          </div>
+        </div>
+        <!--/*头部结束*/-->
+        <!--简要-->
+        <div class="keywords_rule_bd keywords_rule_overview hide" id="keywords_rule_overview">
+          <div class="keywords_info">
+            <strong class="keywords_info_title">关键字</strong>
+            <div class="keywords_info_detail"></div>
+          </div>
+          <div class="keywords_info">
+            <strong class="keywords_info_title">回复</strong>
+            <div class="keywords_info_detail">
+              <p class="reply_info">
+                <em class="num">0</em>条（
+                <em class="num">0</em>条文字，
+                <em class="num">0</em>条图片，
+                <em class="num">0</em>条语音，
+                <em class="num">0</em>条视频，
+                <em class="num">0</em>条图文）
+              </p>
+            </div>
+          </div>
+          <div class="keywords_info">发送全部回复</div>
+        </div>
+        <!--简要结束-->
+        <!--规则详细-->
+        <div class="keywords_rule_bd keywords_rule_detail" id="keywords_rule_detail">
+          <!--规则名-->
+          <div class="rule_name_area">
+            <div class="frm_control_group">
+              <label for="" class="frm_label">规则名</label>
+              <div class="frm_controls">
+                <span class="frm_input_box"><input type="text" class="frm_input"></span>
+                <p class="frm_tips">规则名最多60个字</p>
+              </div>
+            </div>
+          </div>
+          <!-- 关键字-->
+          <div class="keywords_tap">
+            <div class="keywords_tap_hd">
+              <div class="info">
+                <h4>关键字</h4>
+              </div>
+              <div class="opr">
+                <a href="javascript:void(0);" class="add_keys_btn" rule_id="new">添加关键字</a>
+              </div>
+            </div>
+            <div class="keywords_tap_bd">
+              <ul class="keywords_list keys_list" rule_id="new">
+                <li is_match="false" key_id="0">
+                  <div class="desc"><strong class="title">fdsafd</strong></div>
+                  <div class="opr">
+                    <a href="javascript:void(0);" class="Js_keyword_match">未全匹配</a><a href="javascript:void(0);" class="icon14_common edit_gray Js_keyword_edit">编辑</a><a href="javascript:void(0);" class="icon14_common del_gray Js_keyword_del">删除</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 回复部分-->
+          <div class="keywords_tap no_data">
+            <div class="keywords_tap_hd">
+              <div class="info">
+                <h4>回复</h4>
+              </div>
+              <div class="opr">
+                <label for="" class="frm_checkbox_label">
+                  <input type="checkbox" class="frm_checkbox">回复全部
+                </label>
+              </div>
+            </div>
+            <div class="keywords_tap_hd  no_data">
+              <!--图标-->
+              <ul class="media_type_list">
+                <li class="tab_text" rule_id="new">
+                  <a href="javascript:void(0);" class="text_modal">&nbsp;<i class="icon_msg_sender"></i></a>
+                </li>
+                <li class="tab_img" rule_id="new">
+                  <a href="javascript:void(0);" class="img_modal">&nbsp;<i class="icon_msg_sender"></i></a>
+                </li>
+                <li class="tab_audio" rule_id="new">
+                  <a href="javascript:void(0);" class="audio_modal">&nbsp;<i class="icon_msg_sender"></i></a>
+                </li>
+                <li class="tab_video" rule_id="new">
+                  <a href="javascript:void(0);" class="video_modal">&nbsp;<i class="icon_msg_sender"></i></a>
+                </li>
+                <li class="tab_appmsg" rule_id="new">
+                  <a href="javascript:void(0);" class="news_modal">&nbsp;<i class="icon_msg_sender"></i></a>
+                </li>
+              </ul>
+              <!--回复内容部分-->
+              <ul class="keywords_list reply_list">
+                <!--<li reply_content_id="5">-->
+                  <!--<div class="desc">-->
+                    <!--<div class="media_content"><strong class="title">12345333</strong></div>-->
+                  <!--</div>-->
+                  <!--<div class="opr">-->
+                    <!--<a href="javascript:void(0);" class="icon14_common edit_gray Js_keyword_edit">编辑</a>-->
+                    <!--<a href="javascript:void(0);" class="icon14_common del_gray Js_keyword_del">删除</a>-->
+                  <!--</div>-->
+                <!--</li>-->
+                <!--<li>-->
+                  <!--<div class="desc">-->
+                    <!--<div class="media_content">-->
+                      <!--<div class="appmsgSendedItem">-->
+                        <!--<a href="#" target="_blank" class="title_wrp">-->
+                          <!--<img class="icon" src="images/library/1.jpg" alt=""><span class="title">[图片]</span> </a>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                  <!--<div class="opr">-->
+                    <!--<a href="javascript:void(0);" class="icon14_common del_gray Js_keyword_del">删除</a>-->
+                  <!--</div>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<div class="desc">-->
+                <!--<div class="media_content">-->
+                <!--<div class="audio_msg">-->
+                <!--<div class="icon_audio_wrp"><span class="icon_audio_msg"></span></div>-->
+                <!--<div class="audio_content">-->
+                <!--<div class="audio_title">音乐名称</div>-->
+                <!--<div class="audio_length">03:01</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="opr">-->
+                <!--<a href="javascript:void(0);" class="icon14_common del_gray Js_keyword_del">删除</a>-->
+                <!--</div>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<div class="desc">-->
+                <!--<div class="media_content">-->
+                <!--<div class="richvideo">-->
+                <!--<div class="richvideo_content">-->
+                <!--<h3 class="title">000</h3>-->
+                <!--<div class="video_info"></div>-->
+                <!--<div class="video_wrp">-->
+                <!--<div class="video_shot"><img src="images/library/1.jpg" alt=""></div>-->
+                <!--</div>-->
+                <!--<div class="video_desc">12344677899</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="opr">-->
+                <!--<a href="javascript:void(0);" class="icon14_common del_gray Js_keyword_del">删除</a>-->
+                <!--</div>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<div class="desc">-->
+                <!--<div class="media_content">-->
+                <!--<div class="appmsg multi">-->
+                <!--<div class="appmsg_content">-->
+                <!--<div class="appmsg_info">-->
+                <!--<em class="appmsg_date">2015年12月07日</em>-->
+                <!--</div>-->
+                <!--<div class="cover_appmsg_item">-->
+                <!--<h3 class="appmsg_title"><a href="#">素材test001</a></h3>-->
+                <!--<div class="appmsg_thumb_wrp"><img src="images/library/1.jpg" alt=""></div>-->
+                <!--</div>-->
+                <!--<div class="appmsg_item">-->
+                <!--<div class="appmsg_thumb_wrp"><img src="images/library/1.jpg" alt=""></div>-->
+                <!--<h3 class="appmsg_title"><a href="#">11111</a></h3>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="opr">-->
+                <!--<a href="javascript:void(0);" class="icon14_common del_gray Js_keyword_del">删除</a>-->
+                <!--</div>-->
+                <!--</li>-->
+              </ul>
+            </div>
+          </div>
+          <div class="keywords_rule_ft">
+            <p class="media_stat info">文字(
+              <em class="num">0</em>)、
+              图片(<em class="num">0</em>)、
+              语音(<em class="num">0</em>)、
+              视频(<em class="num">0</em>)、
+              图文(<em class="num">0</em>)
+            </p>
+            <div class="opr">
+              <button class="btn btn_primary create_btn" rule_id="new">保存</button>
+              <button class="btn btn_primary cancel delete_btn">删除</button>
+              <div class="mod-popover" style="left:720px" hidden>
+                <div class="mod-popover_arrow"></div>
+                <div class="mod-popover_inner">
+                  <div class="popover_content">确定要删除此规则吗？</div>
+                  <div class="popover_bar">
+                    <button class="btn btn_primary remove" rule_id="new">确认</button>
+                    <button class=" btn btn_primary cancel delete_cancel">取消</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--规则详细结束-->
+      </li>
+    </ul>
+
+
+    <% unless @wx_key_responses.empty? %>
+        <% @wx_key_responses.each do |wx_key_response| %>
+            <!-- /*记录各个类型消息的个数 */-->
+            <% reply_content_text_num = 0
+               reply_content_pic_num = 0
+               reply_content_audio_num = 0
+               reply_content_vedio_num = 0
+               reply_content_new_num = 0
+            %>
+
+            <ul class="keywords_rule_list" rule_id=<%=wx_key_response.id%>>
+              <li class="keywords_rule_item open">
+                <!-- /*头部 */-->
+                <div class="keywords_rule_hd no_extra dropdown_opened">
+                  <div class="info"><%=wx_key_response.rule_name%></div>
+                  <div class="opr">
+                    &nbsp;
+                    <a href="javascript:void(0);" class="icon_dropdown_switch" id="keywords_dropdown">
+                      <i class="arrow arrow_up"></i>
+                      <i class="arrow arrow_down"></i>
+                    </a>
+                  </div>
+                </div>
+                <!--/*头部结束*/-->
+                <!--简要-->
+                <div class="keywords_rule_bd keywords_rule_overview hide" id="keywords_rule_overview">
+                  <div class="keywords_info">
+                    <strong class="keywords_info_title">关键字</strong>
+                    <div class="keywords_info_detail"></div>
+                  </div>
+                  <div class="keywords_info">
+                    <strong class="keywords_info_title">回复</strong>
+                    <div class="keywords_info_detail">
+                      <p class="reply_info">
+                        <em class="num">0</em>条（
+                        <em class="num">0</em>条文字，
+                        <em class="num">0</em>条图片，
+                        <em class="num">0</em>条语音，
+                        <em class="num">0</em>条视频，
+                        <em class="num">0</em>条图文）
+                      </p>
+                    </div>
+                  </div>
+                  <div class="keywords_info">发送全部回复</div>
+                </div>
+                <!--简要结束-->
+                <!--规则详细-->
+                <div class="keywords_rule_bd keywords_rule_detail" id="keywords_rule_detail">
+                  <!--规则名-->
+                  <div class="rule_name_area">
+                    <div class="frm_control_group">
+                      <label for="" class="frm_label">规则名</label>
+                      <div class="frm_controls">
+                        <span class="frm_input_box"><input type="text" class="frm_input" value=<%=wx_key_response.rule_name%>></span>
+                        <p class="frm_tips">规则名最多60个字</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 关键字-->
+                  <div class="keywords_tap">
+                    <div class="keywords_tap_hd">
+                      <div class="info">
+                        <h4>关键字</h4>
+                      </div>
+                      <div class="opr">
+                        <a href="javascript:void(0);" class="add_keys_btn" rule_id=<%=wx_key_response.id%>>添加关键字</a>
+                      </div>
+                    </div>
+                    <div class="keywords_tap_bd">
+                      <ul class="keywords_list keys_list" rule_id=<%=wx_key_response.id%>>
+                        <% unless wx_key_response.wx_keys.empty? %>
+                            <% wx_key_response.wx_keys.each do |wx_key| %>
+                                <li is_match=<%= wx_key.is_match %> key_id=<%= wx_key.id %>>
+                                  <div class="desc"><strong class="title"><%= wx_key.key %></strong></div>
+                                  <div class="opr">
+                                    <% if wx_key.is_match %>
+                                        <a href="javascript:void(0);" class="Js_keyword_match">
+                                          已全匹配</a>
+                                    <% else %>
+                                        <a href="javascript:void(0);" class="Js_keyword_match">
+                                          未全匹配</a>
+                                    <% end %>
+                                    <a href="javascript:void(0);" class="icon14_common edit_gray Js_keyword_edit">编辑</a>
+                                    <a href="javascript:void(0);" class="icon14_common del_gray Js_keyword_del">删除</a>
+                                  </div>
+                                </li>
+                            <% end %>
+                        <% end %>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- 回复部分-->
+                  <div class="keywords_tap no_data">
+                    <div class="keywords_tap_hd">
+                      <div class="info">
+                        <h4>回复</h4>
+                      </div>
+                      <div class="opr">
+                        <label for="" class="frm_checkbox_label">
+                          <input type="checkbox" class="frm_checkbox">回复全部
+                        </label>
+                      </div>
+                    </div>
+                    <div class="keywords_tap_hd  no_data">
+                      <!--图标-->
+                      <ul class="media_type_list">
+                        <li class="tab_text" rule_id=<%=wx_key_response.id%>>
+                          <a href="javascript:void(0);" class="text_modal">&nbsp;<i class="icon_msg_sender"></i></a>
+                        </li>
+                        <li class="tab_img" rule_id=<%=wx_key_response.id%>>
+                          <a href="javascript:void(0);" class="img_modal">&nbsp;<i class="icon_msg_sender"></i></a>
+                        </li>
+                        <li class="tab_audio" rule_id=<%=wx_key_response.id%>>
+                          <a href="javascript:void(0);" class="audio_modal">&nbsp;<i class="icon_msg_sender"></i></a>
+                        </li>
+                        <li class="tab_video" rule_id=<%=wx_key_response.id%>>
+                          <a href="javascript:void(0);" class="video_modal">&nbsp;<i class="icon_msg_sender"></i></a>
+                        </li>
+                        <li class="tab_appmsg" rule_id=<%=wx_key_response.id%>>
+                          <a href="javascript:void(0);" class="news_modal">&nbsp;<i class="icon_msg_sender"></i></a>
+                        </li>
+                      </ul>
+                      <!--回复内容部分-->
+                      <ul class="keywords_list reply_list">
+                        <% unless wx_key_response.wx_response_contents.empty? %>
+                            <% wx_key_response.wx_response_contents.each do |wx_response_content| %>
+                                <!--回复的内容是文字-->
+                                <% if wx_response_content.content_type == 0 %>
+                                    <% reply_content_text_num = reply_content_text_num +1 %>
+                                    <li reply_content_id=<%= wx_response_content.id %>
+                                            rule_id=<%= wx_key_response.id %>
+                                        reply_type=<%= wx_response_content.content_type %>>
+                                      <div class="desc">
+                                        <div class="media_content">
+                                          <strong class="title"><%= wx_response_content.text_content %></strong></div>
+                                      </div>
+                                      <div class="opr">
+                                        <a href="javascript:void(0);" class="icon14_common edit_gray Js_keyword_edit">编辑</a>
+                                        <a href="javascript:void(0);" class="icon14_common del_gray Js_keyword_del">删除</a>
+                                      </div>
+                                    </li>
+                                <!--回复的内容是图片-->
+                                <% elsif wx_response_content.content_type == 1 %>
+                                    <% imgsrc = @img_resouces.find(wx_response_content.media_content).file_url %>
+                                    <li reply_type="1" rule_id=<%= wx_key_response.id %> reply_content_id=<%=wx_response_content.id%>
+                                        media_id=<%=wx_response_content.media_content%> >
+                                      <div class="desc">
+                                        <div class="media_content">
+                                          <div class="appmsgSendedItem">
+                                            <a href="#" target="_blank" class="title_wrp">
+                                              <img class="icon" src=<%= imgsrc%> alt=""></a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="opr">
+                                        <a href="javascript:void(0);" class="icon14_common del_gray Js_keyword_del">删除</a>
+                                      </div>
+                                    </li>
+                                <!--回复的内容是图文-->
+                                <% elsif wx_response_content.content_type == 2 %>
+                                    <% article = @wx_articles.find(wx_response_content.media_content)
+                                       imgsrc = @img_resouces.find(article.cover_file_id).file_url
+                                    %>
+                                    <li reply_type="2" rule_id=<%= wx_key_response.id %> reply_content_id=<%=wx_response_content.id%>  media_id=<%=article.id%>>
+                                      <div class="desc">
+                                        <div class="media_content">
+                                          <div class="richvideo">
+                                            <div class="richvideo_content"><h3 class="title"><%=article.title%></h3>
+                                              <div class="video_info"></div>
+                                              <div class="video_wrp">
+                                                <div class="video_shot"><img src=<%=imgsrc%> alt="">
+                                                </div>
+                                              </div>
+                                              <div class="video_desc"><%=article.digest%></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="opr">
+                                        <a href="javascript:void(0);" class="icon14_common del_gray Js_keyword_del">删除</a>
+                                      </div>
+                                    </li>
+
+                      <% end %>
+                            <% end %>
+                        <% end %>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="keywords_rule_ft">
+                    <p class="media_stat info">文字(
+                      <em class="num"> <%=reply_content_text_num %>  </em>)、
+                      图片(<em class="num"><%=reply_content_pic_num %></em>)、
+                      语音(<em class="num"><%=reply_content_audio_num %></em>)、
+                      视频(<em class="num"><%=reply_content_vedio_num %></em>)、
+                      图文(<em class="num"><%=reply_content_new_num %></em>)
+                    </p>
+                    <div class="opr">
+                      <button class="btn btn_primary edit_btn create_btn" rule_id=<%= wx_key_response.id %>>保存</button>
+                      <button class="btn btn_primary cancel delete_btn">删除</button>
+                      <div class="mod-popover" style="left:720px" hidden>
+                        <div class="mod-popover_arrow"></div>
+                        <div class="mod-popover_inner">
+                          <div class="popover_content">确定要删除此规则吗？</div>
+                          <div class="popover_bar">
+                            <button class="btn btn_primary remove" rule_id=<%= wx_key_response.id %>>确认</button>
+                            <button class=" btn btn_primary cancel delete_cancel">取消</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--规则详细结束-->
+              </li>
+            </ul>
+        <% end %>
+    <% end %>
+
+
+
+
+    <div class="results" style="position: fixed;left: 35%;top: 0;" hidden>删除成功</div>
+
+    <div class="keyword_pop"
+         style="position: fixed; left: 0;right: 0;top: 0;bottom: 0;background-color: rgba(120,120,120,0.5);"
+         rule-id="" operate_type="" key_id="" hidden>
+
+      <div style="position: relative;background-color:white;margin: 20px 100px 100px;padding:0;left: 10%;
+          width: 820px;border-top: 1px solid #e7e7eb;">
+        <h2 style="padding: 0 20px;
+            height: 52px;
+            line-height: 52px;
+            font-size: 16px;
+            background: #f4f5f9;
+            font-weight: normal;" id="pop_title">添加关键字</h2>
+
+        <a class="close" title="Close">×</a>
+        <div style="padding: 20px 30px;">
+
+          <div class="emotion_editor">
+            <textarea id="pop_text"></textarea>
+            <div class="editor_toolbar">
+              <div class="editor_tip">关键字少于30个字符</div>
+            </div>
+          </div>
+          <!--<div style="color: #8d8d8d;">关键字少于30个字符</div>-->
+          <div style="color: #8d8d8d;">
+          </div>
+        </div>
+
+        <div class="button-bar" style="position: relative;">
+          <button class="btn btn_primary" id="pop_confirm">确定</button>
+          <button class="btn btn_primary cancel">取消</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script type="text/javascript" charset="utf-8">
+      // page initial function
+      var new_keys_account = 0;
+      var groupMap = <%= raw @group_map.to_json%>;
+      var groupName = <%= raw @group_name_map.to_json%>;
+      $(function () {
+
+        //页面初始化
+        pageInitail();
+        //页面的事件绑定
+        pageEventsBind();
+
+      });
+
+
+      //页面初始化
+      function pageInitail(){
+        //清空新建ul下面的数据元素
+        $(".new_rule_ul").hide();
+
+        //弹出层的可拖拽设置
+        $("#img_choice_popup,#news_choice_popup").draggable();
+      }
+
+
+      //页面的事件绑定
+      function pageEventsBind() {
+        /*关键字自动回复详情切换*/
+        $(".keywords_rule_hd").click(function () {
+          var _li = $(this).parent();
+          _li.find("#keywords_rule_detail").toggle();
+          _li.find("#keywords_rule_overview").toggle();
+          _li.find(".arrow_up").toggle();
+          _li.find(".arrow_down").toggle();
+        });
+
+        //点击添加规则按钮的点击事件
+        $(".btn_add").click(function () {
+          $(".new_rule_ul").toggle();
+          $(".new_rule_ul .frm_input").val("");
+          $(".new_rule_ul .keywords_list").empty();
+        });
+
+
+        //添加关键字按钮的点击事件，弹框添加关键字
+        $(".add_keys_btn").click(function () {
+          var rule_id = $(this).attr("rule_id");
+          showPopView(rule_id,1,null);
+        });
+
+        //弹出层的取消按钮的点击事件
+        $(".cancel").click(function () {
+          $("#pop_text").val("");
+          $(".keyword_pop").hide();
+        });
+
+
+        //删除单个关键字的按钮的点击事件，删除当前li
+        $(".Js_keyword_del").click(function () {
+          $(this).parent().parent().hide();
+        });
+
+
+        //编辑膜一个关键字的铅笔图标的点击事件响应
+        $(".keys_list .Js_keyword_edit").click(function () {
+          var li_key = $(this).parent().parent();
+          var rule_id = li_key.parent().attr("rule_id");
+          var key_id  = li_key.attr("key_id");
+
+          showPopView(rule_id,2,key_id);
+        });
+
+        //编辑膜一个关键字的铅笔图标的点击事件响应
+        $(".reply_list .Js_keyword_edit").click(function () {
+          var li_key = $(this).parent().parent();
+          var rule_id = li_key.attr("rule_id");
+          var reply_id = li_key.attr("reply_content_id");
+          showPopView(rule_id,4,reply_id);
+        });
+
+
+        // 添加回复的文字图标的按钮点击事件
+        $(".text_modal").click(function(){
+          var rule_id = $(this).parent().attr("rule_id");
+          // 判断下面的回复内容是否已经达到五个
+          if($(".reply_list li[rule_id="+rule_id+"]").length==5){
+            showMessage("最多可以回复五条消息");
+          }else{
+            showPopView(rule_id,3,null);
+          }
+        });
+
+        // 添加回复的news图标的按钮点击事件
+        $(".news_modal").click(function(){
+          var rule_id = $(this).parent().attr("rule_id");
+          // 判断下面的回复内容是否已经达到五个
+          if($(".reply_list li[rule_id="+rule_id+"]").length==5){
+            showMessage("最多可以回复五条消息");
+          }else{
+            $("#news_choice_popup").attr("rule_id",rule_id);
+            $("#mask,#news_choice_popup").show();
+          }
+        });
+
+
+        // 添加回复的文字图标的按钮点击事件
+        $(".img_modal").click(function(){
+          var rule_id = $(this).parent().attr("rule_id");
+          // 判断下面的回复内容是否已经达到五个
+          if($(".reply_list li[rule_id="+rule_id+"]").length==5){
+            showMessage("最多可以回复五条消息");
+          }else{
+            $("#img_choice_popup").attr("rule_id",rule_id);
+            $("#mask,#img_choice_popup").show();
+            // 默认选择的是为分组的图片展示出来
+            $(".js_group dd[data-groupid=1]").trigger("click");
+          }
+        });
+
+
+
+
+        // 删除规则按钮的点击事件
+        $(".delete_btn").click(function(){
+          $(this).parent().find(".mod-popover").show();
+        });
+
+        //是否全匹配的链接点击事件
+        $(".Js_keyword_match").click(function(){
+          if($(this).html() == "未全匹配"){
+            $(this).html("已全匹配");
+            $(this).parent().parent().attr("is_match",true);
+          }else{
+            $(this).html("未全匹配");
+            $(this).parent().parent().attr("is_match",false);
+          }
+        });
+
+        // 确定删除规则按钮的点击事件
+        $("button.remove").on('click', function () {
+          var rule_id = $(this).attr("rule_id");
+          if(rule_id == "new"){
+            location.reload();
+          }else if(rule_id != null && rule_id != ""){
+            $.ajax({
+              type: 'get',
+              url: '<%=delete_wx_key_response_wx_auto_responses_path %>',
+              dataType: 'json',
+              data: {rule_id:rule_id},
+              success: function (data) {
+                if (data.result == 'success') {
+                  showMessage("删除成功");
+                  location.reload();
+                } else {
+                  showMessage("已删除");
+                  location.reload();
+                }
+              }
+            });
+          }
+        });
+
+        // 取消删除规则按钮的点击事件
+        $("button.delete_cancel").on('click', function () {
+          $(this).parent().parent().parent().hide();
+        });
+
+        // popup页面的点击事件
+        $("#pop_confirm").click(function () {
+          var operate_type = $(".keyword_pop").attr("operate_type");
+          var rule_id = $(".keyword_pop").attr("rule_id");
+
+          //如果是添加关键字
+          if (operate_type == 1){
+            var key_content = $("#pop_text").val().trim();
+            var key_id = "new_" + new_keys_account++;
+
+            var _div1 = "<div class='desc'><strong class='title'>" + key_content + "</strong></div>";
+
+            var _div2 = $("<div class='opr'><a href='javascript:void(0);' class='Js_keyword_match'>未全匹配</a>"
+                + "<a href='javascript:void(0);' class='icon14_common edit_gray Js_keyword_edit'>编辑</a>"
+                + "<a href='javascript:void(0);' class='icon14_common del_gray Js_keyword_del'>删除</a>"
+                + "</div>");
+
+            //关键字编辑图标的点击事件的绑定
+            _div2.find(".Js_keyword_edit").on("click",function(){
+              $("#pop_text").val(key_content);
+              showPopView(rule_id,2,key_id);
+
+            });
+
+            //关键字删除图标的点击事件的绑定
+            _div2.find(".Js_keyword_del").on("click",function(){
+              $(this).parent().parent().remove();
+            });
+
+            //关键字是否全匹配的点击链接的事件绑定
+            _div2.find(".Js_keyword_match").click(function(){
+              if($(this).html() == "未全匹配"){
+                $(this).html("已全匹配");
+                $(this).parent().parent().attr("is_match",true);
+              }else{
+                $(this).html("未全匹配");
+                $(this).parent().parent().attr("is_match",false);
+              }
+            });
+
+            // 将此keyword的li增加的页面中去
+            $("<li>").attr("is_match",false).attr("key_id",key_id).append(_div1).append(_div2).appendTo( $("ul[rule_id=" + rule_id + "].keys_list") );
+            $(".keyword_pop").hide();
+            $("#pop_text").val("");
+
+          }
+          //如果是修改关键字
+          else if(operate_type == 2){
+            var key_id = $(".keyword_pop").attr("key_id");
+            $("ul[rule_id="+ rule_id+"]").find("li[key_id="+ key_id+"]").find(".title").html($("#pop_text").val());
+            $(".keyword_pop").hide();
+            $("#pop_text").val("");
+
+          }
+          //如果是添加回复
+          else if(operate_type == 3){
+            var key_content = $("#pop_text").val().trim();
+
+            var _div1 = "<div class='desc'><div class='media_content'><strong class='title'>"+key_content+"</strong></div></div>"
+            var _div2 = $("<div class='opr'>"
+                +"<a href='javascript:void(0);' class='icon14_common edit_gray Js_keyword_edit'>编辑</a>"
+                + "<a href='javascript:void(0);' class='icon14_common del_gray Js_keyword_del'>删除</a>"
+                +"</div>");
+
+
+            //修改回复文字的图标点击事件
+            _div2.find(".Js_keyword_edit").click(function(){
+              var reply_content_id = $(this).parent().parent().attr("reply_content_id");
+              showPopView(rule_id,4,reply_content_id);
+            });
+
+            //删除回复文字的图标点击事件   =>  删除此行的li
+            _div2.find(".Js_keyword_del").click(function(){
+                $(this).parent().parent().remove();
+            });
+
+
+            // 将此keyword的li增加的页面中去
+            var _ul = $("ul[rule_id="+rule_id+"]").find(".reply_list");
+            $("<li>").attr("reply_type",0).attr("rule_id",rule_id).attr("reply_content_id","new_"+new_keys_account++).append(_div1).append(_div2).appendTo( _ul );
+            $(".keyword_pop").hide();
+            $("#pop_text").val("");
+
+          }
+
+          //如果是修改回复文字
+          else if(operate_type == 4){
+            var reply_content_id = $(".keyword_pop").attr("key_id");
+
+
+            $("ul[rule_id="+ rule_id+"]").find("li[reply_content_id="+reply_content_id+"]")
+                .find(".title").html($("#pop_text").val());
+            $(".keyword_pop").hide();
+            $("#pop_text").val("");
+          }
+        });
+
+
+
+        //新建规则的保存按钮的点击事件 ==>  添加新的规则
+        $(".create_btn").click(function(){
+          var rule_id = $(this).attr("rule_id");
+          //如果没有输入规则的名称
+          if($("ul[rule_id="+rule_id+"] .frm_input").val().trim() == ""){
+            showMessage("请输入规则名称");
+            return false;
+          }
+
+          // 如果没有设置一个关键字
+          if($("ul[rule_id="+rule_id+"].keys_list li").length == 0){
+            showMessage("至少输入一个关键字");
+            return false;
+          }
+
+          //如果没有设置回复内容
+          if($("ul[rule_id="+rule_id+"] .reply_list li").length == 0){
+            showMessage("至少输入一个回复内容");
+            return false;
+          }
+
+
+            //包装提交的数据结构 wx_key_response
+            var wx_key_response = {
+              rule_name:"",
+              is_response_all:"",
+              keys:[],
+              reply_content:[]
+            };
+
+          wx_key_response.rule_name = $("ul[rule_id="+rule_id+"] .frm_input").val();
+          wx_key_response.is_response_all = $("ul[rule_id="+rule_id+"] .frm_checkbox").attr("checked") || $("ul[rule_id="+rule_id+"] .frm_checkbox").prop("checked");
+
+
+          //　包装所有的关键字信息到数据结构中去
+          $.each($("ul[rule_id="+rule_id+"].keys_list li"),function(i,v){
+            var key_word = {};
+            //如果是新建的关键字，那么就不用包装ｉｄ
+            if($(this).attr("key_id").indexOf("new") == -1){
+              key_word.id = $(v).attr("key_id");
+            }
+            // 如果是隐藏的key li说明是删除
+            if($(v).is(":hidden")){
+              key_word.is_delete = true
+            }
+
+            key_word.is_match = $(v).attr("is_match");
+            key_word.key = $(v).find(".title").html();
+            wx_key_response.keys.push(key_word);
+          });
+
+
+          // 包装所有的回复内容到数据结构中去
+          $.each($("ul[rule_id="+rule_id+"] .reply_list li"),function(i,v){
+            var reply_content = {};
+            if($(this).attr("reply_content_id").indexOf("new") ==-1){
+              reply_content.id = $(v).attr("reply_content_id");
+            }
+
+            // 如果是隐藏的key li说明是删除
+            if($(v).is(":hidden")){
+              reply_content.is_delete = true
+            }
+
+            reply_content.content_type = $(v).attr("reply_type");
+            // 回复的消息类型是文字
+            if($(v).attr("reply_type") == '0'){
+              reply_content.text_content = $(v).find(".title").html();
+            }else{
+              reply_content.media_content = $(v).attr("media_id");
+            }
+
+            wx_key_response.reply_content.push(reply_content);
+          });
+
+          $(this).attr("disabled","true");
+
+          //是新建的规则
+          if (rule_id == "new"){
+            $.ajax({
+              type: 'POST',
+              url: '<%=create_key_response_wx_auto_responses_path %>',
+              dataType: 'json',
+              data: wx_key_response,
+              success: function (data) {
+                if (data.result == 'success') {
+                  showMessage("保存成功");
+                  location.reload();
+                } else {
+                  showMessage("保存失败");
+                }
+              }
+            });
+          }
+          //不是新建的规则
+          else{
+            wx_key_response.id = rule_id;
+            $.ajax({
+              type: 'POST',
+              url: '<%=update_key_response_wx_auto_responses_path %>',
+              dataType: 'json',
+              data: wx_key_response,
+              success: function (data) {
+                if (data.result == 'success') {
+                  showMessage("保存成功");
+                  location.reload();
+                } else {
+                  showMessage("保存失败");
+                }
+              }
+            });
+          }
+        });
+
+        //弹出的图片选择层的确定按钮的点击事件
+        $("#img_choice_confirm").click(function(){
+          var rule_id =　$("#img_choice_popup").attr("rule_id");
+          var _ul = $("ul[rule_id="+rule_id+"] .reply_list");
+
+          var _li = $("<li><div class='desc'><div class='media_content'><div class='appmsgSendedItem'>"+
+              "<a href='#' target='_blank' class='title_wrp'>"+
+              "<img class='icon' src="+$("label.frm_checkbox_label.selected>img").attr("src")
+              +" alt=''></a>" +
+              "</div></div></div><div class='opr'>" +
+              "<a href='javascript:void(0);' class='icon14_common del_gray Js_keyword_del'>删除</a>" +
+              "</div></li>");
+
+
+          //删除回复文字的图标点击事件   =>  删除此行的li
+          _li.find(".Js_keyword_del").click(function(){
+            $(this).parent().parent().remove();
+          });
+
+          var media_id = $("label.frm_checkbox_label.selected").parent().attr("resource-id");
+
+          _li.attr("reply_type",1).attr("rule_id",rule_id)
+              .attr("reply_content_id","new_"+new_keys_account++)
+              .attr("media_id",media_id++).appendTo(_ul);
+
+          $("#mask,#img_choice_popup").hide();
+
+        });
+
+
+        //素材选取界面的关闭按钮和取消按钮的点击事件
+        $("#news_choice_popup .close,#news_choice_cancer").click(function(){
+          $("#mask,#news_choice_popup").hide();
+        });
+
+
+        //news选项上面保存media_id
+        $("#news_choice_confirm").click(function(){
+          $("#mask,#news_choice_popup").hide();
+
+          var article_id = $(".appmsg.selected").attr("media_id");
+          var rule_id =　$("#news_choice_popup").attr("rule_id");
+          var _ul = $("ul[rule_id="+rule_id+"] .reply_list");
+          var articles = <%=raw @wx_articles.to_json%>;
+          var article;
+          for(var i=0;i<articles.length;i++){
+            if(article_id == articles[i].id){
+              article = articles[i];
+              break;
+            }
+          }
+          var imgsrc = findImageSrcByMediaId(article.cover_file_id);
+          var _li = $("<li><div class='desc'><div class='media_content'><div class='richvideo'>"
+          +"<div class='richvideo_content'><h3 class='title'>"
+          +article.title +"</h3><div class='video_info'></div>"
+          +"<div class='video_wrp'><div class='video_shot'><img src="
+          +imgsrc
+          +" alt=''></div>"
+          +"</div><div class='video_desc'>"+article.digest+"</div></div></div></div></div>"
+          +"<div class='opr'> <a href='javascript:void(0);' class='icon14_common del_gray Js_keyword_del'>删除</a>"
+          +"</div></li>");
+
+          //删除回复图文的图标点击事件   =>  删除此行的li
+          _li.find(".Js_keyword_del").click(function(){
+            $(this).parent().parent().remove();
+          });
+
+          var media_id = $("label.frm_checkbox_label.selected").parent().attr("resource-id");
+
+          _li.attr("reply_type",2).attr("rule_id",rule_id)
+              .attr("reply_content_id","new_"+new_keys_account++)
+              .attr("media_id",article.id++).appendTo(_ul);
+
+          $("#mask,#news_choice_popup").hide();
+
+        });
+
+        // 图文弹出层的ｎｅｗｓ点击事件
+        $(".img_pick .appmsg").click(function(){
+          //选择状态的修改
+          if($(this).hasClass("selected")){
+            $(this).removeClass("selected");
+          }else{
+            $(".img_pick .appmsg").removeClass("selected");
+            $(this).toggleClass("selected");
+          }
+          var media_id = $(this).attr("media_id");
+          setNewsConfirmBtnVisible();
+
+        });
+
+
+      }
+
+
+      // 设置确定按钮是否可以点击
+      function setNewsConfirmBtnVisible(){
+        if($(".appmsg.selected").length == 0){
+          $("#news_choice_confirm").attr("disabled","true");
+          $("#news_choice_confirm").addClass("btn_disabled");
+        }else{
+          $("#news_choice_confirm").removeAttr("disabled");
+          $("#news_choice_confirm").removeClass("btn_disabled");
+        }
+      }
+
+
+      // show出弹出层，设置弹出层的属性参数值
+      function showPopView(rule_id,type,key_id){
+        $(".keyword_pop").show();
+        $(".keyword_pop").attr("operate_type", type);
+        $(".keyword_pop").attr("rule_id", rule_id);
+        if (key_id != null) {
+          $(".keyword_pop").attr("key_id", key_id);
+        }
+        switch (type) {
+          case 1:
+            $("#pop_title").html("添加关键字");
+            $("#pop_text").val("");
+            break;
+          case 2:
+            $("#pop_title").html("修改关键字");
+            var _ul = $("ul[rule_id="+ rule_id+"]");
+            $("#pop_text").val(_ul.find("li[key_id = " + key_id + "]").find(".title").html());
+            break;
+          case 3:
+            $("#pop_title").html("添加回复文字");
+            break;
+          case 4:
+            $("#pop_title").html("修改回复文字");
+            $("#pop_text").val($("li[rule_id = " + rule_id + "][reply_content_id="+key_id+"]").find(".title").html());
+            break;
+          default:
+            return true;
+        }
+      }
+
+
+
+      //提示消息框
+      function showMessage(msg) {
+        $(".results").html(msg);
+        $(".results").show();
+        setTimeout(function () {
+          $(".results").hide();
+        }, 1000);
+      }
+
+      //通过media_id找到file_url字段
+      function findImageSrcByMediaId(media_id) {
+        for(k in groupMap){
+          var array = groupMap[k];
+          for(var i=0;i<array.length;i++){
+            resource = array[i];
+            if(resource.id == media_id){
+              return resource.file_url;
+            }
+          }
+        }
+        return false;
+      }
+
+
+
+
+
+
+    </script>
+
+
+<% end %>
+

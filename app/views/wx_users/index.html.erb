@@ -1,0 +1,118 @@
+<%= content_for :css do %>
+    <%= stylesheet_link_tag 'page_user', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'page_user_ext', 'data-turbolinks-track' => true %>
+
+<% end %>
+<%= content_for :tab do %>
+    <h2>用户管理</h2>
+<% end %>
+<%= content_for :resource do %>
+    <div class="main_bd">
+      <div class="global_mod user_global_opr float_layout">
+        <div class="global_info">
+          <div class="search_bar" id="searchBar">
+
+          </div>
+        </div>
+        <div class="global_extra">
+          <a href="javascript:;" data-y="3" class="btn btn_primary btn_add" id="js_tag_add_btn">
+            <i class="icon14_common add_white"></i>新建标签
+          </a>
+        </div>
+      </div>
+      <div class="inner_container_box side_r cell_layout">
+        <div class="inner_main">
+          <div class="bd">
+            <div class="global_mod user_group_opr">
+              <span class="group_name" id="js_groupName"></span>
+                    <span class="js_groupCommand" style="display:none;">
+                      <a href="javascript:;" class="mod_link js_tag_edit_btn">重命名</a>
+                      <a class="mod_link js_tag_del_btn" href="javascript:;">删除</a>
+                    </span>
+            </div>
+            <div class="table_wrp user_list">
+              <table class="table" cellspacing="0">
+                <thead class="thead">
+                <tr>
+                  <th class="table_cell user no_extra" colspan="2">
+                    <div class="group_select">
+                      <label for="selectAll" class="group_select_label frm_checkbox_label">
+                        <i class="icon_checkbox"></i>
+                        <input type="checkbox" class="frm_checkbox" id="selectAll">
+                        全选 </label>&nbsp;
+                      <a class="btn btn_default btn_disabled js_tag_putOn_btn" href="javascript:;">打标签</a>
+                      <a class="btn btn_default btn_disabled js_tag_toBanList_btn" href="javascript:;">加入黑名单</a>
+                    </div>
+                  </th>
+                </tr>
+                </thead>
+                <tbody class="tbody" id="userGroups"></tbody>
+              </table>
+            </div>
+            <div class="tool_area">
+              <div class="pagination_wrp js_pageNavigator"></div>
+            </div>
+          </div>
+        </div>
+        <div class="inner_side">
+          <div class="bd">
+            <div class="group_list">
+              <div class="inner_menu_box" id="groupsList"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
+<%= content_for :js do %>
+    <script type="text/javascript">
+      define('widget/emoji.css', [], function () {
+        return null;
+      });
+      define('biz_web/widget/dropdown.css', [], function () {
+        return null;
+      });
+      define('widget/rich_buddy.css', [], function () {
+        return null;
+      });
+      define('widget/pagination.css', [], function () {
+        return null;
+      });
+    </script>
+    <script type="text/html" id="js_changeRemarkName">
+      备注名称
+      <span class="frm_input_box with_counter counter_in append">
+        <input type="text" class="frm_input js_remarkName_input" value="">
+        <em class="frm_input_append frm_counter">0/30</em>
+      </span>
+    </script>
+    <script type="text/html" id="js_tag_edit_tpl">
+      <h4 class="popover_title">标签名称</h4>
+      <span class="frm_input_box with_counter counter_in append">
+          <input type="text" class="frm_input js_name" placeholder="" value="{name}" data-tagid="{tagid}">
+          <em class="frm_input_append frm_counter js_counter" style="display:none;">0/6</em>
+      </span>
+      <span class="js_tips frm_msg fail" style="display:none;"></span>
+    </script>
+    <script type="text/html" id="js_tag_del_tpl">
+      删除标签后，该标签下的所有用户将失去该标签属性。是否确定删除？
+    </script>
+    <script type="text/html" id="js_tag_putOn_tpl">
+      <div class="js_tag_putOn_tags popover_tag_list"></div>
+      <p class="js_tag_putOn_maxTips frm_msg fail" style="display:none;">最多只能选择3个标签</p>
+      <span class="popover_tag_add js_tag_putOn_add_btn">新建标签</span>
+      <div class="frm_input_box_wrp js_tag_input_wrap" style="display:none">
+        <a href="javascript:;" class="js_tag_putOn_cancel_a r">取消</a>
+        <a href="javascript:;" class="js_tag_putOn_add_a r">添加</a>
+        <span class="frm_input_box with_counter counter_in append js_tag_putOn_add_span">
+            <input type="text" class="frm_input js_tag_putOn_add_input" name="js_key">
+            <em class="frm_input_append frm_counter js_counter" style="display:none;">0/6</em>
+        </span>
+      </div>
+      <p class="frm_msg fail js_tag_putOn_tips" style="display:none;"></p>
+    </script>
+    <script type="text/javascript">
+      wx.cgiData = <%= raw @wx_cgiData.to_json %>;
+      seajs.use('user/index_tag', wx_main);
+    </script>
+<% end %>

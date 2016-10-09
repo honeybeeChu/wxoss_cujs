@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  funcid: MyString
+  systemid: 1
+  name: MyString
+  optype: 1
+  indexurl: MyText
+  groupnolist: MyText
+  securitylevellist: MyText
+  description: MyText
+
+two:
+  funcid: MyString
+  systemid: 1
+  name: MyString
+  optype: 1
+  indexurl: MyText
+  groupnolist: MyText
+  securitylevellist: MyText
+  description: MyText

@@ -1,0 +1,430 @@
+@charset "utf-8";
+/* 公共样式 */
+html,body,table,th,tr,td,div,span,input,select,textarea,ul,li,dl,ol,dt,dd,form,p,hr,img,h1,h2,h3,h4,h5,h6,h7{
+	padding:0;
+	margin:0;
+}
+strong{
+	font-weight:normal;}
+ul,li{ list-style: none; }
+li{    display: list-item;
+    text-align: -webkit-match-parent;}
+img{
+	border:0;
+	vertical-align: bottom; 
+}
+input textarea{resize:none;outline:none}
+html{height:100%; padding:0;margin:0;}
+body {
+	font-size:14px;	
+	background:#e7e8eb;
+	color:#222222;
+	width:100%;
+	min-width:1200px;
+	overflow:auto;
+	font-family:Microsoft Yahei, Arial, Helvetica, sans-serif;
+}
+i{font-style: italic;}
+a{text-decoration:none; outline: none;}
+button,input{outline: none;}
+input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:0;}/* for firefox Button Bug*/
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.clearfix { display: inline-table; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+form {
+    display: block;
+    margin-top: 0em;
+}
+.hide {
+	display: none;
+}
+input, select{
+	color:#222;
+}
+.fl{float:left;}
+
+/*头部*/
+.top{
+	height:65px;
+    width: 100%;
+}
+.headbox{	
+	height:60px;
+    width: 100%;
+	border-bottom:1px solid #d9dadc;
+	border-top:4px solid #44b549;
+	background:#fff;
+	margin:0;	
+}
+.head{
+	width:1200px;
+	height:60px;
+	margin:0 auto;	
+}
+.headlogo{
+	float:left;
+	width:345px;
+	padding:10px;
+}
+.headlogo img{
+	display:block;
+	max-width:100%;
+}
+.headToolbar{
+	float:right;
+	width: auto;
+	padding-top:20px;
+}
+.headToolbar [class*="icon-"]{
+	position:relative;
+	float:right;
+	display:inline-block;	
+	background-repeat: no-repeat;
+}
+.headToolbar .icon-msg{
+	width:22px;
+	height: 15px;
+	background-image:image_url('mes.png');	
+	display:inline;
+	margin:0 10px 0 20px;
+	margin-top:8px;	
+}
+.headToolbar .icon-user{	
+	height: 28px;
+	padding-top:5px;
+	background-image:image_url('user.png');
+	padding-left:38px;
+	color:#222;	
+}
+
+.headToolbar .icon-quit{	
+	height: 20px;	
+	padding:0 10px;
+	border-left:1px solid #d0d0d0;
+	color:#222;	
+	margin-top:4px;
+}
+.dropmenu{
+	position:absolute;
+	z-index:1050;
+	width:auto;	
+	top:40px;
+	right:0;
+	border:1px solid #d9dadc;
+	display: none;
+} 
+.dropmenu li{
+	height:40px;
+	line-height: 40px;
+	padding-left:5px;
+	background:#fff;
+}
+.dropmenu li:hover{
+	background:#d7d7d7;
+}
+#body{
+	width:1200px;		
+	margin:0 auto;
+	margin-bottom:88px;
+	margin-top:36px;	
+	background:#fff;
+	border:1px solid #d9dadc;	
+}
+/*菜单*/
+.col_side, .col_main {	
+	font-family:Microsoft Yahei, Arial, Helvetica, sans-serif;
+	display:table-cell;
+	vertical-align:top;
+	word-wrap:break-word;
+	word-break:break-all;	
+}
+.col_side{
+	background: #fff;	
+	height:100%;	
+	width: 208px;
+	overflow-x: hidden;	
+	border-right:1px solid #e7e7eb;	
+}
+.col_main{
+	width:990px;
+	padding-bottom:150px;	
+}
+.menu_box{
+	margin-bottom:150px;
+	background:#fff;
+	width:209px;
+	display:block;	
+}
+em{
+	font-style:normal;
+}
+dl {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+dt {
+    display: block;
+}
+dd {
+    display: block;    
+}
+.menu{
+	background:image_url('menu_line.gif') no-repeat center bottom;
+	padding-bottom:5px;
+	margin-bottom:5px;
+	}
+.menu:last-child{
+	background:0;
+}
+.no_extra{	
+	margin-top:13px;
+	border-top-width:0;
+}
+.menu_box_sub h2{
+	font-size:14px;
+	font-weight:normal;
+	padding-left:58px;	
+	line-height:46px;
+	background:#f4f5f9;
+	color:#8d8d8d;
+}
+.menu_title {
+    position: relative;
+    padding: 5px 30px;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    line-height: 30px;
+    color: #8d8d8d;
+	margin-bottom: 0;
+}
+.icon_menu {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    display: inline-block;
+	margin-right: 10px;
+    margin-top: -0.2em;
+}
+.icon1{
+	background:image_url('icon_01.png') no-repeat;
+}
+.icon2{
+	background:image_url('icon_02.png') no-repeat;
+}
+.icon3{
+	background:image_url('icon_03.png') no-repeat;
+}
+.icon4{
+	background:image_url('icon_04.png') no-repeat;
+}
+.menu_item {
+    line-height: 34px;
+}
+.menu_item a {
+    display: block;
+    padding: 0 0 0 58px;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    color: #222;
+}
+.menu_item a:hover{
+	background:#f4f5f9;
+}
+
+a {
+    color: #459ae9;
+    text-decoration: none;
+}
+.menu_item.selected a{
+    background-color: #44b549;
+    color: #fff;
+}
+/*公共底部*/
+.foot{
+	width:100%;
+	height:67px;
+}
+.footer{
+	background:#b8b9b9;
+	width:100%;
+	height:67px;
+	line-height:67px;	
+	text-align: center;
+	color:#fff;
+}
+/*遮罩*/
+.black_overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: 1001;
+	-moz-opacity: 0.6;
+	opacity: .6;
+	filter: alpha(opacity=60);
+}
+/*弹出层*/
+.edit-credentials {
+	position: fixed;
+	z-index: 1002;
+	left: 50%;
+	top: 50%;
+	width: 846px;
+	height: 580px;
+	margin-top: -290px;
+	margin-left: -423px;
+}
+.close {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	display: inline;
+	z-index: 3200;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	color: #9e9fa1;
+	font-size: 30px;
+	font-weight: bold;
+}
+.close:hover {
+	color: #7d7d7d;
+}
+/*翻页*/
+ .pagination {
+    text-align: right;
+    padding: 0 16px;
+}
+.page_nav_area {
+    letter-spacing: 4px;
+	display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+}
+.page_prev, .page_next {
+    position: relative;
+    font-size: 0;
+    letter-spacing: -5px;
+    background-color: #fff;   
+    background-image: linear-gradient(to bottom,#fff 0,#fff 100%);
+    border-color: #e6e7ec;
+    color: #222;
+    height: 30px;
+    line-height: 30px;
+    width: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+.pagination .btn {
+	width:auto;
+	min-width:0px;
+    display: inline-block;
+    overflow: visible;
+    padding: 0 16px;
+	vertical-align: middle;
+    text-align: center;
+    text-decoration: none;	
+    cursor: pointer;
+	border-radius: 3px;
+	background:#fff;
+	border: 1px solid #e7e7eb;
+	color:#222;
+}
+.pagination .btn:hover{background:#e7e7eb;}
+.page_prev .arrow, .page_next .arrow {
+	position: absolute;
+	top: 16px;
+	left:16px;
+	margin-top: -6px;
+	margin-left: -3px;
+}
+.page_next .arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-style: dashed;
+    border-color: transparent;
+    border-right-width: 0;
+    border-left-color: #919191;
+    border-left-style: solid;
+}
+.page_prev .arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-style: dashed;
+    border-color: transparent;
+    border-left-width: 0;
+    border-right-color: #919191;
+    border-right-style: solid;
+}
+.page_num {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    letter-spacing: normal;
+	padding:0 10px;
+}
+.goto_area {
+    margin-left: 8px;
+	display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+}
+.goto_area input[type="text"] {
+    vertical-align: middle;
+    width: 75px;
+    height: 22px;
+    line-height: 22px;
+    padding: 4px 0;
+    border: 1px solid #e7e7eb;
+	text-align: center;
+    font-size: 14px;
+    margin-right: 4px;
+	border-radius:3px;
+}
+.page_go {
+	background-image: linear-gradient(to bottom,#fff 0,#fff 100%);
+    border-color: #e6e7ec;
+    color: #222;
+    height: 30px;
+    line-height: 30px;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  funcid: MyString
+  systemid: 1
+  matchtype: 1
+  urlpattern: MyText
+  matchresult: MyString
+  priority: 1
+  description: MyText
+
+two:
+  funcid: MyString
+  systemid: 1
+  matchtype: 1
+  urlpattern: MyText
+  matchresult: MyString
+  priority: 1
+  description: MyText

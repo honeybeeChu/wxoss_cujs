@@ -1,0 +1,312 @@
+<%= content_for :js do %>
+    <%= javascript_include_tag 'ipmana', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'jquery-ui.min', 'data-turbolinks-track' => true %>
+<% end %>
+<%= content_for :menu do %>
+    <div class="results" style="position: fixed;left: 35%;top: 0;z-index: 100;" hidden >删除成功</div>
+    <div class="main_hd">
+      <h2 id="model_title">自定义菜单</h2>
+    </div>
+    <div class="main_bd menu_setting_box">
+      <div class="highlight_box">
+        <div class="icon_wrap icon_custom_menu"></div>
+        <div class="txt"><h2>菜单编辑中</h2>
+          <p>菜单未发布，请确认菜单编辑完成后点击“保存并发布”同步到手机。</p>
+        </div>
+      </div>
+      <div class="menu_setting_area">
+        <div class="menu_preview_area">
+          <div class="mobile_menu_preview">
+            <div class="mobile_hd">
+              <% unless @current_wx_official_account.nil? %>
+                  <%= @current_wx_official_account.wechat_name%>
+              <% end %>
+            </div>
+            <div class="mobile_bd">
+              <ul class="pre_menu_list">
+                <% if @wx_menus != nil %>
+                    <% @wx_menus.each do |wx_menu| %>
+                        <!--是父菜单-->
+                        <% if wx_menu.level == 0 %>
+                            <li class="pre_menu_item grid_item size1of3 selected hot main-menu-li" id='<%= wx_menu.key %>'>
+                              <a class="pre_menu_link" href="javascript:void(0);">
+                                <i class="icon_menu_dot" style="display:none;"></i>
+                                <span class="main-menu-name"><%= wx_menu.name %></span>
+                              </a>
+                              <div class="sub_pre_menu_box">
+                                <ul class="sub_pre_menu_list">
+                                  <% @wx_menus.each do |son_menu| %>
+                                      <% if son_menu.level == 1 and son_menu.parent_id == wx_menu.key %>
+                                          <li id='<%= son_menu.key %>' class="selected hot sub-menu-li">
+                                            <a href="javascript:void(0);">
+                                              <span class="sub_pre_menu_inner sub-menu-name"><%= son_menu.name %></span>
+                                            </a>
+                                          </li>
+                                      <% end %>
+                                  <% end %>
+                                  <li class="add_submenu_btn">
+                                    <a href="javascript:void(0);" title="最多添加5个子菜单">
+                                      <span class="sub_pre_menu_inner"><i class="icon14_menu_add"></i></span>
+                                    </a>
+                                  </li>
+                                </ul>
+                                <i class="arrow arrow_out"></i>
+                                <i class="arrow arrow_in"></i>
+                              </div>
+                            </li>
+                        <% end %>
+                    <% end %>
+                <% end %>
+                <!--&lt;!&ndash; 主菜单上面的添加按钮 &ndash;&gt;-->
+                <li class="pre_menu_item grid_item size1of3 add_main_menu_btn" style="float: none;
+                    width: auto;
+                    overflow: hidden;">
+                  <a class="pre_menu_link" href="javascript:void(0);" style="height: 50px;">
+                  <span><i class="icon14_menu_add"></i></span>
+                  <span id="tip_addMenu" hidden>点击添加菜单</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sort_btn_wrp">
+            <button class="btn btn_default" id="orderMenuBtn">菜单排序</button>
+            <button class="btn btn_default" id="confirmOrderBtn" style="width: 99px;display:none;">完成</button>
+          </div>
+        </div>
+        <div class="menu_form_area">
+          <!--提示信息-->
+          <div class="menu_initial_tips tips_global hide ">请通过拖拽左边的菜单进行排序</div>
+          <!--提示信息结束-->
+          <!--菜单编辑-->
+          <div class="portable_editor to_left">
+            <div class="editor_inner">
+              <div class="global_mod float_layout menu_form_hd">
+                <h4 class="global_info menu_name_area">子菜单名称</h4>
+                <div class="global_extra">
+                  <a href="javascript:void(0);">删除子菜单</a>
+                </div>
+              </div>
+              <div class="menu_form_bd">
+                <div class="msg_sender_tips tips_global">已添加子菜单，仅可设置菜单名称。</div>
+                <div class="frm_control_group">
+                  <label for="" class="frm_label"><strong class="title menu_name_area">子菜单名称</strong></label>
+                  <div class="frm_controls">
+                    <span class="frm_input_box with_counter counter_in append"><input type="text" class="frm_input" value="" id="input_menuname"></span>
+                    <p class="frm_msg fail hide">字数超过上限</p>
+                    <p class="frm_msg fail hide">请输入子菜单名称</p>
+                    <p class="frm_tips">字数不超过8个汉字或16个字母</p>
+                  </div>
+                </div>
+
+                <div id="message_edit_area">
+                  <div class="frm_control_group choice_menutype_area">
+                    <label for="" class="frm_label"><strong class="title">子菜单内容</strong></label>
+                    <div class="frm_controls frm_vertical_pt">
+                    </div>
+                    <p>
+                      <label for="" class="radio_label">
+                        <input type="radio" name="RadioGroup1" value=0 id="RadioGroup1_0">
+                        发送消息</label>
+                      <label for="" class="radio_label">
+                        <input type="radio" name="RadioGroup1" value=1 id="RadioGroup1_1">
+                        跳转网页</label>
+                      <label for="" class="radio_label">
+                        <input type="radio" name="RadioGroup1" value=2 id="RadioGroup1_2">
+                        一键上网</label>
+                      <br>
+                    </p>
+                  </div>
+                  <div class="menu_content url jsMain" id="url" style="background-color: #fff;
+                      padding: 16px 20px;
+                      border: 1px solid #e7e7eb;display: none;">
+                    <form action="" id="urlForm" onsubmit="return false;">
+                      <p class="menu_content_tips tips_global">订阅者点击该子菜单会跳到以下链接</p>
+                      <div class="frm_control_group">
+                        <label for="" class="frm_label">页面地址</label>
+                        <div class="frm_controls">
+                                                <span class="frm_input_box">
+                                                    <input type="text" class="frm_input" id="urlText" name="urlText">
+                                                </span>
+                          <p class="frm_tips" id="js_urlTitle" style="display: none;">
+                            来自<span class="js_name"></span><span style="display:none;"> -《<span class="js_title"></span>》</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="frm_control_group btn_appmsg_wrap">
+                        <div class="frm_controls">
+                          <p class="frm_msg fail dn" id="urlUnSelect" style="display: none;">
+                            <span for="urlText" class="frm_msg_content" style="display: inline;">请选择一篇文章</span>
+                          </p>
+                          <a href="javascript:;" id="js_appmsgPop">从公众号图文消息中选择</a>
+                          <a href="javascript:void(0);" class="dn btn btn_default" id="js_reChangeAppmsg" style="display: none;">重新选择</a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="menu_content_container">
+                    <div id="tabBoxA" class="tabBox">
+                      <ul class="tabList" id="tabListA">
+                        <li class="hot" msg-type=2><i class="icon_txt icon_appmsg"></i>图文消息</li>
+                        <li msg-type=3><i class="icon_txt"></i>文字</li>
+                        <li msg-type=4><i class="icon_txt icon_img"></i>图片</li>
+                        <li msg-type=5><i class="icon_txt icon_voice"></i>语音</li>
+                        <li msg-type=6><i class="icon_txt icon_video"></i>视频</li>
+                      </ul>
+                      <div id="tabOutBoxA">
+                        <!--图文消息-->
+                        <div class="tabOutList">
+                          <div class="inner">
+                            <div class="img_item_bd" id="news_item" media_id="" hidden>
+                              <br>
+                              <a href="#" id="news_item_del">删除</a>
+                            </div>
+                            <div class="create_access auto_news_choice">
+                              <a href="#" id="news_modal">
+                                <i class="icon36 icon36_add"></i>
+                                <strong>从素材库中选择</strong></a>
+                            </div>
+                            <div class="create_access auto_news_choice">
+                              <a href="/wxoss/wx_articles/edit?t=media/appmsg_edit_v2&action=edit&isNew=1&type=10&lang=zh_CN&token=1708268647"><i class="icon36 icon36_add"></i>
+                                <strong>新建图文消息</strong></a>
+                            </div>
+                          </div>
+                        </div>
+                        <!--文字-->
+                        <div class="tabOutList" style="display: none;float: none;">
+                          <div class="edit_area">
+                            <textarea id="msg_text_content" style="width: 100%;" maxlength=600></textarea>
+                          </div>
+                          <div class="editor_toolbar">
+                            <div class="editor_tip">最多可以输入600个字</div>
+                          </div>
+                        </div>
+                        <!--图片-->
+                        <div class="tabOutList" style="display: none;">
+                          <div class="inner">
+                            <div class="img_item_bd" id="img_item" media_id="" hidden>
+                              <img class="pic" src="" style="height:70px;width:70px;">
+                              <a href="#" id="img_item_del">删除</a>
+                            </div>
+                            <div class="create_access auto_img_choice">
+                              <a href="#" id="img_modal"><i class="icon36 icon36_add"></i>
+                                <strong>从素材库中选择</strong></a>
+                            </div>
+                            <div class="create_access auto_img_choice">
+                              <a href="#"><i class="icon36 icon36_add"></i>
+                                <strong>上传图片</strong></a>
+                            </div>
+                          </div>
+                        </div>
+                        <!--语音-->
+                        <div class="tabOutList" style="display: none;">
+                          <div class="inner">
+                            <div class="img_item_bd" id="audio_item" media_id="" hidden>
+                              <img class="pic" src="" style="height:70px;width:70px;">
+                              <a href="#" id="audio_item_del">删除</a>
+                            </div>
+                            <div class="create_access">
+                              <a href="#" id="audio_modal"><i class="icon36 icon36_add"></i>
+                                <strong>从素材库中选择</strong></a>
+                            </div>
+                            <div class="create_access">
+                              <a href="#"><i class="icon36 icon36_add"></i>
+                                <strong>新建语音</strong></a>
+                            </div>
+                          </div>
+                        </div>
+                        <!--视频-->
+                        <div class="tabOutList" style="display: none;">
+                          <div class="inner">
+                            <div class="img_item_bd" id="video_item" media_id="" hidden>
+                              <img class="pic" src="" style="height:70px;width:70px;">
+                              <a href="#" id="video_item_del">删除</a>
+                            </div>
+                            <div class="create_access">
+                              <a href="#" id="video_modal"><i class="icon36 icon36_add"></i>
+                                <strong>从素材库中选择</strong></a>
+                            </div>
+                            <div class="create_access">
+                              <a href="#"><i class="icon36 icon36_add"></i>
+                                <strong>新建视频</strong></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                  <div class="menu_content yijian jsMain" id="yijian" style="background-color: #fff;
+                      padding: 16px 20px;
+                      border: 1px solid #e7e7eb;display: none;">
+                    <form action="" id="urlForm" onsubmit="return false;">
+                      <p class="menu_content_tips tips_global">订阅者点击该菜单会获取上网链接信息</p>
+                      <div class="frm_control_group">
+
+                        <!--<label for="" class="frm_label">KEY值</label>-->
+                        <!--<div class="frm_controls">-->
+                        <!--<span class="frm_input_box">-->
+                        <!--<input type="text" class="frm_input" id="keyText" name="keyText">-->
+                        <!--</span>-->
+                        <!--</div>-->
+                        <br/>
+                        <label for="" class="frm_label">功能描述</label>
+                        <div class="frm_controls">
+                            <span class="frm_input_box">
+                                <input type="text" class="frm_input" id="describeText" name="describeText">
+                            </span>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div id="js_errTips" style="color:red;margin-top: 10px;display: none;" class="msg_sender_msg mini_tips warn">请设置当前菜单内容</div>
+
+                </div>
+
+                <!--kaishi -->
+
+                <!-- 结束-->
+              </div>
+            </div>
+          </div>
+          <!--菜单编辑结束-->
+        </div>
+      </div>
+      <div class="tool_bar" style="padding-left:346px;padding-top:35px;">
+        <button class="btn btn_primary" id="submit_btn">保存并发布</button>
+      </div>
+    </div>
+
+    <div id="confirm_popup"
+        showType=0 style="z-index:99; position: fixed; left: 0px; right: 0px; top: 0px; bottom: 0px; background-color: rgba(120, 120, 120, 0.498039);display: none;">
+      <div class="searchBox" style="background-color:white;margin: 100px 250px 100px;padding:0;">
+        <h2 style="padding: 0 20px;
+            height: 52px;
+            line-height: 52px;
+            font-size: 16px;
+            background: #f4f5f9;
+            font-weight: normal;">温馨提示</h2>
+
+        <a class="close" title="Close">×</a>
+        <div id="pop_tips_content" style="padding: 100px 30px;">
+          发布成功后会覆盖原版本，且将在24小时内对所有用户生效，确认发布？
+
+        </div>
+
+        <div class="button-bar" style="position: relative;">
+          <button id="confirm_menu_btn" class="btn btn_primary">确定</button>
+          <button class="btn btn_primary cancel">取消</button>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+<% end %>
+
+

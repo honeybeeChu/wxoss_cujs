@@ -1,0 +1,805 @@
+/* line 1, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-toolbar-primary {
+  position: relative;
+}
+
+/* line 5, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-toolbar.edui-toolbar-primary .edui-button, .edui-default .edui-toolbar.edui-toolbar-primary .edui-splitbutton, .edui-default .edui-toolbar.edui-toolbar-primary .edui-menubutton, .edui-default .edui-toolbar.edui-toolbar-primary .edui-combox {
+  margin: 1px 4px;
+}
+
+/* line 9, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-toolbar.edui-toobar-secondary {
+  display: none;
+}
+
+/* line 13, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.show-edui-more .edui-default .edui-toolbar.edui-toobar-secondary {
+  display: block;
+}
+
+/* line 17, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-toolbar {
+  border-bottom: 1px solid #e7e7eb;
+}
+
+/* line 21, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-editor-toolbarbox.show-edui-more .edui-for-more .edui-button-wrap {
+  border: 1px solid #e7e7eb;
+  background-color: #fff;
+}
+
+/* line 26, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-toolbar .edui-button .edui-icon, .edui-toolbar .edui-menubutton .edui-icon, .edui-toolbar .edui-splitbutton .edui-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* line 33, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.icon_edui_zoom {
+  position: absolute;
+  right: 4px;
+  top: 2px;
+  width: 26px;
+  height: 26px;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 100px;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+/* line 46, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.icon_edui_zoom.zoom_out_switch {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 0 no-repeat;
+}
+
+/* line 50, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.icon_edui_zoom.zoom_in_switch {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -36px no-repeat;
+}
+
+/* line 54, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.icon_edui_zoom:hover {
+  border: 1px solid #e7e7eb;
+  background-color: #fff;
+}
+
+/* line 59, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-more .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -72px no-repeat;
+  width: 26px;
+  height: 26px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* line 67, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertvote .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -108px no-repeat;
+}
+
+/* line 71, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertcard .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -138px no-repeat;
+}
+
+/* line 75, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-undo .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -168px no-repeat;
+}
+
+/* line 79, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-redo .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -198px no-repeat;
+}
+
+/* line 83, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-bold .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -228px no-repeat;
+}
+
+/* line 87, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-italic .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -258px no-repeat;
+}
+
+/* line 91, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-fontborder .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_fontborder-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 95, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-underline .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -288px no-repeat;
+}
+
+/* line 99, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-strikethrough .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_strikethrough-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 103, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-subscript .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_subscript-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 107, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-superscript .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_superscript-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 111, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-blockquote .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -318px no-repeat;
+}
+
+/* line 115, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-forecolor .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -348px no-repeat;
+}
+
+/* line 119, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-backcolor .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -378px no-repeat;
+}
+
+/* line 123, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-autotypeset .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_autotypeset-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 127, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-justifyleft .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -408px no-repeat;
+}
+
+/* line 131, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-justifycenter .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -438px no-repeat;
+}
+
+/* line 135, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-justifyright .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -468px no-repeat;
+}
+
+/* line 139, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-justifyjustify .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -498px no-repeat;
+}
+
+/* line 143, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertorderedlist .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -529px no-repeat;
+}
+
+/* line 147, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertunorderedlist .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -559px no-repeat;
+}
+
+/* line 151, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-lineheight .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -589px no-repeat;
+}
+
+/* line 155, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-rowspacingbottom .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -619px no-repeat;
+}
+
+/* line 159, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-rowspacingtop .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -649px no-repeat;
+}
+
+/* line 163, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-horizontal .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -679px no-repeat;
+}
+
+/* line 167, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-link .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -709px no-repeat;
+}
+
+/* line 171, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-code .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_code-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 175, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertimage .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -739px no-repeat;
+}
+
+/* line 179, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertframe .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_insertframe-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 183, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-emoticon .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_emoticon-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 187, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-spechars .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_spechars-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 191, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-help .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_help-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 195, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-print .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_print-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 199, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-preview .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_preview-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 203, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-searchreplace .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_searchreplace-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 207, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-map .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_map-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 211, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-gmap .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_gmap-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 215, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertvideo2 .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -769px no-repeat;
+}
+
+/* line 219, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertaudio .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -799px no-repeat;
+}
+
+/* line 223, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertmusic .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -829px no-repeat;
+}
+
+/* line 227, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-time .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_time-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 231, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-date .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_date-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 235, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-cut .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_cut-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 239, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-formatmatch .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -859px no-repeat;
+}
+
+/* line 243, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-pasteplain .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_pasteplain-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 247, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-directionalityltr .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_directionalityltr-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 251, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-directionalityrtl .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_directionalityrtl-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 255, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-source .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_source-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 259, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-removeformat .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -890px no-repeat;
+}
+
+/* line 263, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-unlink .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -920px no-repeat;
+}
+
+/* line 267, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-touppercase .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_touppercase-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 271, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-tolowercase .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_tolowercase-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 275, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertrow .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_tolowercase-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 279, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertrownext .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_insertrownext-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 283, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertcol .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_tolowercase-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 287, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertcolnext .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_tolowercase-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 291, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-mergeright .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_mergeright-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 295, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-mergedown .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_mergedown-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 299, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-splittorows .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_splittorows-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 303, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-splittocols .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_splittocols-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 307, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertparagraphbeforetable .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_insertparagraphbeforetable-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 311, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-deleterow .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_deleterow-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 315, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-deletecol .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_deletecol-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 319, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-splittocells .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_splittocells-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 323, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-mergecells .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_mergecells-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 327, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-deletetable .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_deletetable-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 331, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-fullscreen .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_fullscreen-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 335, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-anchor .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_anchor-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 339, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-pagebreak .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_pagebreak-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 343, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-imagenone .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -950px no-repeat;
+}
+
+/* line 347, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-imageleft .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -980px no-repeat;
+}
+
+/* line 351, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-wordimage .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_wordimage-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 355, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-imageright .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -1010px no-repeat;
+}
+
+/* line 359, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-imagecenter .edui-icon {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -1040px no-repeat;
+}
+
+/* line 363, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-indent .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_indent-634dd761081a37af7e93dc7d7b5d7d8e242971c077a5de6d720694a183315288.png?__sprite) no-repeat 0 0;
+}
+
+/* line 367, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-outdent .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_outdent-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 371, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-webapp .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_webapp-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 375, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-edittable .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_edittable-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 379, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-template .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_template-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 383, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-delete .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_delete-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 387, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-highlightcode .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_highlightcode-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 391, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-deletehighlightcode .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_deletehighlightcode-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 395, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-attachment .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_attachment-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 399, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-edittd .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_edittd-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 403, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-snapscreen .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_snapscreen-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 407, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-scrawl .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_scrawl-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 411, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-background .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_background-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 415, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-music .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_music-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 419, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-formula .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_formula-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 423, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-aligntd .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_formula-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 427, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertparagraphtrue .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_insertparagraphtrue-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 431, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertparagraph .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_formula-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 435, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-insertcaption .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_insertcaption-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 439, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-deletecaption .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_formula-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 443, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-inserttitle .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_inserttitle-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 447, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-deletetitle .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_deletetitle-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 451, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-aligntable .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_aligntable-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 455, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-tablealignment-left .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_tablealignment-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 459, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-tablealignment-center .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_tablealignment-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 463, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-for-tablealignment-right .edui-icon {
+  background: transparent url(/assets/htmledition/icon_edui_tablealignment-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png?__sprite) no-repeat 0 0;
+}
+
+/* line 467, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-toolbar .edui-menubutton-body .edui-arrow, .edui-toolbar .edui-splitbutton-body .edui-arrow, .edui-toolbar .edui-combox-body .edui-arrow {
+  background: transparent url(/assets/htmledition/edui-arrow2968da-9a787ad6a747874299042fef7f1d36afd83e58efe1c493543157c7cc63156609.png) no-repeat 0 0;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* line 474, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-toolbar .edui-splitbutton-body .edui-arrow, .edui-toolbar .edui-combox-body .edui-arrow {
+  width: 10px;
+  background-position: 50% 50%;
+}
+
+/* line 479, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-toolbar .edui-menubutton .edui-menubutton-body {
+  padding-right: 10px;
+}
+
+/* line 483, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-toolbar .edui-menubutton-body .edui-arrow {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-position: 90% 50%;
+}
+
+/* line 491, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-toolbar .edui-separator {
+  width: 1px;
+  height: 20px;
+  background-color: #e7e7eb;
+  margin: 4px 2px;
+}
+
+/* line 498, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-button .edui-button-wrap, .edui-splitbutton .edui-splitbutton-body, .edui-menubutton .edui-menubutton-body, .edui-combox .edui-combox-body {
+  border: 1px solid transparent;
+}
+
+/* line 502, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-button .edui-state-hover .edui-button-wrap, .edui-button .edui-state-checked .edui-button-wrap, .edui-button .edui-state-active .edui-button-wrap, .edui-splitbutton .edui-state-hover .edui-splitbutton-body, .edui-splitbutton .edui-state-checked .edui-splitbutton-body, .edui-splitbutton .edui-state-active .edui-splitbutton-body, .edui-menubutton .edui-state-hover .edui-menubutton-body, .edui-menubutton .edui-state-checked .edui-menubutton-body, .edui-menubutton .edui-state-active .edui-menubutton-body, .edui-combox .edui-state-hover .edui-combox-body, .edui-combox .edui-state-opened .edui-combox-body, .edui-combox .edui-state-active .edui-combox-body {
+  border: 1px solid #e7e7eb;
+  background-color: #fff;
+}
+
+/* line 507, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-popup-content {
+  border: 1px solid #e7e7eb;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  padding: 5px;
+  background: #fff;
+}
+
+/* line 518, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-menu-body .edui-state-hover {
+  padding: 0 !important;
+  background-color: #f4f5f9;
+  border: 1px solid #e7e7eb;
+}
+
+/* line 524, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-colorpicker-preview {
+  height: 20px;
+  border: 1px solid #e7e7eb;
+  margin-left: 1px;
+  width: 128px;
+  float: left;
+}
+
+/* line 532, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-colorpicker-nocolor {
+  float: right;
+  margin-right: 1px;
+  font-size: 12px;
+  line-height: 14px;
+  height: 14px;
+  border: 1px solid #e7e7eb;
+  padding: 3px 5px;
+  cursor: pointer;
+}
+
+/* line 543, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.edui-default .edui-wx-input {
+  width: 100%;
+}
+
+/* line 547, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_box {
+  padding: 15px;
+  width: 220px;
+}
+
+/* line 552, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_group {
+  padding-bottom: 12px;
+}
+
+/* line 556, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_hd {
+  margin-bottom: 5px;
+  color: #8d8d8d;
+}
+
+/* line 561, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_hd_tab {
+  padding: 0 .5em;
+  border-left: 1px solid #e7e7eb;
+  cursor: pointer;
+  color: #d2d2d2;
+}
+
+/* line 568, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_hd_tab:first-child {
+  padding-left: 0;
+  border-left-width: 0;
+}
+
+/* line 573, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_hd_tab.selected {
+  color: #8d8d8d;
+}
+
+/* line 577, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_bd {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 582, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_square {
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin: 0 4px 4px 0;
+  border: 1px solid #e7e7eb;
+  cursor: pointer;
+}
+
+/* line 591, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_toolbar {
+  overflow: hidden;
+  *zoom: 1;
+  border-top: 1px dotted #e7e7eb;
+  padding-top: 15px;
+}
+
+/* line 598, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_toolbar .ue_colorpicker_square {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+  background-color: #f00;
+}
+
+/* line 605, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_toolbar .btn_ue_colorpicker {
+  float: right;
+  margin-left: 6px;
+  padding: 0 22px;
+  height: 24px;
+  line-height: 24px;
+  *line-height: 22px;
+  text-decoration: none;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #e7e7eb;
+  background-color: #fff;
+  color: #222;
+}
+
+/* line 623, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_toolbar .btn_ue_colorpicker:hover {
+  border-color: #dadbe0;
+  color: #222;
+  text-decoration: none;
+}
+
+/* line 629, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_toolbar .ue_colorpicker_input_box {
+  overflow: hidden;
+  *zoom: 1;
+  display: block;
+  border: 1px solid #e7e7eb;
+  padding: 0 5px;
+}
+
+/* line 637, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_toolbar .ue_colorpicker_input_append {
+  float: left;
+  margin-right: 4px;
+}
+
+/* line 642, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_toolbar .ue_colorpicker_input_inner {
+  overflow: hidden;
+  *zoom: 1;
+  display: block;
+}
+
+/* line 648, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_toolbar input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  line-height: 24px;
+  height: 24px;
+}
+
+/* line 657, /home/chuliang/work/wxoss/app/assets/stylesheets/widget/ueditor_new/themes/default/ueditor.css.scss */
+.ue_colorpicker_nocolor {
+  background: url(/assets/htmledition/ueditor_z29f4d5-52a13c4ff2ff759d7978c9c9d1b3c8efd76f64c47e2c5324ceeebc6539369e6a.png) 0 -1070px no-repeat;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  border-width: 0;
+}

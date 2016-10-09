@@ -1,0 +1,250 @@
+<% content_for :content do %>
+    <div class="main_hd">
+        <h2 id="model_title">自动回复</h2>
+      </div>
+    <div class="main_bd">
+      <div class="highlight_box">
+        <div class="opr">
+          <button class="btn btn_primary btn_red">停用</button>
+        </div>
+        <div class="icon_wrap icon_reply_open"></div>
+        <div class="txt txt_2">
+          <h2>已开启自动回复设置</h2>
+          <p>通过编辑内容或关键词规则，快速进行自动回复设置。如具备开发能力，可更灵活地使用该功能。</p>
+        </div>
+      </div>
+      <div class="content_wrap">
+        <div class="reply_tab_wrp">
+          <ul class="tab_navs">
+            <li class="tab_nav subscribe_response">
+              <%= link_to "被添加自动回复", :action => 'index' %>
+            </li>
+            <li class="tab_nav message_response">
+              <%= link_to "消息自动回复", :action => 'index', :type => 'message_response' %>
+            <li class="tab_nav keyword_response">
+              <%= link_to "关键词自动回复", :action => 'index', :type => 'keyword_response' %>
+            </li>
+          </ul>
+        </div>
+        <%= yield :response %>
+        </div>
+      </div>
+      <%= yield %>
+
+
+
+
+
+    <!--遮罩层ｍａｓｋ的样式-->
+    <div id="mask" style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;
+        filter: alpha(opacity = 75);-moz-opacity: .75;-khtml-opacity: .75;opacity: .75;
+        background-color: #000;z-index: 9998;display: none;"></div>
+
+    <!--　图片的选择弹出层　-->
+    <div id="img_choice_popup" rule_id="" style="border-width: 0;
+        overflow: hidden;width: 846px;margin-top: 1%;
+        z-index: 9999;position: fixed;top: 1%;display: none;">
+      <div class="dialog_hd" style="line-height: 52px;
+          padding: 0 20px;background-color: #f4f5f9;border-bottom: 1px solid #e7e7eb;">
+        <h3>选择图片</h3>
+        <a class="close" title="Close">×</a>
+      </div>
+      <div class="dialog_bd">
+        <div class="inner_container_box">
+          <div class="inner_side" style="width: 18%;border-right: 1px solid #e7e7eb;">
+            <div class="group_list" style="padding-left: 10px;">
+              <div class="inner_menu_box">
+                <dl class="inner_menu js_group">
+                  <% unless @group_name_map.nil? %>
+                      <% @group_name_map.each do |group|%>
+                          <% size = @group_map[group[0]].length%>
+                          <dd class="inner_menu_item js_groupitem" data-groupid=<%=group[0]%>>
+                            <a href="javascript:;" class="inner_menu_link" title=<%=group[1]%> />
+                            <strong><%=group[1]%></strong><em class="num">(<span><%=size%></span>)</em>
+                            </a>
+                          </dd>
+                      <% end %>
+                  <% end %>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="inner_main" style=" width: 2000px;display: table-cell;
+              vertical-align: top;
+              word-wrap: break-word;
+              word-break: break-all;">
+            <div class="img_pick_area">
+              <div class="img_pick" style="text-align: left;">
+                <ul class="group js_list img_list">
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dialog_ft" style="padding: 16px 0;
+          background-color: #f4f5f9;text-align: center;">
+        <button id="img_choice_confirm" class="btn btn_default btn_disabled"
+                style="width: 120px;border-radius: 5px;" disabled>确定</button>
+        <button id="img_choice_cancer" class="btn btn_default"
+                style="width: 120px;border-radius: 5px;">取消</button>
+      </div>
+    </div>
+
+
+
+
+        
+      
+
+
+    </div>
+
+    <!--　图文的选择弹出层　-->
+    <div id="news_choice_popup" rule_id="" style="border-width: 0;
+        overflow: hidden;width: 906px;margin-top: 1%;
+        z-index: 9999;position: fixed;top: 1%;display:none;">
+      <div class="dialog_hd" style="line-height: 52px;
+          padding: 0 20px;background-color: #f4f5f9;border-bottom: 1px solid #e7e7eb;">
+        <h3>选择素材</h3>
+        <a class="close" title="Close">×</a>
+      </div>
+      <div class="dialog_bd">
+        <div class="inner_container_box">
+          <div class="inner_main" style=" width: 2000px;display: table-cell;
+              vertical-align: top;
+              word-wrap: break-word;
+              word-break: break-all;">
+            <div class="img_pick_area">
+              <div class="img_pick" style="text-align: left;">
+                <% unless @wx_articles.nil? %>
+                    <% @wx_articles.each do |article|%>
+                        <% imgSrc = @current_wx_official_account.wx_resources.find(article.cover_file_id).file_url%>
+                        <div class="appmsg_col">
+                          <div class="inner">
+                            <div>
+                              <div class="appmsg" media_id=<%= article.id %> data-id="400505465" data-fileid="400505457" data-completed="1">
+                                <div class="appmsg_content">
+                                  <h4 class="appmsg_title js_title">
+                                    <a href=<%= article.content_url == nil ? '#':article.content_url %> target="_blank"><%= article.title %></a>
+                                  </h4>
+                                  <div class="appmsg_info">
+                                    <em class="appmsg_date">
+                                      <%= article.updated_at.to_s[0,4] %>年<%= article.updated_at.to_s[5,2] %>月<%= article.updated_at.to_s[8,2] %>日
+                                    </em>
+                                  </div>
+                                  <div class="appmsg_thumb_wrp" style="background-image:url('<%= imgSrc%>')">
+                                  </div>
+                                  <p class="appmsg_desc"><%= article.digest==""?"【无】":article.digest %></p>
+                                </div>
+                                <div class="appmsg_mask"></div>
+                                <i class="icon_card_selected">已选择</i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                    <%end%>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dialog_ft" style="padding: 16px 0;
+          background-color: #f4f5f9;text-align: center;">
+        <button id="news_choice_confirm" class="btn btn_default btn_disabled"
+                style="width: 120px;border-radius: 5px;" disabled>确定</button>
+        <button id="news_choice_cancer" class="btn btn_default"
+                style="width: 120px;border-radius: 5px;">取消</button>
+      </div>
+    </div>
+
+    
+    <script>
+      // 修改头部功能模块的名称
+      $("#model_title").html("自动回复");
+      //展现切换公众号链接
+      $(".id_wechat").show();
+
+      //左侧菜单栏的当前功能块处于选中状态
+      $(".menu_box dd").removeClass("selected");
+      $(".menu_box dd.response").addClass("selected");
+
+      var search = location.search;
+      if (search.length > 0) {
+        var type = search.split('=')[1];
+        if (search.split('=')[0] == "?choiced_account_id"){               //如果是从选择公众号弹框跳转来的
+          $(".tab_navs li.subscribe_response").addClass("selected");
+        }else{
+          $("li." + type).addClass("selected");
+        }
+      } else {
+        $(".tab_navs li.subscribe_response").addClass("selected");
+      }
+
+
+
+      //素材选取界面的关闭按钮和取消按钮的点击事件
+      $("#img_choice_popup .close,#img_choice_cancer").click(function(){
+        $("#mask,#img_choice_popup").hide();
+      });
+
+
+      // 图片选择层的组别ｌｉ点击事件绑定
+      $("#img_choice_popup .js_group dd").click(function(){
+        //选择状态的修改
+        $("#img_choice_popup .js_group dd").removeClass("selected");
+
+        $(this).addClass("selected");
+
+        var group_id = $(this).attr("data-groupid");
+
+        //将选择的组的所有图片在右侧的mian区域中显示出来
+        var img_resources = groupMap[group_id];
+
+        $(".img_list").empty();
+        for(var i = 0;i<img_resources.length;i++){
+          var resource = img_resources[i];
+          var _li = $("<li class='img_item' resource-id="+resource.id+
+              "><label class='frm_checkbox_label img_item_bd'>"+
+              "<img src="+resource.file_url+" alt="+resource.resource_name+" class='pic'>"+
+              "<span class='lbl_content'>" + resource.resource_name + "</span>" +
+              "<div class='selected_mask'>"+
+              "<div class='selected_mask_inner'></div>"+
+              "<div class='selected_mask_icon'></div></div></label></li>");
+
+          //图片的点击事件
+          _li.click(function(){
+            var label = $(this).find("label");
+            if(label.hasClass("selected")){
+              label.removeClass("selected");
+            }else{
+              $("#img_choice_popup .img_list li label").removeClass("selected");
+              $(this).find("label").toggleClass("selected");
+            }
+            setConfirmBtnVisible();
+
+          });
+
+          _li.appendTo($(".img_list"));
+        }
+      });
+
+      // 设置确定按钮是否可以点击
+      function setConfirmBtnVisible(){
+        if($(".img_list li>label.selected").length == 0){
+          $("#img_choice_confirm").attr("disabled","true");
+          $("#img_choice_confirm").addClass("btn_disabled");
+        }else{
+          $("#img_choice_confirm").removeAttr("disabled");
+          $("#img_choice_confirm").removeClass("btn_disabled");
+        }
+      }
+
+
+    </script>
+<% end %>
+<%= render template: "layouts/application" %>

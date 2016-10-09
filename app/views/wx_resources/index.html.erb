@@ -1,0 +1,167 @@
+<%= content_for :css do %>
+    <%= stylesheet_link_tag 'page/media/media_list', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'media', 'data-turbolinks-track' => true %>
+<% end %>
+<%= content_for :tab do %>
+    <h2>素材管理</h2>
+<% end %>
+<%= content_for :resource do %>
+    <div class="main_bd" id="js_main">
+      <div class="page_msg mini pic_clear" style="display:none" id="js_pic_clear">
+        <div class="inner group">
+          <span class="msg_icon_wrp"><i class="icon_msg_mini info"></i></span>
+          <div class="msg_content">当前图片数量过多，为了不影响正常使用，建议进行<a href="javascript:;" id="js_pic_clear_a">批量清理</a>。</div>
+        </div>
+      </div>
+      <div id="js_forbit_warn"></div>
+      <div class="search_bar" id="searchDiv">
+            <span class="frm_input_box search with_del append ">
+                <a class="del_btn" href="javascript:" id="searchCloseBt"><i class="icon_search_del"></i>&nbsp;</a>
+                <a id="searchBt" href="javascript:" class="frm_input_append"><i class="icon16_common search_gray">搜索</i>&nbsp;
+                </a>
+                <input id="keyInput" type="text" placeholder="标题/作者/摘要" value="" class="frm_input">
+            </span>
+
+      </div>
+      <div class="sub_title_bar">
+        <div class="info">
+          <h3 id="page_title">
+            <span id="query_tips">图文消息</span>(共<span id="js_count">0</span>条)
+          </h3>
+          <div class="rank_style">
+            <a href="javascript:;" class="btn_card_rank current" id="js_cardview" alt="卡片式">卡片式</a>
+            <a href="javascript:;" class="btn_list_rank" id="js_listview" alt="列表式">列表式</a>
+          </div>
+        </div>
+        <a target="_blank" class="btn btn_add btn_primary r btn_new" href="/wxoss/wx_articles/edit?t=media/appmsg_edit_v2&action=edit&isNew=1&type=10&lang=zh_CN&token=1708268647">
+          <i class="icon14_common add_white"></i>新建图文消息
+        </a>
+      </div>
+
+      <div class="appmsg_list" id="js_card" style="display:none;">
+        <div class="appmsg_col tj_item">
+          <div class="inner" id="js_col1"></div>
+        </div>
+        &nbsp;
+        <div class="appmsg_col tj_item">
+          <div class="inner" id="js_col2"></div>
+        </div>
+        &nbsp;
+        <div class="appmsg_col">
+          <div class="inner" id="js_col3"></div>
+        </div>
+      </div>
+      <div class="appmsg_list_v" id="js_list" style="display:none;"></div>
+      <div class="empty_tips dn" id="js_empty"><p>暂无素材</p></div>
+      <div class="empty_tips dn" id="js_search_empty">没有搜索结果，请重新输入关键字或者查看<a href="javascript:;" id="reload">全部图文消息</a>
+      </div>
+      <div class="tool_area">
+        <div class="pagination_wrp pageNavigator" id="js_pagebar"></div>
+      </div>
+    </div>
+    <script type="text/html" id="tpl_list">
+      <ul class="inner_list_v">
+        {each list as item}
+        <li class="appmsg_item_v js_appmsgitem">
+          <div class="inner">
+            <div class="content">
+              <img src="{item.img_url}" class="content_cover">
+              <div class="content_abstract">
+                {if item.multi_item.length == 1}
+                {each item.multi_item as subitem index}
+                <p class="js_title">
+                  <a target="_blank" class="abstract_tit" href="{subitem.content_url}">{subitem.title}</a></p>
+                {/each}
+                {else}
+                {each item.multi_item as subitem index}
+                <p class="js_title"><a target="_blank" href="{subitem.content_url}">{index+1}. {subitem.title}</a></p>
+                {/each}
+                {/if}
+              </div>
+            </div>
+            <div class="opr">
+              <a target="_blank" href="/cgi-bin/appmsg?t=media/appmsg_edit&action=edit&lang=zh_CN&token=1819544827&type=10&appmsgid={item.app_id}&fromview=list">编辑</a>
+              <a href="javascript:;" class="js_del" data-id="{item.app_id}">删除</a>
+              <div class="popover " style="position: relative;display:none">
+                <div class="popover_inner">
+                  <div class="popover_content">
+                    确定删除此素材吗？
+                  </div>
+                  <div class="popover_bar">
+                    <a href="javascript:;" class="btn btn_primary">
+                      确定 </a>
+                    <a href="javascript:;" class="btn btn_default">
+                      取消 </a>
+                  </div>
+                </div>
+                <i class="popover_arrow popover_arrow_out">
+                </i>
+                <i class="popover_arrow popover_arrow_in">
+                </i>
+              </div>
+            </div>
+            <div class="date">
+              <p>{timeFormat item.create_time}</p>
+            </div>
+          </div>
+        </li>
+        {/each}
+      </ul>
+    </script>
+    <script type="text/html" id="tpl_forbit">
+      {each list as item idx}
+      <div class="forbidden_tips">
+        <div class="page_msg mini default">
+          <div class="inner group">
+                <span class="msg_icon_wrp">
+                    <i class="icon_msg_mini warn"></i>
+                </span>
+            <div class="msg_content">
+              <p>经用户投诉，你的帐号已{item.info}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/each}
+    </script>
+    <script type="text/html" id="js_pic_clear_tpl">
+      <p>删除前请确认没有自动回复、自定义菜单等功能正在使用该图片。你可选择删除</p>
+      <div class="clean_filter">
+        <div class="dropdown_menu_wrp">
+          <div class="js_pic_clear_drop"></div>
+        </div>
+        <p class="desc">以下所选组的图片合计 <span class="js_pic_clear_num">-</span> 张</p>
+      </div>
+      <div class="group_list js_pic_clear_list">
+      </div>
+    </script>
+    <script type="text/html" id="js_pic_clear_checkbox_tpl">
+      <label class="frm_checkbox_label">
+        <i class="icon_checkbox"></i>
+        <span class="lbl_content">{name} ({cnt}张)</span>
+        <input type="checkbox" data-id="{id}" data-cnt="{cnt}" class="frm_checkbox">
+      </label>
+    </script>
+<% end %>
+<%= content_for :js do %>
+    <script type="text/javascript">
+      define('biz_web/widget/dropdown.css', [], function () {
+        return null;
+      });
+      define('widget/tooltip.css', [], function () {
+        return null;
+      });
+      define('widget/pagination.css', [], function () {
+        return null;
+      });
+      define('widget/media.css', [], function () {
+        return null;
+      });</script>
+    <script type="text/html" id="js_deleteHtml">
+      确定删除此素材？
+    </script>
+    <script type="text/javascript">
+      wx.cgiData = <%= raw @wx_articles.to_json %>;
+      seajs.use('media/appmsg_list_v2', wx_main);
+    </script>
+<% end %>

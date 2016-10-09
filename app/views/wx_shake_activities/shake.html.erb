@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>摇一摇</title>
+  <%= stylesheet_link_tag 'shake', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery-2.2.0.min', 'data-turbolinks-track' => true %>
+
+
+  <script type="text/javascript">
+    var SHAKE_THRESHOLD = 3000;
+    var last_update = 0;
+    var x;
+    var y;
+    var z;
+    var last_x;
+    var last_y;
+    var last_z;
+    var count = 0;
+    var flag = false;
+    var openid = '<%= @openid %>';
+    var wx_activity = <%= raw @wx_activity.to_json %>;
+    var status = wx_activity.status;
+
+    $(document).ready(function () {
+      if(status == -1 || status == 0){
+        $('.txt').text("活动暂未开始，请耐心等待！");
+      }else if (status == 99){
+        $('.txt').text("活动已结束，下次再来吧！");
+        showAward();
+      }else{
+        flag = true;
+      }
+
+      // 监听摇一摇事件
+      if (window.DeviceMotionEvent) {
+        window.addEventListener('devicemotion', deviceMotionHandler, false);
+      } else {
+        alert("对不起，您的手机无法支持摇一摇！");
+      }
+
+      function deviceMotionHandler(eventData) {
+        var acceleration = eventData.accelerationIncludingGravity;
+        var curTime = new Date().getTime();
+        var diffTime = curTime - last_update;
+        if (diffTime > 100) {
+          last_update = curTime;
+          x = acceleration.x;
+          y = acceleration.y;
+          z = acceleration.z;
+          var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+
+          if (speed > SHAKE_THRESHOLD) {
+            if(flag){
+              $.ajax({
+                type:'get',
+                url: '/wxoss/wx_shake_activities/get_status',
+                dataType: 'json',
+                data:{wx_activity_id: wx_activity.id},
+                success: function (data) {
+                  if (data.status == 99){
+                    flag = false;
+                    $('.txt').text("活动已结束，下次再来吧！");
+                    showAward();
+                  }else{
+                    saveCount(count++);
+                  }
+                }
+              });
+            }
+          }
+          last_x = x;
+          last_y = y;
+          last_z = z;
+        }
+      }
+
+      /*×按钮*/
+      $('.close').click(function() {
+        $('.mask').hide();
+        $(this).parent().hide();
+      });
+
+      $('#lose .btn').click(function() {
+        $('.mask').hide();
+        $('#lose').hide();
+      });
+    });
+
+    function saveCount(count) {
+      $.ajax({
+        type:'post',
+        url: '/wxoss/wx_shake_activities/save_count',
+        dataType: 'json',
+        data:{ openid : openid ,
+          wx_activity_id: wx_activity.id,
+          count : count},
+        success: function (data) {
+          if(data.result == "success"){
+            if(count > 0) $('.num.f16.cred').text(count);
+          }
+        }
+      });
+    }
+
+    function showAward() {
+      $.ajax({
+        type:'get',
+        url: '/wxoss/wx_shake_activities/get_awardstatus',
+        dataType: 'json',
+        data:{ openid: openid,
+          wx_activity_id: wx_activity.id},
+        success: function (data) {
+          var result = data.award_info;
+          if (result['is_award'] == true){
+            $('#win .modal-body').find('.f18.cred').text(result['name']);
+            $('.mask').show();
+            $('#win').show();
+          } else{
+            $('.mask').show();
+            $('#lose').show();
+          }
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+
+<div class="shake"><img src="/assets/shake.png" alt=""/></div>
+<div class="txt">您当前摇动手机<span class="num f16 cred">0</span>次</div>
+<!--遮罩-->
+<div class="mask hide"></div>
+<!--未中奖弹窗-->
+<div id="lose" class="modal_default hide">
+  <button class="close">&times;</button>
+  <div class="modal-body">
+    <img src="/assets/null.png" alt=""/>
+    <p class="f14 fontb cred">很遗憾，未中奖！</p>
+    <button class="btn">继续努力吧</button>
+  </div>
+</div>
+<!--中奖弹窗-->
+<div id="win" class="modal hide">
+  <img src="/assets/bg_01.png" alt=""/>
+  <button class="close">&times;</button>
+  <div class="modal-body">
+    <p class="corange f12">恭喜您获得以下奖品</p>
+    <p class="f18 cred" style="padding-top:20px;padding-bottom:10px;">iPhone 6s</p>
+  </div>
+</div>
+
+</body>
+</html>

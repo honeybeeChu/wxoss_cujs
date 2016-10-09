@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <%= stylesheet_link_tag 'wx_shake_activities', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'screen', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery-2.2.0.min', 'data-turbolinks-track' => true %>
+
+  <script type="text/javascript">
+    $(function (){
+      var data_list = <%= raw @data_list.to_json%>;
+      for (var i = 0;i < data_list.length;i++){
+        switch(data_list[i].award_level)
+        {
+          case 1:
+            $('.first').show();
+            $('<span/>').text(data_list[i].nickname).appendTo($('.first .md'));
+            break;
+          case 2:
+            $('.second').show();
+            $('<span/>').text(data_list[i].nickname).appendTo($('.second .md'));
+            break;
+          case 3:
+            $('.third').show();
+            $('<span/>').text(data_list[i].nickname).appendTo($('.third .md'));
+            break;
+          case 4:
+            $('.fourth').show();
+            $('<span/>').text(data_list[i].nickname).appendTo($('.fourth .md'));
+            break;
+          case 5:
+            $('.fifth').show();
+            $('<span/>').text(data_list[i].nickname).appendTo($('.fifth .md'));
+            break;
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+<html>
+<head></head>
+<body>
+<div class="pk list">
+  <div class="md_list">
+    <div class="first hide">
+      <i><img src="/assets/one.png" alt=""/></i>
+      <div class="md"></div>
+    </div>
+    <div class="second hide">
+      <i><img src="/assets/two.png" alt=""/></i>
+      <div class="md"></div>
+    </div>
+    <div class="third hide">
+      <i><img src="/assets/three.png" alt=""/></i>
+      <div class="md"></div>
+    </div>
+    <div class="fourth cy hide">
+      <i><div class="mark">四等奖</div></i>
+      <div class="md"></div>
+    </div>
+    <div class="fifth cy hide">
+      <i><div class="mark">四等奖</div></i>
+      <div class="md"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

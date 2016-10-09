@@ -1,0 +1,148 @@
+// Place all the styles related to the wx_wheel_activities controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@charset "utf-8";
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;}
+body{color:#222; font-size:12px;font-family:"Microsoft YaHei"}
+ul,ol{list-style-type:none;}
+select,input,img,select{vertical-align:middle;}
+input{ font-size:12px;}
+a{ text-decoration:none; color:#000;}
+a:hover{color:#c00; text-decoration:none;}
+:active{ border:0;}
+.clear{clear:both;}
+.hide{ display:none;}
+/*文字颜色*/
+.cyellow{color: #e6da08}
+.cred{ color:#e94935;}
+.corange{ color:#fc8322;}
+.cwhite{color:#fff;}
+.cgray{ color:#666;}
+/*文字大小*/
+.f12{font-size: 1.2em;}
+.f14{font-size: 1.4em;}
+.f16{font-size: 1.6em;}
+.f18{font-size: 1.8em;}
+.fontn{font-weight: normal;}
+.fontb{font-weight: bold;}
+/* 大转盘样式 */
+.banner{display:block;width:100%;margin-left:auto;}
+.banner .turnplate{display:block;width:100%;position:relative; padding:0 5%; padding-top:14%; padding-bottom:8%; box-sizing:border-box;}
+.banner .turnplate canvas.item{width:100%;}
+.banner .turnplate img.pointer{position:absolute;width:30%;height:33%;left:35%;top:33%;}
+#wheelcanvas{ background:url(/assets/zp.png) no-repeat; background-size:100%; padding:3.2%; padding-right:2.8%; box-sizing:border-box;}
+.number{ width:100%; text-align:center; color:#ffeb8c; font-size:1.4em; padding-bottom:20px;}
+.number span{ padding:0 5px;}
+a.btn_record{ width:50%; padding-left:25%;}
+a.btn_record img{ width:50%;}
+.award_show{width:90%; margin-left:5%; margin-top:10px; }
+.award_top, .award_top img{ width:100%;}
+.award_show ul{border-bottom-left-radius:5px; border-bottom-right-radius:5px; background:#fff;}
+.award_list{ width:100%; padding: 10px; box-sizing:border-box; color:#222;}
+.award_list li{ border-bottom:1px solid #ccc; width:100%; padding:5px 0;}
+.award_list li:last-child{border-bottom:0;}
+.award_img{
+  width:64px;
+  height:64px;
+  border: 1px solid #e7e7eb;
+  background:#f4f5f9 url(/assets/img.png) center no-repeat;
+  margin-right:10px;
+  display:inline-block;
+}
+.award_img img{ width:100%; height:100%; margin-right:0; border:0;}
+.award_name{ width:35%; padding-right:10px;display:inline-block; position:relative;}
+.award_num{ width:25%; float:right; text-align:right; display:inline-block; padding-top:30px; padding-right:10px;}
+.rules{ width:90%; padding-left:5%; margin-top:30px; font-size:1em; line-height:1.5em; color:#eabfb8;}
+.rules h2{ text-align:center; color:#e6da08; text-shadow: #7a1909 0 1px 0; font-weight:normal; border-bottom:1px solid #6d1709; box-shadow: #b62811 0 1px 0; position:relative; margin-bottom:20px;}
+.rules h2 span{ background:#9d230f; padding:0 10px; position:relative; top:12px;}
+.rules h3{color:#e6da08; font-weight:normal; padding-top:5px;}
+.rules p{ text-indent:2em;}
+.rules p.txt{ padding-left:2em; text-indent:0;}
+.foot, .foot img{ width:100%;}
+.foot{ margin-top:20px;}
+/*遮罩层*/
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.50;
+  opacity: .50;
+  filter: alpha(opacity=50);
+}
+/*模态框*/
+.modal{
+  position: fixed;
+  z-index: 1002;
+  left:0;
+  top: 30%;
+  width: 90%;
+  margin-left:5%;
+  text-align:center;
+  background:#fff;
+  border-radius:5px;
+}
+.modal .close {
+  display: inline;
+  z-index: 3200;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2em;
+  background:#000;
+  -moz-opacity: 0.80;
+  opacity: .80;
+  filter: alpha(opacity=80);
+  border:none;
+  width:28px;
+  height:28px;
+  line-height:28px;
+  border-radius:14px;
+  text-align:center;
+}
+.modal .images{ position:absolute; top:-60px;}
+.modal-body, .modal-body img, .modal img{ width:100%;}
+.modal-body{text-align:center; padding-top:40px; padding-bottom:20px;}
+.modal-body p{
+  padding-bottom:10px;
+}
+.btn{
+  background:url(/assets/btn.png) no-repeat center;
+  background-size:100%;
+  color:#a94e0b;
+  width:50%;
+  height:36px;
+  border:0;
+  text-align:center;
+  font-size:1.2em;
+  font-weight:bold;
+  margin-top:10px;
+}
+.btn:active{ border:0;}
+.jq{
+  background:url(/assets/j_bg.png) no-repeat center;
+  background-size:100%;
+  font-size:1.8em;
+  text-align:center;
+  color:#994309;
+  width:40%;
+  height:40px;
+  margin-left:30%;
+  line-height:50px;
+  margin-bottom:5px;
+}
+#j_win_info .modal-body div{ height:30px;margin-top:5px;}
+#j_win_info p{ float:left;text-align: right;width:90px;margin-right:10px;}
+#j_win_info input{ float:left;}
+.red{ background:#9d230f;}
+.record{ padding:0 10px; position:relative; top:-20px;}
+.record h2{ text-align:left; color:#fff; font-weight:normal;}
+.record p{ text-align:center; color:#fff; font-weight:normal; margin-top:10px;}
+.record_list { margin:10px 0;}
+.record_list td{color:#e6da08; padding-right:5px; line-height:40px; border-bottom:1px dashed #d24932;}

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wx_official_account_id: 1
+  original_id: MyString
+  resource_name: MyString
+  thumb_medial_id: MyString
+  resource_type: 1
+  group: MyString
+  column: MyString
+  fomat: MyString
+  resource_size: 1
+
+two:
+  wx_official_account_id: 1
+  original_id: MyString
+  resource_name: MyString
+  thumb_medial_id: MyString
+  resource_type: 1
+  group: MyString
+  column: MyString
+  fomat: MyString
+  resource_size: 1

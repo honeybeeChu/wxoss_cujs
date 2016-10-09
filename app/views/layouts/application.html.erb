@@ -1,0 +1,125 @@
+<%= content_for :js do %>
+    <%= javascript_include_tag 'jquery-ui.min', 'data-turbolinks-track' => true %>
+<% end %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%= yield :title %>微信认证后台管理系统</title>
+  <meta charset="UTF-8"/>
+  <!-- 让ie浏览器使用最新的渲染引擎 -->
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  <%= stylesheet_link_tag 'master.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'css.css', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'application.js', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'ipmana', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'wx_account_choice', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'login', 'data-turbolinks-track' => true %>
+
+  <%= yield :css %>
+  <%= csrf_meta_tags %>
+  <% admin=session[:admin] %>
+</head>
+<body>
+
+<!--遮罩层ｍａｓｋ的样式-->
+<div id="mask_select_account" style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;
+    filter: alpha(opacity = 75);-moz-opacity: .75;-khtml-opacity: .75;opacity: .75;
+    background-color: #000;z-index: 9998;display: <%= @account_select?'block':'none'%>;"></div>
+
+
+<div id="pop_account_select" class="searchBox"
+     style="margin-left:150px;border-width: 0;background-color:white;padding: 0px 0px;
+         overflow: hidden;width: 846px;margin-top: 1%;
+         z-index: 9999;position: fixed;top: 1%;display: <%= @account_select?'block':'none'%>;">
+  <h2 style="padding: 0 20px;
+      height: 52px;
+      line-height: 52px;
+      font-size: 16px;
+      background: #f4f5f9;
+      font-weight: normal;">选择公众号</h2>
+
+  <a class="close" title="Close">×</a>
+  <div style="padding: 20px 30px;">
+    <div class="search">
+      <input id="search_name" type="text" style="color:#8d8d8d" onfocus="if(this.value=='请输入公众号名称'){this.value='';this.style.color='#8d8d8d'};" onblur="if(this.value==''){this.value='请输入公众号名称';this.style.color='#8d8d8d'}" value="请输入公众号名称">
+    </div>
+    <form class="button_to" method="get" action="/wxoss/wx_official_accounts">
+      <input class="btn search_btn" id="searchBtn" type="submit" value="搜索"><input type="hidden" name="search_name" value="">
+    </form>
+    <div class="web_chat_error"><%= @authorize_msg %></div>
+    <div style="max-height: 300px;overflow: auto;width:100%;">
+      <table class="data-table">
+        <thead>
+        <tr class="hover">
+          <th>名称</th>
+          <th>微信号</th>
+
+        </tr>
+        </thead>
+        <tbody id="wxAccountTable">
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+  <div class="button-bar" style="position: relative;">
+    <button id="confirm_choice" class="btn btn_primary">确定</button>
+    <button class="btn btn_primary cancel">取消</button>
+  </div>
+
+
+</div>
+
+
+
+<% unless @account_select %>
+    <div class="headbox">
+      <div class="head">
+        <a href="javascript:void(0)" class="headlogo"><%= image_tag("logo.png") %></a>
+        <div class="headToolbar">
+          <%= link_to '退出', welcome_logout_path, :class => "icon-quit" %>
+          <a href="javascript:void(0)" class="icon-msg">&nbsp;</a>
+          <a href="javascript:void(0)" class="icon-user"><span><%= admin.fetch("adminname") %></span></a>
+        </div>
+      </div>
+    </div>
+    <div id="body">
+      <div class="col_side">
+        <input type="hidden" id="menu" value="<%= JSON.pretty_generate(admin.fetch('menu')) %>"/>
+      </div>
+      <!--菜单结束-->
+      <!--主体-->
+      <div class="col_main">
+        <div class="main">
+
+          <% if admin.fetch('logintype') == 0
+               @this_wechat_name = session[:current_official_account_wechat_name]
+               if @this_wechat_name != nil %>
+                  <div class="id_wechat">
+                    <span id="choiced_account_id"><%= @this_wechat_name %></span>
+                    <a href="javascript:void(0)" class="replace">切换公众号</a>
+                  </div>
+              <% end
+                 end %>
+
+          <%= content_for?(:content) ? yield(:content) : yield %>
+        </div>
+      </div>
+    </div>
+    <div class="footer">版权信息</div>
+<% end %>
+</body>
+<%= yield :js %>
+
+</html>
+
+<script>
+  $("#pop_account_select").draggable();
+
+</script>

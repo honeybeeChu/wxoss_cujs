@@ -1,0 +1,9 @@
+---
+:verbose: false
+:logfile: log/sidekiq.log
+test:
+  :concurrency: 5
+development:
+  :concurrency: 5
+production:
+  :concurrency: 50

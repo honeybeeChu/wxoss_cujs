@@ -1,0 +1,67 @@
+<%= content_for :response do %>
+        <div id="tabBoxA" class="tabBox">
+          <ul class="tabList" id="tabListA">
+            <li class="hot" id="res_text"><i class="icon_txt"></i>文字</li>
+            <li id="res_pic"><i class="icon_txt icon_img"></i>图片</li>
+            <li id="res_audio"><i class="icon_txt icon_voice"></i>语音</li>
+            <li id="res_vedio"><i class="icon_txt icon_video"></i>视频</li>
+          </ul>
+          <div id="tabOutBoxA">   
+            <!--文字-->
+            <div class="tabOutList">
+              <div class="edit_area">
+                <%= text_area :wx_auto_response, :res_content %>
+              </div>
+              <div class="editor_toolbar"><div class="editor_tip">还可以输入591字</div></div> 
+            </div>
+            <!--图片-->
+            <div class="tabOutList" style="display: none;"> 
+              <div class="inner">
+                <div class="create_access">
+                  <a href="#" id="img_modal"><i class="icon36 icon36_add"></i>
+                  <strong>从素材库中选择</strong></a>
+                </div>
+                <div class="create_access">
+                  <a href="#"><i class="icon36 icon36_add"></i>
+                  <strong>上传图片</strong></a>
+                </div>
+              </div>
+             </div>
+            <!--语音-->
+            <div class="tabOutList" style="display: none;"> 
+            <div class="inner">
+                <div class="create_access">
+                  <a href="#" id="audio_modal"><i class="icon36 icon36_add"></i>
+                  <strong>从素材库中选择</strong></a>
+                </div>
+                <div class="create_access">
+                  <a href="#"><i class="icon36 icon36_add"></i>
+                  <strong>新建语音</strong></a>
+                </div>
+              </div>
+             </div>
+            <!--视频-->
+            <div class="tabOutList" style="display: none;">
+            <div class="inner">
+                <div class="create_access">
+                  <a href="#" id="video_modal"><i class="icon36 icon36_add"></i>
+                  <strong>从素材库中选择</strong></a>
+                </div>
+                <div class="create_access">
+                  <a href="#"><i class="icon36 icon36_add"></i>
+                  <strong>新建视频</strong></a>
+                </div>
+              </div>
+             </div>
+          </div>
+        </div>
+
+
+        <div hidden>
+          <input id="currentAccountId" value= <%= session[:current_official_account_id] %> />
+          <%= text_field :wx_auto_response, :event_type %>
+          <%= text_field :wx_auto_response, :res_type %>
+        </div> 
+        <div class="results" style="left: 20%;" hidden>删除成功</div>
+
+<% end %>

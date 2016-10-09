@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+    window._points = [+new Date()];
+    function wx_main(mod) {
+      window._points && (window._points[3] = +new Date());
+    }
+  </script>
+  <title><%= yield :title %>微信认证后台管理系统</title>
+  <meta charset="UTF-8"/>
+  <!-- 让ie浏览器使用最新的渲染引擎 -->
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'layout_head', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'base', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'lib', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'wx_account_choice', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery-ui.min', 'data-turbolinks-track' => true %>
+  <% unless @account_select %>
+      <%= javascript_include_tag 'login', 'data-turbolinks-track' => true %>
+  <% end %>
+  <%= yield :css %>
+  <%= csrf_meta_tags %>
+  <% admin=session[:admin] %>
+</head>
+<body>
+<%= render template: "layouts/account_select" %>
+<% unless @account_select %>
+    <div class="headbox">
+      <div class="head">
+        <a href="javascript:void(0)" class="headlogo"><%= image_tag("logo.png") %></a>
+        <div class="headToolbar">
+          <%= link_to '退出', welcome_logout_path, :class => "icon-quit" %>
+          <a href="javascript:void(0)" class="icon-msg">&nbsp;</a>
+          <a href="javascript:void(0)" class="icon-user"><span><%= admin.fetch("adminname") %></span></a>
+        </div>
+      </div>
+    </div>
+    <div id="body" class="body <%= @page_css %>">
+      <div id="js_container_box" class="container_box cell_layout side_l">
+        <div class="col_side">
+          <input type="hidden" id="menu" value="<%= JSON.pretty_generate(admin.fetch('menu')) %>"/>
+        </div>
+        <!--菜单结束-->
+        <!--主体-->
+        <div class="col_main">
+          <div class="main_hd">
+            <%= yield :tab %>
+            <div class="title_tab" id="topTab"></div>
+            <% if admin.fetch('logintype') == 0
+                 @this_wechat_name = session[:current_official_account_wechat_name]
+                 if @this_wechat_name != nil %>
+                    <div class="id_wechat">
+                      <span id="choiced_account_id"><%= @this_wechat_name %></span>
+                      <a href="javascript:void(0)" class="replace">切换公众号</a>
+                    </div>
+                <% end
+                   end %>
+          </div>
+          <%= yield :resource %>
+        </div>
+      </div>
+    </div>
+    <div class="footer">版权信息</div>
+    <%= render template: "layouts/wx_info_application" %>
+    <%= yield :js %>
+<% end %>
+</body>
+</html>

@@ -1,0 +1,9 @@
+'zh-CN':
+    activerecord:
+      models:
+        wx_official_account: "微信公众号"
+      attributes:
+        wx_official_account:
+          wechat_account: "微信号"
+          original_id: "原始ID"
+          appid: "微信appid"

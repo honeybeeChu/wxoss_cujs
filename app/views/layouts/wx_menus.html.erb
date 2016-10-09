@@ -1,0 +1,955 @@
+<!--遮罩层ｍａｓｋ的样式-->
+<div id="mask" style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;
+    filter: alpha(opacity = 75);-moz-opacity: .75;-khtml-opacity: .75;opacity: .75;
+    background-color: #000;z-index: 9998;display:none;"></div>
+
+<!--　图片的选择弹出层　-->
+<div id="img_choice_popup" style="border-width: 0;
+    overflow: hidden;width: 846px;margin-top: 1%;
+    z-index: 9999;position: fixed;top: 1%;display:none;">
+  <div class="dialog_hd" style="line-height: 52px;
+      padding: 0 20px;background-color: #f4f5f9;border-bottom: 1px solid #e7e7eb;">
+    <h3>选择图片</h3>
+    <a class="close" title="Close">×</a>
+  </div>
+  <div class="dialog_bd">
+    <div class="inner_container_box">
+      <div class="inner_side" style="width: 18%;border-right: 1px solid #e7e7eb;">
+        <div class="group_list" style="padding-left: 10px;">
+          <div class="inner_menu_box">
+            <dl class="inner_menu js_group">
+              <% unless @group_name_map.nil? %>
+                  <% @group_name_map.each do |group|%>
+                      <% size = @group_map[group[0]].length%>
+                      <dd class="inner_menu_item js_groupitem" data-groupid=<%=group[0]%>>
+                        <a href="javascript:;" class="inner_menu_link" title=<%=group[1]%> />
+                        <strong><%=group[1]%></strong><em class="num">(<span><%=size%></span>)</em>
+                        </a>
+                      </dd>
+                  <% end %>
+              <% end %>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="inner_main" style=" width: 2000px;display: table-cell;
+          vertical-align: top;
+          word-wrap: break-word;
+          word-break: break-all;">
+        <div class="img_pick_area">
+          <div class="img_pick" style="text-align: left;">
+            <ul class="group js_list img_list">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog_ft" style="padding: 16px 0;
+      background-color: #f4f5f9;text-align: center;">
+    <button id="img_choice_confirm" class="btn btn_default btn_disabled"
+            style="width: 120px;border-radius: 5px;" disabled>确定</button>
+    <button id="img_choice_cancer" class="btn btn_default"
+            style="width: 120px;border-radius: 5px;">取消</button>
+  </div>
+
+</div>
+
+
+
+<!--　图文的选择弹出层　-->
+<div id="news_choice_popup" style="border-width: 0;
+    overflow: hidden;width: 906px;margin-top: 1%;
+    z-index: 9999;position: fixed;top: 1%;display:none;">
+  <div class="dialog_hd" style="line-height: 52px;
+      padding: 0 20px;background-color: #f4f5f9;border-bottom: 1px solid #e7e7eb;">
+    <h3>选择素材</h3>
+    <a class="close" title="Close">×</a>
+  </div>
+  <div class="dialog_bd">
+    <div class="inner_container_box">
+      <div class="inner_main" style=" width: 2000px;display: table-cell;
+          vertical-align: top;
+          word-wrap: break-word;
+          word-break: break-all;">
+        <div class="img_pick_area">
+          <div class="img_pick" style="text-align: left;">
+            <% unless @wx_articles.nil? %>
+                <% @wx_articles.each do |article|%>
+                    <% imgSrc = @current_wx_official_account.wx_resources.find(article.cover_file_id).file_url%>
+                    <div class="appmsg_col">
+                      <div class="inner">
+                        <div>
+                          <div class="appmsg" media_id=<%= article.id %> data-id="400505465" data-fileid="400505457" data-completed="1">
+                            <div class="appmsg_content">
+                              <h4 class="appmsg_title js_title">
+                                <a href=<%= article.content_url == nil ? '#':article.content_url %> target="_blank"><%= article.title %></a>
+                              </h4>
+                              <div class="appmsg_info">
+                                <em class="appmsg_date">
+                                  <%= article.updated_at.to_s[0,4] %>年<%= article.updated_at.to_s[5,2] %>月<%= article.updated_at.to_s[8,2] %>日
+                                </em>
+                              </div>
+                              <div class="appmsg_thumb_wrp" style="background-image:url('<%= imgSrc%>')">
+                              </div>
+                              <p class="appmsg_desc"><%= article.digest==""?"【无】":article.digest %></p>
+                            </div>
+                            <div class="appmsg_mask"></div>
+                            <i class="icon_card_selected">已选择</i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                <%end%>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog_ft" style="padding: 16px 0;
+      background-color: #f4f5f9;text-align: center;">
+    <button id="news_choice_confirm" class="btn btn_default btn_disabled"
+            style="width: 120px;border-radius: 5px;" disabled>确定</button>
+    <button id="news_choice_cancer" class="btn btn_default"
+            style="width: 120px;border-radius: 5px;">取消</button>
+  </div>
+</div>
+
+
+<% content_for :content do %>
+    <%= yield :menu %>
+    <script>
+      var groupMap = <%= raw @group_map.to_json%>;
+      var groupName = <%= raw @group_name_map.to_json%>;
+
+      $(function () {
+        //保存所有的菜单项，保存当前正在编辑的菜单的ｉｄ,随机生产的ｉｄ作为ｋｅｙ
+        menuObjs = {
+          current_id: "",
+          menus: {}
+        };
+
+        //子菜单上的＋的ｊｑｕｅｒｙ对象
+        sub_plus_obj = null;
+
+        //页面初始化
+        pageInitial();
+
+        //页面的事件绑定
+        pageEventsBind();
+
+        // 将第一个主菜单的数据反应在右侧的编辑区域
+        if(menuObjs.current_id != ""){
+          setValues2editArea(menuObjs.menus[menuObjs.current_id]);
+          $("#" +menuObjs.current_id + " .pre_menu_link").trigger("click");
+        }
+
+      });
+
+
+      //页面初始化
+      function pageInitial() {
+        var current_account_id = '<%= session[:current_official_account_id] %>';
+        //如果session中没有current_official_account_id ，弹出选择框
+        if (current_account_id == '') {
+//          $("#account_choice").show();
+          $("#mask_select_account,#pop_account_select").show();
+          return;
+        }
+        //图片选择层的可拖拽的实现
+        $("#img_choice_popup").draggable();
+        $("#news_choice_popup").draggable();
+
+        var wx_menus = <%= raw @wx_menus.to_json%>
+
+        var _first_select_id,first_flag = true;
+        for(var i= 0;i<wx_menus.length;i++){
+          var _menu = wx_menus[i];
+          menuObjs.menus[_menu.key] = {name: _menu.name, id: _menu.key, level:_menu.level,
+            order: _menu.sort};
+          if (_menu.msg_type != null){
+            menuObjs.menus[_menu.key]['msg_type'] = _menu.msg_type;
+            if(_menu.msg_type == 1){
+              menuObjs.menus[_menu.key]['msg_content'] = _menu.url;
+            }else{
+              menuObjs.menus[_menu.key]['msg_content'] = _menu.msg_content;
+            }
+
+          }
+          if(_menu.parent_id != null){
+            menuObjs.menus[_menu.key]['parent_id'] = _menu.parent_id;
+          }
+          if(first_flag && _menu.level == 0){
+            menuObjs.current_id=_menu.key;
+            first_flag = false;
+          }
+        }
+
+        // 修改头部功能模块的名称
+        $("#model_title").html("自定义菜单");
+        //展现切换公众号链接
+        $(".id_wechat").show();
+
+        //左侧菜单栏的当前功能块处于选中状态
+        $(".menu_box dd").removeClass("selected");
+        $(".menu_box dd.response").addClass("selected");
+
+        var search = location.search;
+        if (search.length > 0) {
+          var type = search.split('=')[1];
+          if (search.split('=')[0] == "?choiced_account_id") {               //如果是从选择公众号弹框跳转来的
+            $(".tab_navs li.subscribe_response").addClass("selected");
+          } else {
+            $("li." + type).addClass("selected");
+          }
+        } else {
+          $(".tab_navs li.subscribe_response").addClass("selected");
+        }
+
+        //初始化时候，设置菜单的内容为发送消息
+        $("#RadioGroup1_0").prop("checked", "checked");
+
+      }
+
+      //页面的事件绑定
+      function pageEventsBind() {
+
+        //　提示框关闭按钮的点击事件
+        $(".searchBox .close").click(function(){
+            $("#confirm_popup").hide();
+        });
+
+        /*子菜单内容 发送消息 跳转网页
+         radioBox的选择事件*/
+        $("input[name='RadioGroup1']").click(function () {
+          //发送消息
+          if ($(this).val() == 0) {
+            $("#url").hide();
+            $("#yijian").hide();
+            $(".menu_content_container").show();
+
+          }
+          // 跳转链接　
+          else if($(this).val() == 1){
+            $(".menu_content_container").hide();
+            $("#yijian").hide();
+            $("#url").show();
+          }
+          //　一键上网
+          else if($(this).val() == 2) {
+            $("#yijian").show();
+            $("#url").hide();
+            $(".menu_content_container").hide();
+          }
+        });
+
+
+        // 修改菜单顺序的按钮点击事件的绑定
+        $("#orderMenuBtn").click(function () {
+          // 自身隐藏并显示完成按钮
+          $(this).hide();
+          $("#confirmOrderBtn").show();
+          $(".portable_editor,.tool_bar").hide();
+          $(".menu_initial_tips").show();
+
+          // 可拖拽的实现，和拖拽图标的展现
+          var _scroll_top = $(document).scrollTop();
+          $(".add_submenu_btn").hide();
+          $( ".sub_pre_menu_list").sortable({cursorAt:{bottom:_scroll_top}, items: "li:not(.add_submenu_btn)"});
+          $(".pre_menu_list").sortable({cursorAt:{bottom:425}, items: "li:not(.add_main_menu_btn)"});
+          $( ".sub_pre_menu_list").disableSelection();
+          $( ".pre_menu_list").disableSelection();
+
+
+        });
+
+        // 完成菜单顺序修改的完成按钮的点击事件的绑定
+        $("#confirmOrderBtn").click(function () {
+          //页面元素的隐藏和显示
+          $(this).hide();
+          $(".menu_initial_tips").hide();
+          $(".portable_editor,.tool_bar").show();
+          $("#orderMenuBtn").show();
+
+          $(".sub_pre_menu_list").each(function(){
+            // 当到达五个子菜单的时候，本身自动隐藏
+            if ($(this).children().length < 6){
+              $(this).find(".add_submenu_btn").show();
+            }
+          });
+
+          $(".pre_menu_list").sortable("destroy");
+          $( ".sub_pre_menu_list").sortable("destroy");
+
+          // 去除菜单的可拖拽性，去除菜单上的拖拽状态图标，显示父菜单图标
+//          $(".pre_menu_list").sortable({disable:".sub-menu-li"});
+//          $( ".sub_pre_menu_list").sortable({disable:".sub-ul-sortable"});
+
+
+        });
+
+        //主菜单的点击事件
+        $(".main-menu-li>a").click(function () {
+          //去除其他的ｌｉ的ｃｕｒｒｅｎｔ样式
+          $("li.current").removeClass("current");
+          $(this).parent().addClass("current");
+
+          $(".sub_pre_menu_box").hide();
+          $(this).parent().find(".sub_pre_menu_box").show();
+
+          var _thisObj = menuObjs.menus[$(this).parent().attr("id")];
+
+          // 将编辑区域的值复制到menuObjs中去
+          setEditValue2Obj();
+          menuObjs.current_id = $(this).parent().attr("id");
+          // menuObjs中的值将复制到编辑区域中去
+          setValues2editArea(_thisObj);
+        });
+
+        //子菜单的点击事件
+        $(".sub-menu-li").click(function () {
+          $("li.current").removeClass("current");
+          $(this).addClass("current");
+
+          $(".sub_pre_menu_box").hide();
+          var parent_menu_id = menuObjs.menus[$(this).attr("id")].parent_id;
+          $("#" + parent_menu_id).find(".sub_pre_menu_box").show();
+
+          var _thisObj = menuObjs.menus[$(this).attr("id")];
+          // 将编辑区域的值复制到menuObjs中去
+          setEditValue2Obj();
+
+          menuObjs.current_id = $(this).attr("id");
+          // menuObjs中的值将复制到编辑区域中去
+          setValues2editArea(_thisObj);
+        });
+
+
+        //主菜单上面的　＋　按钮的点击事件
+        $("li.add_main_menu_btn").click(function (e) {
+          //根据主菜单现在的个数做出不同的相应
+          var mainMenuAccount = $(".pre_menu_list").children().length;
+          var mainmenu_id = "main-" + parseInt(e.timeStamp);
+          var _newMainMenu_li = $("<li id=" + mainmenu_id + " class='pre_menu_item grid_item size1of3 selected hot main-menu-li current'>"
+              + "<a class='pre_menu_link' href='javascript:void(0);'>"
+              + "<i class='icon_menu_dot' style='display:none;'></i>"
+              + "<span class='main-menu-name'>菜单名称</span>"
+              + "</a><div class='sub_pre_menu_box'><ul class='sub_pre_menu_list'>"
+              + "<li class='add_submenu_btn'><a href='javascript:void(0);' title='最多添加5个子菜单'><span class='sub_pre_menu_inner'>"
+              + "<i class='icon14_menu_add'></i>"
+              + "</span> </a> </li></ul><i class='arrow arrow_out'></i><i class='arrow arrow_in'></i></div></li>");
+          $(this).before(_newMainMenu_li);
+          // 将新建的主菜单加入到menuObjs对象中去
+          menuObjs.menus[mainmenu_id] = {id: mainmenu_id, name: "菜单名称", level: 0}
+
+          //被新建的主菜单添加点击事件
+          _newMainMenu_li.find(".pre_menu_link").click(function () {
+
+            //去除其他的ｌｉ的ｃｕｒｒｅｎｔ样式
+            $("li.current").removeClass("current");
+            $(this).parent().addClass("current");
+
+            $(".sub_pre_menu_box").hide();
+            $(this).parent().find(".sub_pre_menu_box").show();
+
+            var _thisObj = menuObjs.menus[$(this).parent().attr("id")];
+            // 将编辑区域的值复制到menuObjs中去
+            setEditValue2Obj();
+            menuObjs.current_id = $(this).parent().attr("id");
+            // menuObjs中的值将复制到编辑区域中去
+            setValues2editArea(_thisObj);
+          });
+
+          _newMainMenu_li.find(".pre_menu_link").trigger("click");
+          //被新建的主菜单上的子菜单的+点击事件
+          _newMainMenu_li.find(".add_submenu_btn").click(function (e) {
+
+            setClickFunction2SubPlus($(this));
+
+          });
+
+        });
+
+        //　子菜单上面的　＋　按钮的点击事件
+        $("li.add_submenu_btn").click(function (e) {
+
+          setClickFunction2SubPlus($(this));
+
+        });
+
+
+
+
+
+        //　点击保存并发布的按钮的点击事件
+        $("#submit_btn").click(function () {
+          var check_ok = true;
+          //　将在编辑的数据放入到menuOBjs中去
+          setEditValue2Obj();
+          // 对页面在提交修改前的ｃｈｅｃｋ,教研menuObjs的数据完整性
+          for (key in menuObjs.menus) {
+            _menu = menuObjs.menus[key];
+
+            if (_menu.msg_type && (!_menu.msg_content || _menu.msg_content == "")) {
+              if (_menu.level == 0){
+                $("#" + key + " .pre_menu_link").trigger("click");
+              }
+              else{
+                $(".sub_pre_menu_box").hide();
+                $("#" + key).parent().parent().show();
+                $("#" + key).trigger("click");
+              }
+
+              $("#js_errTips").show();
+              check_ok = false;
+              break;
+            }
+
+            //不返回消息的父菜单又没有子菜单
+            else if(!_menu.msg_type && !has_son(_menu)){
+              $(".sub_pre_menu_box").hide();
+              $("#" + key+" .pre_menu_link").trigger("click");
+              $("#js_errTips").show();
+              check_ok = false;
+              break;
+            }
+          }
+
+          if (check_ok){
+            $("#pop_tips_content").html("发布成功后会覆盖原版本，且将在24小时内对所有用户生效，确认发布？");
+            $("#confirm_popup").attr("showType",0);
+            $("#confirm_popup").show();
+          }
+        });
+
+        //　弹框页面的确定按钮的点击事件
+        $("#confirm_menu_btn").click(function () {
+
+
+          var showType = $("#confirm_popup").attr("showType");
+
+          //保存和提交ｍｅｎｕ
+          if(showType == 0){
+            //　防止重复提交
+            $(this).attr('disabled',"true");
+
+            setOrder2MenuObjs();
+
+            var actionUrl = '<%=create_menu_wx_menus_path %>';
+            $.ajax({
+              type: 'POST',
+              url: actionUrl,
+              dataType: 'json',
+              data: menuObjs,
+              success: function (data) {
+                if (data.result == 'success') {
+                  location.reload();
+                } else {
+                  $(".cancel").trigger("click");
+                  showMessage(data.errmsg);
+//                  location.reload();
+                }
+              }
+            });
+          }
+          //　删除菜单
+          else if(showType == 1){
+            //　删除menuObjs里面的当前ｍｅｎｕ的数据
+            var current_id = menuObjs.current_id;
+            // 如果删除的父菜单,还要删除下面的子菜单
+            if(menuObjs.menus[current_id].level == 0){
+              delete  menuObjs.menus[current_id];
+              for(_menu in menuObjs.menus){
+                if(_menu.parent_id == current_id){
+                  delete menuObjs.menus[_menu.id];
+                }
+              }
+            }else{
+              delete  menuObjs.menus[current_id];
+            }
+            //　删除此页面元素
+            $("#"+current_id).remove();
+            menuObjs.current_id = "";
+
+            // 删除后ｈｉｄｅ弹出的ｐｏｐ层
+            $("#confirm_popup").hide();
+          }
+          //　是子菜单上面的＋的点击事件
+          else if(showType == 2){
+            var parent_id = sub_plus_obj.parent().parent().parent().attr("id");
+
+            delete menuObjs.menus[parent_id].msg_type;
+            delete menuObjs.menus[parent_id].msg_content;
+
+            setClickFunction2SubPlus(sub_plus_obj,1);
+            $("#confirm_popup").hide();
+          }
+          else{
+            return;
+          }
+        });
+
+        //　弹框页面的取消按钮的点击事件
+        $("#confirm_popup .cancel").click(function () {
+          $("#confirm_popup").hide();
+        });
+
+        //删除菜单的点击事件绑定
+        $(".global_extra>a").click(function(){
+          // 弹出确定删除此菜单的按钮
+          $("#confirm_popup").attr("showType",1);
+          $("#confirm_popup").show();
+
+          $("#pop_tips_content").html("发布成功后,此菜单将会被删除,确定删除此菜单？");
+        });
+
+        // 图片选择按钮的点击事件，弹出图片选择层
+        $("#img_modal").click(function(){
+          $("#mask,#img_choice_popup").show();
+          // 默认选择的是为分组的图片展示出来
+          $(".js_group dd[data-groupid=1]").trigger("click");
+        });
+
+        // 图文选择按钮的点击事件，弹出图文选择层
+        $("#news_modal").click(function(){
+          $("#mask,#news_choice_popup").show();
+        });
+
+        //素材选取界面的关闭按钮和取消按钮的点击事件
+        $("#img_choice_popup .close,#news_choice_popup .close,#img_choice_cancer,#news_choice_cancer").click(function(){
+          $("#mask,#img_choice_popup,#news_choice_popup").hide();
+        });
+
+        // 图片选择层的组别ｌｉ点击事件绑定
+        $("#img_choice_popup .js_group dd").click(function(){
+          //选择状态的修改
+          $("#img_choice_popup .js_group dd").removeClass("selected");
+
+          $(this).addClass("selected");
+
+          var group_id = $(this).attr("data-groupid");
+
+          //将选择的组的所有图片在右侧的mian区域中显示出来
+          var img_resources = groupMap[group_id];
+
+          $(".img_list").empty();
+          for(var i = 0;i<img_resources.length;i++){
+            var resource = img_resources[i];
+            var _li = $("<li class='img_item' resource-id="+resource.id+
+                "><label class='frm_checkbox_label img_item_bd'>"+
+                "<img src="+resource.file_url+" alt="+resource.resource_name+" class='pic'>"+
+                "<span class='lbl_content'>" + resource.resource_name + "</span>" +
+                "<div class='selected_mask'>"+
+                "<div class='selected_mask_inner'></div>"+
+                "<div class='selected_mask_icon'></div></div></label></li>");
+
+            //图片的点击事件
+            _li.click(function(){
+              var label = $(this).find("label");
+              if(label.hasClass("selected")){
+                label.removeClass("selected");
+              }else{
+                $("#img_choice_popup .img_list li label").removeClass("selected");
+                $(this).find("label").toggleClass("selected");
+              }
+              setConfirmBtnVisible();
+
+            });
+
+            _li.appendTo($(".img_list"));
+          }
+        });
+
+
+
+        // 确定选中的图片
+        $("#img_choice_confirm").click(function(){
+          $("#mask,#img_choice_popup").hide();
+
+          var media_id = $("label.frm_checkbox_label.selected").parent().attr("resource-id");
+
+          //图片选项上面保存media_id
+          $("#img_item").attr("media_id", media_id);
+
+          $(".auto_img_choice").hide();
+          $("#img_item img").attr("src",  $("label.frm_checkbox_label.selected>img").attr("src"));
+          $("#img_item").show();
+        });
+
+
+        //news选项上面保存media_id
+        $("#news_choice_confirm").click(function(){
+          $("#mask,#news_choice_popup").hide();
+
+          var media_id = $(".appmsg.selected").attr("media_id");
+
+          //图片选项上面保存media_id
+          $("#news_item").attr("media_id", media_id);
+
+          $(".auto_news_choice").hide();
+          $("#news_item").show();
+
+          var newsHtml = $("<div class='news_box' style='width:300px;'></div>");
+          newsHtml.append($(".appmsg.selected").parent().parent().parent().html());
+          newsHtml.find(".appmsg").removeClass("selected");
+
+          $("#news_item").prepend(newsHtml);
+
+        });
+
+        // 删除选中的图片
+        $("#img_item_del").on("click", function () {
+          $("#img_item").hide();
+          $(".auto_img_choice").show();
+        });
+
+        // 删除选中的news
+        $("#news_item_del").on("click", function () {
+          $("#news_item .news_box").remove();
+          $("#news_item").attr("media_id","");
+
+          $("#news_item").hide();
+          $(".auto_news_choice").show();
+        });
+
+
+
+
+        // 图文弹出层的ｎｅｗｓ点击事件
+        $(".img_pick .appmsg").click(function(){
+          //选择状态的修改
+          if($(this).hasClass("selected")){
+            $(this).removeClass("selected");
+          }else{
+            $(".img_pick .appmsg").removeClass("selected");
+            $(this).toggleClass("selected");
+          }
+          var media_id = $(this).attr("media_id");
+          setNewsConfirmBtnVisible();
+
+        });
+
+      }
+
+      // 设置确定按钮是否可以点击
+      function setConfirmBtnVisible(){
+        if($(".img_list li>label.selected").length == 0){
+          $("#img_choice_confirm").attr("disabled","true");
+          $("#img_choice_confirm").addClass("btn_disabled");
+        }else{
+          $("#img_choice_confirm").removeAttr("disabled");
+          $("#img_choice_confirm").removeClass("btn_disabled");
+        }
+      }
+
+      // 设置确定按钮是否可以点击
+      function setNewsConfirmBtnVisible(){
+        if($(".appmsg.selected").length == 0){
+          $("#news_choice_confirm").attr("disabled","true");
+          $("#news_choice_confirm").addClass("btn_disabled");
+        }else{
+          $("#news_choice_confirm").removeAttr("disabled");
+          $("#news_choice_confirm").removeClass("btn_disabled");
+        }
+      }
+
+      //子菜单上的＋号的点击事件的绑定
+      function setClickFunction2SubPlus(thisObj,opeType){
+
+        //主菜单是有内容的
+        var main_li = thisObj.parent().parent().parent();
+
+        if(menuObjs.menus[main_li.attr("id")].msg_type != null){
+          $("#pop_tips_content").html("添加子菜单后，一级菜单的内容将被清除。确定添加子菜单？");
+          $("#confirm_popup").attr("showType",2);
+          $("#confirm_popup").show();
+          sub_plus_obj = thisObj;
+        }
+        //主菜单没有内容的时候
+        else{
+          //　将在编辑的数据放入到menuOBjs中去
+          if(!opeType)
+            setEditValue2Obj();
+
+          $(".sub_pre_menu_box").hide();
+          main_li.find(".sub_pre_menu_box").show();
+
+          var submenu_id = "sub-" + new Date().getTime();
+
+          var sub_menu = $("<li id=" + submenu_id + " class='sub-menu-li'><a href='javascript:void(0);'><span class='sub_pre_menu_inner sub-menu-name'>子菜单名称"
+              + "</span></a></li>");
+
+          menuObjs.menus[submenu_id] = {
+            id: submenu_id,
+            "name": "子菜单名称",
+            level: 1,
+            parent_id: main_li.attr("id")
+          };
+          // 被添加的子菜单的点击事件的绑定
+          sub_menu.click(function () {
+            //去除其他的ｌｉ的ｃｕｒｒｅｎｔ样式
+            $("li.current").removeClass("current");
+            $(this).addClass("current");
+
+            var _thisObj = menuObjs.menus[$(this).attr("id")];
+            // 将编辑区域的值复制到menuObjs中去
+            setEditValue2Obj();
+
+            menuObjs.current_id = $(this).attr("id");
+            // menuObjs中的值将复制到编辑区域中去
+            setValues2editArea(_thisObj);
+          });
+          sub_menu.trigger("click");
+
+          thisObj.before(sub_menu);
+          // 当到达五个子菜单的时候，本身自动隐藏
+          if (thisObj.parent().children().length == 6)
+            thisObj.hide();
+        }
+
+      }
+
+      // 将一个数据的值反应在右侧的编辑区域
+      function setValues2editArea(obj) {
+        $("h4.menu_name_area").html(obj.name);
+        $("#input_menuname").val(obj.name);
+
+        $("strong.menu_name_area").html(obj.level == 0 ? "菜单名称" : "子菜单名称");
+        $(".global_extra>a").html(obj.level == 0 ? "删除菜单" : "删除子菜单"　);
+
+        //恢复
+        $("li[msg-type=3]").trigger("click");
+        $("#img_item").hide();
+        $("#img_item>img").attr("src","");
+        $(".auto_img_choice").show();
+        //还原图文
+        $(".auto_news_choice").show();
+        $("#news_item").hide();
+        $("#news_item .news_box").remove();
+
+
+        //是父元素,并且有子
+        if (obj.level == 0 && has_son(obj)) {
+          $(".msg_sender_tips").show();
+          $("#message_edit_area").hide();
+        }
+        //是子元素或者没有子元素的父元素
+        else {
+          $(".msg_sender_tips").hide();
+          $("#msg_text_content").val("");
+
+          $("#message_edit_area").show();
+          $("#urlText,#describeText").val("");
+
+          // 是新建的菜单
+          if (!obj.msg_type) {
+            $("#RadioGroup1_0").trigger("click");
+          }
+          // 是ｕｒｌ跳转链接的情况
+          else if (obj.msg_type == 1) {
+            $("#RadioGroup1_1").trigger("click");
+            $("#urlText").val(obj.msg_content || "");
+          }
+
+          //是一键上网的ｒａｄｉｏ
+          else if(obj.msg_type == 7){
+            $("#RadioGroup1_2").trigger("click");
+            $("#describeText").val(obj.msg_content||"");
+          }
+          //　是发送消息的情况
+          else {
+            $("#RadioGroup1_0").trigger("click");
+            //图文消息
+            if (obj.msg_type == 2) {
+              $("li[msg-type=2]").trigger("click");
+              $(".auto_news_choice").hide();
+              $("#news_item").show();
+
+              setNews2InnerDiv(obj.msg_content);
+
+
+//              $("#msg_img_content").val(obj.msg_content || "");
+            }
+            //文字消息
+            else if (obj.msg_type == 3) {
+              $("li[msg-type=3]").trigger("click");
+              $("#msg_text_content").val(obj.msg_content || "");
+
+            }
+            //图片消息
+            else if (obj.msg_type == 4) {
+              $("li[msg-type=4]").trigger("click");
+
+              var imgSrc = findImageSrcByMediaId(obj.msg_content);
+              $("#img_item").attr("media_id",obj.msg_content);
+              // 显示图片
+              $("#img_item").show();
+              $("#img_item>img").attr("src",imgSrc);
+              $(".auto_img_choice").hide();
+
+            }
+            //音频消息
+            else if (obj.msg_type == 5) {
+              $("li[msg-type=5]").trigger("click");
+            }
+            //视频消息
+            else if (obj.msg_type == 6) {
+              $("li[msg-type=6]").trigger("click");
+            }
+          }
+        }
+      }
+
+      // 将右边的编辑区域的值放入到menuObjs对应的对象中去
+      /*
+       obj:上次处理的数据对象
+       current_id:此次要处理的对象的id
+      * */
+      function setEditValue2Obj() {
+        if(menuObjs.current_id == "")
+          return;
+        // 名称放到左侧的菜单中显示
+        var obj = menuObjs.menus[menuObjs.current_id];
+
+        if (obj.level == 0) {   //父菜单
+          $("#" + menuObjs.current_id).find(".main-menu-name").html($("#input_menuname").val());
+        } else {              //　子菜单
+          $("#" + menuObjs.current_id).find(".sub-menu-name").html($("#input_menuname").val());
+        }
+
+        //父菜单，有子菜单
+        if (obj.level == 0 && has_son(obj)) {
+          obj.name = $("#input_menuname").val();  //名称
+        } else {
+          obj.name = $("#input_menuname").val();  //名称
+          var radioValue = $('input:radio[name="RadioGroup1"]:checked').val();
+          //如果选择的是发送消息
+          if (radioValue == 0) {
+            var _msg_type = $("#tabListA li.hot").attr("msg-type");
+            obj.msg_type = _msg_type;
+            //文字
+            if(_msg_type == 3){
+              obj.msg_content = $("#msg_text_content").val();
+            }
+            //图文
+            else if(_msg_type == 2){
+              obj.msg_content = $("#news_item").attr("media_id");
+            }
+            //图片
+            else if(_msg_type == 4 && !$("#img_item").is(":hidden")){
+              obj.msg_content = $("#img_item").attr("media_id");
+            }
+            //语音
+            else if(_msg_type == 5 && !$("#audio_item").is(":hidden")){
+              obj.msg_content = $("#audio_item").attr("media_id");
+            }
+            //视频
+            else if(_msg_type == 6 && !$("#video_item").is(":hidden")){
+              obj.msg_content = $("#video_item").attr("media_id");
+            }
+          }
+          //　如果选择的是ｕｒｌ链接跳转
+          else if(radioValue == 1) {
+            obj.msg_type = 1;
+            obj.msg_content = $("#urlText").val();
+          }
+          //　如果选择的是一键上网
+          else if(radioValue == 2) {
+            obj.msg_type = 7;
+            obj.msg_content = $("#describeText").val();
+          }
+        }
+      }
+
+      //在提交之前将菜单的顺序体现在menuObjs数据结构中去
+      function setOrder2MenuObjs() {
+        var menuJson = new Array;
+        //父菜单的ｏｒｄｅｒ设置
+        $(".main-menu-li").each(function (index, ele) {
+
+          var parent_id = $(ele).attr("id");
+          menuJson.push(menuObjs.menus[parent_id]);
+          menuObjs.menus[parent_id]["order"] = index;
+          $("#" + parent_id + " .sub-menu-li").each(function (i, sub) {
+            var sub_id = $(sub).attr("id");
+            menuJson.push(menuObjs.menus[sub_id]);
+            menuObjs.menus[sub_id]["order"] = i;
+          });
+        });
+
+        menuObjs["menuJson"] = menuJson;
+
+      }
+
+
+
+
+      //　判断主菜单是否有子菜单
+      function has_son(self) {
+        for (k in menuObjs.menus) {
+          if (menuObjs.menus[k].parent_id == self["id"])
+            return true;
+        }
+        return false;
+      }
+
+      //提示消息框
+      function showMessage(msg) {
+        $(".results").html(msg);
+        $(".results").show();
+        setTimeout(function () {
+          $(".results").hide();
+        }, 2000);
+      }
+
+      //　设置图文消息在图文输入框中显示
+      function setNews2InnerDiv(article_id){
+        var articles = <%=raw @wx_articles.to_json%>;
+        var article;
+        for(var i=0;i<articles.length;i++){
+          if(article_id == articles[i].id){
+            article = articles[i];
+            break;
+          }
+        }
+        $("#news_item").attr("media_id",article.id);
+        var imgsrc = findImageSrcByMediaId(article.cover_file_id);
+        var _div = $("<div class='news_box' style='width:300px;'><div class='inner'><div>" +
+                "<div class='appmsg'><div class='appmsg_content'><h4 class='appmsg_title js_title'>" +
+                "<a href="+article.content_url+
+                "target='blank'>"+article.title+"</a></h4>"+
+                "<div class='appmsg_info'><em class='appmsg_date'>"+
+                article.updated_at.substr(0,4)+"年"+article.updated_at.substr(5,2)
+                  +"月" +article.updated_at.substr(8,2) + "日"+
+                "</em></div><div class='appmsg_thumb_wrp' style='background-image:url("+imgsrc+")'>"
+              + "</div><p class='appmsg_desc'>"+article.digest+"</p></div><div class='appmsg_mask'></div>"
+                +"</div></div></div></div>"
+        );
+
+        $("#news_item").prepend(_div);
+
+      }
+
+
+      //通过media_id找到file_url字段
+      function findImageSrcByMediaId(media_id) {
+        for(k in groupMap){
+          var array = groupMap[k];
+          for(var i=0;i<array.length;i++){
+            resource = array[i];
+            if(resource.id == media_id){
+              return resource.file_url;
+            }
+          }
+        }
+        return false;
+      }
+
+    </script>
+<% end %>
+<%= render template: "layouts/application" %>

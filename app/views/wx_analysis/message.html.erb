@@ -1,0 +1,612 @@
+<%= content_for :css do %>
+    <%= stylesheet_link_tag 'page/stat/stat_overview', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'wx_msg_analysis', 'data-turbolinks-track' => true %>
+<% end %>
+<%= content_for :tab do %>
+    <h2>统计</h2>
+<% end %>
+<%= content_for :resource do %>
+    <script type="text/javascript">
+      // Date扩展
+      (function () {
+        var pick = function () {
+          for (var i = 0; i < arguments.length; i++) {
+            if (arguments[i])
+              return arguments[i];
+          }
+        };
+        var pad = function (val) {
+          val = val + "";
+          return val.length > 1 ? val : "0" + val;
+        };
+        var dateFormat = function (format) {
+          var timestamp = this.valueOf();
+          if (isNaN(timestamp)) {
+            return 'Invalid date';
+          }
+          // pick取到参数列表中第一个非空的参数返回
+          format = pick(format, '%Y-%m-%d %H:%M:%S');
+
+          var date = this,
+              key, // used in for constuct below
+              hours = date["getHours"](),
+              mathRound = Math.round;
+          day = date["getDay"](),
+              dayOfMonth = date["getDate"](),
+              month = date["getMonth"](),
+              fullYear = date["getFullYear"](),
+            //lang = defaultOptions.lang,
+            //langWeekdays = lang.weekdays,
+            // List all format keys. Custom formats can be added from the outside.
+              replacements = ({
+                //'a': langWeekdays[day].substr(0, 3), // Short weekday, like 'Mon'
+                //'A': langWeekdays[day], // Long weekday, like 'Monday'
+                'd': pad(dayOfMonth), // pad函数将一位的月份添加前置0变成两位
+                'e': dayOfMonth, // Day of the month, 1 through 31
+
+                // Month
+                //'b': lang.shortMonths[month], // Short month, like 'Jan'
+                //'B': lang.months[month], // Long month, like 'January'
+                'm': pad(month + 1), // Two digit month number, 01 through 12
+
+                // Year
+                'y': fullYear.toString().substr(2, 2), // Two digits year, like 09 for 2009
+                'Y': fullYear, // Four digits year, like 2009
+
+                // Time
+                'H': pad(hours), // Two digits hours in 24h format, 00 through 23
+                'I': pad((hours % 12) || 12), // Two digits hours in 12h format, 00 through 11
+                'l': (hours % 12) || 12, // Hours in 12h format, 1 through 12
+                'M': pad(date["getMinutes"]()), // Two digits minutes, 00 through 59
+                'p': hours < 12 ? 'AM' : 'PM', // Upper case AM or PM
+                'P': hours < 12 ? 'am' : 'pm', // Lower case AM or PM
+                'S': pad(date.getSeconds()), // Two digits seconds, 00 through  59
+                'L': pad(mathRound(timestamp % 1000), 3) // Milliseconds (naming from Ruby)
+              });
+
+          // do the replaces
+          for (key in replacements) {
+            while (format.indexOf('%' + key) !== -1) { // regex would do it in one line, but this is faster
+              format = format.replace('%' + key, typeof replacements[key] === 'function' ? replacements[key](timestamp) : replacements[key]);
+            }
+          }
+          return format;
+        };
+        Date.prototype.dateFormat = dateFormat;
+      })();
+      // 全局公共函数都放在这里啦啦啦
+      var st_f = {
+        _msg_data: [],
+        yest_idx: -1,
+        monthago_idx: -1,
+        weekago_idx: -1,
+        first_idx: -1,
+        _init: function (data) {
+          this._msg_data = data;
+          this._calc_peruser();
+          this._calc_idx();
+        },
+        _get_msg: function (i) {
+          return this._msg_data[i];
+        },
+        _calc_peruser: function () {
+          var msg_data = this._msg_data;
+          for (var i = 0; i < msg_data.length; i++) {
+            msg_data[i].per_user = msg_data[i].user !== "-" ? this._tofix(msg_data[i].count / msg_data[i].user, 1) : "-";
+            msg_data[i].orig_per_user = msg_data[i].user !== "-" ? msg_data[i].count / msg_data[i].user : "-";
+            if (typeof msg_data[i].hour === "number") {
+              // MD，补齐4位
+              var hour = msg_data[i].hour + "";
+              while (hour.length < 4) {
+                hour = "0" + hour;
+              }
+              msg_data[i].hour = hour.replace(new RegExp('([^\s]{2})(?=([^\s])+$)', 'ig'), "$1:");
+            }
+          }
+        },
+        _calc_idx: function () {
+          var msg_data = this._msg_data;
+          var oneday = 24 * 60 * 60 * 1000,
+              now = new Date(),
+              first = new Date(now - oneday * 1).dateFormat("%Y-%m-%d"),
+              yesterday = new Date(now - oneday * 2).dateFormat("%Y-%m-%d"),
+              weekago = new Date(now - oneday * 8).dateFormat("%Y-%m-%d"),
+              monthago = new Date(now - oneday * 31).dateFormat("%Y-%m-%d");
+          for (var i = 0; i < msg_data.length; i++) {
+            if (msg_data[i].date == yesterday) {
+              this.yest_idx = i;
+            } else if (msg_data[i].date == weekago) {
+              this.weekago_idx = i;
+            } else if (msg_data[i].date == monthago) {
+              this.monthago_idx = i;
+            } else if (msg_data[i].date == first) {
+              this.first_idx = i;
+            }
+          }
+        },
+        _tofix: function (num, len) {
+          var reg = new RegExp("\\.[\\d]{" + len + ",}");
+          return reg.test(num + "") ? num.toFixed(len) : num;
+        },
+        _write: function (msg) {
+          document.write(msg);
+        },
+        _get_item: function (i, key) {
+          var item = this._msg_data[i];
+          if (i < 0) {
+            return ("<span class='none_data'>暂无数据</span>");
+          }
+          if (item && typeof item[key] !== "undefined") {
+            return (item[key]);
+          } else {
+            return ("<span class='none_data'>暂无数据</span>");
+          }
+        },
+        _write_msg: function (i, key) {
+          return this._write(this._get_item(i, key));
+        },
+        _percent: function (i, j, key) {
+          var item_i = this._msg_data[i],
+              item_j = this._msg_data[j];
+          if (!item_i || !item_j || i < 0 || j < 0) {
+            return ("&nbsp;&nbsp;&nbsp;--");
+          }
+          var key_i = item_i[key],
+              key_j = item_j[key];
+          if (typeof key_i === "undefined" || typeof key_j === "undefined" || (key_i === 0 && key_j === 0)) {
+            return ("&nbsp;&nbsp;&nbsp;--");
+          }
+          if (key_j === 0) return ("&nbsp;&nbsp;&nbsp;--");
+          if (key_i < key_j) {
+            return ("<i class=\"icon_down\" title=\"下降\"></i>" + this._tofix((key_j - key_i) / key_j * 100, 1) + "%");
+          } else if (key_i > key_j) {
+            return ("<i class=\"icon_up\" title=\"上升\"></i>" + this._tofix((key_i - key_j) / key_j * 100, 1) + "%");
+          } else {
+            return ("<i class=\"icon_up\" title=\"上升\"></i>0%");
+          }
+        },
+        _write_perc: function (i, j, key) {
+          this._write(this._percent(i, j, key));
+        }
+      };
+    </script>
+    <script type="text/javascript">
+      window.cgiData = <%= raw @wx_msg_stats.to_json%>
+      var _msg_data = cgiData.data.msg_data;
+      st_f._init(_msg_data);
+    </script>
+    <div class="main_bd msg_analysis">
+      <div class="wrp_overview wrp_message">
+        <div class="wrp_select_box append_help" style="margin-bottom: 15px">
+          <div class="select_box" id="js_timetype_drop">
+          </div>
+          <div class="ext_info help">
+            <i id="" class="icon_msg_mini ask"></i>
+            <div class="help_content">
+              <i class="dropdown_arrow out"></i>
+              <i class="dropdown_arrow in"></i>
+              <dl class="help-change-list" id="pop_items_info">
+                <dt>消息发送人数</dt>
+                <dd>关注者主动发送消息的去重用户数</dd>
+                <dt>消息发送次数</dt>
+                <dd>关注者主动发送消息的次数</dd>
+                <dt>人均发送次数</dt>
+                <dd>消息发送总次数/消息发送的去重用户数</dd>
+                <dt>日、周、月</dt>
+                <dd>分别计算昨日数据相比1天、7天、30天前的变化情况</dd>
+              </dl>
+              <div class="help-change-footer" id="footer_items_info">
+                <span class="wechat_data_range">数据从2013年7月1日开始统计。</span>由于服务器缓存，以及指标计算方法和统计时间的差异，数据可能出现微小误差，一般在1%以内。
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="info_box poi_rel" id="js_keydata_p">
+          <div class="inner">
+            <div class="info_hd">
+              <h4>昨日关键指标</h4>
+            </div>
+            <div class="info_bd">
+              <div class="content" id="js_keydata">
+                <table class="ui_trendgrid ui_trendgrid_3">
+                  <tr>
+                    <td class="first">
+                      <div class="ui_trendgrid_item">
+                        <div class="ui_trendgrid_chart"></div>
+                        <dl>
+                          <dt><b>消息发送人数</b></dt>
+                          <dd class="ui_trendgrid_number"><strong>
+                            <script type="text/javascript">st_f._write_msg(st_f.first_idx, "user");</script>
+                          </strong><em class="ui_trendgrid_unit"></em></dd>
+                          <dd>日
+                            <script type="text/javascript">st_f._write_perc(st_f.first_idx, st_f.yest_idx, "user");</script>
+                          </dd>
+                          <dd>周
+                            <script type="text/javascript">st_f._write_perc(st_f.first_idx, st_f.weekago_idx, "user");</script>
+                          </dd>
+                          <dd>月
+                            <script type="text/javascript">st_f._write_perc(st_f.first_idx, st_f.monthago_idx, "user");</script>
+                          </dd>
+                        </dl>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ui_trendgrid_item">
+                        <div class="ui_trendgrid_chart"></div>
+                        <dl>
+                          <dt><b>消息发送次数</b></dt>
+                          <dd class="ui_trendgrid_number"><strong>
+                            <script type="text/javascript">st_f._write_msg(st_f.first_idx, "count");</script>
+                          </strong><em class="ui_trendgrid_unit"></em></dd>
+                          <dd>日
+                            <script type="text/javascript">st_f._write_perc(st_f.first_idx, st_f.yest_idx, "count");</script>
+                          </dd>
+                          <dd>周
+                            <script type="text/javascript">st_f._write_perc(st_f.first_idx, st_f.weekago_idx, "count");</script>
+                          </dd>
+                          <dd>月
+                            <script type="text/javascript">st_f._write_perc(st_f.first_idx, st_f.monthago_idx, "count");</script>
+                          </dd>
+                        </dl>
+                      </div>
+                    </td>
+                    <td class="last">
+                      <div class="ui_trendgrid_item">
+                        <div class="ui_trendgrid_chart"></div>
+                        <dl>
+                          <dt><b>人均发送次数</b></dt>
+                          <dd class="ui_trendgrid_number"><strong>
+                            <script type="text/javascript">st_f._write_msg(st_f.first_idx, "per_user");</script>
+                          </strong><em class="ui_trendgrid_unit"></em></dd>
+                          <dd>日
+                            <script type="text/javascript">st_f._write_perc(st_f.first_idx, st_f.yest_idx, "orig_per_user");</script>
+                          </dd>
+                          <dd>周
+                            <script type="text/javascript">st_f._write_perc(st_f.first_idx, st_f.weekago_idx, "orig_per_user");</script>
+                          </dd>
+                          <dd>月
+                            <script type="text/javascript">st_f._write_perc(st_f.first_idx, st_f.monthago_idx, "orig_per_user");</script>
+                          </dd>
+                        </dl>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info_box drop_hd_right">
+          <div class="inner">
+
+            <div class="info_bd">
+              <div class="sub_title">趋势图</div>
+              <div class="sub_content" id="js_msg_chart">
+
+              </div>
+              <div class="split"></div>
+              <h4 class="sub_title">消息发送次数分布图</h4>
+              <div class="sub_content">
+                <div id="js_dist">
+                </div>
+              </div>
+              <div class="split"></div>
+              <h4 class="sub_title">详细数据
+                <div class="tr_ext_info">
+                  <a target="_blank" href="javascript:void(0);" id="js_download_detail">导出Excel</a></div>
+              </h4>
+              <div class="sub_content">
+                <div id="js_detail_table">
+                </div>
+                <div class="turn_page tr" id="js_pagebar">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrp_loading">
+          <div class="stat_loading">
+            <i class="icon_loading"></i><span>消息加载中...</span>
+          </div>
+          <div class="mask"></div>
+        </div>
+
+      </div>
+    </div>
+    <script type="text/html" id="js_keydata_tpl">
+      <table class="ui_trendgrid ui_trendgrid_3">
+        <tr>
+          <td class="first">
+            <div class="ui_trendgrid_item">
+              <div class="ui_trendgrid_chart"></div>
+              <dl>
+                <dt><b>消息发送人数</b></dt>
+                <dd class="ui_trendgrid_number"><strong>
+                  {$yest "user"}
+                </strong><em class="ui_trendgrid_unit"></em></dd>
+                <dd>日 {day_percent "user"}
+                </dd>
+                <dd>周 {week_percent "user"}
+                </dd>
+                <dd>月 {month_percent "user"}
+                </dd>
+              </dl>
+            </div>
+          </td>
+          <td>
+            <div class="ui_trendgrid_item">
+              <div class="ui_trendgrid_chart"></div>
+              <dl>
+                <dt><b>消息发送次数</b></dt>
+                <dd class="ui_trendgrid_number"><strong>
+                  {$yest "count"}
+                </strong><em class="ui_trendgrid_unit"></em></dd>
+                <dd>日 {day_percent "count"}
+                </dd>
+                <dd>周 {week_percent "count"}
+                </dd>
+                <dd>月 {month_percent "count"}
+                </dd>
+              </dl>
+            </div>
+          </td>
+          <td class="last">
+            <div class="ui_trendgrid_item">
+              <div class="ui_trendgrid_chart"></div>
+              <dl>
+                <dt><b>人均发送次数</b></dt>
+                <dd class="ui_trendgrid_number"><strong>
+                  {$yest "per_user"}
+                </strong><em class="ui_trendgrid_unit"></em></dd>
+                <dd>日 {day_percent "per_user"}
+                </dd>
+                <dd>周 {week_percent "per_user"}
+                </dd>
+                <dd>月 {month_percent "per_user"}
+                </dd>
+              </dl>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </script>
+    <script type="text/html" id="js_dist_tpl">
+      <div class="table_wrp">
+        <table class="table">
+          <colgroup span="3">
+            <col class="CountInterval">
+            <col class="MsgUser">
+            <col class="Percent" style="width: 70%;">
+          </colgroup>
+          <thead class="thead">
+          <tr>
+            <th name="CountInterval" class="table_cell">消息发送次数</th>
+            <th name="MsgUser" class="table_cell tr">消息发送人数</th>
+            <th name="Percent" class="table_cell tl">占比</th>
+          </tr>
+          </thead>
+          <tbody class="tbody">
+          {if data.length}
+          {each data as item i}
+          <tr>
+            <td class="table_cell">
+              <div>{item.count_str}</div>
+            </td>
+            <td class="table_cell tr">
+              <div>{item.cal_count}({item.percent}%)</div>
+            </td>
+            <td class="table_cell tl">
+              <div class="ui_progress">
+                <div style="width:{item.percent}%;" class="ui_progress_bar"></div>
+              </div>
+            </td>
+          </tr>
+          {/each}
+          {else}
+          <tr class="empty_item">
+            <td class="empty_tips" colspan="10">暂无数据</td>
+          </tr>
+          {/if}
+          </tbody>
+        </table>
+      </div>
+    </script>
+    <script type="text/html" id="js_compare_dist_tpl">
+      <div class="table_wrp with_border">
+        <table class="table compared_talbe">
+          <colgroup span="4">
+            <col class="CountInterval">
+            <col class="MsgUser">
+            <col class="MsgTime">
+            <col class="Percent" style="width: 45%;">
+          </colgroup>
+          <thead class="thead">
+          <tr>
+            <th name="CountInterval" class="table_cell">消息发送次数</th>
+            <th name="MsgUser" class="table_cell tr">消息发送人数</th>
+            <th name="time" class="table_cell tr">时间</th>
+            <th name="Percent" class="table_cell tl">占比</th>
+          </tr>
+          </thead>
+          <tbody class="tbody">
+          {if data.length}
+          {each data as item i}
+          <tr>
+            {if item.hiderow!==true}
+            <td class="table_cell td_high_light" {if item.rowspan}rowspan="2" {/if}>
+            <div>{item.count_str}</div>
+            </td>
+            {/if}
+            <td class="table_cell tr">
+              <div>{item.cal_count}({item.percent}%)</div>
+            </td>
+            <td class="table_cell tr">
+              <div>{item.dist_time}</div>
+            </td>
+            <td class="table_cell tl">
+              <div class="ui_progress {if item.hiderow===true}ui_progress_blue{/if}">
+                <div style="width:{item.percent}%;" class="ui_progress_bar"></div>
+              </div>
+            </td>
+          </tr>
+          {/each}
+          {else}
+          <tr class="empty_item">
+            <td colspan="10" class="empty_tips">暂无数据</td>
+          </tr>
+          {/if}
+          </tbody>
+        </table>
+      </div>
+    </script>
+    <script type="text/html" id="js_detail_table_tpl">
+      <div class="table_wrp">
+        <table class="table" cellspacing="0">
+          <thead class="thead">
+          <tr>
+            <th class="table_cell rank_area tl js_rankFlag" sortkey="0">
+              时间                <span class="icon_rank rank_area">
+                    {if filter.sort_key!=0 || filter.sort_type==1 || filter.sort_type==2}
+                    <i class="arrow arrow_up"></i>
+                    {/if}
+                    {if filter.sort_key!=0 || filter.sort_type==0 || filter.sort_type==2}
+                    <i class="arrow arrow_down"></i>
+                    {/if}
+                </span>
+            </th>
+            {if filter.type=="hourly"}
+            <th class="table_cell rank_area tl js_rankFlag" sortkey="5">
+              小时
+                <span class="icon_rank rank_area">
+                    {if filter.sort_key!=5 || filter.sort_type==1 || filter.sort_type==2}
+                    <i class="arrow arrow_up"></i>
+                    {/if}
+                    {if filter.sort_key!=5 || filter.sort_type==0 || filter.sort_type==2}
+                    <i class="arrow arrow_down"></i>
+                    {/if}
+                </span>
+            </th>
+            {/if}
+            <th class="table_cell rank_area tr js_rankFlag" sortkey="2">
+              消息发送人数                <span class="icon_rank">
+                    {if filter.sort_key!=2 || filter.sort_type==1 || filter.sort_type==2}
+                    <i class="arrow arrow_up"></i>
+                    {/if}
+                    {if filter.sort_key!=2 || filter.sort_type==0 || filter.sort_type==2}
+                    <i class="arrow arrow_down"></i>
+                    {/if}
+                </span>
+            </th>
+            <th class="table_cell rank_area tr js_rankFlag" sortkey="3">
+              消息发送次数                <span class="icon_rank">
+                    {if filter.sort_key!=3 || filter.sort_type==1 || filter.sort_type==2}
+                    <i class="arrow arrow_up"></i>
+                    {/if}
+                    {if filter.sort_key!=3 || filter.sort_type==0 || filter.sort_type==2}
+                    <i class="arrow arrow_down"></i>
+                    {/if}
+                </span>
+            </th>
+            <th class="table_cell tr rank_area last_child no_extra js_rankFlag" sortkey="4">
+              人均发送次数                <span class="icon_rank">
+                    {if filter.sort_key!=4 || filter.sort_type==1 || filter.sort_type==2}
+                    <i class="arrow arrow_up"></i>
+                    {/if}
+                    {if filter.sort_key!=4 || filter.sort_type==0 || filter.sort_type==2}
+                    <i class="arrow arrow_down"></i>
+                    {/if}
+                </span>
+            </th>
+
+          </tr>
+          </thead>
+          <tbody class="tbody">
+          {if data.length > 0}
+          {each data as item i}
+          <tr>
+            {if (filter.type=="hourly" && i==0)||filter.type!="hourly"}
+            <td {if filter.type=="hourly"}rowspan="{data.length}" class="table_cell td_high_light" {else} class="table_cell" {/if}>{item.date}</td>
+            {/if}
+            {if filter.type=="hourly"}
+            <td class="table_cell tl hour">{item.hour}</td>
+            {/if}
+            <td class="table_cell {if filter.indexType=="user"}td_high_light {/if}js_user tr">{item.user}</td>
+            <td class="table_cell {if filter.indexType=="count"}td_high_light {/if}js_count tr">{item.count}</td>
+            <td class="table_cell {if filter.indexType=="average"}td_high_light {/if}js_average tr">{item.per_user}</td>
+          </tr>
+          {/each}
+          {else}
+          <tr class="empty_item"><td colspan="10" class="empty_tips">暂无数据</td></tr>
+          {/if}
+          </tbody>
+        </table>
+      </div>
+    </script>
+    <script type="text/html" id="js_compare_detail_table_tpl">
+      <div class="table_wrp with_border">
+        <table class="table compared_talbe" cellspacing="0">
+          <thead class="thead">
+          <tr>
+            <th class="table_cell rank_area">
+              序号            </th>
+            <th class="table_cell rank_area tl">
+              时间            </th>
+            {if filter.type=="hourly"}
+            <th class="table_cell rank_area tl">
+              小时            </th>
+            {/if}
+            <th class="table_cell rank_area tr">
+              消息发送人数
+            </th>
+            <th class="table_cell rank_area tr">
+              消息发送次数
+            </th>
+            <th class="table_cell tr rank_area last_child no_extra">
+              人均发送次数
+            </th>
+          </tr>
+          </thead>
+          <tbody class="tbody">
+          {if data.length > 0}
+          {each data as item i}
+          <tr>
+            {if i%2==0}
+            <td class="table_cell td_high_light" rowspan="2">{pageIndex filter.pagesize filter.page i}</td>
+            {/if}
+            <td class="table_cell tl">{item.date}</td>
+            {if filter.type=="hourly"}
+            <td class="table_cell tl hour">{item.hour}</td>
+            {/if}
+            <td class="table_cell {if filter.indexType=="user"}td_high_light {/if} js_user tr">{item.user}</td>
+            <td class="table_cell {if filter.indexType=="count"}td_high_light {/if}js_count tr">{item.count}</td>
+            <td class="table_cell {if filter.indexType=="average"}td_high_light {/if}js_average tr">{item.per_user}</td>
+          </tr>
+          {/each}
+          {else}
+          <tr class="empty_item"><td colspan="10" class="empty_tips">暂无数据</td></tr>
+          {/if}
+          </tbody>
+        </table>
+      </div>
+    </script>
+<% end %>
+<%= content_for :js do %>
+    <script type="text/javascript">
+      define('widget/pagination.css', [], function () {
+        return null;
+      });
+      define('biz_web/widget/date_range.css', [], function () {
+        return null;
+      });
+      define('biz_web/widget/dropdown.css', [], function () {
+        return null;
+      });
+    </script>
+    <script type="text/javascript">
+      seajs.use('statistics/msg.js', wx_main);
+    </script>
+<% end %>

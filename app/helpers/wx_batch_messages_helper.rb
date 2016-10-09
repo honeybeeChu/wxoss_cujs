@@ -1,0 +1,2 @@
+module WxBatchMessagesHelper
+end

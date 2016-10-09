@@ -1,0 +1,90 @@
+<%= content_for :content do %>
+    <div class="col_main setup">
+      <div class="main_hd">
+        <h2>摇一摇管理</h2>
+        <div class="page_nav">
+          <%= link_to '返回上一层', wx_shake_managements_path, :class => 'icon_goback' %>
+          <%= link_to '摇一摇管理', wx_shake_managements_path %>&nbsp;/&nbsp;摇一摇详情
+        </div>
+      </div>
+      <div class="main_bd">
+        <div class="msg_pre_view">
+          <ul>
+            <li class="group">
+              <span class="title">活动名称</span>
+              <div class="msg"><%= @wx_activity.name %><br/>
+                <span class="dec">活动名称只用于管理，不显示在下发的活动内容中</span>
+              </div>
+            </li>
+            <li class="group">
+              <span class="title">开始时间</span>
+              <div class="msg"><%= @wx_activity.begintime.strftime("%Y-%m-%d %H:%M") %>
+              </div>
+            </li>
+            <li class="group">
+              <span class="title">结束时间</span>
+              <div class="msg"><%= @wx_activity.endtime.strftime("%Y-%m-%d %H:%M") %>
+              </div>
+            </li>
+            <li class="group">
+              <span class="title">活动峰值</span>
+              <div class="msg"><%= @wx_activity.maxcount %><br/>
+                <span class="dec">活动时摇动手机的终点次数</span>
+              </div>
+            </li>
+            <li class="group">
+              <span class="title">二维码</span>
+              <div class="msg">
+                <div class="qr_code">
+                  <img src="<%= @wx_activity.qrcode_url %>" alt=""/><div class="txt">扫码关注<br/>进入活动页面</div></div>
+              </div>
+            </li>
+            <li class="group">
+              <span class="title">活动说明</span>
+              <div class="msg">
+                <div class="ins">
+                  <%= @wx_activity.description %>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="prize_list">
+          <p class="prize_h">奖项设置</p>
+          <% @wx_activity_awards.each do |wx_activity_award| %>
+              <div class="prize_item">
+                <% case wx_activity_award.level %>
+                <% when 1 %>
+                    <div class="prize_item_hd"><h4 class="prize_title">一等奖</h4></div>
+                <% when 2 %>
+                    <div class="prize_item_hd"><h4 class="prize_title">二等奖</h4></div>
+                <% when 3 %>
+                    <div class="prize_item_hd"><h4 class="prize_title">三等奖</h4></div>
+                <% when 4 %>
+                    <div class="prize_item_hd"><h4 class="prize_title">四等奖</h4></div>
+                <% when 5 %>
+                    <div class="prize_item_hd"><h4 class="prize_title">五等奖</h4></div>
+                <% end %>
+                <div class="prize_item_bd">
+                  <ul class="prize_option_list">
+                    <li class="prize_option">
+                      <div class="prize_img"><img src="<%= wx_activity_award.imgurl %>" alt=""/></div>
+                      <span class="prize_name"><%= wx_activity_award.name %></span>
+                      <span class="prize_num"><%= wx_activity_award.amount %>个</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div></div>
+<% end %>
+<%= content_for :js do %>
+    <script type="text/javascript">
+      $(function() {
+        var content = $('.ins').text().split("\n").join("<br/>").substring(5);
+        $(".ins").html(content);
+      });
+    </script>
+<% end %>

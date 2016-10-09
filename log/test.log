@@ -1,0 +1,46 @@
+  [1m[36mActiveRecord::SchemaMigration Load (40.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (46.0ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (43.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (44.9ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (40.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (40.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (41.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (42.0ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (39.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (42.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (41.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (39.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (39.7ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (39.7ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (44.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (40.7ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (40.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (38.9ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (45.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (43.0ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (40.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (43.6ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (41.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (39.8ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (40.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (39.6ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (39.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (48.5ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (39.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (40.4ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (41.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (45.7ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (40.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (39.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (41.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (40.5ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (39.9ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (40.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (39.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (41.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (46.8ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (45.4ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (43.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (42.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (42.8ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (43.7ms)[0m  SET FOREIGN_KEY_CHECKS = 1

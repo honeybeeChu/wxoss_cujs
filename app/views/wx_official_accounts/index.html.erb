@@ -1,0 +1,104 @@
+<%= content_for :content do %>
+    <div class="main_hd">
+        <h2 id="model_title"> 公众号管理</h2>
+        
+      </div>
+        <div class="searchBox">
+
+          <div class="search">
+        <input id="search_name" type="text" style="color:#8d8d8d" onFocus="if(this.value=='请输入公众号名称'){this.value='';this.style.color='#8d8d8d'};" onblur="if(this.value==''){this.value='请输入公众号名称';this.style.color='#8d8d8d'}" value= <%= @search_name %>>
+      </div>
+
+      <%= button_to('搜索', wx_official_accounts_path, method: :get, class: "btn search_btn",
+                    params: {search_name: ''}, id: "searchBtn") %>
+
+      <%= button_to '添加公众号', new_wx_official_account_path, class: "btn add_btn", method: :get %>
+      <table class="J_table_hover data-table">
+        <thead>
+        <tr>
+          <th>名称</th>
+          <th>微信号</th>
+          <th colspan="5" style="text-align: center">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @current_wx_official_account.each do |wx_official_account| %>
+            <tr>
+              <td class="name"><%= wx_official_account.wechat_name %></td>
+              <td><%= wx_official_account.wechat_account %></td>
+              <td><%= link_to '详情', wx_official_account %></td>
+              <td><%= link_to '修改', edit_wx_official_account_path(wx_official_account) %></td>
+              <td>
+                <%= link_to '删除', wx_official_account, method: :delete, :class => 'msg_card_opr_item_inner remove'%>
+              </td>
+              <td><%= link_to '获取素材', get_resources_wx_official_account_path(wx_official_account), remote: true, :class => 'get_resources' %></td>
+              <td><%= link_to '获取用户', get_users_wx_official_account_path(wx_official_account), remote: true, :class => 'get_users' %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+    <!--   </div>
+    </div> -->
+
+    <script type="text/javascript">
+      $(function () {
+        $(".manager").addClass("selected");
+        $("#searchBtn").on("click", function () {
+          var searchName = $("#search_name").val();
+          if (searchName == '请输入公众号名称' || $.trim(searchName) == '') {
+            $(this).parents().submit();
+          }
+          else {
+            $("input[name='search_name']").val(searchName);
+            $(this).parents().submit();
+          }
+        })
+        $(".get_resources,.get_users").on('click', function () {
+          var resource_Link = $(this);
+          $.ajax({
+            url: resource_Link.attr("href"),
+            success: function (data) {
+              $('<div class="results"  style="position:fixed;z-index:999;top:0px ">' + data.err_msg + '</div>').appendTo("body").fadeOut(2000);
+            },
+            error: function (msg) {
+              $('<div class="results"  style="position:fixed;z-index:999;top:0px ">获取失败</div>').appendTo("body").fadeOut(2000);
+            }
+          });
+          return false;
+        });
+        $('a.remove').click(function () {
+          var wechat_name = $(this).parent().parent().find(".name").html();
+          $(".mod-popover").remove();
+          $(this).after('<div class="mod-popover" style="left:-90px"><div class="mod-popover_arrow"></div>' +
+              '<div class="mod-popover_inner" style="width: 234px;"><div class="popover_content">确定要删除 '+wechat_name+' 公众号吗？</div>' +
+              '<div class="popover_bar"><button class="btn btn_primary remove">确认</button><button ' +
+              'class=" btn btn_primary cancel">取消</button></div></div></div>');
+          var deleteLink = $(this);
+          $("button.remove").on('click', function () {
+            $.ajax({
+              type: "DELETE",
+              url: deleteLink.attr("href"),
+              success: function (data) {
+                $('<div class="results"  style="position:fixed;z-index:999;top:0px ">删除成功</div>').appendTo("body");
+                location.reload();
+              },
+              error: function (msg) {
+                $('<div class="results"  style="position:fixed;z-index:999;top:0px ">删除失败</div>').appendTo("body");
+                location.reload();
+              }
+            });
+          });
+          $("button.cancel").on('click', function () {
+            $(".mod-popover").remove();
+          });
+          return false;
+        });
+
+
+      });
+    </script>
+
+
+
+<% end %>

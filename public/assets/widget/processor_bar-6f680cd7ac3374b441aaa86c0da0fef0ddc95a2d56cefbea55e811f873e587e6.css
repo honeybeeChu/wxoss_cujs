@@ -1,0 +1,157 @@
+/* line 1, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar {
+  background-color: #e9e9e9;
+  background-image: -moz-linear-gradient(top, #f3f2f2 0, #dfdfdf 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f3f2f2), to(#dfdfdf));
+  background-image: -webkit-linear-gradient(top, #f3f2f2 0, #dfdfdf 100%);
+  background-image: -o-linear-gradient(top, #f3f2f2 0, #dfdfdf 100%);
+  background-image: linear-gradient(to bottom, #f3f2f2 0, #dfdfdf 100%);
+  border-bottom: 1px solid #cecece;
+  box-shadow: inset 0 1px 0 0 #f8f8f8;
+  -moz-box-shadow: inset 0 1px 0 0 #f8f8f8;
+  -webkit-box-shadow: inset 0 1px 0 0 #f8f8f8;
+}
+
+/* line 14, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.dialog .processor_bar {
+  border-bottom: 1px solid #b1b1b1;
+  box-shadow: inset 0 1px 0 0 #f8f8f8, 0 1px 2px 0 #cacaca;
+  -moz-box-shadow: inset 0 1px 0 0 #f8f8f8, 0 1px 2px 0 #cacaca;
+  -webkit-box-shadow: inset 0 1px 0 0 #f8f8f8, 0 1px 2px 0 #cacaca;
+}
+
+/* line 21, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar.ie .step {
+  background: transparent url(/assets/htmledition/bg_processor_ie218877-9a2fa28c85e9fc35e788f3524dab3de850daf7f2dedc44248bea3fbbe28c5ef5.png) no-repeat 0 0;
+}
+
+/* line 25, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar.ie .step.current {
+  background-image: none;
+  background-color: #62a256;
+}
+
+/* line 30, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step {
+  background: transparent url(/assets/htmledition/bg_processor218877-0068111bca7cd8b9fb129dbd1daa827eb7e139834787c618bca37f74b88d2e09.png) no-repeat 0 0;
+  text-align: center;
+  line-height: 36px;
+  color: #747474;
+}
+
+/* line 37, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step.pprev {
+  background-position: right 0;
+}
+
+/* line 41, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step.pprev h4 {
+  padding-right: 14px;
+}
+
+/* line 45, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step.prev {
+  background-position: right -85px;
+}
+
+/* line 49, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step.prev h4 {
+  padding-right: 14px;
+}
+
+/* line 53, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step.current {
+  background-color: #5fa054;
+  background-image: -moz-linear-gradient(top, #78bc6d 0, #4f8d44 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#78bc6d), to(#4f8d44));
+  background-image: -webkit-linear-gradient(top, #78bc6d 0, #4f8d44 100%);
+  background-image: -o-linear-gradient(top, #78bc6d 0, #4f8d44 100%);
+  background-image: linear-gradient(to bottom, #78bc6d 0, #4f8d44 100%);
+  color: #fff;
+}
+
+/* line 63, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step.next {
+  background-position: left -41px;
+}
+
+/* line 67, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step.next h4 {
+  padding-left: 8px;
+}
+
+/* line 71, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step.nnext {
+  background-position: left -1px;
+}
+
+/* line 75, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step.nnext h4 {
+  padding-left: 8px;
+}
+
+/* line 79, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar h4 {
+  font-weight: 400;
+  font-style: normal;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+/* line 89, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar {
+  background-color: #fff;
+  background-image: none;
+  border-color: #e6e7ea;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+/* line 98, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.dialog .processor_bar {
+  border-color: #e6e7ea;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+/* line 105, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar.ie .step {
+  background-image: url(/assets/htmledition/bg_processor218877-0068111bca7cd8b9fb129dbd1daa827eb7e139834787c618bca37f74b88d2e09.png);
+}
+
+/* line 109, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar.ie .step.current {
+  background-color: #44b549;
+}
+
+/* line 113, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step {
+  background: transparent url(/assets/htmledition/bg_processor218877-0068111bca7cd8b9fb129dbd1daa827eb7e139834787c618bca37f74b88d2e09.png) no-repeat 0 0;
+  line-height: 44px;
+}
+
+/* line 118, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step.prev {
+  background-position: right -44px;
+}
+
+/* line 122, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step.current {
+  background-color: #44b549;
+  background-image: none;
+}
+
+/* line 127, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step.next {
+  background-position: 0 -88px;
+}
+
+/* line 131, /home/chuliang/work/ruby/wxoss/app/assets/stylesheets/widget/processor_bar.css.scss */
+.processor_bar .step.nnext {
+  background-position: 0 0;
+}

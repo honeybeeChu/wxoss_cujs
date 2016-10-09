@@ -1,0 +1,2 @@
+module WxWheelManagementsHelper
+end

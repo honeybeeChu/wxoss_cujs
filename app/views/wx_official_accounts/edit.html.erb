@@ -1,0 +1,16 @@
+
+<div class="col_main">
+  <div class="main">
+    <div class="main_hd">
+      <h2>公众号管理</h2>
+    </div>
+    <div class="main_bd" style="border-top: 1px solid #e7e7eb;">
+      <%= render 'form' %>
+      </div>
+  </div>
+</div>
+<script type="text/javascript">
+  //appid和appsecret不可以被修改
+  $("#wx_official_account_app_id,#wx_official_account_app_secret").attr("disabled","true");
+</script>
+

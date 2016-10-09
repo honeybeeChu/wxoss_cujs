@@ -1,0 +1,212 @@
+<%= content_for :css do %>
+    <%= stylesheet_link_tag 'page/stat/stat_overview', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'wx_msg_analysis', 'data-turbolinks-track' => true %>
+<% end %>
+<%= content_for :resource do %>
+    <div class="main_hd">
+      <h2>统计</h2>
+      <div class="title_tab" id="js_topTab"></div>
+      <div class="id_wechat">亚信WIFI<a href="javascript:void(0)" class="replace">切换公众号</a></div>
+    </div>
+    <div class="mian_bd msg_keywords">
+      <div class="page_msg mini top_interval">
+        <div class="inner group">
+        <span class="msg_icon_wrp">
+           <i class="icon_msg_mini info"></i>
+        </span>
+          <div class="msg_content">
+            <p>出于性能考虑，在每日数据中滤除了出现次数小于2次的关键词</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrp_overview">
+        <div class="info_box drop_hd_right">
+          <div class="inner">
+
+            <div class="info_bd">
+              <h4 class="sub_title">详细数据
+                <div class="tr_ext_info"><a target="_blank" href="#" id="js_download_detail">导出Excel</a></div>
+              </h4>
+              <div class="sub_content">
+                <div class="table_wrp" id="js_keyword">
+                </div>
+                <div class="turn_page tr" id="js_pagebar">
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="ext_info help">
+          <i id="" class="icon_msg_mini ask"></i>
+          <div class="help_content" style="top: -15px;right:-30px">
+            <i class="dropdown_arrow out"></i>
+            <i class="dropdown_arrow in"></i>
+            <dl class="help-change-list" id="pop_items_info">
+              <dt>关键词</dt>
+              <dd>用户发送文字中所包含的特殊名词。</dd>
+              <dt>自定义关键词</dt>
+              <dd>公众号在编辑模式中预先设置的关键词。</dd>
+              <dt>非自定义关键词</dt>
+              <dd>用户发送消息中，非公众号在编辑模式中预先设置的关键词。</dd>
+            </dl>
+            <div class="help-change-footer" id="footer_items_info">
+              <span class="wechat_data_range">数据从2013年7月1日开始统计。</span>由于服务器缓存，以及指标计算方法和统计时间的差异，数据可能出现微小误差，一般在1%以内。
+            </div>
+
+          </div>
+        </div>
+        <div class="wrp_loading">
+          <div class="stat_loading">
+            <i class="icon_loading"></i><span>消息加载中...</span>
+          </div>
+          <div class="mask"></div>
+        </div>
+
+      </div>
+    </div>
+    <script type="text/html" id="js_keyword_tpl">
+      <table class="table" cellspacing="0">
+        {if data.length > 0}
+        <colgroup span="4">
+          <col class="gri_Rank" style="width: 8%;">
+          <col class="gri_Keyword">
+
+          <col class="gri_ExpCount" style="width: 11%;">
+          <col class="gri_Percent" style="width: 68%;">
+
+        </colgroup>
+        <thead class="thead">
+        <tr>
+          <th name="gri_Rank" class="table_cell">排行</th>
+          <th name="gri_Keyword" class="table_cell tl">消息关键词</th>
+          <th name="gri_ExpCount" class="table_cell  tr">出现次数</th>
+          <th name="gri_Percent" class="table_cell tl no_extra">占比</th>
+        </tr>
+        </thead>
+        <tbody class="tbody">
+        {each data as item i}
+        <tr>
+          <td class="table_cell">{i+1}</td>
+          <td class="table_cell tl">{item.keyword}</td>
+          <td class="table_cell tr">{item.exp_count}</td>
+          <td class="table_cell">
+            <div class="ui_progress">
+              <div style="width:{(item.exp_count/total_count)*100}%;" class="ui_progress_bar"></div>
+            </div>
+          </td>
+        </tr>
+        {/each}
+        {else}
+        <tr class="empty_item">
+          <td colspan="10" class="empty_tips">暂无数据</td>
+        </tr>
+        {/if}
+        </tbody>
+      </table>
+    </script>
+<% end %>
+<%= content_for :js do %>
+    <script type="text/javascript">
+      define('widget/pagination.css', [], function () {
+        return null;
+      });
+      define('biz_web/widget/date_range.css', [], function () {
+        return null;
+      });
+      define('biz_web/widget/dropdown.css', [], function () {
+        return null;
+      });
+    </script>
+    <script type="text/javascript">
+      wx.cgiData = {
+        filter: {
+          type: "-1"
+        },
+        keyword_list: [
+          {
+            date: "",
+            exp_count: "44" * 1 || 0,
+            keyword: "111"
+          }
+          , {
+            date: "",
+            exp_count: "27" * 1 || 0,
+            keyword: "1111"
+          }
+          , {
+            date: "",
+            exp_count: "14" * 1 || 0,
+            keyword: "222"
+          }
+          , {
+            date: "",
+            exp_count: "5" * 1 || 0,
+            keyword: "11111"
+          }
+          , {
+            date: "",
+            exp_count: "3" * 1 || 0,
+            keyword: "11"
+          }
+          , {
+            date: "",
+            exp_count: "2" * 1 || 0,
+            keyword: "321"
+          }
+          , {
+            date: "",
+            exp_count: "2" * 1 || 0,
+            keyword: "gggg"
+          }
+          , {
+            date: "",
+            exp_count: "2" * 1 || 0,
+            keyword: "hhhh"
+          }
+          , {
+            date: "",
+            exp_count: "2" * 1 || 0,
+            keyword: "hi"
+          }
+          , {
+            date: "",
+            exp_count: "2" * 1 || 0,
+            keyword: "hqlj"
+          }
+          , {
+            date: "",
+            exp_count: "2" * 1 || 0,
+            keyword: "jj"
+          }
+          , {
+            date: "",
+            exp_count: "2" * 1 || 0,
+            keyword: "jjjj"
+          }
+          , {
+            date: "",
+            exp_count: "2" * 1 || 0,
+            keyword: "tstst"
+          }
+          , {
+            date: "",
+            exp_count: "2" * 1 || 0,
+            keyword: "吧"
+          }
+          , {
+            date: "",
+            exp_count: "2" * 1 || 0,
+            keyword: "呵呵"
+          }
+          , {
+            date: "",
+            exp_count: "2" * 1 || 0,
+            keyword: "的"
+          }
+        ]
+      };
+      seajs.use('statistics/msg_keyword.js', wx_main);
+    </script>
+<% end %>

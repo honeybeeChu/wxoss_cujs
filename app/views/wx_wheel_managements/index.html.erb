@@ -1,0 +1,143 @@
+<%= content_for :content do %>
+    <div class="main_hd">
+      <h2>大转盘管理</h2>
+    </div>
+    <div class="main_bd">
+      <div class="topbar top_bor">
+        <%= button_to '新建大转盘', new_wx_wheel_management_path, class: "btn btn_add btn_new", method: :get %>
+      </div>
+
+      <div class="table_wrp with_border">
+        <table class="J_table_hover data-table">
+          <thead>
+          <tr>
+            <th>大转盘名称</th>
+            <th>开始时间</th>
+            <th>结束时间</th>
+            <th>状态</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% if @wx_activities.nil? || @wx_activities.empty? %>
+              <tr>
+                <td colspan="5">
+                  <div class="empty_tips">
+                    <p>你还没有创建任何大转盘活动</p>
+                  </div>
+                </td>
+              </tr>
+          <% else %>
+              <% @wx_activities.each do |wx_activity| %>
+                  <tr>
+                    <td class="name"><%= wx_activity.name %></td>
+                    <td><%= wx_activity.begintime.strftime('%Y-%m-%d %H:%M') %></td>
+                    <td><%= wx_activity.endtime.strftime('%Y-%m-%d %H:%M') %></td>
+                    <% case wx_activity.status %>
+                    <% when -1 %>
+                        <td class="col2">未开始</td>
+                        <td>
+                          <%= link_to '编辑', edit_wx_wheel_management_path(wx_activity) %>
+                          <%= link_to '详情', wx_wheel_management_path(wx_activity) %>
+                          <%= link_to '参与地址', '', :class => 'link', :wx_activity_id =>wx_activity.id %>
+                          <%= link_to '删除', wx_wheel_management_path(wx_activity), method: :delete, :class => 'remove' %>
+                        </td>
+                    <% when 1 %>
+                        <td class="col2">进行中</td>
+                        <td>
+                          <%= link_to '获奖名单', prizelist_wx_wheel_managements_path(wx_activity) %>
+                          <%= link_to '详情', wx_wheel_management_path(wx_activity) %>
+                          <%= link_to '参与地址', '', :class => 'link', :wx_activity_id =>wx_activity.id %>
+                          <%= link_to '删除', wx_wheel_management_path(wx_activity), method: :delete, :class => 'remove' %>
+                        </td>
+                    <% when 99 %>
+                        <td>已结束</td>
+                        <td>
+                          <%= link_to '获奖名单', prizelist_wx_wheel_managements_path(wx_activity) %>
+                          <%= link_to '详情', wx_wheel_management_path(wx_activity) %>
+                          <%= link_to '参与地址', '', :class => 'link', :wx_activity_id =>wx_activity.id %>
+                          <%= link_to '删除', wx_wheel_management_path(wx_activity), method: :delete, :class => 'remove' %>
+                        </td>
+                    <% end %>
+                  </tr>
+              <% end %>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<% end %>
+<%= content_for :js do %>
+    <%= javascript_include_tag 'ZeroClipboard/ZeroClipboard.js', 'data-turbolinks-track' => true %>
+    <script>
+      $(function () {
+        //页面初始化
+        var current_account_id = '<%= session[:current_official_account_id] %>';
+        //如果session中没有current_official_account_id ，弹出选择框
+        if (current_account_id == '') {
+          $("#mask_select_account,#pop_account_select").show();
+          return;
+        }
+
+        $('a.remove').click(function () {
+          var activity_name = $(this).parent().parent().find(".name").html();
+          $(".mod-popover").remove();
+          $(this).after('<div class="mod-popover" style="left:70px"><div class="mod-popover_arrow"></div>' +
+              '<div class="mod-popover_inner" style="width: 234px;"><div class="popover_content">确定要删除 '+activity_name+' 活动吗？</div>' +
+              '<div class="popover_bar"><button class="btn btn_primary remove">确认</button><button ' +
+              'class="btn btn_primary cancel">取消</button></div></div></div>');
+          var deleteLink = $(this);
+          $("button.remove").on('click', function () {
+            $.ajax({
+              type: "DELETE",
+              url: deleteLink.attr("href"),
+              success: function (data) {
+                $('<div class="results"  style="position:fixed;z-index:999;top:0px ">删除成功</div>').appendTo("body");
+                location.reload();
+              },
+              error: function (msg) {
+                $('<div class="results"  style="position:fixed;z-index:999;top:0px ">删除失败</div>').appendTo("body");
+                location.reload();
+              }
+            });
+          });
+          $("button.cancel").on('click', function () {
+            $(".mod-popover").remove();
+          });
+          return false;
+        });
+
+        $('a.link').click(function () {
+          $(".mod-popover").remove();
+          //获取主机地址，如： http://localhost:8083
+          var curWwwPath = window.document.location.href;
+          var pathName = window.document.location.pathname;
+          var pos = curWwwPath.indexOf(pathName);
+          var localhostPath = curWwwPath.substring(0, pos);
+          $(this).after('<div class="mod-popover" style="left:15px"><div class="mod-popover_arrow"></div>' +
+              '<div class="mod-popover_inner" style="width: 234px;"><input type="text" id="address" value="'+localhostPath+'/wxoss/wx_wheel_activities?wx_activity_id='+$(this).attr('wx_activity_id')+'">' +
+              '<div class="popover_bar"><button class="btn btn_primary copy" data-clipboard-target="address">复制</button><button ' +
+              'class="btn btn_primary cancel">取消</button></div></div></div>');
+          var client = new ZeroClipboard($('.copy'));
+          client.on( "ready", function( readyEvent ) {
+            // alert( "ZeroClipboard SWF is ready!" );
+
+            client.on( "aftercopy", function( event ) {
+              // `this` === `client`
+              // `event.target` === the element that was clicked
+              //alert("Copied text to clipboard: " + event.data["text/plain"] );
+              $('<div class="results"  style="position:fixed;z-index:999;top:0px ">已复制到剪贴板</div>').appendTo("body");
+              setTimeout(function () {
+                $(".results").hide();
+              }, 1000);
+            });
+          });
+          $("button.cancel").on('click', function () {
+            $(".mod-popover").remove();
+          });
+          return false;
+        });
+
+      });
+    </script>
+<% end %>
