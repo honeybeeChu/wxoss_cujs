@@ -1,5 +1,5 @@
 namespace = "wxoss_weixin:weixin_authorize"
-redis = Redis.new(:host => '10.1.234.78', :port => "6379", :db => 15)
+redis = Redis.new(:host => ENV['REDIS_PATH'], :port => "6379", :db => 15)
 # 每次重启时，会把当前的命令空间所有的access_token 清除掉。
 exist_keys = redis.keys("#{namespace}:*")
 exist_keys.each { |key| redis.del(key) }
