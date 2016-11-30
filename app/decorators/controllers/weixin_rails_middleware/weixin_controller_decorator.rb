@@ -192,6 +192,9 @@ WeixinRailsMiddleware::WeixinController.class_eval do
     des_text = "<xml><ToUserName><![CDATA[#{@weixin_message.ToUserName}]]></ToUserName><FromUserName><![CDATA[#{@weixin_message.FromUserName}]]></FromUserName>"+
         "<CreateTime>#{@weixin_message.CreateTime}</CreateTime><MsgType><![CDATA[#{@weixin_message.MsgType}]]></MsgType><Event><![CDATA[#{@weixin_message.Event}]]></Event></xml>"
     postResult = post(ACCESS_INTERNET_URL, des_text)
+
+    WORKER_LOG.info postResult
+
     _content = getContentFromXml postResult
     reply_text_message(_content)
 
@@ -214,6 +217,8 @@ WeixinRailsMiddleware::WeixinController.class_eval do
     des_text = "<xml><ToUserName><![CDATA[#{@weixin_message.ToUserName}]]></ToUserName><FromUserName><![CDATA[#{@weixin_message.FromUserName}]]></FromUserName>"+
         "<CreateTime>#{@weixin_message.CreateTime}</CreateTime><MsgType><![CDATA[#{@weixin_message.MsgType}]]></MsgType><Event><![CDATA[#{@weixin_message.Event}]]></Event></xml>"
     postResult = post(ACCESS_INTERNET_URL, des_text)
+    WORKER_LOG.info postResult
+
     _content = getContentFromXml postResult
     reply_text_message(_content)
 
