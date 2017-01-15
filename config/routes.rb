@@ -1,6 +1,8 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+
+
   scope 'wxoss' do
     mount WeixinRailsMiddleware::Engine, at: "/"
 
@@ -53,6 +55,15 @@ Rails.application.routes.draw do
     get 'wx_msganalysis/fdevreport' => 'wx_msganalysis#fdevreport'
     get 'wx_interfaceanalysis' => 'wx_interfaceanalysis#index'
     get 'wx_useranalysis' => 'wx_useranalysis#index'
+
+    # 刷新微信认证的数据系统
+    get 'wxserver/configrefresh'
+    # 查看微信认证系统的运行状态
+    get 'wxserver/health'
+
+
+
+
 
 
     resources :wx_batch_messages do
