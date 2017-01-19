@@ -57,13 +57,7 @@ Rails.application.routes.draw do
     get 'wx_useranalysis' => 'wx_useranalysis#index'
 
     # 刷新微信认证的数据系统
-    get 'wxserver/configrefresh'
-    # 查看微信认证系统的运行状态
-    get 'wxserver/health'
-
-
-
-
+    get 'wxserver/netauth' => 'wxserver#netauth'
 
 
     resources :wx_batch_messages do
