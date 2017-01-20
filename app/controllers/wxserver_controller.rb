@@ -1,4 +1,6 @@
+# encoding: utf-8
 require 'net/http'
+require "open-uri"
 class WxserverController < ApplicationController
   skip_filter :authenticate, :url_check
 
@@ -31,8 +33,24 @@ class WxserverController < ApplicationController
   private
   # http get请求处理方法
   def httpGet(url)
-    uri = URI(url)
-    Net::HTTP.get(uri)
+    uri = URI.parse(url)
+    http = Net::HTTP.new(uri.host, uri.port)
+    if uri.scheme == 'https'
+      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      http.use_ssl = true
+    end
+    begin
+      request = Net::HTTP::Get.new(uri.request_uri)
+      request['Content-Type'] = 'application/json;charset=utf-8'
+      request['User-Agent'] = 'Mozilla/5.0 (Windows NT 5.1; rv:29.0) Gecko/20100101 Firefox/29.0'
+      request['X-ACL-TOKEN'] = 'xxx_token'
+      #request.set_form_data(params)
+      response = http.start { |http| http.request(request) }
+
+      return response.body
+    rescue => err
+      return nil
+    end
   end
 
 end
