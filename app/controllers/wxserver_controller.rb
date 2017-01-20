@@ -10,7 +10,9 @@ class WxserverController < ApplicationController
     paramStr=params[:paramStr]
     WORKER_LOG.info "微信认证链接携带参数params为#{paramStr}"
 
-    getParamsStr = WXSERVER_NETAUTH + "?paramStr=" + paramStr
+
+
+    getParamsStr = WXSERVER_NETAUTH + "?paramStr=" + paramStr.gsub("+","u002B")
 
     WORKER_LOG.info "http get方法的参数为#{getParamsStr}"
 
